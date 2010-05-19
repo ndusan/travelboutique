@@ -1,6 +1,6 @@
 <?php
 //Site
-define('SITE', 'http://travelbutique');//http://localhost
+define('SITE', 'http://travelboutique');//http://localhost
 //App root
 define('APP_ROOT', '');
 define('IN_DEV', true);
@@ -12,7 +12,7 @@ define('EMAIL_ERROR_MSG', 'Email already in use');
 
 //DB params
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'travelbutique');
+define('DB_NAME', 'travelboutique');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 

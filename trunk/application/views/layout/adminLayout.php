@@ -7,6 +7,10 @@
 		<!-- Include jQuery -->
 		<?php echo $html->js('jquery-1.4.2.min'); ?>
 		
+		<!-- Default css file -->
+		<?php echo $html->css('default'); ?>
+		
+		
 		<!-- Default js file -->
 		<?php echo $html->js('default'); ?>
 
