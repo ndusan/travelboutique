@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule !^(\.gif|\.png|\.jpe?g|\.css|\.js|\.php|^public/.*|^public/uploads/.*)$ index.php [nocase,last]
+#RewriteRule ^(.*)$ index.php [nocase,last]
