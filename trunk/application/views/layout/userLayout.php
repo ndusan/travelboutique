@@ -6,6 +6,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=7" />
 		<!-- Include jQuery -->
 		<?php echo $html->js('jquery-1.4.2.min'); ?>
+                
+                <!-- Include cufon -->
+                <?php echo $html->js('cufon'); ?>
+                <?php echo $html->js('Gotham_Medium.font'); ?>
 		
 		<!-- Default css file -->
 		<?php echo $html->css('default'); ?>
@@ -20,6 +24,10 @@
 		//Custom calls for js
 		echo $html->customJs($this->_js);
 		?>
+                <script type="text/javascript">
+			Cufon.replace('.all-rg', { fontFamily: 'Gotham-Medium', hover:true });
+
+                </script>
 		
     </head>
     <body>
