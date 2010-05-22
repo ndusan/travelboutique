@@ -1,0 +1,252 @@
+/*RESET*/
+html {height:100%;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0; padding:0;}
+table {border-collapse:separate;}
+fieldset,img {border:0;}
+address,caption,cite,code,dfn,th,var {font-style:normal; font-weight:normal;}
+em,strong{}
+ol,ul {list-style:none;}
+caption {text-align:center; padding:10px 0; border-top:solid 1px #A1BDC4;}
+th {text-align:left;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;}
+q:before,q:after {content:'';}
+abbr,acronym { border:0;}
+
+
+/* GENERAL */
+body {font-size:12px; color:#333; font-family:arial,sans-serif; background:transparent url("../images/body_bg.jpg") fixed repeat top center;}
+a {color:#587E85;}
+a:hover {text-decoration:none;}
+p {font-family:arial,sans-serif;}
+.clear {clear:both; line-height:0;}
+.fl {float:left;}
+.fr {float:right;}
+label {line-height:18px;}
+h1 {font-size:21px; line-height:40px; font-weight:bold; letter-spacing:-1px;}
+h2,caption {font-size:16px; line-height:20px; font-weight:bold;}
+h3 {font-size:14px; line-height:20px; font-weight:bold;}
+button, input, textarea, select {font-size:12px; font-family:Arial,Sans-serif;}
+
+/* LOGIN */
+.loginWrapper {border:solid 1px #74949C; background-color:#FFF; width:400px; position:absolute; top:170px; left:50%; margin-left:-200px; padding:60px 20px 20px; -moz-border-radius:3px;}
+.login {background-color:#F4F4F4; border:solid 1px #74949c; position:relative;}
+
+/* VISUALS */
+.common_title {padding:5px 5px 10px;}
+.common_title a {text-decoration:none;}
+.common_subtitile {color:#666;}
+
+/* BORDERS */
+.borNone {border:none !important;}
+.borBot {border-bottom:solid 1px #d8d8d8; border-top:none !important;}
+.borTop {border-top:solid 1px #d8d8d8; border-bottom:none !important;}
+.radio {background:transparent !important; border:none !important; width:auto !important;}
+/* NO RESULTS */
+.noResults {padding:10px; border:solid 1px #74949C; background-color:#FFFFCC;}
+/* POPUPS */
+.msg {position:absolute; top:10px; left:50%; width:600px; padding:10px; margin-left:-300px; text-align:center;}
+.msg_login, .error {border:solid 1px #cc3333; background:#fff; color:#cc3333; -moz-border-radius:3px;} /* red */
+.success {border:solid 1px #339900; background:#fff; color:#339900; -moz-border-radius:3px;} /* green */
+.pending {border:solid 1px #cc6600; background:#fff; color:#cc6600; -moz-border-radius:3px;} /* orange */
+/* TABLE INPUTS */
+.flagged {float:left; width:235px !important; }
+.flag {display:block; margin:0 0 0 2px; float:left; width:12px; height:12px; background:transparent url("../images/flag_bg.png") scroll repeat top left;}
+.flag:hover {background-position:0 -12px;}
+/* TABLE TR MASKS */
+.odd {background-color:#FFF;}
+.even {}
+.odd:hover, .even:hover {background-color:#E8F0F0; cursor:pointer;}
+.j_warning {border:solid 1px #CC3333!important; background-color:#FFCCCC!important; color:#CC3333!important;}
+
+.j_delete, .j_del {display:block; width:18px; height:18px; background:transparent url("../images/j_icons.png") scroll no-repeat 0 0;}
+.j_delete:hover, .j_del:hover {background-position:-18px 0;}
+.j_edit {display:block; width:18px; height:18px; background:transparent url("../images/j_icons.png") scroll no-repeat 0 -18px;}
+.j_edit:hover {background-position:-18px -18px;}
+.j_add {display:block; width:18px; height:18px; background:transparent url("../images/j_icons.png") scroll no-repeat 0 -54px;}
+.j_add:hover{background-position:-18px -54px;}
+.j_view{display:block; width:18px; height:18px; background:transparent url("../images/j_icons.png") scroll no-repeat 0 -108px;}
+.j_view:hover{background-position:-18px -108px;}
+.j_close {display:block; width:18px; height:18px; background:transparent url("../images/j_icons.png") scroll no-repeat top left;}
+.j_close:hover {background-position:0 -18px;}
+.j_open {display:block; width:18px; height:18px; background:transparent url("../images/j_icons.png") scroll no-repeat 0 -72px;}
+.j_open:hover {background-position:-18px -72px;}
+.j_tree {display:block; width:18px; height:18px; background:transparent url("../images/j_icons.png") scroll no-repeat 0 -126px;}
+.j_tree:hover {background-position:-18px -126px;}
+.show_more {display:block; width:18px; height:18px; background:transparent url("../images/j_icons.png") scroll no-repeat 0 -144px;}
+.show_more:hover {background-position:-18px -144px;}
+.show_less {display:block; width:18px; height:18px; background:transparent url("../images/j_icons.png") scroll no-repeat 0 -162px;}
+.show_less:hover {background-position:-18px -162px;}
+
+.m2px {margin:0 2px;}
+.addText {text-indent:23px;} /* adds ident to text */
+
+.loader {background:transparent url("../images/loader.gif") scroll no-repeat center center; height: 20px; padding:20px 0;}
+
+/* MORE INFO */
+.moreinfo {overflow:hidden; margin:0 5px;}
+.moreinfo ul {}
+.moreinfo li {overflow:hidden; padding:3px 0; border-bottom:solid 1px #A1BDC4; font-weight:bold; }
+.moreinfo li span {float:right; width:80%; font-weight:normal;}
+
+/* INPUTS */
+.inputs tbody input {background-color:#FFF; border:solid 1px #b5b5b5; padding:2px; width:250px;}
+.inputs tbody input:focus {border-color:#74949C; background-color:#e8f0f0;}
+
+/* TEXTAREA */
+.inputs tbody textarea {background-color:#FFF; border:solid 1px #b5b5b5; padding:2px; width:250px; height: 100px;}
+.inputs tbody textarea:focus {border-color:#74949C; background-color:#e8f0f0;}
+
+/* SELECTS */
+.inputs tbody select {background-color:#FFF; border:solid 1px #b5b5b5; padding:2px; width:256px;}
+.inputs tbody select:focus {border-color:#74949C; background-color:#e8f0f0;}
+
+/* BUTTONS */
+.tabelar tfoot input, .display tfoot input, .inputs tfoot input, .inputs tfoot button, .filterTop tfoot input {background:#FFF url("../images/table_head_bg.png") scroll repeat-x bottom left; border:solid 1px #74949C; padding:3px 10px; -moz-border-radius:3px;}
+.tabelar tfoot input:hover,.display tfoot input:hover, .inputs tfoot input:hover, .inputs tfoot button:hover, .filterTop tfoot input:hover {background-color:#FFF; background-image:none; cursor:pointer;}
+/* BIG BUTTONS */
+.bigButton {font-size:14px; line-height:16px; font-weight:bold; padding:5px 10px 5px 5px !important;}
+.butIco {float:left; width:16px; height:16px; display:block; margin:0 5px 0 0;}
+.okIco {background:transparent url("../images/ok.png") scroll no-repeat center center;}
+/* TREE ITEMS */
+.treeItem {overflow:hidden; float:left; line-height:18px; border:solid 1px #D8D8D8; padding:1px 0 1px 3px; -moz-border-radius:2px;}
+
+/* TABLES */
+/* table with inputs */
+.inputs {overflow:hidden; padding:10px 5px;}
+.inputs label {font-weight:bold;}
+.inputs table {width:100%;}
+.inputs table th {border-bottom:solid 1px #d8d8d8;}
+.inputs table tbody td {padding:3px 5px; border-bottom:solid 1px #d8d8d8; border-top:solid 1px #FFF;}
+.inputs table tfoot td {padding:5px; border-top:solid 1px #FFF;}
+.inputs table tbody td span {cursor: pointer;}
+/* table with displayed info */
+.display {overflow:hidden; padding:10px 5px;}
+.display label {line-height:20px;}
+.display table {width:100%;}
+.display table th {border-bottom:solid 1px #d8d8d8; }
+.display table tbody td {padding:3px 5px; border-bottom:solid 1px #d8d8d8; border-top:solid 1px #FFF;}
+.display table tfoot td {padding:5px; border-top:solid 1px #FFF;}
+/* table with new info */
+.displayNew {overflow:hidden; padding:10px 0;}
+.displayNew label {line-height:20px;}
+.displayNew table {width:100%;}
+.displayNew table th { padding:0 5px;}
+.displayNew table tfoot td {padding:5px; border-top:solid 1px #FFF;}
+.displayNew .borders {overflow:hidden; line-height:20px; padding:3px 0; margin:0 5px; border-bottom:solid 1px #d8d8d8; border-top:solid 1px #FFF;}
+.displayNew .borders span {padding:0 5px; float:left; width:30%;}
+/* table with tabelar data */
+.tabelar {overflow:hidden; padding:10px 5px;}
+.tabelar label {line-height:20px;}
+.tabelar table {width:100%; border:solid 1px #b5b5b5; border-left:none; border-top:none;}
+.tabelar table th {font-weight:bold; padding:5px; border-color:#B5B5B5; border-style:solid none none solid; border-width:1px; background:transparent url("../images/table_head_bg.png") scroll repeat-x bottom left;}
+.tabelar table tbody td {padding:5px; border-color:#b5b5b5; border-style:solid none none solid; border-width:1px;}
+.tabelar table tfoot td {background-color:#E8F0F0; padding:5px; border-color:#b5b5b5; border-style:solid none none solid; border-width:1px;}
+.th_active {background-position:top left !important;}
+.blueArrow {float:right; display:block; margin:3px; width:8px; height:8px; background-image:url("../images/blue_arrow_bg.png");}
+.Up {background-position:top left;}
+.Down {background-position:bottom left;}
+.tabelar table tbody input{background-color:#FFF; border:solid 1px #b5b5b5; padding:2px;}
+.tabelar table tbody input:focus {border-color:#74949C; background-color:#e8f0f0;}
+
+/* BUILD */
+.page {margin:0 auto; padding:0 15px; max-width:1650px; min-width:960px; position:relative;}
+.content {margin:10px 0 0 150px; clear:both; overflow:visible; position:relative; }
+
+.backHolder {border-bottom:solid 1px #D8D8D8; border-top:solid 1px #D8D8D8; background-color:#E8F0F0; overflow:hidden; line-height:18px; padding:5px; margin:5px 5px 0;}
+
+.hello {font-size:14px; color:#FFFFCC; font-weight:bold; letter-spacing:-1px; position:absolute; top:-45px; right:20px; line-height:41px;}
+
+.subNav {position:absolute; width:150px; top:0; left:-146px;}
+.subNav ul {overflow:hidden;}
+.subNav li {margin-bottom:5px; text-align:left; line-height:41px; font-size:14px; font-weight:bold; letter-spacing:-1px;}
+.subNav li a {text-indent:10px; text-decoration:none; display:block; width:147px; height:41px; background-image:url("../images/subnav_bg.png");}
+.subNav li a:hover {background-position:0 -41px; color:#2e3d40;}
+.subNav li .active,.subNav li .active:hover {background-position:0 -82px; color:#2e3d40;}
+
+.mainNav {position:absolute; height:50px; top:-45px; left:0px;}
+.mainNav ul {overflow:hidden; margin-left:50px;}
+.mainNav li {float:left; margin-right:5px; line-height:41px; font-size:14px; font-weight:bold; letter-spacing:-1px;}
+.mainNav li a {text-indent:10px; text-decoration:none; display:block; width:142px; height:41px; background-image:url("../images/nav_bg.png");}
+.mainNav li a:hover {background-position:0 -41px; color:#2e3d40;}
+.mainNav li .active,.mainNav li .active:hover {height:46px; background-position:0 -82px; color:#2e3d40;}
+.mainNav .logout {background-position:0 -140px;}
+.mainNav .logout:hover {background-position:0 -181px;}
+.mainNav .logoutActive,.mainNav .logoutActive:hover {background-position:0 -222px;}
+
+.breadcrumb {margin:25px 0 0; line-height:41px; font-size:14px; font-weight:bold; letter-spacing:-1px;}
+.breadcrumb ul {overflow:hidden; border-right:solid 1px #74949C;}
+.breadcrumb li {float:right; padding:0 5px; border:solid 1px #74949C; border-right:none;}
+
+.mainSearch {overflow:hidden; height:90px; margin:0 270px 0 0;}
+.search {position:relative; margin:25px 10px 10px; width:250px; height:41px; background:url("../images/search_bg.png") scroll no-repeat top left;}
+.search input {margin:8px; padding: 5px; background:transparent; border:none; width:190px;}
+
+.searchBig {margin:0 auto; position:relative; width:500px; height:41px; background:url("../images/searchBig_bg.png") scroll no-repeat top left;}
+.searchBig .input {margin:8px; padding: 5px; background:transparent; border:none; width:440px; color:#B5B5B5;}
+.searchBig .input:focus, .search input:focus {background-color:#e8f0f0; color:#333;}
+.searchBig .button,.search .button {border:none; position:absolute; top:7px; right:4px; width:27px; height:27px; display:block; background:url("../images/search_button.png") scroll no-repeat top left;}
+.searchBig .button:hover,.search .button:hover {background-position:0 -27px; cursor:pointer;}
+
+.filterTop {position:relative; background-color:#FFF; margin:10px; padding:10px; border:solid 1px #B5B5B5; -moz-border-radius:3px;}
+.filterTop table {width:100%;}
+.filterTop table th {border-bottom:solid 1px #d8d8d8;}
+.filterTop table tbody td {padding:3px 5px; border-bottom:solid 1px #d8d8d8; border-top:solid 1px #FFF;}
+.filterTop table tfoot td {padding:5px; border-top:solid 1px #FFF;}
+/* INPUTS */
+.filterTop tbody input {background-color:#FFF; border:solid 1px #b5b5b5; padding:2px;}
+.filterTop tbody input:focus {border-color:#74949C; background-color:#e8f0f0;}
+/* SELECTS */
+.filterTop tbody select {background-color:#FFF; border:solid 1px #b5b5b5; padding:2px;}
+.filterTop tbody select:focus {border-color:#74949C; background-color:#e8f0f0;}
+
+.main {background-color:#f4f4f4;; display:inline; float:left; margin-right:-272px; width:100%; min-height:500px; overflow:hidden; border:solid 1px #74949C;}
+.mainContent {margin:0 270px 0 0; overflow:hidden;}
+.tabsContent {border:solid 1px #b5b5b5; position:relative; margin:28px 0 10px;}
+
+.sidebarTabs {position:absolute; left:-1px; top:-27px;}
+.sidebarTabs ul {height:27px;}
+.sidebarTabs li {position:relative; float:left; margin-right:3px; line-height:24px; font-size:12px;}
+.sidebarTabs li a { padding:0 25px 0 10px; text-align:center; text-decoration:none; display:block; height:24px; background:url("../images/tabs_bg.png") scroll no-repeat top left;}
+.sidebarTabs li a span {position:absolute; display:block; height:24px; width:19px; top:0; right:0; background:url("../images/tabs_bg.png") scroll no-repeat top right;}
+.sidebarTabs li a:hover {background-position:0 -24px; color:#2e3d40;}
+.sidebarTabs li a:hover span {background-position:100% -24px;}
+.sidebarTabs li .active, .sidebarTabs li .active:hover {position:relative; height:27px; background-position:0 -48px; color:#2e3d40;}
+.sidebarTabs li .active span, .sidebarTabs li .active:hover span {height:27px; background-position:100% -48px; color:#2e3d40;}
+
+.contentTabs {position:absolute; left:-1px; top:-27px;}
+.contentTabs ul {height:27px;}
+.contentTabs li {position:relative; float:left; margin-right:3px; line-height:24px; font-size:12px;}
+.contentTabs li a { padding:0 25px 0 10px; text-align:center; text-decoration:none; display:block; height:24px; background:url("../images/tabs_bg.png") scroll no-repeat 0 -79px;}
+.contentTabs li a span {position:absolute; display:block; height:24px; width:19px; top:0; right:0; background:url("../images/tabs_bg.png") scroll no-repeat 100% -79px;}
+.contentTabs li a:hover {background-position:0 -103px; color:#2e3d40;}
+.contentTabs li a:hover span {background-position:100% -103px;}
+.contentTabs li .active, .contentTabs li .active:hover {position:relative; height:27px; background-position:0 -127px; color:#2e3d40;}
+.contentTabs li .active span, .contentTabs li .active:hover span {height:27px; background-position:100% -127px; color:#2e3d40;}
+
+.treeHolder {border:solid 1px #b5b5b5; position:relative; margin:28px 0 0;}
+.mainLeft {width:250px; margin:0 10px; float:left; position:relative; display:inline;}
+.mainRight {width:250px; margin:90px 10px 0; float:right; position:relative; display:inline;}
+
+.dropR {display:none; z-index:1; position:absolute; top:26px; left:0; padding:5px; width:250px; height:200px; overflow:auto; background-color:#F4F4F4; border:solid 1px #b5b5b5;}
+.dropL {display:none; z-index:1; position:absolute; top:26px; right:0; padding:5px; width:250px; height:200px; overflow:auto; background-color:#F4F4F4; border:solid 1px #b5b5b5;}
+.dropR p, .dropL p {padding:5px 0; border-bottom:dotted 1px #DADADA; line-height:15px;}
+.dropR p input, .dropL p input {vertical-align:text-top; margin:0 5px 0 0;}
+
+/* CALENDAR */
+#calendar { width:240px; padding:10px 0; margin:0 auto;}
+#calendar .today {background:#789298; color:#FFF;}
+#calendar .today a {color:#FFF;}
+#calendar .date_has_event {background:#FFFFCC;}
+#calendar .date_has_event a {color:#333}
+#calendar caption {padding-bottom: 5px; font-weight: bold;}
+#calendar table {width: 100%; border-collapse: collapse; border-right: 1px solid #789298; border-top: 1px solid #789298;}
+#calendar thead th {padding: 5px; text-align: center; border-bottom: 1px solid #789298; border-left: 1px solid #789298; background: #e8f0f0;}
+#calendar tbody td {padding: 5px; text-align: center; border-bottom: 1px solid #789298; border-left: 1px solid #789298;}
+#calendar tfoot td {padding: 5px;}
+#calendar tfoot {border-bottom: 1px solid #789298; border-left: 1px solid #789298;}
+#calendar tfoot #next { text-align: right;}
+#calendar tfoot #prev { text-align: left;}
+
+/** Some extra option**/
+.j_dynamic_object{ visibility: collapse; }
+.j_dynamic_tenant{ visibility: collapse; }
