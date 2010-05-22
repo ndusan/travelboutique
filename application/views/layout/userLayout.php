@@ -25,7 +25,7 @@
 		echo $html->customJs($this->_js);
 		?>
                 <script type="text/javascript">
-			Cufon.replace('.all-rg', { fontFamily: 'Gotham-Medium', hover:true });
+			Cufon.replace('h3', { fontFamily: 'Gotham-Medium', hover:true });
 
                 </script>
 		
