@@ -37,7 +37,7 @@ button, input, textarea, select {font-size:12px; font-family:Arial,Sans-serif;}
 
 /* NAVIGATION */
 .mainNav ul {padding:5px 0 0 5px;}
-.mainNav li {position:relative; float:left; font-size:14px; font-weight:bold;}
+.mainNav li {position:relative; float:left; font-size:14px; font-weight:bold; letter-spacing:-1px;}
 .mainNav li a {color:#FFF; padding:18px 20px 13px 20px; text-decoration:none; text-transform:uppercase; display:block;}
 .mainNav li a span {position:absolute; top:0; right:0; width:25px; height:45px; margin-right:-5px; background:transparent url(../images/navIdle_bg.png) scroll no-repeat 20px 0;}
 .mainNav li a:hover {color:#444;}
