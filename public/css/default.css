@@ -24,7 +24,7 @@ p {font-family:arial,sans-serif;}
 label {line-height:18px;}
 h1 {font-size:14px; line-height:40px; font-weight:bold; letter-spacing:-1px;}
 h2,caption {font-size:14px; line-height:20px; font-weight:bold;}
-h3 {font-size:14px; font-weight:bold;}
+h3 {font-size:13px; font-weight:bold;}
 button, input, textarea, select {font-size:12px; font-family:Arial,Sans-serif;}
 
 /* BUILD */
@@ -37,10 +37,10 @@ button, input, textarea, select {font-size:12px; font-family:Arial,Sans-serif;}
 
 /* NAVIGATION */
 .mainNav ul {padding:5px 0 0 5px;}
-.mainNav li {position:relative; float:left; font-size:14px; font-weight:bold; letter-spacing:-1px;}
-.mainNav li a {color:#b75fb6; padding:18px 20px 13px 20px; text-decoration:none; text-transform:uppercase; display:block;}
+.mainNav li {position:relative; float:left; font-size:14px; font-weight:bold;}
+.mainNav li a {color:#FFF; padding:18px 20px 13px 20px; text-decoration:none; text-transform:uppercase; display:block;}
 .mainNav li a span {position:absolute; top:0; right:0; width:25px; height:45px; margin-right:-5px; background:transparent url(../images/navIdle_bg.png) scroll no-repeat 20px 0;}
-.mainNav li a:hover {color:#666;}
+.mainNav li a:hover {color:#444;}
 
 .mainNav li .active,.mainNav li .active:hover {color:#333; padding:18px 20px 0 23px; margin:0 0 0 -3px; height:27px; background:transparent url(../images/navActive_bg.png) scroll no-repeat top left;}
 .mainNav li .active span {position:absolute; top:0; right:0; width:5px; height:45px; margin-right:-5px; background:transparent url(../images/navActive_bg.png) scroll no-repeat top right;}
