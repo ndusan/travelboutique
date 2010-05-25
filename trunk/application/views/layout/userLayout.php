@@ -9,7 +9,7 @@
                 
                 <!-- Include cufon -->
                 <?php echo $html->js('cufon'); ?>
-                <?php echo $html->js('Gotham_Medium.font'); ?>
+                <?php echo $html->js('Georgia'); ?>
 		
 		<!-- Default css file -->
 		<?php echo $html->css('default'); ?>
@@ -25,7 +25,7 @@
 		echo $html->customJs($this->_js);
 		?>
                 <script type="text/javascript">
-			Cufon.replace('h3', { fontFamily: 'Gotham-Medium', hover:true });
+			Cufon.replace('h3', { fontFamily: 'Georgia', hover:true });
 
                 </script>
 		
