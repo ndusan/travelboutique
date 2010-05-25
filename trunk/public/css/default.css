@@ -42,9 +42,4 @@ button, input, textarea, select {font-size:12px; font-family:Arial,Sans-serif;}
 .mainNav li a span {position:absolute; top:0; right:0; width:25px; height:45px; margin-right:-5px; background:transparent url(../images/navIdle_bg.png) scroll no-repeat 20px 0;}
 .mainNav li a:hover {color:#444;}
 
-.mainNav li .active,.mainNav li .active:hover {color:#333; padding:18px 20px 0 23px; margin:0 0 0 -3px; height:27px; background:transparent url(../images/navActive_bg.png) scroll no-repeat top left;}
-.mainNav li .active span {position:absolute; top:0; right:0; width:5px; height:45px; margin-right:-5px; background:transparent url(../images/navActive_bg.png) scroll no-repeat top right;}
-
-.mainNav .firstActive,.mainNav .firstActive:hover {color:#333; padding:18px 20px 0 23px; height:27px; background:transparent url(../images/firstNavActive_bg.png) scroll no-repeat top left;}
-.mainNav li .firstActive span {position:absolute; top:0; right:0; width:5px; height:45px; margin-right:-5px; background:transparent url(../images/firstNavActive_bg.png) scroll no-repeat top right;}
-
+.mainNav li .active,.mainNav li .active:hover {color:#333; padding:18px 20px 0 23px; margin:0 0 0 -3px; height:27px;}
