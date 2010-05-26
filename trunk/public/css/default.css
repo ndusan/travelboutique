@@ -38,7 +38,7 @@ button, input, textarea, select {font-size:12px; font-family:Arial,Sans-serif;}
 .bottom {height:15px; background:transparent url(../images/footer_bg.png) scroll no-repeat top center;}
 
 /* NAVIGATION */
-.mainNav {position:absolute; margin:85px 0 0; right:0; top:0; font-size:13px; font-weight:bold; letter-spacing:-1px;}
+.mainNav {position:absolute; margin:100px 0 0; right:0; top:0; font-size:13px; font-weight:bold; letter-spacing:-1px;}
 .mainNav a {color:#FFF; text-decoration:none; padding: 0 5px; text-transform:uppercase;}
 .mainNav a:hover {color:#000;}
 .mainNav .active,.mainNav .active:hover {color:#000;}
