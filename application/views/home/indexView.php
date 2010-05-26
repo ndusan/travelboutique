@@ -1,11 +1,12 @@
 <div class="wrapper">
     <div class="header">
+        <div class="letter"></div>
         <div class="lang">
-            <a href="#">sr</a> | <a href="#">en</a>
+            <a class="active" href="#">sr</a> | <a href="#">en</a>
         </div>
         <div class="logo">
             <div class="logoHolder">
-                <a href="#"><img alt="travel boutique" title="homepage" src="../public/images/logo.png" /></a>
+                <a href="#"><img alt="travel boutique" title="homepage" src="<?php echo IMAGE_PATH; ?>logo.png" /></a>
             </div>
             <div class="mainNav">
                 <a href="#">početna</a>|
