@@ -1,20 +1,27 @@
 <div class="wrapper">
-<div class="header">
-    <div class="logo">
-        logo and stuff
+    <div class="header">
+        <div class="lang">
+            <a href="#">sr</a> | <a href="#">en</a>
+        </div>
+        <div class="logo">
+            <div class="logoHolder">
+                <a href="#"><img alt="travel boutique" title="homepage" src="../public/images/logo.png" /></a>
+            </div>
+            <div class="mainNav">
+                <a href="#">početna</a>|
+                <a href="#">individualna putovanja</a>|
+                <a class="active" href="#">aranžmani</a>|
+                <a href="#">avio karte</a>|
+                <a href="#">rent a car</a>|
+                <a href="#">o nama</a>|
+                <a href="#">kontakt</a>
+            </div>
+        </div>
+
     </div>
-    <div class="mainNav">
-        <ul>
-            <li><h3><a class="firstActive" href="#"><span></span>početna</a></h3></li>
-            <li><h3><a href="#"><span></span>individualna putovanja</a></h3></li>
-            <li><h3><a class="active"  href="#"><span></span>aranžmani</a></h3></li>
-            <li><h3><a href="#"><span></span>avio karte</a></h3></li>
-            <li><h3><a href="#"><span></span>rent a car</a></h3></li>
-        </ul>
+    <div class="top"></div>
+    <div class="main">
+        <h2>main content</h2>
     </div>
-</div>
-<div class="main">
-    <h2>main content</h2>
-</div>
-    <div class="footer">footer</div>
+    <div class="bottom">footer</div>
 </div>
