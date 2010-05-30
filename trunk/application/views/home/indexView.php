@@ -22,24 +22,24 @@
     <div class="top"></div>
     <div class="main">
         <div class="banners">
-            <div class="arrow right"></div>
-            <div class="arrow left"></div>
+            <a href="#" class="arrow right"></a>
+            <a href="#" class="arrow left"></a>
             <div class="maskBottom"></div>
                 <ul>
                     <li class="image">
                         <div class="maskTop"></div>
                         <div class="title"><a href="#">Paris</a></div>
-                        <img src="<?php echo IMAGE_PATH; ?>1.jpg" />
+                        <img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>1.jpg" />
                     </li>
                     <li class="image">
                         <div class="maskTop"></div>
                         <div class="title"><a href="#">Spain</a></div>
-                        <img src="<?php echo IMAGE_PATH; ?>1.jpg" />
+                        <img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>1.jpg" />
                     </li>
                     <li class="image">
                         <div class="maskTop"></div>
                         <div class="title"><a href="#">Maldives</a></div>
-                        <img src="<?php echo IMAGE_PATH; ?>1.jpg" />
+                        <img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>1.jpg" />
                     </li>
                 </ul>
         </div>
