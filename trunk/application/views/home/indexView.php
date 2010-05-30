@@ -33,12 +33,12 @@
                     </li>
                     <li class="image">
                         <div class="maskTop"></div>
-                        <div class="title"><a href="#">Paris</a></div>
+                        <div class="title"><a href="#">Spain</a></div>
                         <img src="<?php echo IMAGE_PATH; ?>1.jpg" />
                     </li>
                     <li class="image">
                         <div class="maskTop"></div>
-                        <div class="title"><a href="#">Paris</a></div>
+                        <div class="title"><a href="#">Maldives</a></div>
                         <img src="<?php echo IMAGE_PATH; ?>1.jpg" />
                     </li>
                 </ul>
