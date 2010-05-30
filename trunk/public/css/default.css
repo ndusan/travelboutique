@@ -50,6 +50,6 @@ button, input, textarea, select {font-size:12px; font-family:Arial,Sans-serif;}
 .banners .maskTop {}
 .banners .image {position:relative;}
 .banners .title {color:#FFF; position:absolute; width:300px; bottom:0; left:0; background-color:#333; height:80px;}
-.banners .title a {color:#FFF; margin:0 20px; text-decoration:none; line-height:40px;}
+.banners .title a {font-family:georgia; font-size:24px; color:#FFF; margin:0 15px; text-decoration:none; line-height:45px;}
 .banner ul {overflow:hidden;}
 .banners li {float:left; width:300px; margin:0 15px 0 0;}
