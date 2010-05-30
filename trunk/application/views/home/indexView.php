@@ -1,6 +1,5 @@
 <div class="wrapper">
     <div class="header">
-        <div class="letter"></div>
         <div class="lang">
             <a class="active" href="#">sr</a> | <a href="#">en</a>
         </div>
@@ -22,7 +21,7 @@
     </div>
     <div class="top"></div>
     <div class="main">
-        <h2>main content</h2>
+
     </div>
     <div class="bottom">footer</div>
 </div>
