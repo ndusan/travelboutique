@@ -21,6 +21,28 @@
     </div>
     <div class="top"></div>
     <div class="main">
+        <div class="banners">
+            <div class="arrow right"></div>
+            <div class="arrow left"></div>
+            <div class="maskBottom"></div>
+                <ul>
+                    <li class="image">
+                        <div class="maskTop"></div>
+                        <div class="title">Paris</div>
+                        <img src="" />
+                    </li>
+                    <li class="image">
+                        <div class="maskTop"></div>
+                        <div class="title">Paris</div>
+                        <img src="" />
+                    </li>
+                    <li class="image">
+                        <div class="maskTop"></div>
+                        <div class="title">Paris</div>
+                        <img src="" />
+                    </li>
+                </ul>
+        </div>
 
     </div>
     <div class="bottom">footer</div>
