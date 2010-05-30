@@ -28,18 +28,18 @@
                 <ul>
                     <li class="image">
                         <div class="maskTop"></div>
-                        <div class="title">Paris</div>
-                        <img src="" />
+                        <div class="title"><a href="#">Paris</a></div>
+                        <img src="<?php echo IMAGE_PATH; ?>1.jpg" />
                     </li>
                     <li class="image">
                         <div class="maskTop"></div>
-                        <div class="title">Paris</div>
-                        <img src="" />
+                        <div class="title"><a href="#">Paris</a></div>
+                        <img src="<?php echo IMAGE_PATH; ?>1.jpg" />
                     </li>
                     <li class="image">
                         <div class="maskTop"></div>
-                        <div class="title">Paris</div>
-                        <img src="" />
+                        <div class="title"><a href="#">Paris</a></div>
+                        <img src="<?php echo IMAGE_PATH; ?>1.jpg" />
                     </li>
                 </ul>
         </div>
