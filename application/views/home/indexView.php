@@ -21,10 +21,13 @@
     </div>
     <div class="top"></div>
     <div class="main">
-        <div class="banners">
-            <a href="#" class="arrow right"></a>
-            <a href="#" class="arrow left"></a>
+    	<!-- I've added class carousel -->
+        <div class="carousel banners">
+            <a href="javascript:;" class="arrow right">right</a>
+            <a href="javascript:;" class="arrow left">left</a>
             <div class="maskBottom"></div>
+            	<!-- I've added div with class jCarouselLite  -->
+            	<div class="jCarouselLite">
                 <ul>
                     <li class="image">
                         <div class="maskTop"></div>
@@ -41,9 +44,30 @@
                         <div class="title"><a href="#">Maldives</a></div>
                         <img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>1.jpg" />
                     </li>
+                    <li class="image">
+                        <div class="maskTop"></div>
+                        <div class="title"><a href="#">Maldives</a></div>
+                        <img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>1.jpg" />
+                    </li>
+                    <li class="image">
+                        <div class="maskTop"></div>
+                        <div class="title"><a href="#">Maldives</a></div>
+                        <img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>1.jpg" />
+                    </li>
                 </ul>
-        </div>
-
+	        	</div>
+	        </div>
+        <div style="clear: both;"></div>
     </div>
+    <script type="text/javascript" charset="utf-8">
+    	$(function(){
+		    $(".carousel .jCarouselLite").jCarouselLite({
+		        btnNext: 	".carousel .right",
+		        btnPrev:	".carousel .left",
+		        auto: 		2000,
+		        speed:	 	1000
+		    });   
+    	});
+	</script> 
     <div class="bottom">footer</div>
 </div>

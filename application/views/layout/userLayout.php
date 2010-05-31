@@ -24,10 +24,9 @@
 		//Custom calls for js
 		echo $html->customJs($this->_js);
 		?>
-                <script type="text/javascript">
+        <script type="text/javascript">
 			Cufon.replace('.mainNav a', { fontFamily: 'Georgia', hover:true });
-
-                </script>
+        </script>
 		
     </head>
     <body>
