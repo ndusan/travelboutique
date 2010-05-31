@@ -21,13 +21,13 @@
     </div>
     <div class="top"></div>
     <div class="main">
-    	<!-- I've added class carousel -->
+        <!-- I've added class carousel -->
         <div class="carousel banners">
             <a href="javascript:;" class="arrow right">right</a>
             <a href="javascript:;" class="arrow left">left</a>
             <div class="maskBottom"></div>
-            	<!-- I've added div with class jCarouselLite  -->
-            	<div class="jCarouselLite">
+            <!-- I've added div with class jCarouselLite  -->
+            <div class="jCarouselLite">
                 <ul>
                     <li class="image">
                         <div class="maskTop"></div>
@@ -55,19 +55,19 @@
                         <img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>1.jpg" />
                     </li>
                 </ul>
-	        	</div>
-	        </div>
+            </div>
+        </div>
         <div style="clear: both;"></div>
     </div>
     <script type="text/javascript" charset="utf-8">
-    	$(function(){
-		    $(".carousel .jCarouselLite").jCarouselLite({
-		        btnNext: 	".carousel .right",
-		        btnPrev:	".carousel .left",
-		        auto: 		2000,
-		        speed:	 	1000
-		    });   
-    	});
-	</script> 
+        $(function(){
+            $(".carousel .jCarouselLite").jCarouselLite({
+                btnNext: 	".carousel .right",
+                btnPrev:	".carousel .left",
+                auto: 		2000,
+                speed:	 	1000
+            });
+        });
+    </script>
     <div class="bottom">footer</div>
 </div>
