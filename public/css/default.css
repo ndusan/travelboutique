@@ -44,14 +44,14 @@ button, input, textarea, select {font-size:12px; font-family:Arial,Sans-serif;}
 .mainNav a {color:#FFF; text-decoration:none; padding: 0 5px; text-transform:uppercase;}
 .mainNav a:hover {color:#000;}
 .mainNav .active,.mainNav .active:hover {color:#000;}
-.arrow {z-index:2; top:100px; position:absolute; width:50px; height:64px; display:block; background-image: url(../images/arrows.png);}
+.arrow {z-index:3; top:100px; position:absolute; width:50px; height:64px; display:block; background-image: url(../images/arrows.png);}
 .right {right:5px; background-position:top right;}
 .right:hover {background-position:-100px 0;}
 .left {left:-15px; background-position:top left;}
 .left:hover {background-position:-50px 0;}
 
 .banners {position:relative; height:305px; margin:0 0 0 20px;}
-.banners .maskBottom {z-index:1; height:52px; width:930px; position:absolute; bottom:0; left:0; background:transparent url(../images/maskBottom.png) scroll no-repeat bottom center;}
+.banners .maskBottom {z-index:3; height:52px; width:930px; position:absolute; bottom:0; left:0; background:transparent url(../images/maskBottom.png) scroll no-repeat bottom center;}
 .banners .maskTop {z-index:1; height:10px; width:300px; position:absolute; top:0; left:0; background:transparent url(../images/maskTop.png) scroll no-repeat bottom center;}
 .banners .image {position:relative;}
 .banners .title {color:#FFF; position:absolute; width:300px; bottom:0; left:0; height:80px; background:transparent url(../images/transparent.png) scroll repeat bottom center;}
