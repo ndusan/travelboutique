@@ -31,33 +31,70 @@
                 <ul>
                     <li class="image">
                         <div class="maskTop"></div>
-                        <div class="title"><a href="#">Paris</a></div>
+                        <a class="title" href="#"><span>read more</span>Paris</a>
                         <img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>1.jpg" />
                     </li>
                     <li class="image">
                         <div class="maskTop"></div>
-                        <div class="title"><a href="#">Spain</a></div>
+                        <a class="title" href="#"><span>read more</span>Paris</a>
                         <img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>1.jpg" />
                     </li>
                     <li class="image">
                         <div class="maskTop"></div>
-                        <div class="title"><a href="#">Maldives</a></div>
+                        <a class="title" href="#"><span>read more</span>Sweden</a>
                         <img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>1.jpg" />
                     </li>
                     <li class="image">
                         <div class="maskTop"></div>
-                        <div class="title"><a href="#">Maldives</a></div>
+                        <a class="title" href="#"><span>read more</span>Bobica</a>
                         <img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>1.jpg" />
                     </li>
                     <li class="image">
                         <div class="maskTop"></div>
-                        <div class="title"><a href="#">Maldives</a></div>
+                        <a class="title" href="#"><span>read more</span>Jagodica</a>
                         <img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>1.jpg" />
                     </li>
                 </ul>
             </div>
         </div>
         <div style="clear: both;"></div>
+        <div class="content">
+            <div class="about">
+                <h2>Sta je Travel boutique?</h2>
+                <p>Travel boutique je jedinstveno mesto koje Vam pruza mogucnost da sami kreirajte svoje putovanje uz nasu strucnu pomoc.
+                    <br/><br/>
+                    U skladu sa Vasim zeljama Vas "Butik putovanja" Vam pruza i kompletnu pripremu za samu destinaciju.</p>
+            </div>
+            <div class="newsletter">
+                <div class="letter"></div>
+                <h2>Newsletter</h2>
+                <p>Unesite svoju e-mail adresu da biste bla bla</p>
+                <form>
+                    <label>Vasa e-mail adresa</label>
+                    <input class="inputSmall" type="text" name="" value="" />
+                    <button type="submit">Potvrdi</button>
+                </form>
+            </div>
+        </div>
+            <div class="boxHolder">
+                <div class="tabs">
+                    <ul>
+                        <li><a href="#" class="active">u ponudi</a></li>
+                        <li><a href="#">vremenska prognoza</a></li>
+                        <li><a href="#">kursna lista</a></li>
+                    </ul>
+                </div>
+            
+        <ul>
+            <li class="box"></li>
+            <li class="box"></li>
+            <li class="box"></li>
+            <li class="box"></li>
+            <li class="box"></li>
+        </ul>
+                <div class="clear"></div>
+            </div>
+        
     </div>
     <script type="text/javascript" charset="utf-8">
         $(document).ready(function(){
@@ -65,9 +102,9 @@
                 btnNext: 	".carousel .right",
                 btnPrev:	".carousel .left",
                 auto: 		10000,
-                speed:	 	1500
+                speed:	 	500
             });
         });
     </script>
-    <div class="bottom">footer</div>
+    <div class="bottom"></div>
 </div>
