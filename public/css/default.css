@@ -58,4 +58,4 @@ button, input, textarea, select {font-size:12px; font-family:Arial,Sans-serif;}
 .banners .title a {font-family:georgia; font-size:24px; color:#FFF; margin:0 15px; text-decoration:none; line-height:45px;}
 .banner ul {overflow:hidden;}
 .banners li {float:left; width:300px; margin:0 15px 0 0;}
-.jCarouselLite {width:930px !important; z-index:0 !important; position:absolute !important;}
+.jCarouselLite {width:930px !important;}
