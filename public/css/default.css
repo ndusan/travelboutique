@@ -21,11 +21,14 @@ p {padding:10px 0;}
 .clear {clear:both; line-height:0;}
 .fl {float:left;}
 .fr {float:right;}
-label {line-height:18px;}
+label {font-size:14px; color:#990099;}
 h1 {font-size:14px; line-height:40px; font-weight:bold; letter-spacing:-1px;}
 h2 {font-size:24px; font-weight:normal; color:#990099; border-bottom:solid 1px #CCC;}
 h3 {font-size:13px; font-weight:bold;}
-button, input, textarea, select {font-size:12px; font-family:Arial,Sans-serif;}
+input, textarea, select {background-color:#FFF; margin:3px 0; font-size:12px; font-family:Arial,Sans-serif; padding:5px; border:solid 1px #CCC;}
+button {background-color:#FFF; margin:2px 0; font-size:12px; font-family:Arial,Sans-serif; padding:4px 10px; border:solid 1px #e886e4; -moz-border-radius:3px;}
+button:hover {background-color:#EEE; cursor:pointer;}
+.inputSmall {width:210px;}
 
 /* BUILD */
 .wrapper {width:970px; margin:0 auto;}
@@ -34,9 +37,9 @@ button, input, textarea, select {font-size:12px; font-family:Arial,Sans-serif;}
 .logoHolder {position:absolute; top:15px; left:0;}
 .lang {padding:5px 2px 0 0; text-align:center; position:absolute; top:0; right:20px; width:62px; height:35px; background:transparent url(../images/lang_bg.png) scroll no-repeat bottom center;}
 .lang .active, .lang .active:hover {text-decoration:none; font-weight:bold; color:#000;}
-.letter {position:absolute; bottom:0; right:20px; width:60px; height:40px; background:transparent url(../images/letter_bg.png) scroll no-repeat top center;}
+.letter {position:absolute; top:-15px; right:5px; width:60px; height:40px; background:transparent url(../images/letter_bg.png) scroll no-repeat top center;}
 .top {height:15px; background:transparent url(../images/header_bg.png) scroll no-repeat top center;}
-.main {height:600px; background:transparent url(../images/main_bg.png) scroll repeat-y top center;}
+.main {background:transparent url(../images/main_bg.png) scroll repeat-y top center;}
 .bottom {height:15px; background:transparent url(../images/footer_bg.png) scroll no-repeat top center;}
 
 /* NAVIGATION */
@@ -61,6 +64,16 @@ button, input, textarea, select {font-size:12px; font-family:Arial,Sans-serif;}
 .banners li {float:left; width:300px; margin:0 15px 0 0;}
 .jCarouselLite {width:930px !important;}
 
-.content {padding:20px;}
-.about {float:left; width:460px;}
-.newsletter {float:right; width:235px; position:relative;}
+.content {padding:20px; overflow:hidden;}
+.about {float:left; width:445px; padding:0 250px 0 0; overflow:hidden;}
+.newsletter {float:left; width:235px; position:relative;}
+
+.boxHolder {position:relative; border-top:solid 1px #CCC; border-bottom:solid 1px #CCC; margin:15px 15px 0; padding:9px 0;}
+.tabs {font-family:georgia; position:absolute; top:-31px; left:0;}
+.tabs li {float:left;}
+.tabs a {color:#666; padding:10px 20px 5px; text-decoration:none;  display:block; }
+.tabs a:hover {color:#000;}
+.tabs .active,.tabs .active:hover {background-color:#f4f5f6; border:solid 1px #CCC; color:#990099; border-bottom:none;}
+
+.box {float:left; border:solid 1px #ccc; width:215px; height:160px; margin:9px;}
+
