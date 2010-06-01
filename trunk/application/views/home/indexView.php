@@ -23,8 +23,8 @@
     <div class="main">
         <!-- I've added class carousel -->
         <div class="carousel banners">
-            <a href="javascript:;" class="arrow right">right</a>
-            <a href="javascript:;" class="arrow left">left</a>
+            <a href="javascript:;" class="arrow right"></a>
+            <a href="javascript:;" class="arrow left"></a>
             <div class="maskBottom"></div>
             <!-- I've added div with class jCarouselLite  -->
             <div class="jCarouselLite">
