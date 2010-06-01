@@ -209,7 +209,7 @@ $.fn.jCarouselLite = function(o) {
         mouseWheel: false,
         auto: null,
 
-        speed: 200,
+        speed: 1000,
         easing: null,
 
         vertical: false,
