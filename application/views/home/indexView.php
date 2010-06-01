@@ -60,7 +60,7 @@
         <div style="clear: both;"></div>
     </div>
     <script type="text/javascript" charset="utf-8">
-        $(function(){
+        $(document).ready(function(){
             $(".carousel .jCarouselLite").jCarouselLite({
                 btnNext: 	".carousel .right",
                 btnPrev:	".carousel .left",
