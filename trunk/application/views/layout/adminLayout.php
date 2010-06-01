@@ -8,11 +8,11 @@
 		<?php echo $html->js('jquery-1.4.2.min'); ?>
 		
 		<!-- Default css file -->
-		<?php echo $html->css('default'); ?>
+		<?php echo $html->css('default-admin'); ?>
 		
 		
 		<!-- Default js file -->
-		<?php echo $html->js('default'); ?>
+		<?php echo $html->js('default-login'); ?>
 
 		<?php 
 		//Custom calls for css
