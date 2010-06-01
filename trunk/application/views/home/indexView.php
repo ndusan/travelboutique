@@ -64,8 +64,8 @@
             $(".carousel .jCarouselLite").jCarouselLite({
                 btnNext: 	".carousel .right",
                 btnPrev:	".carousel .left",
-                auto: 		2000,
-                speed:	 	1000
+                auto: 		5000,
+                speed:	 	2000
             });
         });
     </script>
