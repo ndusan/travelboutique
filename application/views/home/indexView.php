@@ -65,7 +65,7 @@
                 btnNext: 	".carousel .right",
                 btnPrev:	".carousel .left",
                 auto: 		5000,
-                speed:	 	2000
+                speed:	 	500
             });
         });
     </script>
