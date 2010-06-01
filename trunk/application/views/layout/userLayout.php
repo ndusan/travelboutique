@@ -26,7 +26,9 @@
 		?>
         <script type="text/javascript">
 			Cufon.replace('.mainNav a', { fontFamily: 'Georgia', hover:true });
-                        Cufon.replace('.banners .title a', { fontFamily: 'Georgia', hover:true });
+                        Cufon.replace('.banners .title', { fontFamily: 'Georgia', hover:true });
+                        Cufon.replace('h2', { fontFamily: 'Georgia', hover:true });
+                        Cufon.replace('label', { fontFamily: 'Georgia', hover:true });
         </script>
 		
     </head>
