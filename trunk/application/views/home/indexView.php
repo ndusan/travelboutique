@@ -16,7 +16,7 @@
                 <a href="#">individualna putovanja</a>|
                 <a class="active" href="#">aranžmani</a>|
                 <a href="#">avio karte</a>|
-                <a href="#">rent a car</a>|
+                <a href="#">rent a car</a>
             </div>
         </div>
 
