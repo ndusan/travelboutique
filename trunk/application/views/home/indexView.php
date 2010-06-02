@@ -124,6 +124,9 @@
         </div>
 
     </div>
+    <div class="links">
+        links below
+    </div>
     <script type="text/javascript" charset="utf-8">
         $(document).ready(function(){
             $(".carousel .jCarouselLite").jCarouselLite({
