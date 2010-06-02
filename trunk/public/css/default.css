@@ -62,7 +62,7 @@ button:hover {background-color:#EEE; cursor:pointer;}
 .banners .title span {padding:8px 0 0; float:right; font-size:14px; color:#999;}
 .banners .title:hover span {color:#FFF;}
 .banner ul {overflow:hidden;}
-.banners li {float:left; width:300px; height:300px; margin:0 15px 0 0;}
+.banners li {float:left; width:300px; height:290px; margin:0 15px 0 0;}
 .jCarouselLite {width:930px !important;}
 
 .content {padding:20px 25px; overflow:hidden;}
