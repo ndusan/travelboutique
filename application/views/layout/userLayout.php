@@ -29,6 +29,7 @@
                         Cufon.replace('.banners .title', { fontFamily: 'Georgia', hover:true });
                         Cufon.replace('h2', { fontFamily: 'Georgia', hover:true });
                         Cufon.replace('label', { fontFamily: 'Georgia', hover:true });
+                        Cufon.replace('h3', { fontFamily: 'Georgia', hover:true });
         </script>
 		
     </head>
