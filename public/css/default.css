@@ -40,7 +40,7 @@ button:hover {background-color:#EEE; cursor:pointer;}
 .letter {position:absolute; top:-15px; right:5px; width:60px; height:40px; background:transparent url(../images/letter_bg.png) scroll no-repeat top center;}
 .top {height:15px; background:transparent url(../images/header_bg.png) scroll no-repeat top center;}
 .main {background:transparent url(../images/main_bg.png) scroll repeat-y top center;}
-.bottom {height:15px; background:transparent url(../images/footer_bg.png) scroll no-repeat top center;}
+.bottom {height:15px; margin:0 0 50px; background:transparent url(../images/footer_bg.png) scroll no-repeat top center;}
 
 /* NAVIGATION */
 .topNav {color:#FFF; position:absolute; top:5px; right:100px;}
