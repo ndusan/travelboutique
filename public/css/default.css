@@ -47,7 +47,7 @@ button:hover {background-color:#EEE; cursor:pointer;}
 .mainNav a {color:#FFF; text-decoration:none; padding: 0 5px; text-transform:uppercase;}
 .mainNav a:hover {color:#000;}
 .mainNav .active,.mainNav .active:hover {color:#000;}
-.arrow {z-index:3; top:100px; position:absolute; width:50px; height:64px; display:block; background-image: url(../images/arrows.png);}
+.arrow {outline:none; z-index:3; top:100px; position:absolute; width:50px; height:64px; display:block; background-image: url(../images/arrows.png);}
 .right {right:5px; background-position:top right;}
 .right:hover {background-position:-100px 0;}
 .left {left:-15px; background-position:top left;}
