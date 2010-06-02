@@ -44,7 +44,7 @@ button:hover {background-color:#EEE; cursor:pointer;}
 
 /* NAVIGATION */
 .mainNav {color:#FFF; position:absolute; margin:100px 0 0; right:0; top:0; font-size:13px; font-weight:bold; letter-spacing:-1px;}
-.mainNav a {color:#FFF; text-decoration:none; padding: 0 5px; text-transform:uppercase;}
+.mainNav a {color:#FFF; text-decoration:none; padding: 0 5px; text-transform:uppercase; outline:none;}
 .mainNav a:hover {color:#000;}
 .mainNav .active,.mainNav .active:hover {color:#000;}
 .arrow {outline:none; z-index:3; top:100px; position:absolute; width:50px; height:64px; display:block; background-image: url(../images/arrows.png);}
@@ -77,6 +77,6 @@ button:hover {background-color:#EEE; cursor:pointer;}
 
 .box {padding:10px; float:left; background-color:#FFF; border:solid 1px #ccc; width:195px; height:140px; margin:9px;}
 .box img {margin:0 0 5px;}
-.box a { text-decoration:none; color:#333;}
+.box a { text-decoration:none; outline:none; color:#333;}
 
 
