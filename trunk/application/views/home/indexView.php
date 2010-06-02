@@ -122,10 +122,9 @@
             </ul>
             <div class="clear"></div>
         </div>
-
-    </div>
-    <div class="links">
-        links below
+        <div class="links">
+            links below
+        </div>
     </div>
     <script type="text/javascript" charset="utf-8">
         $(document).ready(function(){
