@@ -17,8 +17,6 @@
                 <a class="active" href="#">aranžmani</a>|
                 <a href="#">avio karte</a>|
                 <a href="#">rent a car</a>|
-                <a href="#">o nama</a>|
-                <a href="#">kontakt</a>
             </div>
         </div>
 
