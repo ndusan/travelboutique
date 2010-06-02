@@ -76,25 +76,52 @@
                 </form>
             </div>
         </div>
-            <div class="boxHolder">
-                <div class="tabs">
-                    <ul>
-                        <li><a href="#" class="active">u ponudi</a></li>
-                        <li><a href="#">vremenska prognoza</a></li>
-                        <li><a href="#">kursna lista</a></li>
-                    </ul>
-                </div>
-            
-        <ul>
-            <li class="box"></li>
-            <li class="box"></li>
-            <li class="box"></li>
-            <li class="box"></li>
-            <li class="box"></li>
-        </ul>
-                <div class="clear"></div>
+        <div class="boxHolder">
+            <div class="tabs">
+                <ul>
+                    <li><a href="#" class="active">u ponudi</a></li>
+                    <li><a href="#">vremenska prognoza</a></li>
+                    <li><a href="#">kursna lista</a></li>
+                </ul>
             </div>
-        
+
+            <ul>
+                <li class="box">
+                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
+                    <h3><a href="#">Couple at the beach holding hands</a></h3>
+                </li>
+                <li class="box">
+                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
+                    <h3><a href="#">Couple at the beach holding hands</a></h3>
+                </li>
+                <li class="box">
+                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
+                    <h3><a href="#">Couple at the beach holding hands</a></h3>
+                </li>
+                <li class="box">
+                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
+                    <h3><a href="#">Couple at the beach holding hands</a></h3>
+                </li>
+                <li class="box">
+                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
+                    <h3><a href="#">Couple at the beach holding hands</a></h3>
+                </li>
+                <li class="box">
+                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
+                    <h3><a href="#">Couple at the beach holding hands</a></h3>
+                </li>
+                <li class="box">
+                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
+                    <h3><a href="#">Couple at the beach holding hands</a></h3>
+                </li>
+                <li class="box">
+                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
+                    <h3><a href="#">Couple at the beach holding hands</a></h3>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+
     </div>
     <script type="text/javascript" charset="utf-8">
         $(document).ready(function(){
