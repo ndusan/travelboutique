@@ -78,5 +78,6 @@ button:hover {background-color:#EEE; cursor:pointer;}
 .box {padding:10px; float:left; background-color:#FFF; border:solid 1px #ccc; width:195px; height:140px; margin:9px;}
 .box img {margin:0 0 5px;}
 .box a { text-decoration:none; outline:none; color:#333;}
+.box a:hover {color:#990099;}
 
 
