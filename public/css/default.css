@@ -14,7 +14,7 @@ abbr,acronym { border:0;}
 
 
 /* GENERAL */
-body {font-size:13px; color:#333; font-family:arial,sans-serif; background:#431050 url("../images/body_bg.jpg") fixed no-repeat top center;}
+body {font-size:13px; color:#333; font-family:georgia,sans-serif; background:#431050 url("../images/body_bg.jpg") fixed no-repeat top center;}
 a {color:#990099;}
 a:hover {text-decoration:none;}
 p {padding:10px 0;}
@@ -76,7 +76,7 @@ button:hover {background-color:#EEE; cursor:pointer;}
 .callUs h3 {padding:10px 0 0;}
 
 .boxHolder {position:relative; border-top:solid 1px #CCC; border-bottom:solid 1px #CCC; margin:35px 15px 0; padding:9px 0;}
-.tabs {font-family:georgia; position:absolute; top:-31px; left:0;}
+.tabs {position:absolute; top:-31px; left:0;}
 .tabs li {float:left;}
 .tabs a {color:#666; padding:10px 20px 4px; text-decoration:none;  display:block; }
 .tabs a:hover {color:#000;}
