@@ -66,21 +66,20 @@
                     <br/><br/>
                     U skladu sa Vasim zeljama Vas "Butik putovanja" Vam pruza i kompletnu pripremu za samu destinaciju.</p>
             </div>
-            <div class="newsletter">
-                <div class="letter"></div>
-                <h2>Newsletter</h2>
-                <p>Unesite svoju e-mail adresu da biste bla bla</p>
-                <form>
-                    <label>Vasa e-mail adresa</label>
-                    <input class="inputSmall" type="text" name="" value="" />
-                    <button type="submit">Potvrdi</button>
-                </form>
+            <div class="callUs">
+                <div class="wings"></div>
+                <div class="phone"></div>
+                <h2>Pozovite nas</h2>
+                <h3>011 / 435 67 89</h3>
+                <h3>063 / 321 59 87</h3>
             </div>
         </div>
         <div class="boxHolder">
             <div class="tabs">
                 <ul>
                     <li><a href="#" class="active">u ponudi</a></li>
+                    <li><a href="#">putno osiguranje</a></li>
+                    <li><a href="#">poklon vaucer</a></li>
                     <li><a href="#">vremenska prognoza</a></li>
                     <li><a href="#">kursna lista</a></li>
                 </ul>
@@ -107,7 +106,16 @@
             <div class="clear"></div>
         </div>
         <div class="links">
-            links below
+            <div class="newsletter">
+                <div class="letter"></div>
+                <h2>Newsletter</h2>
+                <p>Unesite svoju e-mail adresu da biste bla bla</p>
+                <form>
+                    <label>Vasa e-mail adresa</label>
+                    <input class="inputSmall" type="text" name="" value="" />
+                    <button type="submit">Potvrdi</button>
+                </form>
+            </div>
         </div>
     </div>
     <script type="text/javascript" charset="utf-8">
