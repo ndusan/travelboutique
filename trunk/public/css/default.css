@@ -75,7 +75,7 @@ button:hover {background-color:#EEE; cursor:pointer;}
 .callUs {margin:45px 0 0; float:left; width:230px; position:relative;}
 .callUs h3 {padding:10px 0 0;}
 
-.boxHolder {position:relative; border-top:solid 1px #CCC; border-bottom:solid 1px #CCC; margin:35px 15px 0; padding:9px 0;}
+.boxHolder {position:relative; border-top:solid 1px #CCC; border-bottom:solid 1px #CCC; margin:45px 15px 0; padding:9px 0;}
 .tabs {position:absolute; top:-31px; left:0;}
 .tabs li {float:left;}
 .tabs a {color:#666; line-height:30px; padding:0 15px; text-decoration:none;  display:block; }
