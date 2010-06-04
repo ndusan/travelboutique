@@ -103,22 +103,6 @@
                     <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
                     <h3><a href="#">Couple at the beach holding hands</a></h3>
                 </li>
-                <li class="box">
-                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
-                    <h3><a href="#">Couple at the beach holding hands</a></h3>
-                </li>
-                <li class="box">
-                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
-                    <h3><a href="#">Couple at the beach holding hands</a></h3>
-                </li>
-                <li class="box">
-                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
-                    <h3><a href="#">Couple at the beach holding hands</a></h3>
-                </li>
-                <li class="box">
-                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
-                    <h3><a href="#">Couple at the beach holding hands</a></h3>
-                </li>
             </ul>
             <div class="clear"></div>
         </div>
