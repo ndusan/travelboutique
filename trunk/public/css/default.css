@@ -70,7 +70,7 @@ button:hover {background-color:#EEE; cursor:pointer;}
 
 .content {padding:20px 25px; overflow:hidden;}
 .links {overflow:hidden; padding:20px 25px;}
-.about {float:left; width:440px; padding:0 250px 0 0; overflow:hidden; background:transparent url(../images/about_bg.png)scroll no-repeat 510px center;}
+.about {float:left; width:455px; padding:0 235px 0 0; overflow:hidden; background:transparent url(../images/about_bg.png)scroll no-repeat 510px center;}
 .newsletter {float:left; width:230px; position:relative;}
 .callUs {margin:45px 0 0; float:left; width:230px; position:relative;}
 .callUs h3 {padding:10px 0 0;}
