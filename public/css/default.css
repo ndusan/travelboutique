@@ -92,6 +92,8 @@ button:hover {background-color:#EEE; cursor:pointer;}
 .sidebar {width:230px; float:right;}
 .sidebar h4 {border-bottom:solid 1px #CCC;}
 .mainContent{float:left; width:670px;}
+.mainPromo{float:left; width:670px;}
+.onePromoted {}
 
 .boxHolder {position:relative; border-top:solid 1px #CCC; border-bottom:solid 1px #CCC; margin:45px 15px 0; padding:9px 0;}
 .tabs {position:absolute; top:-31px; left:0;}
