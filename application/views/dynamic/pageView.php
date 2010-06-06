@@ -37,7 +37,7 @@ switch($template){
     <div class="main">
         <div style="clear: both;"></div>
         <div class="content">
-            
+          <?php @include_once($view); ?>
             <div class="sidebar">
                 <div class="subNav">
                     <h4>Subnavigation</h4>
@@ -108,6 +108,6 @@ switch($template){
     <div class="bottom"></div>
 </div>
 
-<?php @include_once($view); ?>
+
 
 
