@@ -11,9 +11,25 @@ $routes = array(
 					  	'action' 		=> 'index', 
 					  	'layout' 		=> 'admin'
 				),
+				//Static pages
+				array(	'url' 			=> '/^rent_a_car\/?$/', 
+						'controller' 	=> 'rent_a_car', 
+					  	'action' 		=> 'index', 
+					  	'layout' 		=> 'user'
+				),
+				array(	'url' 			=> '/^admin\/avio_karte\/?$/', 
+						'controller' 	=> 'avio_karte', 
+					  	'action' 		=> 'index', 
+					  	'layout' 		=> 'user'
+				),
 				array(	'url' 			=> '/^admin\/home\/?$/', 
 						'controller' 	=> 'admin', 
 					  	'action' 		=> 'index', 
 					  	'layout' 		=> 'admin'
-				)
+				),
+				array(	'url' 			=> '/^page\/(?P<pageName>[[:alnum:][:punct:][:space:]]+)\/?$/', 
+						'controller' 	=> 'page', 
+					  	'action' 		=> 'index', 
+					  	'layout' 		=> 'admin'
+				),
 );
