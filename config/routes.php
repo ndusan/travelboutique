@@ -23,14 +23,9 @@ $routes = array(
 					  	'layout' 		=> 'user'
 				),
 				//Dynamic
-				array(	'url' 			=> '/^(?P<parentName>[0-9a-zA-Z\-\_]+)\/?$/', 
+				array(	'url' 			=> '/^(?P<parentName>[0-9a-zA-Z\-\_]+)\/?(?P<childName>[0-9a-zA-Z\-\_]+)\/?$/', 
 						'controller' 	=> 'dynamic', 
-					  	'action' 		=> 'parentPage', 
-					  	'layout' 		=> 'user'
-				),
-				array(	'url' 			=> '/^(?P<parentName>[0-9a-zA-Z\-\_]+)\/(?P<childName>[0-9a-zA-Z\-\_]+)\/?$/', 
-						'controller' 	=> 'dynamic', 
-					  	'action' 		=> 'childPage', 
+					  	'action' 		=> 'page', 
 					  	'layout' 		=> 'user'
 				),
 				array(	'url' 			=> '/^admin\/home\/?$/', 

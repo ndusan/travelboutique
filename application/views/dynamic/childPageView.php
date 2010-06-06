@@ -1,1 +1,0 @@
-#dinamicka sa detetom
