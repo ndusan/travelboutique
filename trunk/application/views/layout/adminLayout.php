@@ -12,7 +12,7 @@
 		
 		
 		<!-- Default js file -->
-		<?php echo $html->js('default-login'); ?>
+		<?php echo $html->js('default-admin'); ?>
 
 		<?php 
 		//Custom calls for css

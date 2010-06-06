@@ -17,6 +17,27 @@ $routes = array(
 					  	'action' 		=> 'submit', 
 					  	'layout' 		=> 'empty'
 				),
+				//Admin panel
+				array(	'url' 			=> '/^admin\/home\/?$/', 
+						'controller' 	=> 'admin', 
+					  	'action' 		=> 'index', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/logout\/?$/', 
+						'controller' 	=> 'login', 
+					  	'action' 		=> 'logout', 
+					  	'layout' 		=> 'empty'
+				),
+				array(	'url' 			=> '/^admin\/users\/add\/?$/', 
+						'controller' 	=> 'admin_users', 
+					  	'action' 		=> 'add', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/users\/existing\/?$/', 
+						'controller' 	=> 'admin_users', 
+					  	'action' 		=> 'existing', 
+					  	'layout' 		=> 'admin'
+				),
 				//Static pages
 				array(	'url' 			=> '/^rent_a_car\/?$/', 
 						'controller' 	=> 'rent_a_car', 
@@ -34,10 +55,6 @@ $routes = array(
 					  	'action' 		=> 'page', 
 					  	'layout' 		=> 'user'
 				),
-				array(	'url' 			=> '/^admin\/home\/?$/', 
-						'controller' 	=> 'admin', 
-					  	'action' 		=> 'index', 
-					  	'layout' 		=> 'admin'
-				),
+				
 				
 );

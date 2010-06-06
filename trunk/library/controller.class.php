@@ -69,16 +69,8 @@ class Controller{
 	 * @return void
 	 */
 	function redirect($url, $msg){
-		
-		switch($msg){
-			case 'error': 	$url = "Location: ".BASE_PATH.(empty($url) ? '' : $url.DS).'?q=error';
-							break;
-			case 'success':	$url = "Location: ".BASE_PATH.(empty($url) ? '' : $url.DS).'?q=success';
-							break;
-			case 'email':	$url = "Location: ".BASE_PATH.(empty($url) ? '' : $url.DS).'?q=email';
-							break;
-			default:		$url = "Location: ".BASE_PATH.(empty($url) ? '' : $url.DS);
-		}
+
+		$url = "Location: ".BASE_PATH.(empty($url) ? '' : $url.DS).(isset($msg) && !empty($msg) ? '?q='.$msg : "");
 		header($url);
 		exit;
 	}
@@ -178,9 +170,9 @@ class Controller{
 	 * @return void
 	 */
 	function userInfoAndSession(){
-		if(!isset($_SESSION['ws-user'])) $this->redirect('', '');
+		if(!isset($_SESSION['tb'])) $this->redirect('admin', '');
 		//Check for user info
-		return $this->db->getUserInfo($_SESSION['ws-user']);
+		return $this->db->getUserInfo($_SESSION['tb']);
 	}
 	
 }
