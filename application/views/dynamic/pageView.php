@@ -10,4 +10,8 @@ switch($template){
 				$view = "tmp2View.php";
 				break;
 }
-@include_once($view);
+?>
+
+Ovde mozes da dodas svoj html koji bi bio zajednicki za ove template-ove
+
+<?php @include_once($view); ?>
