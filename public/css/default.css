@@ -14,18 +14,19 @@ abbr,acronym { border:0;}
 
 
 /* GENERAL */
-body {font-size:13px; color:#333; font-family:georgia,sans-serif; background:#431050 url("../images/body_bg.jpg") fixed no-repeat top center;}
+body {font-size:13px; color:#444; font-family:georgia,sans-serif; background:#431050 url("../images/body_bg.jpg") fixed no-repeat top center;}
 a {color:#990099;}
 a:hover {text-decoration:none;}
-p {padding:10px 0;}
+p {padding:5px 0;}
 .clear {clear:both; line-height:0;}
 .fl {float:left;}
 .fr {float:right;}
 label {font-size:14px; color:#990099;}
-h1 {font-size:28px; line-height:40px; font-weight:bold; letter-spacing:-1px;}
-h2 {font-size:24px; font-weight:normal; color:#990099; border-bottom:solid 1px #CCC;}
-h3 {font-size:18px; font-weight:normal;}
-h4 {font-size:14px; font-weight:normal;}
+h1 {font-size:24px; color:#990099; font-weight:normal; padding:5px 0; margin:5px 0; letter-spacing:-1px;}
+h2 {font-size:18px; font-weight:normal;}
+h3 {font-size:14px; color:#333; font-weight:normal; padding:5px 0; margin:5px 0;}
+h4 { font-size:14px; color:#990099; font-weight:normal; padding:5px 0; margin:5px 0;}
+
 input, textarea, select {background-color:#FFF; margin:3px 0; font-size:12px; font-family:Arial,Sans-serif; padding:5px; border:solid 1px #CCC;}
 button {background-color:#FFF; margin:2px 0; font-size:12px; font-family:Arial,Sans-serif; padding:4px 10px; border:solid 1px #e886e4; -moz-border-radius:3px;}
 button:hover {background-color:#EEE; cursor:pointer;}
@@ -38,12 +39,19 @@ button:hover {background-color:#EEE; cursor:pointer;}
 .logoHolder {position:absolute; top:15px; left:0;}
 .lang {padding:5px 2px 0 0; text-align:center; position:absolute; top:0; right:20px; width:62px; height:35px; background:transparent url(../images/lang_bg.png) scroll no-repeat bottom center;}
 .lang .active, .lang .active:hover {text-decoration:none; font-weight:bold; color:#000;}
-.letter {position:absolute; top:-15px; right:5px; width:60px; height:40px; background:transparent url(../images/letter_bg.png) scroll no-repeat top center;}
+.letter {position:absolute; top:0; right:5px; width:60px; height:40px; background:transparent url(../images/letter_bg.png) scroll no-repeat top center;}
 .phone {position:absolute; top:-5px; right:0; width:77px; height:74px; background:transparent url(../images/phone_bg.png) scroll no-repeat top center;}
 .wings {position:absolute; top:-55px; right:0; width:230px; height:40px; background:transparent url(../images/wings.png) scroll no-repeat top center;}
 .top {height:15px; background:transparent url(../images/header_bg.png) scroll no-repeat top center;}
 .main {padding:5px 0 0; background:transparent url(../images/main_bg.png) scroll repeat-y top center;}
 .bottom {height:15px; margin:0 0 50px; background:transparent url(../images/footer_bg.png) scroll no-repeat top center;}
+.additional {margin:30px 0 0;}
+.contactUs {margin:30px 0 0;}
+.partners {margin:0 20px; text-align:center; padding:20px 0;}
+
+/* VISUALS */
+
+.borBot {border-bottom:solid 1px #CCC;}
 
 /* NAVIGATION */
 .topNav {color:#FFF; position:absolute; top:5px; right:100px;}
@@ -52,9 +60,10 @@ button:hover {background-color:#EEE; cursor:pointer;}
 .mainNav a {color:#FFF; text-decoration:none; padding: 0 5px; text-transform:uppercase; outline:none;}
 .mainNav a:hover {color:#000;}
 .mainNav .active,.mainNav .active:hover {color:#000;}
-.subNav {overflow:hidden;}
-.subNav li {padding:3px 0;}
+.subNav {overflow:hidden; margin:10px 0 0;}
+.subNav li {border-bottom:dotted 1px #CCC;}
 .subNav li a {color:#333; text-decoration:none;}
+.subNav li a:hover {color:#990099;}
 
 
 .arrow {outline:none; z-index:3; top:100px; position:absolute; width:50px; height:64px; display:block; background-image: url(../images/arrows.png);}
@@ -79,9 +88,10 @@ button:hover {background-color:#EEE; cursor:pointer;}
 .about {float:left; width:455px; padding:0 235px 0 0; overflow:hidden; background:transparent url(../images/about_bg.png)scroll no-repeat 510px center;}
 .newsletter {float:left; width:230px; position:relative;}
 .callUs {margin:45px 0 0; float:left; width:230px; position:relative;}
-.callUs h3, .sidebar h3  {padding:10px 0 0;}
+.sidebar h3  {padding:5px 0;}
 .sidebar {width:230px; float:right;}
-.mainContent{float:left;}
+.sidebar h4 {border-bottom:solid 1px #CCC;}
+.mainContent{float:left; width:670px;}
 
 .boxHolder {position:relative; border-top:solid 1px #CCC; border-bottom:solid 1px #CCC; margin:45px 15px 0; padding:9px 0;}
 .tabs {position:absolute; top:-31px; left:0;}
