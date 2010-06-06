@@ -17,7 +17,7 @@ $routes = array(
 					  	'action' 		=> 'index', 
 					  	'layout' 		=> 'user'
 				),
-				array(	'url' 			=> '/^admin\/avio_karte\/?$/', 
+				array(	'url' 			=> '/^avio_karte\/?$/', 
 						'controller' 	=> 'avio_karte', 
 					  	'action' 		=> 'index', 
 					  	'layout' 		=> 'user'
