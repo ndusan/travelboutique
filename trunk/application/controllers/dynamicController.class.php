@@ -3,13 +3,11 @@
 class DynamicController extends Controller{
 	
 	
-	public function parentPage($params){
+	public function page($params){
 		
 		print_r($params);
+		
+		parent::set('template', 'tmp1');
 	}
 	
-	public function childPage($params){
-		
-		print_r($params);
-	}
 }
