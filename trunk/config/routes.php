@@ -6,10 +6,16 @@ $routes = array(
 					  	'action' 		=> 'index', 
 					  	'layout' 		=> 'user'
 				),
+				//Login page
 				array(	'url' 			=> '/^admin\/?$/', 
 						'controller' 	=> 'login', 
 					  	'action' 		=> 'index', 
 					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/submit\/?$/', 
+						'controller' 	=> 'login', 
+					  	'action' 		=> 'submit', 
+					  	'layout' 		=> 'empty'
 				),
 				//Static pages
 				array(	'url' 			=> '/^rent_a_car\/?$/', 

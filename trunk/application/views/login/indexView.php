@@ -13,7 +13,7 @@
 	<div class="info" <?php if(isset($setWarning)):?> style="display: none;" <?php endif;?>>Enter email and password to login</div>
 	<br/>
 	<div style="margin: 30px 0px 0px 300px;">
-	<form method="post" action="<?php echo BASE_PATH.'login'.DS.'submit'.DS; ?>" name="form-login">
+	<form method="post" action="<?php echo BASE_PATH.'admin'.DS.'submit'.DS; ?>" name="form-login">
 		<table>
 			<tr>
 				<td>Email:</td>
