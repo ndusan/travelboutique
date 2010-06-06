@@ -42,12 +42,12 @@ switch($template){
                 <div class="subNav">
                     <h4>Subnavigation</h4>
                     <ul>
-                        <li><h3><a href="#">Subnavigation link</a></h3></li>
-                        <li><h3><a href="#">Subnavigation link</a></h3></li>
-                        <li><h3><a href="#">Subnavigation link</a></h3></li>
-                        <li><h3><a href="#">Subnavigation link</a></h3></li>
-                        <li><h3><a href="#">Subnavigation link</a></h3></li>
-                        <li><h3><a href="#">Subnavigation link</a></h3></li>
+                        <li><h3><a href="#">Sub name</a></h3></li>
+                        <li><h3><a href="#">Another link</a></h3></li>
+                        <li><h3><a href="#">Subnav </a></h3></li>
+                        <li><h3><a href="#">Subnavigation</a></h3></li>
+                        <li><h3><a href="#">FAQ</a></h3></li>
+                        <li><h3><a href="#">Weather services</a></h3></li>
                     </ul>
                 </div>
                 <div class="additional">
