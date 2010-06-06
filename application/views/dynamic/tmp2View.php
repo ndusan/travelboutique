@@ -1,5 +1,5 @@
 <div class="mainPromo">
-    <h1 class="borBot">asdasdadasd</h1>
+    <h1 class="borBot">Aktuelno</h1>
     <div class="onePromoted borBot">
         <img alt="travel boutique" title="homepage" src="<?php echo IMAGE_PATH; ?>3.jpg" />
         <img alt="travel boutique" title="homepage" src="<?php echo IMAGE_PATH; ?>3.jpg" />
