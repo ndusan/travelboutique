@@ -22,14 +22,21 @@ $routes = array(
 					  	'action' 		=> 'index', 
 					  	'layout' 		=> 'user'
 				),
+				//Dynamic
+				array(	'url' 			=> '/^(?P<parentName>[0-9a-zA-Z\-\_]+)\/?$/', 
+						'controller' 	=> 'dynamic', 
+					  	'action' 		=> 'parentPage', 
+					  	'layout' 		=> 'user'
+				),
+				array(	'url' 			=> '/^(?P<parentName>[0-9a-zA-Z\-\_]+)\/(?P<childName>[0-9a-zA-Z\-\_]+)\/?$/', 
+						'controller' 	=> 'dynamic', 
+					  	'action' 		=> 'childPage', 
+					  	'layout' 		=> 'user'
+				),
 				array(	'url' 			=> '/^admin\/home\/?$/', 
 						'controller' 	=> 'admin', 
 					  	'action' 		=> 'index', 
 					  	'layout' 		=> 'admin'
 				),
-				array(	'url' 			=> '/^page\/(?P<pageName>[[:alnum:][:punct:][:space:]]+)\/?$/', 
-						'controller' 	=> 'page', 
-					  	'action' 		=> 'index', 
-					  	'layout' 		=> 'admin'
-				),
+				
 );
