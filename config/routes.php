@@ -28,14 +28,46 @@ $routes = array(
 					  	'action' 		=> 'logout', 
 					  	'layout' 		=> 'empty'
 				),
+				//Users
 				array(	'url' 			=> '/^admin\/users\/add\/?$/', 
 						'controller' 	=> 'admin_users', 
 					  	'action' 		=> 'add', 
 					  	'layout' 		=> 'admin'
 				),
-				array(	'url' 			=> '/^admin\/users\/existing\/?$/', 
+				array(	'url' 			=> '/^admin\/users\/?$/', 
 						'controller' 	=> 'admin_users', 
-					  	'action' 		=> 'existing', 
+					  	'action' 		=> 'index', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/users\/submit\/?$/', 
+						'controller' 	=> 'admin_users', 
+					  	'action' 		=> 'submit', 
+					  	'layout' 		=> 'empty'
+				),
+				array(	'url' 			=> '/^admin\/users\/(?P<id>\d+)\/edit\/?$/', 
+						'controller' 	=> 'admin_users', 
+					  	'action' 		=> 'edit', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/users\/(?P<id>\d+)\/delete\/?$/', 
+						'controller' 	=> 'admin_users', 
+					  	'action' 		=> 'delete', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/users\/(?P<id>\d+)\/submit\/?$/', 
+						'controller' 	=> 'admin_users', 
+					  	'action' 		=> 'submit', 
+					  	'layout' 		=> 'empty'
+				),
+				//Pages
+				array(	'url' 			=> '/^admin\/pages\/?$/', 
+						'controller' 	=> 'admin_pages', 
+					  	'action' 		=> 'index', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/pages\/add\/?$/', 
+						'controller' 	=> 'admin_pages', 
+					  	'action' 		=> 'add', 
 					  	'layout' 		=> 'admin'
 				),
 				//Static pages

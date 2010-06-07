@@ -14,9 +14,9 @@
 
 
 		<div class="post">
-			<h2 class="title">users</h2>
+			<h2 class="title">users / add new</h2>
 		    <div class="info">Fill in all fields</div>
-			<form id="form" name="form" action="<?php echo BASE_PATH.'admin'.DS.'users'.DS.'submit'.DS;?>" method="post">
+			<form id="form" name="form" action="<?php echo BASE_PATH.'admin'.DS.'users'.DS.$user['id'].DS.'submit'.DS;?>" method="post">
 				<?php include('_form.php'); ?>
 			</form>
 		</div>

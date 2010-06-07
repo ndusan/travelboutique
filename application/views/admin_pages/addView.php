@@ -13,6 +13,14 @@
   	<div id="content">
 
 
+		<div class="post">
+			<h2 class="title">pages / add new</h2>
+		    <div class="info">Fill in all fields</div>
+			<form id="form" name="form" action="<?php echo BASE_PATH.'admin'.DS.'users'.DS.'submit'.DS;?>" method="post">
+				<?php include('_form.php'); ?>
+			</form>
+		</div>
+
 	</div>
 	<!-- end content --> 	
 
@@ -23,7 +31,7 @@
         <h2><b>main menu</b></h2>
         <!-- <div class="info">Kliknite na naziv kategorije da biste uneli nove stavke.</div> -->
         <br/>
-        <?php include_once(VIEW_PATH.'admin/_menu.php'); ?>
+        <?php include_once(VIEW_PATH.'admin'.DS.'_menu.php'); ?>
       </li>
     </ul>
   </div>
@@ -38,3 +46,4 @@
   <p id="legal">(c) 2010 TravelButique.rs</p>
 </div>
 <!-- end footer -->
+

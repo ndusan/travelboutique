@@ -8,3 +8,10 @@ $(document).ready(function(){
 		$("#" + id).slideToggle();
 	});
 });
+
+
+function confirmDelete(who, where){
+	
+	if(confirm(who))
+		document.location.href = where;
+}
