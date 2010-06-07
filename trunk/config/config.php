@@ -9,6 +9,7 @@ define('IN_DEV', true);
 define('SUCCESS_MSG', 'Success');
 define('ERROR_MSG', 'Error');
 define('EMAIL_ERROR_MSG', 'Email already in use');
+define('DEFAULT_MSG', 'Enter all required fields');
 
 //DB params
 define('DB_HOST', 'localhost');

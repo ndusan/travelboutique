@@ -14,8 +14,9 @@
 
 		<div class="post">
 			<h2 class="title">pages / view existing</h2>
-		    <div class="info">For more actions click on links</div>
-		    <br/>
+		    <div class="warning" <?php if(!isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg($_GET['q']); ?></div>
+			<div class="info" <?php if(isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg('For more actions click on links'); ?></div>
+			<br/>
 		    <!-- Data -->
 		    <?php if(isset($pages) && !empty($pages)):?>
 		    <div class="entry">
