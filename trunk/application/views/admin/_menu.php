@@ -6,7 +6,7 @@
             		<a href="<?php echo BASE_PATH.'admin'.DS.'users'.DS.'add'.DS;?>">Add new</a>
             	</li>
                 <li style="border-bottom: none;">
-                	<a href="<?php echo BASE_PATH.'admin'.DS.'users'.DS.'existing'.DS;?>">View existing</a>
+                	<a href="<?php echo BASE_PATH.'admin'.DS.'users'.DS;?>">View existing</a>
                 </li>
         	</ul>
     </li>
@@ -17,7 +17,7 @@
        			<a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.'add'.DS;?>">Add page</a>
        		</li>
             <li style="border-bottom: none;">
-            	<a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.'view'.DS;?>">View pages</a>
+            	<a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS;?>">View pages</a>
             </li>
        	</ul>
    	</li>

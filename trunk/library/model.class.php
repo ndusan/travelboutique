@@ -71,4 +71,20 @@ class Model{
 	    }
 	    return $result_array;
 	}
+	
+	/**
+	 * Return output
+	 * @param String $string
+	 * @return array
+	 */
+	function query($string){
+		
+		$res = mysql_query($string);
+		if(mysql_num_rows($res) <= 0) return false;
+		
+		$output = array();
+		while($row = mysql_fetch_assoc($res)) $output[] = $row;
+		
+		return $output;
+	}
 }
