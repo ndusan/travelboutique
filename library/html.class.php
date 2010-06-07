@@ -57,9 +57,10 @@ class HTML{
 	 * @return String
 	 */
 	function msg($text){
-		if(!isset($text['q']) || empty($text['q'])) return false;
+		
+		if(!isset($text) || empty($text)) return false;
 		$txt = "";
-		switch($text['q']){
+		switch($text){
 			//Error
 			case 'error':
 						$txt = "<div class='j_msg_error'>".ERROR_MSG."</div>";
@@ -71,7 +72,9 @@ class HTML{
 			case 'email':
 						$txt = "<div class='j_msg_error'>".EMAIL_ERROR_MSG."</div>";
 						break;
-			default:	break;
+			default:	
+						$txt = "<div class='j_msg_error'>".$text."</div>";
+						break;
 		}
 		return $txt;
 	}

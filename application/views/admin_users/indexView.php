@@ -14,7 +14,9 @@
 
 		<div class="post">
 			<h2 class="title">users / view existing</h2>
-		    <div class="info">For more actions click on links</div>
+		    <div class="warning" <?php if(!isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg($_GET['q']); ?></div>
+			<div class="info" <?php if(isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg('For more actions click on links'); ?></div>
+			<br/>
 		    <br/>
 		    <!-- Data -->
 		    <?php if(isset($users) && !empty($users)):?>
