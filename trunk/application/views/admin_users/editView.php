@@ -14,10 +14,9 @@
 
 
 		<div class="post">
-			<h2 class="title">users / add new</h2>
+			<h2 class="title">users / edit</h2>
 		    <div class="warning" <?php if(!isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg($_GET['q']); ?></div>
 			<div class="info" <?php if(isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg(DEFAULT_MSG); ?></div>
-			<br/>
 			<form id="form" name="form" action="<?php echo BASE_PATH.'admin'.DS.'users'.DS.$user['id'].DS.'submit'.DS;?>" method="post">
 				<?php include('_form.php'); ?>
 			</form>
@@ -32,7 +31,6 @@
       <li>
         <h2><b>main menu</b></h2>
         <!-- <div class="info">Kliknite na naziv kategorije da biste uneli nove stavke.</div> -->
-        <br/>
         <?php include_once(VIEW_PATH.'admin'.DS.'_menu.php'); ?>
       </li>
     </ul>
