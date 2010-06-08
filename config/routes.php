@@ -70,6 +70,11 @@ $routes = array(
 					  	'action' 		=> 'add', 
 					  	'layout' 		=> 'admin'
 				),
+				array(	'url' 			=> '/^admin\/pages\/submit\/?$/', 
+						'controller' 	=> 'admin_pages', 
+					  	'action' 		=> 'submit', 
+					  	'layout' 		=> 'empty'
+				),
 				//Languages
 				array(	'url' 			=> '/^admin\/language\/?$/', 
 						'controller' 	=> 'admin_language', 

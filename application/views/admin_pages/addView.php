@@ -18,8 +18,46 @@
 		    <div class="warning" <?php if(!isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg($_GET['q']); ?></div>
 			<div class="info" <?php if(isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg(DEFAULT_MSG); ?></div>
 			<br/>
-			<form id="form" name="form" action="<?php echo BASE_PATH.'admin'.DS.'users'.DS.'submit'.DS;?>" method="post">
-				<?php include('_form.php'); ?>
+			<form id="form" name="form" action="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.'submit'.DS;?>" method="post">
+				<div class="entry">
+			    <br/>
+			    <?php if(isset($langs) && !empty($langs)):?>
+			    <table cellpadding="0" cellspacing="0">
+			        <?php foreach($langs as $lang):?>
+			        <tr>
+			            <td>Page Name: <img src="<?php echo IMAGE_PATH.$lang['name'].'.png'; ?>" /> </td>
+			            <td><input type="text" name="name[<?php echo $lang['name']; ?>" value=""/></td>
+			        </tr>
+			        <?php endforeach; ?>
+			        <tr>
+			            <td>Level: </td>
+			            <td>
+			            	<select name="level">
+			            		<?php foreach($levels as $level):?>
+			            		<option value="0">Parent</option>
+			            		<option value="<?php $level['id']; ?>">Child of <?php echo $level['name']; ?></option>
+			            		<?php endforeach; ?>
+			            	</select>
+			            </td>
+			        </tr>
+			        <tr>
+			            <td>Template: </td>
+			            <td>
+			            	<input type="radio" name="template" value="tmp1" checked="checked"/>
+			            	<label>tmp1</label>
+			            	<br/>
+			            	<input type="radio" name="template" value="tmp1"/>
+			            	<label>tmp2</label>
+			            </td>
+			        </tr>
+			    </table>
+			    <br/>
+			    <button type="submit">
+			        Create page
+			    </button>
+			    <?php endif; ?>
+			</div>
+
 			</form>
 		</div>
 
