@@ -70,6 +70,17 @@ $routes = array(
 					  	'action' 		=> 'add', 
 					  	'layout' 		=> 'admin'
 				),
+				//Languages
+				array(	'url' 			=> '/^admin\/language\/?$/', 
+						'controller' 	=> 'admin_language', 
+					  	'action' 		=> 'index', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/language\/(?P<id>\d+)\/edit\/(?P<active>\d+)\/?$/', 
+						'controller' 	=> 'admin_language', 
+					  	'action' 		=> 'edit', 
+					  	'layout' 		=> 'admin'
+				),
 				//Static pages
 				array(	'url' 			=> '/^rent_a_car\/?$/', 
 						'controller' 	=> 'rent_a_car', 

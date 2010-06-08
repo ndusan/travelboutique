@@ -1,29 +1,38 @@
 <div class="entry">
     <br/>
+    <?php if(isset($langs) && !empty($langs)):?>
     <table cellpadding="0" cellspacing="0">
+        <?php foreach($langs as $lang):?>
         <tr>
-            <td class="td_title">Name: </td>
-            <td><input type="text" name="firstname" id="firstname" value="<?php echo @$user['firstname'];?>"/></td>
-            <td class="td_warning" id="r-firstname" style="display: none;">Required field</td>
+            <td>Page Name: <img src="<?php echo IMAGE_PATH.$lang['name'].'.png'; ?>" /> </td>
+            <td><input type="text" name="name[<?php echo $lang['name']; ?>" value=""/></td>
+        </tr>
+        <?php endforeach; ?>
+        <tr>
+            <td>Level: </td>
+            <td>
+            	<select name="level">
+            		<?php foreach($levels as $level):?>
+            		<option value="0">Parent</option>
+            		<option value="<?php $level['id']; ?>">Child of <?php echo $level['name']; ?></option>
+            		<?php endforeach; ?>
+            	</select>
+            </td>
         </tr>
         <tr>
-            <td class="td_title">Surname: </td>
-            <td><input type="text" name="lastname" id="lastname" value="<?php echo @$user['lastname'];?>"/></td>
-            <td class="td_warning" id="r-lastname" style="display: none;">Required field</td>
-        </tr>
-        <tr>
-            <td class="td_title">Email: </td>
-            <td><input type="text" name="email" id="email" value="<?php echo @$user['email'];?>" <?php echo (isset($user['id']) ? "disabled='disabled'": "");?>/></td>
-            <td class="td_warning" id="r-email" style="display: <?php echo (isset($emailInUse) ? '' : 'none');?>;" ><?php echo (isset($emailInUse) ? 'Email already in use' : 'Required field');?></td>
-        </tr>
-        <tr>
-            <td class="td_title">Password (min 5 char.): </td>
-            <td><input type="text" name="password" id="password" value="<?php echo @$user['passwd'];?>"/></td>
-            <td class="td_warning" id="r-password" style="display: none;">Required field</td>
+            <td>Template: </td>
+            <td>
+            	<input type="radio" name="template" value="tmp1" checked="checked"/>
+            	<label>tmp1</label>
+            	<br/>
+            	<input type="radio" name="template" value="tmp1"/>
+            	<label>tmp2</label>
+            </td>
         </tr>
     </table>
     <br/>
     <button type="submit">
-        <?php echo (isset($user['id']) ? 'Edit' : 'Add');?>
+        Create page
     </button>
+    <?php endif; ?>
 </div>
