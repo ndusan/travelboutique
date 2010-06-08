@@ -1,8 +1,8 @@
 body {
     margin-top: 20px;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 9pt;
+    font-family: Georgia;
+    font-size: 13px;
     color: #333;
     background-color: #431050;
 }
@@ -32,7 +32,6 @@ body {
 h1, h2, h3 {
     margin: 0;
     text-transform: lowercase;
-    font-family: Georgia, "Times New Roman", Times, serif;
     font-weight: normal;
     color: #FFFFFF;
 }
@@ -171,7 +170,7 @@ input, textarea, select {
     margin-bottom: 10px;
     padding-bottom: 5px;
     border-bottom: 1px dashed #D1D1D1;
-    color: #330033;
+    color: #333;
     font-weight: bold;
 }
 
@@ -236,6 +235,7 @@ input, textarea, select {
     padding: 3px 0 3px 15px;
     color: #666666;
     display: block;
+    text-decoration:noneč
 
 }
 #sidebar li li a:hover {
@@ -251,15 +251,10 @@ input, textarea, select {
     padding-bottom: 5px;
     font-size: 1.5em;
     font-weight: normal;
-    color: #330033;
+    color: #333;
     border-bottom: 1px dashed #d2d2d2;
     margin-bottom: 10px;
 }
-
-#sidebar strong, #sidebar b {
-    color: #330033;
-}
-
 /* Search */
 
 #search {
@@ -493,8 +488,7 @@ html>body #footer {
 .steps_title{
     padding: 10px;
     font-weight: bold;
-    background-color: #B1B1B1;
-    color: #369;
+    color: #330033;
 }
 .steps_input{
     width: 400px;
