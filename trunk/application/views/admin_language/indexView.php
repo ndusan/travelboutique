@@ -13,32 +13,25 @@
   	<div id="content">
 
 		<div class="post">
-			<h2 class="title">pages / view existing</h2>
-		    <div class="warning" <?php if(!isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg($_GET['q']); ?></div>
-			<div class="info" <?php if(isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg('For more actions click on links'); ?></div>
+			<h2 class="title">language / view existing</h2>
+		    <div class="info" <?php if(!isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg($_GET['q']); ?></div>
+			<div class="info" <?php if(isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg('Set language visible'); ?></div>
 			<br/>
+		    <br/>
 		    <!-- Data -->
-		    <?php if(isset($pages) && !empty($pages)):?>
+		    <?php if(isset($langs) && !empty($langs)):?>
 		    <div class="entry">
 		    <table cellspacing="0" cellspacing="0">
 		    	<tr class="steps_title">
 		    		<td>Name</td>
-		    		<td>Type</td>
-		    		<td>Level</td>
 		    		<td>Actions</td>
 		    	</tr>
 		    	
-		    	<?php foreach($pages as $page):?>
+		    	<?php foreach($langs as $lang):?>
 		    	<tr onmouseover="className='tr_over'" onmouseout="className='tr_out'" class="tr_out">
-		    		<td><?php echo $page['name'];?></td>
-		    		<td><?php echo ($page['static'] == 1 ? 'Dynamic' : 'Static'); ?></td>
-		    		<td><?php echo $page['level_id'];?></td>
+		    		<td><?php echo $lang['name'];?></td>
 		    		<td>
-		    			<span>
-		    				<a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$page['id'].DS.'edit'.DS;?>">
-		    					<img src="<?php echo IMAGE_PATH;?>edit.gif" width="16" height="16" title="Edit" alt="Edit" />
-		    				</a>
-		    			</span>
+		    			<input type="checkbox" name="" onclick="javascript:document.location.href='<?php echo BASE_PATH.'admin'.DS.'language'.DS.$lang['id'].DS.'edit'.DS.(1 - $lang['active']).DS; ?>'" value="" <?php echo ($lang['active']==1 ? "checked='checked'" : ""); ?>/>
 		    		</td>
 		    	</tr>
 		    	<?php endforeach;?>
