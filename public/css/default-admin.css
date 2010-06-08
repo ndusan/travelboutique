@@ -221,8 +221,8 @@ input, textarea, select {
 }
 
 #sidebar li ul {
-    margin: 0px;
-    padding: 5px 0;
+    margin: 0;
+    padding: 0;
 }
 
 #sidebar li li {
@@ -235,7 +235,7 @@ input, textarea, select {
     padding: 3px 0 3px 15px;
     color: #666666;
     display: block;
-    text-decoration:noneč
+    text-decoration:none;
 
 }
 #sidebar li li a:hover {
@@ -357,10 +357,6 @@ html>body #footer {
 
     background-color: #ffffff;
     padding: 20px;
-}
-#menu-add a.button { 
-    padding-top:0;
-    padding-bottom:0;
 }
 /*Upload*/
 #status
@@ -506,8 +502,8 @@ html>body #footer {
 .steps .done {background-position:0 0; font-size:16px; font-weight:bold; color:#b1b1b1;}
 .banner_img{border: 1px solid #ccc; padding: 2px; height: 80px;}
 .pageName{ border: 1px solid #369;}
-.entry table {width:100%; border-color:#D0D0D0; border-style:solid; border-width:1px 1px 0 0;}
-.entry td {background:#FEF6E0; padding:5px; border-color:#D0D0D0; border-style:solid; border-width:0 0 1px 1px;}
+.entry table {width:100%; border-color:#d1d1d1; border-style:solid; border-width:1px 1px 0 0;}
+.entry td {background:#FEF6E0; padding:5px; border-color:#d1d1d1; border-style:solid; border-width:0 0 1px 1px;}
 .showForm{
     display: none;
 }
