@@ -91,9 +91,11 @@ input, textarea, select {
 button {font-family:georgia; padding:3px 10px; color: #330033; border:solid 1px #330033; -moz-border-radius:3px;}
 
 #login {
+    position:absolute;
+    top:50%; left:50%;
+    margin:-200px 0 0 -150px;
     background-color: #FFFFFF;
     width: 300px;
-    margin: auto;
     padding: 30px 20px 30px 20px;
 }
 #login td {padding:3px;}
