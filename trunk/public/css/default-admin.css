@@ -83,12 +83,12 @@ legend {
 
 input, textarea, select {
     font-family:georgia;
-    color: #330033;
+    color: #333;
     padding: 3px;
     border:solid 1px #CCC;
 }
 
-button {font-family:georgia; padding:3px 5px; color: #330033; border:solid 1px #330033; -moz-border-radius:3px;}
+button {font-family:georgia; padding:3px 10px; color: #330033; border:solid 1px #330033; -moz-border-radius:3px;}
 
 #login {
     background-color: #FFFFFF;
