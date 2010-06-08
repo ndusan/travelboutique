@@ -92,11 +92,11 @@ button {font-family:georgia; padding:3px 10px; color: #330033; border:solid 1px 
 
 #login {
     background-color: #FFFFFF;
-    text-align: center;
-    width: 900px;
+    width: 300px;
     margin: auto;
-    padding: 30px 20px 30px 20px;
+    padding: 10px 20px 30px 20px;
 }
+#login td {padding:3px;}
 
 #wrapper {
     background: #7ACF00 url(../images/admin_images/img03.jpg);
