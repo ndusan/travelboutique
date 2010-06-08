@@ -17,7 +17,6 @@
 			<h2 class="title">users / view existing</h2>
 		    <div class="warning" <?php if(!isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg($_GET['q']); ?></div>
 			<div class="info" <?php if(isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg('For more actions click on links'); ?></div>
-			<br/>
 		    <br/>
 		    <!-- Data -->
 		    <?php if(isset($users) && !empty($users)):?>
@@ -70,7 +69,6 @@
       <li>
         <h2><b>main menu</b></h2>
         <!-- <div class="info">Kliknite na naziv kategorije da biste uneli nove stavke.</div> -->
-        <br/>
         <?php include_once(VIEW_PATH.'admin/_menu.php'); ?>
       </li>
     </ul>
