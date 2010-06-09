@@ -22,7 +22,7 @@
 		    <div class="entry">
 		    <table cellspacing="0" cellspacing="0">
 		    	<tr class="steps_title">
-		    		<td>Name</td>
+		    		<td>Link</td>
 		    		<td>Type</td>
 		    		<td>Level</td>
 		    		<td>Actions</td>
@@ -30,9 +30,9 @@
 		    	
 		    	<?php foreach($pages as $page):?>
 		    	<tr onmouseover="className='tr_over'" onmouseout="className='tr_out'" class="tr_out">
-		    		<td><?php echo $page['name'];?></td>
-		    		<td><?php echo ($page['static'] == 1 ? 'Dynamic' : 'Static'); ?></td>
-		    		<td><?php echo $page['level_id'];?></td>
+		    		<td><?php echo $page['link'];?></td>
+		    		<td><?php echo $page['type']; ?></td>
+		    		<td><?php echo $page['parent_id'];?></td>
 		    		<td>
 		    			<span>
 		    				<a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$page['id'].DS.'edit'.DS;?>">
