@@ -87,4 +87,10 @@ class Model{
 		
 		return $output;
 	}
+	
+	function insert($string){
+		
+		$res = mysql_query($string);
+		return mysql_insert_id($this->_dbHandle);
+	}
 }

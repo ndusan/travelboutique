@@ -18,7 +18,7 @@
 		    <div class="warning" <?php if(!isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg($_GET['q']); ?></div>
 			<div class="info" <?php if(isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg(DEFAULT_MSG); ?></div>
 			<br/>
-			<form id="form" name="form" action="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.'submit'.DS;?>" method="post">
+			<form id="form" name="form" action="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$params['id'].DS.'submit'.DS;?>" method="post">
 				<div class="entry">
 			    <br/>
 			    <?php if(isset($langs) && !empty($langs)):?>
@@ -27,7 +27,7 @@
 			        <tr>
 			            <td>Page Name: <img src="<?php echo IMAGE_PATH.$lang['name'].'.png'; ?>" /> </td>
 			            <td>
-			            	<input type="text" name="name[<?php echo $lang['name']; ?>]" value=""/>
+			            	<input type="text" name="name[<?php echo $lang['name']; ?>]" value="<?php echo @($page['info']['language_id'] == $lang['id'] ? $page['info']['name'] : ''); ?>"/>
 			            	<input type="hidden" name="language[<?php echo $lang['name']; ?>]" value="<?php echo $lang['id']; ?>" />
 			            </td>
 			        </tr>
@@ -39,7 +39,10 @@
 								<option value="0">Parent</option>
 								<?php if(isset($levels) && !empty($levels)):?>
 			            		<?php foreach($levels as $level):?>
-			            		<option value="<?php $level['id']; ?>">Child of <?php echo $level['link']; ?></option>
+			            		<?php if($level['id'] == $page['id']) $sel = "selected='selected'";
+			            				else $sel = "";
+			            		?>
+			            		<option <?php echo $sel; ?> value="<?php $level['id']; ?>">Child of <?php echo $level['link']; ?></option>
 			            		<?php endforeach; ?>
 			            		<?php endif; ?>
 			            	</select>
@@ -48,17 +51,17 @@
 			        <tr>
 			            <td>Template: </td>
 			            <td>
-			            	<input type="radio" name="template" value="tmp1" checked="checked"/>
+			            	<input type="radio" name="template" value="tmp1" <?php if(isset($page['info']['template']) && $page['info']['template'] == 'tmp1'):?>checked="checked"<?php endif;?>/>
 			            	<label>tmp1</label>
 			            	<br/>
-			            	<input type="radio" name="template" value="tmp1"/>
+			            	<input type="radio" name="template" value="tmp2" <?php if(isset($page['info']['template']) && $page['info']['template'] == 'tmp2'):?>checked="checked"<?php endif;?>/>
 			            	<label>tmp2</label>
 			            </td>
 			        </tr>
 			    </table>
 			    <br/>
 			    <button type="submit">
-			        Create page
+			        Save changes
 			    </button>
 			    <?php endif; ?>
 			</div>

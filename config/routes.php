@@ -70,9 +70,19 @@ $routes = array(
 					  	'action' 		=> 'add', 
 					  	'layout' 		=> 'admin'
 				),
+				array(	'url' 			=> '/^admin\/pages\/(?P<id>\d+)\/edit\/?$/', 
+						'controller' 	=> 'admin_pages', 
+					  	'action' 		=> 'edit', 
+					  	'layout' 		=> 'admin'
+				),
 				array(	'url' 			=> '/^admin\/pages\/submit\/?$/', 
 						'controller' 	=> 'admin_pages', 
 					  	'action' 		=> 'submit', 
+					  	'layout' 		=> 'empty'
+				),
+				array(	'url' 			=> '/^admin\/pages\/(?P<id>\d+)\/submit\/?$/', 
+						'controller' 	=> 'admin_pages', 
+					  	'action' 		=> 'update', 
 					  	'layout' 		=> 'empty'
 				),
 				//Languages

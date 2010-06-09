@@ -17,7 +17,24 @@ class Admin_pagesController extends Controller{
 	
 	public function submit($params){
 		
+		if($this->db->submit($params)) parent::redirect('admin'.DS.'pages', 'success');
+		else parent::redirect('admin'.DS.'pages'.DS.'add', 'error');
+	}
+	
+	public function edit($params){
 		
-		parent::redirect('admin'.DS.'pages', 'success');
+		parent::set('page', $this->db->getPage($params));
+		
+		parent::set('langs', $this->db->getLanguages());
+		
+		parent::set('levels', $this->db->getLevels());
+		
+		parent::set('params', $params);
+	}
+	
+	public function update($params){
+		
+		if($this->db->update($params)) parent::redirect('admin'.DS.'pages', 'success');
+		else parent::redirect('admin'.DS.'pages'.DS.'add', 'error');
 	}
 }
