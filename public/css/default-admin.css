@@ -89,7 +89,7 @@ input, textarea, select {
     border:solid 1px #CCC;
 }
 
-button {font-family:georgia; padding:3px 10px; color: #330033; border:solid 1px #330033; -moz-border-radius:3px;}
+button {font-family:georgia; padding:5px 15px; background-color:#D4E6FD; color:#333; border:solid 1px #A5C0DF; -moz-border-radius:3px;}
 
 #login {
     position:absolute;
@@ -498,6 +498,6 @@ html>body #footer {
 .pageName{ border: 1px solid #369;}
 .entry table {width:100%; border-color:#d1d1d1; border-style:solid; border-width:1px 1px 0 0;}
 .entry th {text-align:left; background:#FEF6E0; padding: 10px 5px; font-weight: bold; color: #333; border-color:#d1d1d1; border-style:solid; border-width:0 0 1px 1px;}
-.entry td {background:#FEF6E0; padding:5px; border-color:#d1d1d1; border-style:solid; border-width:0 0 1px 1px;}
-
+.entry tbody td {background:#FEF6E0; padding:5px; border-color:#d1d1d1; border-style:solid; border-width:0 0 1px 1px;}
+.entry tfoot td {background:#FFF; padding:5px; border-color:#d1d1d1; border-style:solid; border-width:0 0 1px 1px;}
 .showForm{ display: none;}
