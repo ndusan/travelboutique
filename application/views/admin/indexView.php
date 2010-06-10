@@ -18,11 +18,10 @@
 
   <!-- start sidebar -->
   <div id="sidebar">
+      <h2><b>main menu</b></h2>
     <ul>
       <li>
-        <h2><b>main menu</b></h2>
         <!-- <div class="info">Kliknite na naziv kategorije da biste uneli nove stavke.</div> -->
-        <br/>
         <?php include_once('_menu.php'); ?>
       </li>
     </ul>
