@@ -154,8 +154,8 @@ button {font-family:georgia; padding:3px 10px; color: #330033; border:solid 1px 
     width: 900px;
     background: #FFFFFF;
     border: 5px solid #330033;
-    margin: 0 auto 0 auto;
-    padding: 0 20px 0 20px;
+    margin: 0 auto;
+    padding: 20px;
     clear: both;
 }
 
@@ -164,8 +164,6 @@ button {font-family:georgia; padding:3px 10px; color: #330033; border:solid 1px 
 #content {
     float: right;
     width: 600px;
-    padding-top: 15px;
-    padding-right: 10px;
 }
 
 /* Post */
@@ -214,7 +212,6 @@ button {font-family:georgia; padding:3px 10px; color: #330033; border:solid 1px 
 #sidebar {
     float: left;
     width: 250px;
-    padding-left: 10px;
 }
 
 #sidebar ul {
