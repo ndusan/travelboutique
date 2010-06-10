@@ -89,7 +89,7 @@ input, textarea, select {
     border:solid 1px #CCC;
 }
 
-button {font-family:georgia; padding:5px 15px; background-color:#D4E6FD; color:#333; border:solid 1px #A5C0DF; -moz-border-radius:3px;}
+button {font-family:georgia; padding:5px 15px; background-color:#D4E6FD; color:#333; border:solid 1px #333; -moz-border-radius:3px;}
 
 #login {
     position:absolute;
