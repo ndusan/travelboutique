@@ -21,7 +21,7 @@
             <!-- Data -->
             <?php if(isset($users) && !empty($users)):?>
             <div class="entry">
-                <table cellspacing="0" cellspacing="0">
+                <table cellpadding="0" cellspacing="0">
                     <thead>
                         <tr>
                             <th>Name</th>
