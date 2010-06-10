@@ -16,9 +16,7 @@
             <h2 class="title">language / view existing</h2>
             <div class="info" <?php if(!isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg($_GET['q']); ?></div>
             <div class="info" <?php if(isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg('Set language visible'); ?></div>
-            <br/>
-            <br/>
-            <!-- Data -->
+
             <?php if(isset($langs) && !empty($langs)):?>
             <div class="entry">
                 <table cellspacing="0" cellspacing="0">
