@@ -231,7 +231,7 @@ button {font-family:georgia; padding:5px 15px; background-color:#D4E6FD; color:#
 
 #sidebar li li a {
     outline:none;
-    padding: 3px 0 3px 15px;
+    padding: 5px 15px;
     color: #666666;
     display: block;
     text-decoration:none;
