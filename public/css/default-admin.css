@@ -101,10 +101,6 @@ button {font-family:georgia; padding:3px 10px; color: #330033; border:solid 1px 
 }
 #login td {padding:3px;}
 
-#wrapper {
-    background: #7ACF00 url(../images/admin_images/img03.jpg);
-}
-
 /* Header */
 
 #header {
@@ -332,7 +328,6 @@ html>body #footer {
     display: block;
     float: left;
     padding: 1px 15px 1px 15px;
-    background: url(../images/admin_images/img03.jpg) no-repeat right 50%;
     text-decoration: none;
     font-size: 10px;
     color: #FFFFFF;
@@ -501,7 +496,7 @@ html>body #footer {
 .banner_img{border: 1px solid #ccc; padding: 2px; height: 80px;}
 .pageName{ border: 1px solid #369;}
 .entry table {width:100%; border-color:#d1d1d1; border-style:solid; border-width:1px 1px 0 0;}
-.entry th {text-align:left; background:#FEF6E0; padding: 10px 5px; font-weight: bold; color: #330033; border-color:#d1d1d1; border-style:solid; border-width:0 0 1px 1px;}
+.entry th {text-align:left; background:#FEF6E0; padding: 10px 5px; font-weight: bold; color: #333; border-color:#d1d1d1; border-style:solid; border-width:0 0 1px 1px;}
 .entry td {background:#FEF6E0; padding:5px; border-color:#d1d1d1; border-style:solid; border-width:0 0 1px 1px;}
 
 .showForm{ display: none;}
