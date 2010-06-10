@@ -11,8 +11,6 @@
 <div id="page">
   	<!-- start content -->
   	<div id="content">
-
-
 		<div class="post">
 			<h2 class="title">users / add new</h2>
 		    <div class="warning" <?php if(!isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg($_GET['q']); ?></div>
