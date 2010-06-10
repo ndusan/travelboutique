@@ -496,7 +496,7 @@ html>body #footer {
 .banner_img{border: 1px solid #ccc; padding: 2px; height: 80px;}
 .pageName{ border: 1px solid #369;}
 .entry table {width:100%; border-color:#d1d1d1; border-style:solid; border-width:1px 1px 0 0;}
-.entry th {text-align:left; background:#FEF6E0; padding: 10px 5px; font-weight: bold; color: #333; border-color:#d1d1d1; border-style:solid; border-width:0 0 1px 1px;}
-.entry tbody td {background:#FEF6E0; padding:5px; border-color:#d1d1d1; border-style:solid; border-width:0 0 1px 1px;}
-.entry tfoot td {background:#FFF; padding:5px; border-color:#d1d1d1; border-style:solid; border-width:0 0 1px 1px;}
+.entry th {text-align:left; background-color:#EFEEE3; padding: 10px 5px; font-weight: bold; color: #333; border-color:#d1d1d1; border-style:solid; border-width:0 0 1px 1px;}
+.entry tbody td {background-color:#FEF6E0; padding:5px; border-color:#d1d1d1; border-style:solid; border-width:0 0 1px 1px;}
+.entry tfoot td {background-color:#FFF; padding:5px; border-color:#d1d1d1; border-style:solid; border-width:0 0 1px 1px;}
 .showForm{ display: none;}
