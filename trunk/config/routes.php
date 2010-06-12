@@ -85,6 +85,21 @@ $routes = array(
 					  	'action' 		=> 'submitMore', 
 					  	'layout' 		=> 'empty'
 				),
+				array(	'url' 			=> '/^admin\/pages\/(?P<id>\d+)\/more\/(?P<item_id>\d+)\/edit\/?$/', 
+						'controller' 	=> 'admin_pages', 
+					  	'action' 		=> 'more', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/pages\/(?P<id>\d+)\/more\/submit\/(?P<item_id>\d+)\/?$/', 
+						'controller' 	=> 'admin_pages', 
+					  	'action' 		=> 'submitMore', 
+					  	'layout' 		=> 'empty'
+				),
+				array(	'url' 			=> '/^admin\/pages\/(?P<id>\d+)\/more\/(?P<item_id>\d+)\/delete\/?$/', 
+						'controller' 	=> 'admin_pages', 
+					  	'action' 		=> 'deleteMore', 
+					  	'layout' 		=> 'admin'
+				),
 				array(	'url' 			=> '/^admin\/pages\/submit\/?$/', 
 						'controller' 	=> 'admin_pages', 
 					  	'action' 		=> 'submit', 

@@ -22,7 +22,7 @@
 			    	Template: <?php echo $page['template'];?>
 			    </div>
 			    <br/><br/>
-			    <form action="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$page['id'].DS.'more'.DS.'submit'.DS; ?>" method="post">
+			    <form  enctype="multipart/form-data" action="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$page['id'].DS.'more'.DS.'submit'.DS.(isset($params['item_id'])?$params['item_id'].DS :""); ?>" method="post">
 				    <?php if(isset($langs) && !empty($langs)):?>
 				    <table cellspacing="0" cellspacing="0">
 				    	<tbody>
@@ -33,24 +33,40 @@
 					    	</tr>
 					    	<tr>
 					    		<th>Title</th>
-					    		<td><input type="text" name="title[<?php echo $lang['id'];?>]" value="" /></td>
+					    		<td><input type="text" name="title[<?php echo $lang['id'];?>]" value="<?php echo @$item[$lang['id']]['title']; ?>" /></td>
 					    	</tr>
 							<tr>
 					    		<th style="vertical-align: top;">Content</th>
 					    		<td>
-									<textarea cols="46" rows="10" name="content[<?php echo $lang['id'];?>]"></textarea>
+									<textarea cols="46" rows="10" name="content[<?php echo $lang['id'];?>]"><?php echo @$item[$lang['id']]['content']; ?></textarea>
 								</td>
 					    	</tr>
 					    	<?php endforeach;?>
+					    	<?php if($page['template']!='tmp1' || !isset($morePages) || empty($morePages) || isset($item)):?>
 					    	<tr>
 					    		<th style="vertical-align: top;">Images:</th>
 					    		<td>
-					    			<input type="file" name="file1" value=""><br/>
-					    			<input type="file" name="file2" value=""><br/>
-					    			<input type="file" name="file3" value="">
+					    			<input type="file" name="file0" ><br/>
+					    			<input type="file" name="file1" ><br/>
+					    			<input type="file" name="file2" >
+					    			<?php 
+			    					if(isset($item) && is_dir(UPLOAD_PATH.$item[$lang['id']]['folder'])){
+				    					$handle = opendir(UPLOAD_PATH.$item[$lang['id']]['folder']);
+				    					while (false !== ($file = readdir($handle))) {
+									        if($file!='.' && $file!='..'){?>
+									        
+									        <a href="<?php echo UPLOAD_PATH.$item[$lang['id']]['folder'].DS.$file; ?>" target="_blank"><?php echo $file;?></a><br/>
+									        
+									        <?php 
+									        }
+									    }
+			    					}
+				    			?>
 					    		</td>
 					    	</tr>
+					    	<?php endif;?>
 					    </tbody>
+					    <?php if($page['template']!='tmp1' || !isset($morePages) || empty($morePages) || isset($item)):?>
 					    <tfoot>
 					    	<tr>
 					    		<td colspan="2">
@@ -58,6 +74,7 @@
 					    		</td>
 					    	</tr>
 				    	</tfoot>
+				    	<?php endif;?>
 				    </table>
 				    <?php endif;?>
 			    </form>
@@ -66,11 +83,38 @@
 			    <table cellpadding="0" cellspacing="0">
 			    	<tbody>
 			    		<tr>
-			    			<th>xx</th>
+			    			<th>Created</th>
+			    			<th>Images</th>
+			    			<th style="width:10px;">Action</th>
 			    		</tr>
 			    		<?php foreach($morePages as $morePage):?>
 			    		<tr>
-			    			<td>xxx</td>
+			    			<td><?php echo $morePage['modif'];?></td>
+			    			<td>
+			    				<?php 
+			    					if(is_dir(UPLOAD_PATH.$morePage['folder'])){
+				    					$handle = opendir(UPLOAD_PATH.$morePage['folder']);
+				    					while (false !== ($file = readdir($handle))) {
+									        if($file!='.' && $file!='..'){?>
+									        
+									        <a href="<?php echo UPLOAD_PATH.$morePage['folder'].DS.$file; ?>" target="_blank"><?php echo $file;?></a><br/>
+									        
+									        <?php 
+									        }
+									    }
+			    					}
+				    			?>
+			    			</td>
+			    			<td>
+			    				<span>
+				    				<a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$page['id'].DS.'more'.DS.$morePage['id'].DS.'edit'.DS;?>">
+				    					<img src="<?php echo IMAGE_PATH;?>edit.gif" width="16" height="16" title="Edit" alt="Edit" />
+				    				</a>
+				    				<a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$page['id'].DS.'more'.DS.$morePage['id'].DS.'delete'.DS;?>">
+				    					<img src="<?php echo IMAGE_PATH;?>delete.gif" width="16" height="16" title="More details" alt="More details" />
+				    				</a>
+				    			</span>
+			    			</td>
 			    		</tr>
 			    		<?php endforeach; ?>
 			    	</tbody>

@@ -55,16 +55,46 @@ class Admin_pagesController extends Controller{
 		parent::set('page', $this->db->getPage($params));
 		parent::set('langs', $this->db->getLanguages());
 		
+		parent::set('morePages', $this->db->getMorePage($params));
+		
 		parent::defaultJs(array('tiny_mce'.DS.'tiny_mce'));
+		
+		if(isset($params['item_id'])){
+			$getItem = $this->db->getItem($params);
+			parent::set('item', $getItem);
+		}
+		parent::set('params', $params);
 	}
 	
 	public function submitMore($params){
+		parent::userInfoAndSession();
 		
-		if($this->db->submitMore($params)){
+		if($folder = $this->db->submitMore($params)){
+
 			//Upload files if entered
-			
-			parent::redirect('admin'.DS.'pages'.$params['id'].DS.'more', 'success');
-		}
-		else parent::redirect('admin'.DS.'pages'.$params['id'].DS.'more', 'error');
+			for($i=0; $i<3; $i++){
+				$fileTag = 'file'.$i;
+				if($params[$fileTag]['error'] == 0){
+					
+					//Create dir if not exists
+					if(!is_dir(UPLOAD_PATH.$folder)) mkdir(UPLOAD_PATH.$folder, 0777);
+					//Put value in dir
+					move_uploaded_file($params[$fileTag]['tmp_name'], UPLOAD_PATH.$folder.DS.$params[$fileTag]['name']);
+				}
+			}
+			parent::redirect('admin'.DS.'pages'.DS.$params['id'].DS.'more', 'success');
+		}else parent::redirect('admin'.DS.'pages'.DS.$params['id'].DS.'more', 'error');
 	}
+	
+	public function deleteMore($params){
+		parent::userInfoAndSession();
+		
+		$folder = $this->db->getFolder($params);
+		if(is_dir(UPLOAD_PATH.$folder['folder'])) rmdir(UPLOAD_PATH.$folder['folder']);
+		
+		$this->db->removeItem($params);
+		parent::redirect('admin'.DS.'pages'.DS.$params['id'].DS.'more', 'success');
+	}
+	
+
 }
