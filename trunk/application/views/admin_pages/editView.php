@@ -19,53 +19,9 @@
 			<div class="info" <?php if(isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg(DEFAULT_MSG); ?></div>
 			<br/>
 			<form id="form" name="form" action="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$params['id'].DS.'submit'.DS;?>" method="post">
-				<div class="entry">
-			    <br/>
-			    <?php if(isset($langs) && !empty($langs)):?>
-			    <table cellpadding="0" cellspacing="0">
-			        <?php foreach($langs as $lang):?>
-			        <tr>
-			            <td>Page Name: <img src="<?php echo IMAGE_PATH.$lang['name'].'.png'; ?>" /> </td>
-			            <td>
-			            	<input type="text" name="name[<?php echo $lang['name']; ?>]" value="<?php echo @($page['info']['language_id'] == $lang['id'] ? $page['info']['name'] : ''); ?>"/>
-			            	<input type="hidden" name="language[<?php echo $lang['name']; ?>]" value="<?php echo $lang['id']; ?>" />
-			            </td>
-			        </tr>
-			        <?php endforeach; ?>
-			        <tr>
-			            <td>Level: </td>
-			            <td>
-			            	<select name="level">
-								<option value="0">Parent</option>
-								<?php if(isset($levels) && !empty($levels)):?>
-			            		<?php foreach($levels as $level):?>
-			            		<?php if($level['id'] == $page['id']) $sel = "selected='selected'";
-			            				else $sel = "";
-			            		?>
-			            		<option <?php echo $sel; ?> value="<?php $level['id']; ?>">Child of <?php echo $level['link']; ?></option>
-			            		<?php endforeach; ?>
-			            		<?php endif; ?>
-			            	</select>
-			            </td>
-			        </tr>
-			        <tr>
-			            <td>Template: </td>
-			            <td>
-			            	<input type="radio" name="template" value="tmp1" <?php if(isset($page['info']['template']) && $page['info']['template'] == 'tmp1'):?>checked="checked"<?php endif;?>/>
-			            	<label>tmp1</label>
-			            	<br/>
-			            	<input type="radio" name="template" value="tmp2" <?php if(isset($page['info']['template']) && $page['info']['template'] == 'tmp2'):?>checked="checked"<?php endif;?>/>
-			            	<label>tmp2</label>
-			            </td>
-			        </tr>
-			    </table>
-			    <br/>
-			    <button type="submit">
-			        Save changes
-			    </button>
-			    <?php endif; ?>
-			</div>
-
+				
+				<?php include_once('_form.php'); ?>
+				
 			</form>
 		</div>
 

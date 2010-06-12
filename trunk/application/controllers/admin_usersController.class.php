@@ -6,6 +6,7 @@ class Admin_usersController extends Controller{
 	public function add($params){
 		parent::userInfoAndSession();
 		
+		parent::set('submenu', 'users');
 	}
 	
 	public function index($params){
@@ -14,6 +15,8 @@ class Admin_usersController extends Controller{
 		//Get all users from DB
 		$users = $this->db->getUsers();
 		parent::set('users', $users);
+		
+		parent::set('submenu', 'users');
 	}
 	
 	public function edit($params){
@@ -23,6 +26,8 @@ class Admin_usersController extends Controller{
 		$user = $this->db->getUser($params);
 		parent::set('user', $user);
 		
+		
+		parent::set('submenu', 'users');
 	}
 	
 	public function submit($params){

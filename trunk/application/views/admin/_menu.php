@@ -1,7 +1,7 @@
 <ul>	
     <li>
         <a href="javascript:;" class="submenu-action" id="submenu-users">Users</a>
-        <ul style="display: none;" class="submenu" id="users">
+        <ul <?php if(!isset($submenu) || $submenu!='users'):?>style="display: none;"<?php endif;?> class="submenu" id="users">
             <li>
                 <a href="<?php echo BASE_PATH.'admin'.DS.'users'.DS.'add'.DS;?>">Add new</a>
             </li>
@@ -15,7 +15,7 @@
     </li>
     <li>
         <a href="javascript:;" class="submenu-action" id="submenu-pages">Pages</a>
-        <ul style="display: none;" class="submenu" id="pages">
+        <ul <?php if(!isset($submenu) || $submenu!='pages'):?>style="display: none;"<?php endif;?> class="submenu" id="pages">
             <li>
                 <a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.'add'.DS;?>">Add page</a>
             </li>

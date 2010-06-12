@@ -26,16 +26,23 @@
 		    		<td>Level</td>
 		    		<td>Actions</td>
 		    	</tr>
-		    	
 		    	<?php foreach($pages as $page):?>
 		    	<tr onmouseover="className='tr_over'" onmouseout="className='tr_out'" class="tr_out">
 		    		<td><?php echo $page['link'];?></td>
 		    		<td><?php echo $page['type']; ?></td>
-		    		<td><?php echo $page['parent_id'];?></td>
+		    		<td>
+		    			<?php 
+		    			if($page['parent_id'] <= 0) echo "Parent";
+		    			else echo "Child of ".$page['level'];
+		    			?>
+		    		</td>
 		    		<td>
 		    			<span>
 		    				<a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$page['id'].DS.'edit'.DS;?>">
 		    					<img src="<?php echo IMAGE_PATH;?>edit.gif" width="16" height="16" title="Edit" alt="Edit" />
+		    				</a>
+		    				<a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$page['id'].DS.'more'.DS;?>">
+		    					<img src="<?php echo IMAGE_PATH;?>view.gif" width="16" height="16" title="More details" alt="More details" />
 		    				</a>
 		    			</span>
 		    		</td>
