@@ -7,7 +7,7 @@ class DynamicController extends Controller{
 		
 		print_r($params);
 		
-		parent::set('template', 'tmp1');
+		parent::set('template', 'tmp2');
 	}
 	
 }

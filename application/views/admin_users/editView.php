@@ -28,6 +28,7 @@
     <ul>
       <li>
         <h2><b>main menu</b></h2>
+        <br/>
         <!-- <div class="info">Kliknite na naziv kategorije da biste uneli nove stavke.</div> -->
         <?php include_once(VIEW_PATH.'admin'.DS.'_menu.php'); ?>
       </li>

@@ -65,15 +65,16 @@
     <!-- end content -->
 
     <!-- start sidebar -->
-    <div id="sidebar"><h2><b>main menu</b></h2>
-        <ul>
-            <li>
-                <h2><b>main menu</b></h2>
-                <!-- <div class="info">Kliknite na naziv kategorije da biste uneli nove stavke.</div> -->
-                <?php include_once(VIEW_PATH.'admin/_menu.php'); ?>
-            </li>
-        </ul>
-    </div>
+    <div id="sidebar">
+	    <ul>
+	      <li>
+	        <h2><b>main menu</b></h2>
+	        <br/>
+	     	<!-- <div class="info">Kliknite na naziv kategorije da biste uneli nove stavke.</div> -->
+	        <?php include_once(VIEW_PATH.'admin/_menu.php'); ?>
+		    </li>
+		</ul>
+	</div>
     <!-- end sidebar -->
 
     <div style="clear: both;">&nbsp;</div>
