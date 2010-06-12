@@ -144,16 +144,92 @@ class Admin_pagesModel extends Model{
 	
 	public function submitMore($params){
 		
-		foreach($params['title'] as $lang_id => $val){
+		if(isset($params['item_id']) && !empty($params['item_id'])){
+			$query = sprintf("SELECT `id`, `folder` FROM `page_items` WHERE `id`='%s'",
+								mysql_real_escape_string($params['item_id'])
+								);
+			$res = mysql_query($query);
+			$row = mysql_fetch_assoc($res);
 			
-			$query = sprintf("INSERT INTO `page_items` SET `title`='%s', `language_id`='%s', `content`='%s', `page_id`='%s'",
-							mysql_real_escape_string($val),
-							mysql_real_escape_string($lang_id),
-							mysql_real_escape_string($params['content'][$lang_id]),
-							mysql_real_escape_string($params['id'])
-							);
-			mysql_query($query);
+		foreach($params['title'] as $lang_id => $val){
+				
+				$query = sprintf("UPDATE `page_item_details` SET `title`='%s', `content`='%s'
+									WHERE `language_id`='%s' AND `page_item_id`='%s'",
+								mysql_real_escape_string($val),
+								mysql_real_escape_string($params['content'][$lang_id]),
+								mysql_real_escape_string($lang_id),
+								mysql_real_escape_string($row['id'])
+								);
+				mysql_query($query);
+			}
+			$folder = $row['folder'];
+		}else{
+		$folder = time();
+			$query = sprintf("INSERT INTO `page_items` SET  `page_id`='%s', `folder`='%s'",
+								mysql_real_escape_string($params['id']),
+								mysql_real_escape_string($folder)
+								);
+			$itemId = parent::insert($query);
+			foreach($params['title'] as $lang_id => $val){
+				
+				$query = sprintf("INSERT INTO `page_item_details` SET `title`='%s', `language_id`='%s', `content`='%s', `page_item_id`='%s'",
+								mysql_real_escape_string($val),
+								mysql_real_escape_string($lang_id),
+								mysql_real_escape_string($params['content'][$lang_id]),
+								mysql_real_escape_string($itemId)
+								);
+				mysql_query($query);
+			}
 		}
+		
+		return $folder;
+	}
+	
+	public function getMorePage($params){
+		
+		$query = sprintf("SELECT * FROM `page_items` WHERE `page_id`='%s'",
+						mysql_real_escape_string($params['id'])
+						);
+		return parent::query($query);
+	}
+	
+	public function getItem($params){
+		$output = array();
+		
+		$query = sprintf("SELECT  `page_items`.`folder`, `page_item_details`.* FROM `page_items`
+							INNER JOIN `page_item_details` ON `page_items`.`id`=`page_item_details`.`page_item_id` 
+							WHERE `page_items`.`id`='%s'",
+						mysql_real_escape_string($params['item_id'])
+						);
+		$res = mysql_query($query);
+		if(mysql_num_rows($res) <= 0) return false;
+		
+		while($row = mysql_fetch_assoc($res)){
+			$output[$row['language_id']] = $row;
+		}
+		return $output;
+	}
+	
+	public function getFolder($params){
+		
+		$query = sprintf("SELECT `folder` FROM `page_items` WHERE `id`='%s'",
+						mysql_real_escape_string($params['item_id'])
+						);
+		$res = parent::query($query);
+		return $res[0];
+	}
+	
+	public function removeItem($params){
+		
+		$query = sprintf("DELETE FROM `page_item_details` WHERE `page_item_id`='%s'",
+						mysql_real_escape_string($params['item_id'])
+						);
+		mysql_query($query);
+		
+		$query = sprintf("DELETE FROM `page_items` WHERE `id`='%s'",
+						mysql_real_escape_string($params['item_id'])
+						);
+		mysql_query($query);
 		return true;
 	}
 	
