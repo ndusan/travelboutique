@@ -92,8 +92,8 @@ button {font-family:georgia; padding:5px 15px; background-color:#D4E6FD; color:#
 
 #login {
     position:absolute;
-    top:50%; left:50%;
-    margin:-200px 0 0 -150px;
+    top:0; left:50%;
+    margin:150px 0 0 -150px;
     background-color: #FFFFFF;
     width: 300px;
     padding: 30px 20px 30px 20px;
