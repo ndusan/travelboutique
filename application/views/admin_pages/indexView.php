@@ -20,12 +20,15 @@
 		    <?php if(isset($pages) && !empty($pages)):?>
 		    <div class="entry">
 		    <table cellspacing="0" cellspacing="0">
-		    	<tr class="steps_title">
-		    		<td>Link</td>
-		    		<td>Type</td>
-		    		<td>Level</td>
-		    		<td>Actions</td>
+                        <thead>
+		    	<tr>
+		    		<th>Link</th>
+		    		<th>Type</th>
+		    		<th>Level</th>
+		    		<th>Actions</th>
 		    	</tr>
+                        </thead>
+                        <tbody>
 		    	<?php foreach($pages as $page):?>
 		    	<tr onmouseover="className='tr_over'" onmouseout="className='tr_out'" class="tr_out">
 		    		<td><?php echo $page['link'];?></td>
@@ -48,6 +51,7 @@
 		    		</td>
 		    	</tr>
 		    	<?php endforeach;?>
+                        </tbody>
 		
 		    </table>
 		    </div>
