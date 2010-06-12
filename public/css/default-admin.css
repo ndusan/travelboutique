@@ -237,7 +237,7 @@ button {font-family:georgia; padding:5px 15px; background-color:#D4E6FD; color:#
     border-bottom: 1px dashed #D1D1D1;
 
 }
-#sidebar li li a:hover {
+#sidebar li li a:hover, #sidebar .active {
     color: #333333;
     background-color: #F5F5F5;
 }
