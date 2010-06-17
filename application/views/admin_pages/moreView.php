@@ -42,7 +42,7 @@
 								</td>
 					    	</tr>
 					    	<?php endforeach;?>
-					    	<?php if($page['template']!='tmp1' || !isset($morePages) || empty($morePages) || isset($item)):?>
+					    	<?php if($page['template']!='tmp1'):?>
 					    	<tr>
 					    		<th style="vertical-align: top;">Images:</th>
 					    		<td>
@@ -85,11 +85,11 @@
 			    		<tr>
 			    			<th>Created</th>
 			    			<th>Images</th>
-			    			<th style="width:10px;">Action</th>
+			    			<th style="width:80px;">Action</th>
 			    		</tr>
 			    		<?php foreach($morePages as $morePage):?>
 			    		<tr>
-			    			<td><?php echo $morePage['modif'];?></td>
+			    			<td>label-<?php echo $morePage['folder'];?></td>
 			    			<td>
 			    				<?php 
 			    					if(is_dir(UPLOAD_PATH.$morePage['folder'])){
@@ -112,6 +112,14 @@
 				    				</a>
 				    				<a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$page['id'].DS.'more'.DS.$morePage['id'].DS.'delete'.DS;?>">
 				    					<img src="<?php echo IMAGE_PATH;?>delete.gif" width="16" height="16" title="More details" alt="More details" />
+				    				</a>
+				    				<!-- Up -->
+				    				<a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$page['id'].DS.'more'.DS.$morePage['id'].DS.'up'.DS.$morePage['position'].DS;?>">
+				    					<img src="<?php echo IMAGE_PATH;?>up.png" width="16" height="16" title="Up" alt="Up" />
+				    				</a>
+				    				<!-- Down -->
+				    				<a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$page['id'].DS.'more'.DS.$morePage['id'].DS.'down'.DS.$morePage['position'].DS;?>">
+				    					<img src="<?php echo IMAGE_PATH;?>down.png" width="16" height="16" title="Down" alt="Down" />
 				    				</a>
 				    			</span>
 			    			</td>

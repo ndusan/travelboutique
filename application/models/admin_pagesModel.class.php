@@ -4,7 +4,7 @@ class Admin_pagesModel extends Model{
 	
 	public function getPages(){
 		
-		$query = sprintf("SELECT * FROM `pages` WHERE `active`='1'");
+		$query = sprintf("SELECT * FROM `pages` WHERE `active`='1' ORDER BY `id` DESC");
 		$res = mysql_query($query);
 		if(mysql_num_rows($res) <= 0) return false;
 		
@@ -111,6 +111,19 @@ class Admin_pagesModel extends Model{
 							);
 			mysql_query($query);
 		}
+		
+		//Add partners
+		if(isset($params['partner']) && !empty($params['partner'])){
+			foreach($params['partner'] as $val){
+				
+				$query = sprintf("INSERT INTO `page_partners` SET `page_id`='%s', `partner_id`='%s'",
+								mysql_real_escape_string($pageId),
+								mysql_real_escape_string($val)
+								);
+				mysql_query($query);
+			}
+			
+		}
 		return true;
 	}
 	
@@ -136,6 +149,22 @@ class Admin_pagesModel extends Model{
 							mysql_real_escape_string($params['id']),
 							mysql_real_escape_string($val),
 							mysql_real_escape_string($params['language'][$key])
+							);
+			mysql_query($query);
+		}
+		
+		//Delete
+		$query = sprintf("DELETE FROM `page_partners` WHERE `page_id`='%s'",
+						mysql_real_escape_string($params['id'])
+						);
+		mysql_query($query);
+		
+		//Add page details
+		foreach($params['partner'] as $val){
+			
+			$query = sprintf("INSERT INTO `page_partners` SET `page_id`='%s', `partner_id`='%s'",
+							mysql_real_escape_string($params['id']),
+							mysql_real_escape_string($val)
 							);
 			mysql_query($query);
 		}
@@ -165,9 +194,10 @@ class Admin_pagesModel extends Model{
 			$folder = $row['folder'];
 		}else{
 		$folder = time();
-			$query = sprintf("INSERT INTO `page_items` SET  `page_id`='%s', `folder`='%s'",
+			$query = sprintf("INSERT INTO `page_items` SET  `page_id`='%s', `folder`='%s', `position`='%s'",
 								mysql_real_escape_string($params['id']),
-								mysql_real_escape_string($folder)
+								mysql_real_escape_string($folder),
+								mysql_real_escape_string(time())
 								);
 			$itemId = parent::insert($query);
 			foreach($params['title'] as $lang_id => $val){
@@ -187,7 +217,7 @@ class Admin_pagesModel extends Model{
 	
 	public function getMorePage($params){
 		
-		$query = sprintf("SELECT * FROM `page_items` WHERE `page_id`='%s'",
+		$query = sprintf("SELECT * FROM `page_items` WHERE `page_id`='%s'  ORDER BY `position` DESC",
 						mysql_real_escape_string($params['id'])
 						);
 		return parent::query($query);
@@ -233,4 +263,96 @@ class Admin_pagesModel extends Model{
 		return true;
 	}
 	
+	public function up($params){
+		
+		$query = sprintf("SELECT * FROM `page_items` WHERE `page_id`='%s' AND `id`!='%s' AND
+						 `position`>='%s' ORDER BY `position` ASC LIMIT 0, 1",
+						mysql_real_escape_string($params['id']),
+						mysql_real_escape_string($params['item_id']),
+						mysql_real_escape_string($params['position'])
+						);
+		$res = mysql_query($query);
+		
+		if(mysql_num_rows($res) > 0){
+			
+			$row = mysql_fetch_assoc($res);
+			//Switch places
+			$query = sprintf("UPDATE `page_items` SET `position`='%s' WHERE `id`='%s' AND `page_id`='%s'",
+							mysql_real_escape_string($row['position']),
+							mysql_real_escape_string($params['item_id']),
+							mysql_real_escape_string($params['id'])
+							);
+			mysql_query($query);
+			
+			$query = sprintf("UPDATE `page_items` SET `position`='%s' WHERE `id`='%s' AND `page_id`='%s'",
+							mysql_real_escape_string($params['position']),
+							mysql_real_escape_string($row['id']),
+							mysql_real_escape_string($row['page_id'])
+							);
+			mysql_query($query);
+		}
+		return true;
+	}
+	
+	public function down($params){
+		
+		$query = sprintf("SELECT * FROM `page_items` WHERE `page_id`='%s' AND `id`!='%s' AND
+						 `position`<='%s' ORDER BY `position` DESC LIMIT 0, 1",
+						mysql_real_escape_string($params['id']),
+						mysql_real_escape_string($params['item_id']),
+						mysql_real_escape_string($params['position'])
+						);
+		$res = mysql_query($query);
+		
+		if(mysql_num_rows($res) > 0){
+			
+			$row = mysql_fetch_assoc($res);
+			//Switch places
+			$query = sprintf("UPDATE `page_items` SET `position`='%s' WHERE `id`='%s' AND `page_id`='%s'",
+							mysql_real_escape_string($row['position']),
+							mysql_real_escape_string($params['item_id']),
+							mysql_real_escape_string($params['id'])
+							);
+			mysql_query($query);
+			
+			$query = sprintf("UPDATE `page_items` SET `position`='%s' WHERE `id`='%s' AND `page_id`='%s'",
+							mysql_real_escape_string($params['position']),
+							mysql_real_escape_string($row['id']),
+							mysql_real_escape_string($row['page_id'])
+							);
+			mysql_query($query);
+		}
+		return true;
+	}
+	
+	public function getPartners(){
+		
+		$query = sprintf("SELECT * FROM `partners` ORDER BY `id` DESC");
+
+		return parent::query($query);
+	}
+	
+	public function getPagePartners($params){
+		
+		$query = sprintf("SELECT * FROM `partners` ORDER BY `id` DESC");
+		$res = mysql_query($query);
+		
+		if(mysql_num_rows($res) <= 0) return false;
+		$output = array();
+		
+		while($row = mysql_fetch_assoc($res)){
+			
+			$query_ch = sprintf("SELECT * FROM `page_partners` WHERE `page_id`='%s' AND `partner_id`='%s'",
+								mysql_real_escape_string($params['id']),
+								mysql_real_escape_string($row['id'])
+								);
+			$res_ch = mysql_query($query_ch);
+			if(mysql_num_rows($res_ch) > 0){
+				$row = array_merge($row, array('checked' => 1));
+			}else $row = array_merge($row, array('checked' => 0));
+			$output[] = $row;
+		}
+		
+		return $output;
+	}
 }

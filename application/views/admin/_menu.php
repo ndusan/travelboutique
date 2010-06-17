@@ -14,6 +14,17 @@
         <a href="<?php echo BASE_PATH.'admin'.DS.'language'.DS; ?>" >Language</a>
     </li>
     <li>
+        <a href="javascript:;" class="submenu-action" id="submenu-partners">Partners</a>
+        <ul <?php if(!isset($submenu) || $submenu!='partners'):?>style="display: none;"<?php endif;?> class="submenu" id="partners">
+            <li>
+                <a href="<?php echo BASE_PATH.'admin'.DS.'partners'.DS.'add'.DS;?>">Add partner</a>
+            </li>
+            <li>
+                <a href="<?php echo BASE_PATH.'admin'.DS.'partners'.DS;?>">View partners</a>
+            </li>
+       	</ul>
+    </li>
+    <li>
         <a href="javascript:;" class="submenu-action" id="submenu-pages">Pages</a>
         <ul <?php if(!isset($submenu) || $submenu!='pages'):?>style="display: none;"<?php endif;?> class="submenu" id="pages">
             <li>

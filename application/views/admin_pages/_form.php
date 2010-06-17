@@ -41,6 +41,17 @@
                 <label>tmp2</label>
             </td>
         </tr>
+		<?php if(isset($partners) && !empty($partners)):?>
+        <tr>
+            <td>Partners: </td>
+			<td>
+				<?php foreach($partners as $partner):?>
+                <input type="checkbox" name="partner[]" value="<?php echo $partner['id'];?>" <?php echo ((isset($partner['checked']) && $partner['checked'] == 1) ? "checked='checked'" : "");  ?> />
+                <label><?php echo $partner['link'];?></label><br/>
+            	<?php endforeach; ?>
+            </td>
+        </tr>
+        <?php endif;?>
     </table>
     <br/>
     <button type="submit">
