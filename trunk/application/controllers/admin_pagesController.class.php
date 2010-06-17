@@ -14,6 +14,7 @@ class Admin_pagesController extends Controller{
 		parent::set('langs', $this->db->getLanguages());
 		
 		parent::set('levels', $this->db->getLevels());
+		parent::set('partners', $this->db->getPartners());
 		
 		parent::set('submenu', 'pages');
 		
@@ -21,7 +22,7 @@ class Admin_pagesController extends Controller{
 	
 	public function submit($params){
 		parent::userInfoAndSession();
-		
+
 		if($this->db->submit($params)) parent::redirect('admin'.DS.'pages', 'success');
 		else parent::redirect('admin'.DS.'pages'.DS.'add', 'error');
 	}
@@ -34,6 +35,7 @@ class Admin_pagesController extends Controller{
 		parent::set('langs', $this->db->getLanguages());
 		
 		parent::set('levels', $this->db->getLevels());
+		parent::set('partners', $this->db->getPagePartners($params));
 		
 		parent::set('params', $params);
 		
@@ -96,5 +98,19 @@ class Admin_pagesController extends Controller{
 		parent::redirect('admin'.DS.'pages'.DS.$params['id'].DS.'more', 'success');
 	}
 	
+	
+	public function up($params){
+		parent::userInfoAndSession();
+		
+		$this->db->up($params);
+		parent::redirect('admin'.DS.'pages'.DS.$params['id'].DS.'more', 'success');
+	}
+	
+	public function down($params){
+		parent::userInfoAndSession();
+		
+		$this->db->down($params);
+		parent::redirect('admin'.DS.'pages'.DS.$params['id'].DS.'more', 'success');
+	}
 
 }

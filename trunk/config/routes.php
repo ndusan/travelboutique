@@ -90,6 +90,16 @@ $routes = array(
 					  	'action' 		=> 'more', 
 					  	'layout' 		=> 'admin'
 				),
+				array(	'url' 			=> '/^admin\/pages\/(?P<id>\d+)\/more\/(?P<item_id>\d+)\/up\/(?P<position>\d+)\/?$/', 
+						'controller' 	=> 'admin_pages', 
+					  	'action' 		=> 'up', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/pages\/(?P<id>\d+)\/more\/(?P<item_id>\d+)\/down\/(?P<position>\d+)\/?$/', 
+						'controller' 	=> 'admin_pages', 
+					  	'action' 		=> 'down', 
+					  	'layout' 		=> 'admin'
+				),
 				array(	'url' 			=> '/^admin\/pages\/(?P<id>\d+)\/more\/submit\/(?P<item_id>\d+)\/?$/', 
 						'controller' 	=> 'admin_pages', 
 					  	'action' 		=> 'submitMore', 
@@ -108,6 +118,32 @@ $routes = array(
 				array(	'url' 			=> '/^admin\/pages\/(?P<id>\d+)\/submit\/?$/', 
 						'controller' 	=> 'admin_pages', 
 					  	'action' 		=> 'update', 
+					  	'layout' 		=> 'empty'
+				),
+				//Partners
+				array(	'url' 			=> '/^admin\/partners\/?$/', 
+						'controller' 	=> 'admin_partners', 
+					  	'action' 		=> 'index', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/partners\/add\/?$/', 
+						'controller' 	=> 'admin_partners', 
+					  	'action' 		=> 'add', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/partners\/(?P<id>\d+)\/edit\/?$/', 
+						'controller' 	=> 'admin_partners', 
+					  	'action' 		=> 'edit', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/partners\/(?P<id>\d+)\/delete\/?$/', 
+						'controller' 	=> 'admin_partners', 
+					  	'action' 		=> 'delete', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/partners\/((?P<id>\d+)\/)?submit\/?$/', 
+						'controller' 	=> 'admin_partners', 
+					  	'action' 		=> 'submit', 
 					  	'layout' 		=> 'empty'
 				),
 				//Languages
