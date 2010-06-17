@@ -172,6 +172,32 @@ $routes = array(
 					  	'action' 		=> 'submit', 
 					  	'layout' 		=> 'empty'
 				),
+				//Banners
+				array(	'url' 			=> '/^admin\/banners\/?$/', 
+						'controller' 	=> 'admin_banners', 
+					  	'action' 		=> 'index', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/banners\/add\/?$/', 
+						'controller' 	=> 'admin_banners', 
+					  	'action' 		=> 'add', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/banners\/(?P<id>\d+)\/edit\/?$/', 
+						'controller' 	=> 'admin_banners', 
+					  	'action' 		=> 'edit', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/banners\/(?P<id>\d+)\/delete\/?$/', 
+						'controller' 	=> 'admin_banners', 
+					  	'action' 		=> 'delete', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/banners\/((?P<id>\d+)\/)?submit\/?$/', 
+						'controller' 	=> 'admin_banners', 
+					  	'action' 		=> 'submit', 
+					  	'layout' 		=> 'empty'
+				),
 				//Languages
 				array(	'url' 			=> '/^admin\/language\/?$/', 
 						'controller' 	=> 'admin_language', 

@@ -46,6 +46,17 @@
             </li>
        	</ul>
     </li>
+    <li>
+        <a href="javascript:;" class="submenu-action" id="submenu-banners">Banners</a>
+        <ul <?php if(!isset($submenu) || $submenu!='banners'):?>style="display: none;"<?php endif;?> class="submenu" id="banners">
+            <li>
+                <a href="<?php echo BASE_PATH.'admin'.DS.'banners'.DS.'add'.DS;?>">Add</a>
+            </li>
+            <li>
+                <a href="<?php echo BASE_PATH.'admin'.DS.'banners'.DS;?>">View existing</a>
+            </li>
+       	</ul>
+    </li>
     <li><a href="<?php echo BASE_PATH.'admin'.DS.'contact'.DS;?>">Contact</a></li>
     <li><a href="<?php echo BASE_PATH.'admin'.DS.'logout'.DS;?>">Logout</a></li>
 </ul>

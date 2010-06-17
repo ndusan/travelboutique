@@ -37,4 +37,15 @@ class Admin_partnersController extends Controller{
 		@unlink(UPLOAD_PATH.'partners'.DS.$file['id']."-".$file['file']);
 		parent::redirect('admin'.DS.'partners', 'success');
 	}
+	
+	public function edit($params){
+		parent::userInfoAndSession();
+		
+		parent::set('partner', $this->db->getPartner($params));
+		
+		parent::set('params', $params);
+		
+		parent::set('submenu', 'partners');
+	}
+	
 }
