@@ -42,7 +42,7 @@
                 <a href="<?php echo BASE_PATH.'admin'.DS.'carousel'.DS.'add'.DS;?>">Add</a>
             </li>
             <li>
-                <a href="<?php echo BASE_PATH.'admin'.DS.'carousel'.DS.'view'.DS;?>">View existing</a>
+                <a href="<?php echo BASE_PATH.'admin'.DS.'carousel'.DS;?>">View existing</a>
             </li>
        	</ul>
     </li>
