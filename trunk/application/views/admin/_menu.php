@@ -37,7 +37,7 @@
     </li>
     <li>
         <a href="javascript:;" class="submenu-action" id="submenu-carousel">Carousel</a>
-        <ul style="display: none;" class="submenu" id="carousel">
+        <ul <?php if(!isset($submenu) || $submenu!='carousel'):?>style="display: none;"<?php endif;?> class="submenu" id="carousel">
             <li>
                 <a href="<?php echo BASE_PATH.'admin'.DS.'carousel'.DS.'add'.DS;?>">Add</a>
             </li>
