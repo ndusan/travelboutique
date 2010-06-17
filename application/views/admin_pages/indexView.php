@@ -32,7 +32,7 @@
 		    	<?php foreach($pages as $page):?>
 		    	<tr onmouseover="className='tr_over'" onmouseout="className='tr_out'" class="tr_out">
 		    		<td><?php echo $page['link'];?></td>
-		    		<td><?php echo $page['type']; ?></td>
+		    		<td><?php echo ($page['type']=='dynamic' ? 'Dynamic' : 'Static'); ?></td>
 		    		<td>
 		    			<?php 
 		    			if($page['parent_id'] <= 0) echo "Parent";

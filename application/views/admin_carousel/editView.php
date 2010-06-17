@@ -14,11 +14,11 @@
 
 
 		<div class="post">
-			<h2 class="title">partners / edit existing</h2>
+			<h2 class="title">carousel / edit existing</h2>
 		    <div class="warning" <?php if(!isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg($_GET['q']); ?></div>
 			<div class="info" <?php if(isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg(DEFAULT_MSG); ?></div>
 			<br/>
-			<form id="form" name="form" action="<?php echo BASE_PATH.'admin'.DS.'partners'.DS.$params['id'].DS.'submit'.DS;?>" method="post" enctype="multipart/form-data">
+			<form id="form" name="form" action="<?php echo BASE_PATH.'admin'.DS.'carousel'.DS.$params['id'].DS.'submit'.DS;?>" method="post" enctype="multipart/form-data">
 				
 				<?php include_once('_form.php'); ?>
 				

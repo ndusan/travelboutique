@@ -162,6 +162,11 @@ $routes = array(
 					  	'action' 		=> 'edit', 
 					  	'layout' 		=> 'admin'
 				),
+				array(	'url' 			=> '/^admin\/carousel\/(?P<id>\d+)\/delete\/?$/', 
+						'controller' 	=> 'admin_carousel', 
+					  	'action' 		=> 'delete', 
+					  	'layout' 		=> 'admin'
+				),
 				array(	'url' 			=> '/^admin\/carousel\/((?P<id>\d+)\/)?submit\/?$/', 
 						'controller' 	=> 'admin_carousel', 
 					  	'action' 		=> 'submit', 

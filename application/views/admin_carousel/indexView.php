@@ -17,27 +17,29 @@
 		    <div class="info" <?php if(!isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg($_GET['q']); ?></div>
 			<div class="info" <?php if(isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg('For more actions click on links'); ?></div>
 		    <!-- Data -->
-		    <?php if(isset($partners) && !empty($partners)):?>
+		    <?php if(isset($carousel) && !empty($carousel)):?>
 		    <div class="entry">
 		    <table cellspacing="0" cellspacing="0">
                         <thead>
 		    	<tr>
-		    		<th>Link</th>
+		    		<th>Title</th>
 		    		<th>Image</th>
+		    		<th>To page</th>
 		    		<th>Actions</th>
 		    	</tr>
                         </thead>
                         <tbody>
-		    	<?php foreach($partners as $partner):?>
+		    	<?php foreach($carousel as $c):?>
 		    	<tr onmouseover="className='tr_over'" onmouseout="className='tr_out'" class="tr_out">
-		    		<td><?php echo $partner['link'];?></td>
-		    		<td><a href="<?php echo UPLOAD_PATH.'partners'.DS.$partner['id']."-".$partner['file']; ?>" target="_blank"><?php echo $partner['file']; ?></a></td>
+		    		<td><?php echo $c['title'];?></td>
+		    		<td><img src="<?php echo BASE_PATH.UPLOAD_PATH.'carousel'.DS.$c['id']."-".$c['file']; ?>" width="100" height="100" /></td>
+		    		<td><?php echo $c['link'];?></td>
 		    		<td>
 		    			<span>
-		    				<a href="<?php echo BASE_PATH.'admin'.DS.'partners'.DS.$partner['id'].DS.'edit'.DS;?>">
+		    				<a href="<?php echo BASE_PATH.'admin'.DS.'carousel'.DS.$c['id'].DS.'edit'.DS;?>">
 		    					<img src="<?php echo IMAGE_PATH;?>edit.gif" width="16" height="16" title="Edit" alt="Edit" />
 		    				</a>
-		    				<a href="<?php echo BASE_PATH.'admin'.DS.'partners'.DS.$partner['id'].DS.'delete'.DS;?>">
+		    				<a href="<?php echo BASE_PATH.'admin'.DS.'carousel'.DS.$c['id'].DS.'delete'.DS;?>">
 		    					<img src="<?php echo IMAGE_PATH;?>delete.gif" width="16" height="16" title="Delete" alt="Delete" />
 		    				</a>
 		    			</span>
