@@ -47,7 +47,7 @@
 			<td>
 				<?php foreach($partners as $partner):?>
                 <input type="checkbox" name="partner[]" value="<?php echo $partner['id'];?>" <?php echo ((isset($partner['checked']) && $partner['checked'] == 1) ? "checked='checked'" : "");  ?> />
-                <label><?php echo $partner['link'];?></label><br/>
+                <label><img src="<?php echo BASE_PATH.UPLOAD_PATH.'partners'.DS.$partner['id']."-".$partner['file']; ?>"  width="100" height="100"/></label><br/>
             	<?php endforeach; ?>
             </td>
         </tr>
