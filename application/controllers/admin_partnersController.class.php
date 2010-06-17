@@ -23,6 +23,7 @@ class Admin_partnersController extends Controller{
 		
 		if($params['file']['error'] == 0){
 			move_uploaded_file($params['file']['tmp_name'], UPLOAD_PATH.'partners'.DS.$fileId."-".$params['file']['name']);
+			chmod(UPLOAD_PATH.'partners'.DS.$fileId."-".$params['file']['name'], 0775);
 		}
 		
 		parent::redirect('admin'.DS.'partners', 'success');
