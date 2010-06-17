@@ -31,7 +31,7 @@
                             <?php foreach($partners as $partner):?>
                         <tr onmouseover="className='tr_over'" onmouseout="className='tr_out'" class="tr_out">
                             <td><?php echo $partner['link'];?></td>
-                            <td><a href="<?php echo UPLOAD_PATH.'partners'.DS.$partner['id']."-".$partner['file']; ?>" target="_blank"><?php echo $partner['file']; ?></a></td>
+                            <td><img alt="<?php echo $partner['file']; ?>" title="<?php echo $partner['file']; ?>" src="<?php echo UPLOAD_PATH.'partners'.DS.$partner['id']."-".$partner['file']; ?>"/></td>
                             <td>
                                 <span>
                                     <a href="<?php echo BASE_PATH.'admin'.DS.'partners'.DS.$partner['id'].DS.'edit'.DS;?>">
