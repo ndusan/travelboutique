@@ -3,7 +3,7 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th colspan="2">Add new page</th>
+                <th colspan="2">page</th>
             </tr>
         </thead>
             <?php foreach($langs as $lang):?>
@@ -22,7 +22,7 @@
                     <option value="0">Parent</option>
                         <?php if(isset($levels) && !empty($levels)):?>
                             <?php foreach($levels as $level):?>
-                                <?php if($level['id'] == $page['id']) $sel = "selected='selected'";
+                                <?php if($level['id'] == $page['parent_id']) $sel = "selected='selected'";
                                 else $sel = "";
                                 ?>
                     <option <?php echo $sel; ?> value="<?php echo $level['id']; ?>">Child of <?php echo $level['link']; ?></option>

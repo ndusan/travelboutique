@@ -25,11 +25,14 @@ switch($template){
                 <a href="#"><img alt="travel boutique" title="homepage" src="<?php echo IMAGE_PATH; ?>logo.png" /></a>
             </div>
             <div class="mainNav">
-                <a href="#">početna</a> |
-                <a href="#">individualna putovanja</a> |
-                <a class="active" href="#">aranžmani</a> |
-                <a href="#">avio karte</a> |
-                <a href="#">rent a car</a>
+                <a href="<?php echo BASE_PATH;?>" <?php echo (@$active == 'home' ? "class='active'" : "");?>>početna</a> |
+                <?php if(isset($dynamicPages) && !empty($dynamicPages)):?>
+                <?php foreach($dynamicPages as $dp):?>
+                <a href="<?php echo BASE_PATH.$dp['link'].DS;?>" <?php echo (@$active == $dp['link'] ? "class='active'" : "");?>><?php echo $dp['name'];?></a> |
+                <?php endforeach; ?>
+                <?php endif;?>
+                <a href="<?php echo BASE_PATH.'avio-karte'.DS;?>" <?php echo (@$active == 'avio_karte' ? "class='active'" : "");?>>avio karte</a> |
+                <a href="<?php echo BASE_PATH.'rent-a-car'.DS;?>" <?php echo (@$active == 'rent_a_car' ? "class='active'" : "");?>>rent a car</a>
             </div>
         </div>
     </div>
