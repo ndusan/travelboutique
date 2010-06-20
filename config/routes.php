@@ -198,26 +198,15 @@ $routes = array(
 					  	'action' 		=> 'submit', 
 					  	'layout' 		=> 'empty'
 				),
-				//Contact
-				array(	'url' 			=> '/^admin\/contact\/?$/', 
-						'controller' 	=> 'admin_contact', 
+				//Main menu
+				array(	'url' 			=> '/^admin\/menu\/?$/', 
+						'controller' 	=> 'admin_menu', 
 					  	'action' 		=> 'index', 
 					  	'layout' 		=> 'admin'
 				),
-				array(	'url' 			=> '/^admin\/contact\/submit\/?$/', 
-						'controller' 	=> 'admin_contact', 
-					  	'action' 		=> 'index', 
-					  	'layout' 		=> 'admin'
-				),
-				//About us
-				array(	'url' 			=> '/^admin\/about_us\/?$/', 
-						'controller' 	=> 'admin_aboutus', 
-					  	'action' 		=> 'index', 
-					  	'layout' 		=> 'admin'
-				),
-				array(	'url' 			=> '/^admin\/about_us\/submit\/?$/', 
-						'controller' 	=> 'admin_aboutus', 
-					  	'action' 		=> 'index', 
+				array(	'url' 			=> '/^admin\/menu\/(?P<id>\d+)\/set\/?$/', 
+						'controller' 	=> 'admin_menu', 
+					  	'action' 		=> 'set', 
 					  	'layout' 		=> 'admin'
 				),
 				//Languages
