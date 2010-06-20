@@ -32,7 +32,7 @@
 		    	<?php foreach($banners as $c):?>
 		    	<tr onmouseover="className='tr_over'" onmouseout="className='tr_out'" class="tr_out">
 		    		<td><?php echo $c['title'];?></td>
-		    		<td><img src="<?php echo BASE_PATH.UPLOAD_PATH.'banners'.DS.$c['id']."-".$c['file']; ?>" width="100" height="100" /></td>
+		    		<td><img src="<?php echo BASE_PATH.UPLOAD_PATH.'banners'.DS.$c['id']."-".$c['file']; ?>" width="50%" height="50%" /></td>
 		    		<td><?php echo $c['link'];?></td>
 		    		<td>
 		    			<span>
