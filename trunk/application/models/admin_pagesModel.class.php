@@ -43,6 +43,23 @@ class Admin_pagesModel extends Model{
 		return $output;
 	}
 	
+	public function getStaticPage($params){
+		
+		$query = sprintf("SELECT * FROM `static_page_item_details` WHERE `page_id`='%s'",
+						mysql_real_escape_string($params['id'])
+						);
+		$res = mysql_query($query);
+		
+		if(mysql_num_rows($res) <= 0) return false;
+		$output = array();
+		while($row = mysql_fetch_assoc($res)){
+			$output[$row['language_id']] = $row; 
+		}
+		
+		return $output;
+	}
+	
+	
 	public function getLanguages(){
 		
 		$query = sprintf("SELECT * FROM `languages` WHERE `active`='1'");
@@ -124,6 +141,46 @@ class Admin_pagesModel extends Model{
 			}
 			
 		}
+		return true;
+	}
+	
+	public function submit_static($params){
+		
+		foreach($params['name'] as $key => $name){
+			
+			//Check if this is in or not
+			$query = sprintf("SELECT * FROM `static_page_item_details` WHERE `page_id`='%s' AND `language_id`='%s'",
+							mysql_real_escape_string($params['id']),
+							mysql_real_escape_string($key)
+							);
+			$res = mysql_query($query);
+			
+			if(mysql_num_rows($res) <= 0){
+				
+				//Insert 
+				$query = sprintf("INSERT INTO `static_page_item_details` SET `title`='%s', `content`='%s', `language_id`='%s',  `page_id`='%s'",
+								mysql_real_escape_string($name),
+								mysql_real_escape_string($params['content'][$key]),
+								mysql_real_escape_string($key),
+								mysql_real_escape_string($params['id'])
+								);
+				mysql_query($query);
+			}else{
+				
+				//Update
+				$query = sprintf("UPDATE `static_page_item_details` SET `title`='%s', `content`='%s' WHERE `language_id`='%s' AND `page_id`='%s'",
+								mysql_real_escape_string($name),
+								mysql_real_escape_string($params['content'][$key]),
+								mysql_real_escape_string($key),
+								mysql_real_escape_string($params['id'])
+								);
+				mysql_query($query);
+				
+			}
+			
+		
+		}
+		
 		return true;
 	}
 	

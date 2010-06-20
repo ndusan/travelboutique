@@ -75,6 +75,16 @@ $routes = array(
 					  	'action' 		=> 'edit', 
 					  	'layout' 		=> 'admin'
 				),
+				array(	'url' 			=> '/^admin\/pages\/(?P<id>\d+)\/edit_static\/?$/', 
+						'controller' 	=> 'admin_pages', 
+					  	'action' 		=> 'edit_static', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/pages\/(?P<id>\d+)\/submit_static\/?$/', 
+						'controller' 	=> 'admin_pages', 
+					  	'action' 		=> 'submit_static', 
+					  	'layout' 		=> 'edit'
+				),
 				array(	'url' 			=> '/^admin\/pages\/(?P<id>\d+)\/more\/?$/', 
 						'controller' 	=> 'admin_pages', 
 					  	'action' 		=> 'more', 
@@ -207,7 +217,7 @@ $routes = array(
 				array(	'url' 			=> '/^admin\/menu\/(?P<id>\d+)\/set\/?$/', 
 						'controller' 	=> 'admin_menu', 
 					  	'action' 		=> 'set', 
-					  	'layout' 		=> 'admin'
+					  	'layout' 		=> 'empty'
 				),
 				//Languages
 				array(	'url' 			=> '/^admin\/language\/?$/', 
