@@ -57,7 +57,6 @@
             </li>
        	</ul>
     </li>
-    <li><a href="<?php echo BASE_PATH.'admin'.DS.'contact'.DS;?>">Contact</a></li>
-    <li><a href="<?php echo BASE_PATH.'admin'.DS.'about_us'.DS;?>">About us</a></li>
+    <li><a href="<?php echo BASE_PATH.'admin'.DS.'menu'.DS;?>">Main menu</a></li>
     <li><a href="<?php echo BASE_PATH.'admin'.DS.'logout'.DS;?>">Logout</a></li>
 </ul>
