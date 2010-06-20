@@ -32,7 +32,7 @@
 		    	<?php foreach($carousel as $c):?>
 		    	<tr onmouseover="className='tr_over'" onmouseout="className='tr_out'" class="tr_out">
 		    		<td><?php echo $c['title'];?></td>
-		    		<td><img src="<?php echo BASE_PATH.UPLOAD_PATH.'carousel'.DS.$c['id']."-".$c['file']; ?>" width="100" height="100" /></td>
+		    		<td><img src="<?php echo BASE_PATH.UPLOAD_PATH.'carousel'.DS.$c['id']."-".$c['file']; ?>" width="30%" height="30%" /></td>
 		    		<td><?php echo $c['link'];?></td>
 		    		<td>
 		    			<span>
