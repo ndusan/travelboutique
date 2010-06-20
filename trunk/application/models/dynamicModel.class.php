@@ -28,4 +28,17 @@ class DynamicModel extends Model{
 		}
 		return $row;
 	}
+	
+	public function getDetails($pageId, $lang){
+		
+		$query = sprintf("SELECT `page_items`.`folder`, `page_item_details`.* FROM `page_items`
+							INNER JOIN `page_item_details` ON `page_items`.`id`=`page_item_details`.`page_item_id`
+							WHERE `page_items`.`page_id`='%s' AND `page_item_details`.`language_id`=
+								(SELECT `id` FROM `languages` WHERE `name`='%s')",
+						mysql_real_escape_string($pageId),
+						mysql_real_escape_string($lang)
+						);
+						
+		return parent::query($query);
+	}
 }

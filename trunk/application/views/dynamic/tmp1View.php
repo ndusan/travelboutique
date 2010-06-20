@@ -1,3 +1,4 @@
+<?php print_r($getDetails);?>
 <div class="mainContent">
     <h1 class="borBot">Individualna putovanja</h1>
     <h3>Raznovrsnost putovanja i doživljaja</h3>

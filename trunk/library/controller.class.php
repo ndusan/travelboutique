@@ -8,6 +8,7 @@ class Controller{
 
 	protected $_template;
 	protected $db;
+	protected $lng='sr'; 
 	
 	public $renderHTML = 0;
 	

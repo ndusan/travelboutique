@@ -10,6 +10,10 @@ class DynamicController extends Controller{
 		if(!$getPage) header("Location:". BASE_PATH, 'error');
 		
 		
+		//Get page details
+		$getDetails = $this->db->getDetails((isset($getPage['child']['id']) ? $getPage['child']['id'] : $getPage['id']), $this->lng);
+		parent::set('getDetails', $getDetails);
+		
 		//Get data
 		parent::set('template', $getPage['template']);
 	}
