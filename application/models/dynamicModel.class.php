@@ -4,7 +4,9 @@ class DynamicModel extends Model{
 	
 	public function getPage($params){
 		
-		$query = sprintf("SELECT * FROM `pages` WHERE `link`='%s' AND `active`='1' AND `parent_id`='0'",
+		$query = sprintf("SELECT `pages`.*, `page_info`.`name` FROM `pages` 
+							INNER JOIN `page_info` ON `pages`.`id`=`page_info`.`page_id`
+							WHERE `pages`.`link`='%s' AND `pages`.`active`='1' AND `pages`.`parent_id`='0'",
 						mysql_real_escape_string($params['parentName'])
 						);
 		$res = mysql_query($query);
@@ -26,6 +28,7 @@ class DynamicModel extends Model{
 				$row = array_merge($row, array('child' => $row_c));
 			}
 		}
+		
 		return $row;
 	}
 	
