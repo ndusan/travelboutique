@@ -14,7 +14,7 @@
 
 
 		<div class="post">
-			<h2 class="title">pages / add new</h2>
+			<h2 class="title">pages / edit existing</h2>
 		    <div class="warning" <?php if(!isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg($_GET['q']); ?></div>
 			<div class="info" <?php if(isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg(DEFAULT_MSG); ?></div>
 			<br/>

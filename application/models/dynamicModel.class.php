@@ -44,4 +44,17 @@ class DynamicModel extends Model{
 						
 		return parent::query($query);
 	}
+	
+	public function getDynamicPages($langId){
+		
+		$query = sprintf("SELECT `pages`.`link`, `page_info`.`name` FROM `pages` INNER JOIN `page_info`
+							ON `pages`.`id`=`page_info`.`page_id` WHERE 
+							`page_info`.`language_id`=(SELECT `id` FROM `languages` WHERE `name`='%s') 
+							AND `pages`.`active`='1' AND `pages`.`checked`='1'",
+						mysql_real_escape_string($langId)
+						);
+						
+		return parent::query($query);
+	}
+	
 }
