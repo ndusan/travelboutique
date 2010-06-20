@@ -5,9 +5,13 @@ class DynamicController extends Controller{
 	
 	public function page($params){
 		
-		print_r($params);
+		$getPage = $this->db->getPage($params);
 		
-		parent::set('template', 'tmp2');
+		if(!$getPage) header("Location:". BASE_PATH, 'error');
+		
+		
+		//Get data
+		parent::set('template', $getPage['template']);
 	}
 	
 }

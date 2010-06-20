@@ -27,6 +27,13 @@ class Admin_pagesController extends Controller{
 		else parent::redirect('admin'.DS.'pages'.DS.'add', 'error');
 	}
 	
+	public function submit_static($params){
+		parent::userInfoAndSession();
+
+		if($this->db->submit_static($params)) parent::redirect('admin'.DS.'pages', 'success');
+		else parent::redirect('admin'.DS.'pages'.DS.'add', 'error');
+	}
+	
 	public function edit($params){
 		parent::userInfoAndSession();
 		
@@ -39,6 +46,19 @@ class Admin_pagesController extends Controller{
 		
 		parent::set('params', $params);
 		
+		parent::set('submenu', 'pages');
+	}
+	
+	public function edit_static($params){
+		parent::userInfoAndSession();
+		
+		parent::set('page', $this->db->getStaticPage($params));
+		parent::set('langs', $this->db->getLanguages());
+		
+		
+		parent::set('params', $params);
+		
+		parent::defaultJs(array('tiny_mce'.DS.'tiny_mce'));
 		parent::set('submenu', 'pages');
 	}
 	

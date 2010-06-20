@@ -41,12 +41,14 @@
 		    		</td>
 		    		<td>
 		    			<span>
-		    				<a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$page['id'].DS.'edit'.DS;?>">
+		    				<a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$page['id'].DS.($page['type']=='dynamic' ? 'edit' : 'edit_static').DS;?>">
 		    					<img src="<?php echo IMAGE_PATH;?>edit.gif" width="16" height="16" title="Edit" alt="Edit" />
 		    				</a>
+		    				<?php if($page['type'] == 'dynamic'):?>
 		    				<a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$page['id'].DS.'more'.DS;?>">
 		    					<img src="<?php echo IMAGE_PATH;?>view.gif" width="16" height="16" title="More details" alt="More details" />
 		    				</a>
+		    				<?php endif;?>
 		    			</span>
 		    		</td>
 		    	</tr>
