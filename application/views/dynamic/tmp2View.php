@@ -1,3 +1,4 @@
+<?php print_r($getDetails);?>
 <div class="mainPromo">
     <h1 class="borBot">Aktuelno</h1>
     <div class="onePromoted borBot">
