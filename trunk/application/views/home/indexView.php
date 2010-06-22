@@ -1,25 +1,5 @@
 <div class="wrapper">
-    <div class="header">
-        <div class="lang">
-            <a class="active" href="#">sr</a> | <a href="#">en</a>
-        </div>
-        <div class="topNav">
-            <a href="#">o nama</a> | <a href="#">kontakt</a>
-        </div>
-        <div class="logo">
-            <div class="logoHolder">
-                <a href="#"><img alt="travel boutique" title="homepage" src="<?php echo IMAGE_PATH; ?>logo.png" /></a>
-            </div>
-            <div class="mainNav">
-                <a href="#">početna</a> |
-                <a href="#">individualna putovanja</a> |
-                <a class="active" href="#">aranžmani</a> |
-                <a href="#">avio karte</a> |
-                <a href="#">rent a car</a>
-            </div>
-        </div>
-
-    </div>
+    <?php include_once(VIEW_PATH.'home'.DS.'_header.php');?>
     <div class="top"></div>
     <div class="main">
         <!-- I've added class carousel -->
@@ -29,42 +9,29 @@
             <div class="maskBottom"></div>
             <!-- I've added div with class jCarouselLite  -->
             <div class="jCarouselLite">
+            <?php if(isset($getPageInfo['carousel']) && !empty($getPageInfo['carousel'])):?>
                 <ul>
+					<?php foreach($getPageInfo['carousel'] as $c):?>
                     <li class="image">
                         <div class="maskTop"></div>
-                        <a class="title" href="#"><span>read more</span>Paris</a>
-                        <img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>1.jpg" />
+                        <a class="title" href="javascript:;"><span>read more</span><?php echo $c['title'];?></a>
+                        <img title="<?php echo $c['title'];?>" alt="<?php echo $c['title'];?>" src="<?php echo BASE_PATH.UPLOAD_PATH.'carousel'.DS.$c['id']."-".$c['file']; ?>" />
                     </li>
-                    <li class="image">
-                        <div class="maskTop"></div>
-                        <a class="title" href="#"><span>read more</span>Paris</a>
-                        <img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>1.jpg" />
-                    </li>
-                    <li class="image">
-                        <div class="maskTop"></div>
-                        <a class="title" href="#"><span>read more</span>Sweden</a>
-                        <img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>1.jpg" />
-                    </li>
-                    <li class="image">
-                        <div class="maskTop"></div>
-                        <a class="title" href="#"><span>read more</span>Bobica</a>
-                        <img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>1.jpg" />
-                    </li>
-                    <li class="image">
-                        <div class="maskTop"></div>
-                        <a class="title" href="#"><span>read more</span>Jagodica</a>
-                        <img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>1.jpg" />
-                    </li>
+                    <?php endforeach;?>
                 </ul>
+            <?php endif;?>
             </div>
         </div>
         <div style="clear: both;"></div>
         <div class="content">
             <div class="about">
-                <h1 class="borBot">Sta je Travel boutique?</h1>
-                <p>Travel boutique je jedinstveno mesto koje Vam pruza mogucnost da sami kreirajte svoje putovanje uz nasu strucnu pomoc.
-                    <br/><br/>
-                    U skladu sa Vasim zeljama Vas "Butik putovanja" Vam pruza i kompletnu pripremu za samu destinaciju.</p>
+            <?php if(isset($getPageInfo['items']) && !empty($getPageInfo['items'])):?>
+            <?php foreach($getPageInfo['items'] as $gpi):?>
+                <h1 class="borBot"><?php echo $gpi['title'];?></h1>
+              
+                <p><?php echo $gpi['content'];?></p>
+            <?php endforeach;?>
+            <?php endif; ?>
             </div>
             <div class="callUs">
                 <div class="wings"></div>
@@ -86,22 +53,12 @@
             </div>
 
             <ul>
+                <?php foreach($getPageInfo['banners'] as $banner):?>
                 <li class="box">
-                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
-                    <h2><a href="#">Couple at the beach holding hands</a></h2>
+                    <a href="<?php echo BASE_PATH.$banner['parent_link'].DS.(isset($banner['link']) ? $banner['link'].DS : "");?>"><img title="<?php echo $banner['title']; ?>" alt="<?php echo $banner['title']; ?>" src="<?php echo BASE_PATH.UPLOAD_PATH.'banners'.DS.$banner['id']."-".$banner['file']; ?>" /></a>
+                    <h2><a href="<?php echo BASE_PATH.$banner['parent_link'].DS.(isset($banner['link']) ? $banner['link'].DS : "");?>"><?php echo $banner['title']; ?></a></h2>
                 </li>
-                <li class="box">
-                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
-                    <h2><a href="#">Couple at the beach holding hands</a></h2>
-                </li>
-                <li class="box">
-                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
-                    <h2><a href="#">Couple at the beach holding hands</a></h2>
-                </li>
-                <li class="box">
-                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
-                    <h2><a href="#">Couple at the beach holding hands</a></h2>
-                </li>
+                <?php endforeach; ?>
             </ul>
             <div class="clear"></div>
         </div>

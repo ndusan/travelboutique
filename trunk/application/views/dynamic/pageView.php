@@ -28,7 +28,7 @@ switch($getPageInfo['template']){
                 <a href="<?php echo BASE_PATH;?>" <?php echo (@$active == 'home' ? "class='active'" : "");?>>početna</a> |
                 <?php if(isset($dynamicPages) && !empty($dynamicPages)):?>
                 <?php foreach($dynamicPages as $dp):?>
-                <a href="<?php echo BASE_PATH.$dp['link'].DS;?>" <?php echo (@$active == $dp['link'] ? "class='active'" : "");?>><?php echo $dp['name'];?></a> |
+                <a href="<?php echo BASE_PATH.$dp['link'].DS;?>" <?php echo ($getPageInfo['link'] == $dp['link'] ? "class='active'" : "");?>><?php echo $dp['name'];?></a> |
                 <?php endforeach; ?>
                 <?php endif;?>
                 <a href="<?php echo BASE_PATH.'avio-karte'.DS;?>" <?php echo (@$active == 'avio_karte' ? "class='active'" : "");?>>avio karte</a> |
@@ -71,7 +71,7 @@ switch($getPageInfo['template']){
                 </div>
             </div>
         </div>
-
+		<?php if(isset($getPageInfo['banners']) && !empty($getPageInfo['banners'])):?>
         <div class="boxHolder">
             <div class="tabs">
                 <ul>
@@ -88,6 +88,8 @@ switch($getPageInfo['template']){
             </ul>
             <div class="clear"></div>
         </div>
+        <?php endif;?>
+        
         <?php if(isset($getPageInfo['partners']) && !empty($getPageInfo['partners'])):?>
         <div class="partners">
         	<?php foreach($getPageInfo['partners'] as $par):?>
