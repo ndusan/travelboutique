@@ -3,7 +3,6 @@
 class DynamicModel extends Model{
 	
 	public function getPageInfo($params, $langId){
-		$pageStage = "";
 		
 		//Check if this page has child
 		if(isset($params['childName']) && !empty($params['childName'])){
@@ -16,7 +15,7 @@ class DynamicModel extends Model{
 			
 			if(mysql_num_rows($resChild) <= 0) return false;
 			$pageInfo = mysql_fetch_assoc($resChild);
-			$pageStage = "child";
+			
 			
 		}elseif(isset($params['parentName']) && !empty($params['parentName'])){
 		
@@ -28,7 +27,7 @@ class DynamicModel extends Model{
 			
 			if(mysql_num_rows($resParent) <= 0) return false;
 			$pageInfo = mysql_fetch_assoc($resParent);
-			$pageStage = "parent";
+			
 			
 		}else return false;
 		
@@ -90,47 +89,94 @@ class DynamicModel extends Model{
 		}
 		
 		//Get banners
-		$bannerOutput = array();
-		switch($pageStage){
-			case "child":
-							//Find all baners connected to this parent
-							$query_banner = sprintf("SELECT `banners`.*, `pages`.`link` FROM `banners` INNER JOIN
-													`pages` ON `pages`.`id`=`banners`.`page_id`
-													WHERE `pages`.`parent_id`='%s'
-													AND `pages`.`id`!='%s' ORDER BY `banners`.`id` DESC LIMIT 0, 4",
-													mysql_real_escape_string($pageInfo['parent_id']),
-													mysql_real_escape_string($pageInfo['id'])
-													);
-													
-							$res_banner = mysql_query($query_banner);
-							if(mysql_num_rows($res_banner) > 0){
-								//Find parent link
-								$query_l = sprintf("SELECT `link` FROM `pages` WHERE `id`='%s'",
-												mysql_real_escape_string($pageInfo['parent_id'])
-												);
-								$row_l = mysql_fetch_assoc(mysql_query($query_l));
-								while($row_banner = mysql_fetch_assoc($res_banner)){
-									$row_banner['parent_link'] = $row_l['link'];
-									$bannerOutput[] = $row_banner;
-								}
-							}
-							break;
-			case "parent":
-							//Find all baners connected to this parent
-							$query_banner = sprintf("SELECT `banners`.`id`, `banners`.`title`, `banners`.`file`, `pages`.`link` AS `parent_link` FROM `banners` 
-													INNER JOIN `pages` ON `pages`.`id`=`banners`.`page_id` WHERE `pages`.`id`!='%s'	LIMIT 0, 4",
-													mysql_real_escape_string($pageInfo['id'])
-													);
-							$res_banner = mysql_query($query_banner);
-							if(mysql_num_rows($res_banner) > 0){
-								while($row_banner = mysql_fetch_assoc($res_banner)) $bannerOutput[] = $row_banner;
-							}
-							break;
-		}
-		$output = array_merge($output, array('banners' => $bannerOutput));
+		$output = array_merge($output, array('banners' => self::getBanners($pageInfo, $langId)));
 						
 		//print_r($output);
 		return $output;
+	}
+	
+	public function getBanners($pageInfo, $langId){
+		
+		$tmpOutput = array();
+		$query_l = sprintf("SELECT `link` FROM `pages` WHERE `id`='%s'",
+						mysql_real_escape_string($pageInfo['id'])
+						);
+		$row_l = mysql_fetch_assoc(mysql_query($query_l));
+		
+		//Get if it's parent of child
+		if($pageInfo['parent_id'] > 0){
+			
+			//Child
+			$query_banner = sprintf("SELECT `banners`.*, `pages`.`link` FROM `banners` INNER JOIN
+									`pages` ON `pages`.`id`=`banners`.`page_id`
+									WHERE `pages`.`parent_id`='%s'
+									AND `pages`.`id`!='%s' ORDER BY `banners`.`id` DESC LIMIT 0, 4",
+									mysql_real_escape_string($pageInfo['parent_id']),
+									mysql_real_escape_string($pageInfo['id'])
+									);
+			$res_banner = mysql_query($query_banner);
+			$numOfBanners = mysql_num_rows($res_banner);
+			if($numOfBanners > 0)
+				while($row_banner = mysql_fetch_assoc($res_banner)){
+					$row_banner['parent_link'] = $row_l['link'];
+					$tmpOutput[] = $row_banner;
+				} 
+			if($numOfBanners < 4){
+				
+				//Add some extra banners
+				$query_extra = sprintf("SELECT `banners`.`id`, `banners`.`title`, `banners`.`file`, `pages`.`link` FROM `banners` 
+										INNER JOIN `pages` ON `pages`.`id`=`banners`.`page_id` WHERE `pages`.`id`!='%s' AND `pages`.`parent_id`='%s'
+										LIMIT 0, %s",
+										mysql_real_escape_string($pageInfo['id']),
+										mysql_real_escape_string(0),
+										mysql_real_escape_string(4 - $numOfBanners)
+										);
+				$res_extra = mysql_query($query_extra);
+				if(mysql_num_rows($res_extra) > 0)
+					while($row_extra = mysql_fetch_assoc($res_extra)) $tmpOutput[] = $row_extra;
+			}
+		}else{
+			
+			//Parent
+			$query_banner = sprintf("SELECT `banners`.`id`, `banners`.`title`, `banners`.`file`, `pages`.`link` FROM `banners` 
+									INNER JOIN `pages` ON `pages`.`id`=`banners`.`page_id` WHERE `pages`.`parent_id`='%s'	LIMIT 0, 4",
+									mysql_real_escape_string($pageInfo['id'])
+									);
+						
+			$res_banner = mysql_query($query_banner);
+			$numOfBanners = mysql_num_rows($res_banner);
+			if($numOfBanners > 0)
+				while($row_banner = mysql_fetch_assoc($res_banner)){
+					$row_banner['parent_link'] = $row_l['link'];
+					$tmpOutput[] = $row_banner;
+				} 
+			if($numOfBanners < 4){
+				
+				//Add some extra banners
+				$query_extra = sprintf("SELECT `banners`.`id`, `banners`.`title`, `banners`.`file`, `pages`.`link` AS `parent_link` FROM `banners` 
+										INNER JOIN `pages` ON `pages`.`id`=`banners`.`page_id` WHERE `pages`.`id`!='%s' AND `pages`.`parent_id`='%s'	
+										LIMIT 0, %s",
+										mysql_real_escape_string($pageInfo['id']),
+										mysql_real_escape_string(0),
+										mysql_real_escape_string(4 - $numOfBanners)
+										);
+				$res_extra = mysql_query($query_extra);
+				if(mysql_num_rows($res_extra) > 0)
+					while($row_extra = mysql_fetch_assoc($res_extra)) $tmpOutput[] = $row_extra;
+			}
+		}
+		
+		return $tmpOutput;
+	}
+	
+	public function dynamicPages($params, $lang){
+		
+		$query = sprintf("SELECT `pages`.*, `page_info`.`name` FROM `pages` INNER JOIN `page_info`
+							ON `pages`.`id`=`page_info`.`page_id`
+							WHERE `pages`.`checked`='1' AND `page_info`.`language_id`=(SELECT `id` FROM `languages` WHERE `name`='%s')",
+						mysql_real_escape_string($lang)
+						);
+		return parent::query($query);
 	}
 	
 }
