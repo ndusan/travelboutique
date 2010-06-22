@@ -91,7 +91,7 @@ switch($getPageInfo['template']){
         <?php if(isset($getPageInfo['partners']) && !empty($getPageInfo['partners'])):?>
         <div class="partners">
         	<?php foreach($getPageInfo['partners'] as $par):?>
-            <a href="<?php echo $par['link']; ?>" target="_blank"><img alt="travel boutique" title="<?php echo $par['file'];?>" src="<?php echo UPLOAD_PATH.'partners'.DS.$par['id']."-".$par['file']; ?>" /></a>
+            <a href="<?php echo $par['link']; ?>" target="_blank"><img alt="travel boutique" title="<?php echo $par['file'];?>" src="<?php echo BASE_PATH.UPLOAD_PATH.'partners'.DS.$par['id']."-".$par['file']; ?>" /></a>
 			<?php endforeach;?>
         </div>
         <?php endif;?>
