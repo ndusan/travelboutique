@@ -21,7 +21,7 @@ p {padding:5px 0;}
 .clear {clear:both; line-height:0;}
 .fl {float:left;}
 .fr {float:right;}
-label {font-size:14px; color:#990099;}
+label {font-size:14px; color:#990099; display:block;}
 h1 {font-size:24px; color:#990099; font-weight:normal; padding:5px 0; margin:5px 0; letter-spacing:-1px;}
 h2 {font-size:18px; font-weight:normal;}
 h3 {font-size:14px; color:#333; font-weight:normal; padding:5px 0; margin:5px 0;}
@@ -31,6 +31,8 @@ input, textarea, select {background-color:#FFF; margin:3px 0; font-size:12px; fo
 button {background-color:#FFF; margin:2px 0; font-size:12px; font-family:Arial,Sans-serif; padding:4px 10px; border:solid 1px #e886e4; -moz-border-radius:3px;}
 button:hover {background-color:#EEE; cursor:pointer;}
 .inputSmall {width:210px;}
+.inputBig {width:442px;}
+.selectSmall {width:222px;}
 
 /* BUILD */
 .wrapper {width:970px; margin:0 auto;}
@@ -62,7 +64,7 @@ button:hover {background-color:#EEE; cursor:pointer;}
 .mainNav .active,.mainNav .active:hover {color:#000;}
 .subNav {overflow:hidden; margin:10px 0 0;}
 .subNav li {border-bottom:dotted 1px #CCC;}
-.subNav li a {color:#333; text-decoration:none;}
+.subNav li a {color:#333; text-decoration:none; outline:none;}
 .subNav li a:hover {color:#990099;}
 
 
@@ -107,5 +109,10 @@ button:hover {background-color:#EEE; cursor:pointer;}
 .box img {margin:0 0 5px;}
 .box a { text-decoration:none; outline:none; color:#333;}
 .box a:hover {color:#990099;}
+
+/* tabelar data */
+table {overflow:hidden;}
+tbody td {padding:2px 5px;}
+tfoot td {padding:5px;}
 
 
