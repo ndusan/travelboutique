@@ -231,13 +231,23 @@ $routes = array(
 					  	'layout' 		=> 'admin'
 				),
 				//Static pages
-				array(	'url' 			=> '/^rent_a_car\/?$/', 
+				array(	'url' 			=> '/^rent-a-car\/?$/', 
 						'controller' 	=> 'rent_a_car', 
 					  	'action' 		=> 'index', 
 					  	'layout' 		=> 'user'
 				),
-				array(	'url' 			=> '/^avio_karte\/?$/', 
+				array(	'url' 			=> '/^avio-karte\/?$/', 
 						'controller' 	=> 'avio_karte', 
+					  	'action' 		=> 'index', 
+					  	'layout' 		=> 'user'
+				),
+				array(	'url' 			=> '/^contact\/?$/', 
+						'controller' 	=> 'contact', 
+					  	'action' 		=> 'index', 
+					  	'layout' 		=> 'user'
+				),
+				array(	'url' 			=> '/^about-us\/?$/', 
+						'controller' 	=> 'about_us', 
 					  	'action' 		=> 'index', 
 					  	'layout' 		=> 'user'
 				),
