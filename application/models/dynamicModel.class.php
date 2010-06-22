@@ -69,7 +69,7 @@ class DynamicModel extends Model{
 						mysql_real_escape_string('dynamic'),
 						mysql_real_escape_string($langId)
 						);
-						
+				
 		$resCh = mysql_query($query);
 		if(mysql_num_rows($resCh) > 0){
 			$chOutput = array();
@@ -117,7 +117,10 @@ class DynamicModel extends Model{
 							break;
 			case "parent":
 							//Find all baners connected to this parent
-							$query_banner = sprintf("SELECT `banners`.`id`, `banners`.`title`, `banners`.`file` FROM `banners` LIMIT 0, 4");
+							$query_banner = sprintf("SELECT `banners`.`id`, `banners`.`title`, `banners`.`file`, `pages`.`link` AS `parent_link` FROM `banners` 
+													INNER JOIN `pages` ON `pages`.`id`=`banners`.`page_id` WHERE `pages`.`id`!='%s'	LIMIT 0, 4",
+													mysql_real_escape_string($pageInfo['id'])
+													);
 							$res_banner = mysql_query($query_banner);
 							if(mysql_num_rows($res_banner) > 0){
 								while($row_banner = mysql_fetch_assoc($res_banner)) $bannerOutput[] = $row_banner;
@@ -126,7 +129,7 @@ class DynamicModel extends Model{
 		}
 		$output = array_merge($output, array('banners' => $bannerOutput));
 						
-		print_r($output);
+		//print_r($output);
 		return $output;
 	}
 	
