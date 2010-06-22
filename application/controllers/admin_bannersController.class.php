@@ -42,6 +42,7 @@ class Admin_bannersController extends Controller{
 	public function edit($params){
 		parent::userInfoAndSession();
 		
+		parent::set('pages', $this->db->getPages());
 		parent::set('banner', $this->db->getBanner($params));
 		parent::set('params', $params);
 		

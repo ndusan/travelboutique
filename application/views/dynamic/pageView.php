@@ -2,7 +2,7 @@
 //Load different template
 $view = "";
 
-switch($template){
+switch($getPageInfo['template']){
 	case 'tmp1': default:
 				$view = "tmp1View.php";		
 				break;
@@ -43,15 +43,14 @@ switch($template){
           <?php @include_once($view); ?>
             <div class="sidebar">
                 <div class="subNav">
+                    <?php if(isset($getPageInfo['children']) && !empty($getPageInfo['children'])):?>
                     <h4>Subnavigation</h4>
                     <ul>
-                        <li><h3><a href="#">Sub name</a></h3></li>
-                        <li><h3><a href="#">Another link</a></h3></li>
-                        <li><h3><a href="#">Subnav </a></h3></li>
-                        <li><h3><a href="#">Subnavigation</a></h3></li>
-                        <li><h3><a href="#">FAQ</a></h3></li>
-                        <li><h3><a href="#">Weather services</a></h3></li>
+                    	<?php foreach($getPageInfo['children'] as $ch):?>
+                        <li><h3><a href="<?php echo BASE_PATH.$getPageInfo['link'].DS.$ch['link'].DS; ?>"><?php echo $ch['name']?></a></h3></li>
+                        <?php endforeach; ?>
                     </ul>
+                    <?php endif;?>
                 </div>
                 <div class="additional">
                     <h4>Aditional info</h4>
@@ -79,34 +78,23 @@ switch($template){
                     <li><a href="#" class="active">Bla bla bla</a></li>
                 </ul>
             </div>
-
             <ul>
+				<?php foreach($getPageInfo['banners'] as $banner):?>
                 <li class="box">
-                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
-                    <h2><a href="#">Couple at the beach holding hands</a></h2>
+                    <a href="<?php echo BASE_PATH.$banner['parent_link'].DS.(isset($banner['link']) ? $banner['link'].DS : "");?>"><img title="<?php echo $banner['title']; ?>" alt="<?php echo $banner['title']; ?>" src="<?php echo BASE_PATH.UPLOAD_PATH.'banners'.DS.$banner['id']."-".$banner['file']; ?>" /></a>
+                    <h2><a href="<?php echo BASE_PATH.$banner['parent_link'].DS.(isset($banner['link']) ? $banner['link'].DS : "");?>"><?php echo $banner['title']; ?></a></h2>
                 </li>
-                <li class="box">
-                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
-                    <h2><a href="#">Couple at the beach holding hands</a></h2>
-                </li>
-                <li class="box">
-                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
-                    <h2><a href="#">Couple at the beach holding hands</a></h2>
-                </li>
-                <li class="box">
-                    <a href="#"><img title="asdas" alt="asdsadasd" src="<?php echo IMAGE_PATH; ?>2.jpg" /></a>
-                    <h2><a href="#">Couple at the beach holding hands</a></h2>
-                </li>
+                <?php endforeach; ?>
             </ul>
             <div class="clear"></div>
         </div>
+        <?php if(isset($getPageInfo['partners']) && !empty($getPageInfo['partners'])):?>
         <div class="partners">
-            <img alt="travel boutique" title="homepage" src="<?php echo IMAGE_PATH; ?>4.jpg" />
-            <img alt="travel boutique" title="homepage" src="<?php echo IMAGE_PATH; ?>4.jpg" />
-            <img alt="travel boutique" title="homepage" src="<?php echo IMAGE_PATH; ?>4.jpg" />
-            <img alt="travel boutique" title="homepage" src="<?php echo IMAGE_PATH; ?>4.jpg" />
-            <img alt="travel boutique" title="homepage" src="<?php echo IMAGE_PATH; ?>4.jpg" />
+        	<?php foreach($getPageInfo['partners'] as $par):?>
+            <a href="<?php echo $par['link']; ?>" target="_blank"><img alt="travel boutique" title="<?php echo $par['file'];?>" src="<?php echo UPLOAD_PATH.'partners'.DS.$par['id']."-".$par['file']; ?>" /></a>
+			<?php endforeach;?>
         </div>
+        <?php endif;?>
     </div>
     <div class="bottom"></div>
 </div>

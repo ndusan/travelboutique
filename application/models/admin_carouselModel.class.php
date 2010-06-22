@@ -31,13 +31,38 @@ class Admin_carouselModel extends Model{
 	
 	public function submit($params){
 		
-		$query = sprintf("INSERT INTO `carousel` SET `title`='%s', `file`='%s', `page_id`='%s'",
-						mysql_real_escape_string($params['title']),
-						mysql_real_escape_string($params['file']['name']),
-						mysql_real_escape_string($params['page'])
-						);
-		mysql_query($query);
-		return mysql_insert_id();
+		if(isset($params['id']) && !empty($params['id'])){
+			
+			$query = sprintf("UPDATE `carousel` SET `title`='%s', `page_id`='%s'
+								WHERE `id`='%s'",
+							mysql_real_escape_string($params['title']),
+							mysql_real_escape_string($params['page']),
+							mysql_real_escape_string($params['id'])
+							);
+			mysql_query($query);
+			
+			if($params['file']['error'] == 0){
+				
+				//Upload file
+				$query = sprintf("UPDATE `carousel` SET `file`='%s' WHERE `id`='%s'",
+								mysql_real_escape_string($params['file']['name']),
+								mysql_real_escape_string($params['id'])
+								);
+				mysql_query($query);
+			}
+			$id = $params['id'];
+		}else{
+		
+			$query = sprintf("INSERT INTO `carousel` SET `title`='%s', `file`='%s', `page_id`='%s'",
+							mysql_real_escape_string($params['title']),
+							mysql_real_escape_string($params['file']['name']),
+							mysql_real_escape_string($params['page'])
+							);
+			mysql_query($query);
+			$id = mysql_insert_id();
+		}
+		
+		return $id;
 	}
 	
 	public function delete($params){
