@@ -28,6 +28,7 @@ h3 {font-size:14px; color:#333; font-weight:normal; padding:5px 0; margin:5px 0;
 h4 { font-size:14px; color:#990099; font-weight:normal; padding:5px 0; margin:5px 0;}
 
 input, textarea, select {background-color:#FFF; margin:3px 0; font-size:12px; font-family:Arial,Sans-serif; padding:5px; border:solid 1px #CCC;}
+input:focus, textarea:focus, select:focus {border:solid 1px #990099; color:#333;}
 button {background-color:#FFF; margin:2px 0; font-size:12px; font-family:Arial,Sans-serif; padding:4px 10px; border:solid 1px #e886e4; -moz-border-radius:3px;}
 button:hover {background-color:#EEE; cursor:pointer;}
 .inputSmall {width:210px;}
