@@ -1,7 +1,7 @@
-<?php if(isset($getDetails) && !empty($getDetails)):?>
+<?php if(isset($getPageInfo) && !empty($getPageInfo)):?>
 <div class="mainPromo">
-    <h1 class="borBot"><?php echo $pageName;?></h1>
-    <?php foreach($getDetails as $d):?>
+    <h1 class="borBot"><?php echo $getPageInfo['name'];?></h1>
+    <?php foreach($getPageInfo['items'] as $d):?>
     <div class="onePromoted borBot">
     	<?php 
     	$dh = opendir(UPLOAD_PATH.$d['folder']);

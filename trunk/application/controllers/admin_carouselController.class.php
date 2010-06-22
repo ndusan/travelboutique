@@ -42,6 +42,7 @@ class Admin_carouselController extends Controller{
 	public function edit($params){
 		parent::userInfoAndSession();
 		
+		parent::set('pages', $this->db->getPages());
 		parent::set('carousel', $this->db->getTheCarousel($params));
 		parent::set('params', $params);
 		
