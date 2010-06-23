@@ -1,4 +1,9 @@
-<div class="mainContent">
+<div class="wrapper">
+    <?php include_once(VIEW_PATH.'home'.DS.'_header.php'); ?>
+    <div class="top"></div>
+    <div class="main">
+        <div style="clear: both;"></div>
+        <div class="content">
     <h1 class="borBot">rent a car</h1>
     <p>
  	Atraktivne cene…..nudimo Vam veliki izbor različitih klasa automobila vodećih rent-a-car kompanija. Reputacija renomiranih kuća kao što su Hertz, Avis, Budget, Alamo, Centauro...garantuje da sigurno nećete pogrešiti ako iznajmite vozilo unapred. Preuzmite vozilo na nekoj od destinacija širom sveta.
@@ -102,3 +107,7 @@
     </tbody>
 </table>
 </div>
+    </div>
+    <div class="bottom"></div>
+</div>
+
