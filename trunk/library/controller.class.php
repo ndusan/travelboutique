@@ -8,7 +8,7 @@ class Controller{
 
 	protected $_template;
 	protected $db;
-	protected $lng='sr'; 
+	protected $lng=CURRENT_LANG; 
 	
 	public $renderHTML = 0;
 	
@@ -21,6 +21,17 @@ class Controller{
 	 */
 	function __construct($controller, $action, $layout){
 		
+		//Include languages
+		$dir_array = array();
+		$dirs = dir(LANG_PATH);
+		$exists = false;
+		while($dir = $dirs->read())
+			if($dir!='.' && $dir!='..' && $dir!='.svn' && is_file(LANG_PATH.$dir) && $dir == CURRENT_LANG.'Lang.php'){
+				include(LANG_PATH.$dir);
+				$exists = true;	
+			}
+		if(!$exists) include(LANG_PATH.DEFAULT_LANG.'Lang.php'); 
+		
 		//Model file
 		$modelFile = strtolower($controller)."Model.class.php";
 		$modelName = ucfirst($controller)."Model";
@@ -30,10 +41,10 @@ class Controller{
 		
 		if(file_exists(MODEL_PATH.$modelFile)) require_once MODEL_PATH.$modelFile;
 		$this->db = new $modelName;
-		
+
 		//Create template object
 		if(file_exists('library'.DS.'template.class.php')) require_once 'library'.DS.'template.class.php';
-		$this->_template = new Template($controller, $action, $layout);
+		$this->_template = new Template($controller, $action, $layout, $_lang);
 	}
 	
 	/**

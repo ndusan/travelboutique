@@ -33,3 +33,7 @@ define('IMAGE_PATH', BASE_PATH.'public'.DS.'images'.DS);
 define('CSS_PATH', BASE_PATH.'public'.DS.'css'.DS);
 define('JS_PATH', BASE_PATH.'public'.DS.'js'.DS);
 define('UPLOAD_PATH', 'public'.DS.'uploads'.DS);
+
+define('LANG_PATH', 'languages'.DS);
+define('CURRENT_LANG', 'sr');
+define('DEFAULT_LANG', 'sr');

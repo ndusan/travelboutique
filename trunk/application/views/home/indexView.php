@@ -14,7 +14,7 @@
 					<?php foreach($getPageInfo['carousel'] as $c):?>
                     <li class="image">
                         <div class="maskTop"></div>
-                        <a class="title" href="javascript:;"><span>read more</span><?php echo $c['title'];?></a>
+                        <a class="title" href="<?php echo $c['parent_link'].DS.(isset($c['link']) ? $c['link'].DS : "");?>"><span><?php echo $html->translate('detaljnije');?></span><?php echo $c['title'];?></a>
                         <img title="<?php echo $c['title'];?>" alt="<?php echo $c['title'];?>" src="<?php echo BASE_PATH.UPLOAD_PATH.'carousel'.DS.$c['id']."-".$c['file']; ?>" />
                     </li>
                     <?php endforeach;?>
@@ -36,15 +36,15 @@
             <div class="callUs">
                 <div class="wings"></div>
                 <div class="phone"></div>
-                <h1 class="borBot">Pozovite nas</h1>
-                <h2>011 / 435 67 89</h2>
-                <h2>063 / 321 59 87</h2>
+                <h1 class="borBot"><?php echo $html->translate('Pozovite nas');?></h1>
+                <h2><?php echo $html->translate('011 / 435 67 89');?></h2>
+                <h2><?php echo $html->translate('063 / 321 59 87');?></h2>
             </div>
         </div>
         <div class="boxHolder">
             <div class="tabs">
                 <ul>
-                    <li><a href="#" class="active">u ponudi</a></li>
+                    <li><a href="javascript:;" class="active">u ponudi</a></li>
                     <li><a href="#">putno osiguranje</a></li>
                     <li><a href="#">poklon vaucer</a></li>
                     <li><a href="#">vremenska prognoza</a></li>
@@ -65,12 +65,12 @@
         <div class="links">
             <div class="newsletter">
                 <div class="letter"></div>
-                <h1 class="borBot">Newsletter</h1>
-                <p>Unesite svoju e-mail adresu da biste bla bla</p>
+                <h1 class="borBot"><?php echo $html->translate('Dnevne novosti');?></h1>
+                <p><?php echo $html->translate('Novosti tekst');?></p>
                 <form>
-                    <label>Vasa e-mail adresa</label>
+                    <label><?php echo $html->translate('Vaša el.adresa');?></label>
                     <input class="inputSmall" type="text" name="" value="" />
-                    <button type="submit">Potvrdi</button>
+                    <button type="submit"><?php echo $html->translate('Potvrdi');?></button>
                 </form>
             </div>
         </div>

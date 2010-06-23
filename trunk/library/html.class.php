@@ -5,6 +5,9 @@
  *
  */
 class HTML{
+	
+	protected $_language = array();
+	
 	/**
 	 * Include JS
 	 * @param $fileName
@@ -77,5 +80,25 @@ class HTML{
 						break;
 		}
 		return $txt;
+	}
+	
+/**
+	 * Set language array
+	 * @param array $lang
+	 * @return void
+	 */
+	public function setLanguage($lang){
+		$this->_language = $lang;
+	}
+	
+/**
+	 * Get translation
+	 * @param String $string
+	 * @return String
+	 */
+	public function translate($string){
+		if(array_key_exists($string, $this->_language))
+			echo $this->_language[$string];
+		else echo $string;
 	}
 }

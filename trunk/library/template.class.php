@@ -12,6 +12,7 @@ class Template{
 	protected $_controller;
 	protected $_action;
 	protected $_layout;
+	protected $_language;
 
 	/**
 	 * Constructor
@@ -20,10 +21,11 @@ class Template{
 	 * @param String $layout
 	 * @return void
 	 */
-	function __construct($controller, $action, $layout) {
+	function __construct($controller, $action, $layout, $language) {
 		$this->_controller = $controller;
 		$this->_action = $action;
 		$this->_layout = $layout;
+		$this->_language = $language;
 	}
 
 	/**
@@ -66,6 +68,7 @@ class Template{
     	if(file_exists('library'.DS.'html.class.php')){
     		require_once 'library'.DS.'html.class.php';
 			$html = new HTML;
+			$html->setLanguage($this->_language);
     	}
     	
 		extract($this->variables);
