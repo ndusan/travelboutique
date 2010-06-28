@@ -14,5 +14,9 @@ $_lang = array(
 	'Dnevne novosti'	=>		'Dnevne novosti',
 	'Novosti tekst'		=>		'Unesite vašu el.adresu kako bismo vas dodali na listu',
 	'Vaša el.adresa'	=>		'Vaša el.adresa',
-	'Potvrdi'			=>		'Potvrdi'
+	'Potvrdi'			=>		'Potvrdi',
+	'osiguranje'		=>		'osiguranje',
+	'vaučeri'			=>		'vaučeri',
+	'vr.prognoza'		=>		'vr.prognoza',
+	'kursna lista'		=>		'kursna lista'
 );
