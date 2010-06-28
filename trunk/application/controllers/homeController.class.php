@@ -11,4 +11,10 @@ class HomeController extends Controller{
 		
 		parent::set('dynamicPages', $this->db->dynamicPages($params, $this->lng));
 	}
+	
+	public function news($params){
+		
+		if($this->db->submitNews($params)) echo true;
+		else echo false;
+	}
 }

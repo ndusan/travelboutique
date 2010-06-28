@@ -44,22 +44,35 @@
         <div class="boxHolder">
             <div class="tabs">
                 <ul>
-                    <li><a href="javascript:;" class="active">u ponudi</a></li>
-                    <li><a href="#">putno osiguranje</a></li>
-                    <li><a href="#">poklon vaucer</a></li>
-                    <li><a href="#">vremenska prognoza</a></li>
-                    <li><a href="#">kursna lista</a></li>
+                    <li><a href="javascript:;" class="active" id="link-offer">u ponudi</a></li>
+                    <li><a href="javascript:;" id="link-insurance">putno osiguranje</a></li>
+                    <li><a href="javascript:;" id="link-voucher">poklon vaucer</a></li>
+                    <li><a href="javascript:;" id="link-weather">vremenska prognoza</a></li>
+                    <li><a href="javascript:;" id="link-exchange">kursna lista</a></li>
                 </ul>
             </div>
-
-            <ul>
-                <?php foreach($getPageInfo['banners'] as $banner):?>
-                <li class="box">
-                    <a href="<?php echo BASE_PATH.$banner['parent_link'].DS.(isset($banner['link']) ? $banner['link'].DS : "");?>"><img title="<?php echo $banner['title']; ?>" alt="<?php echo $banner['title']; ?>" src="<?php echo BASE_PATH.UPLOAD_PATH.'banners'.DS.$banner['id']."-".$banner['file']; ?>" /></a>
-                    <h2><a href="<?php echo BASE_PATH.$banner['parent_link'].DS.(isset($banner['link']) ? $banner['link'].DS : "");?>"><?php echo $banner['title']; ?></a></h2>
-                </li>
-                <?php endforeach; ?>
-            </ul>
+			<div id="ul">
+	            <ul id="ul-offer">
+	                <?php foreach($getPageInfo['banners'] as $banner):?>
+	                <li class="box">
+	                    <a href="<?php echo BASE_PATH.$banner['parent_link'].DS.(isset($banner['link']) ? $banner['link'].DS : "");?>"><img title="<?php echo $banner['title']; ?>" alt="<?php echo $banner['title']; ?>" src="<?php echo BASE_PATH.UPLOAD_PATH.'banners'.DS.$banner['id']."-".$banner['file']; ?>" /></a>
+	                    <h2><a href="<?php echo BASE_PATH.$banner['parent_link'].DS.(isset($banner['link']) ? $banner['link'].DS : "");?>"><?php echo $banner['title']; ?></a></h2>
+	                </li>
+	                <?php endforeach; ?>
+	            </ul>
+	            <ul id="ul-insurance" style="display: none;">
+	            	<li class="box"><?php echo $html->translate('osiguranje');?></li>
+	            </ul>
+	            <ul id="ul-voucher" style="display: none;">
+	            	<li class="box"><?php echo $html->translate('vaučeri');?></li>
+	            </ul>
+	            <ul id="ul-weather" style="display: none;">
+	            	<li class="box"><?php echo $html->translate('vr.prognoza');?></li>
+	            </ul>
+	            <ul id="ul-exchange" style="display: none;">
+	            	<li class="box"><?php echo $html->translate('kursna lista');?></li>
+	            </ul>
+            </div>
             <div class="clear"></div>
         </div>
         <div class="links">
@@ -67,10 +80,10 @@
                 <div class="letter"></div>
                 <h1 class="borBot"><?php echo $html->translate('Dnevne novosti');?></h1>
                 <p><?php echo $html->translate('Novosti tekst');?></p>
-                <form>
+                <form action="<?php echo BASE_PATH.'ajax-news'.DS;?>" method="post">
                     <label><?php echo $html->translate('Vaša el.adresa');?></label>
-                    <input class="inputSmall" type="text" name="" value="" />
-                    <button type="submit"><?php echo $html->translate('Potvrdi');?></button>
+                    <input class="inputSmall" type="text" name="email" value="" />
+                    <button type="button"><?php echo $html->translate('Potvrdi');?></button>
                 </form>
             </div>
         </div>

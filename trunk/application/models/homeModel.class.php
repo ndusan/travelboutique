@@ -149,4 +149,21 @@ class HomeModel extends Model{
 						);
 		return parent::query($query);
 	}
+	
+	public function submitNews($params){
+		
+		$query = sprintf("SELECT * FROM `newsletters` WHERE `email`='%s'",
+						mysql_real_escape_string($params['email'])
+						);
+		$res = mysql_query($query);
+		
+		if(mysql_num_rows($res) > 0) return false;
+		
+		//Store in DB
+		$query = sprintf("INSERT INTO `newsletters` SET `email`='%s'",
+						mysql_real_escape_string($params['email'])
+						);
+		$res = mysql_query($query);
+		return true;
+	}
 }

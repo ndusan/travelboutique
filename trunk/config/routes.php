@@ -251,12 +251,19 @@ $routes = array(
 					  	'action' 		=> 'index', 
 					  	'layout' 		=> 'user'
 				),
+				//Home page
+				array(	'url' 			=> '/^ajax-news\/?$/', 
+						'controller' 	=> 'home', 
+					  	'action' 		=> 'news', 
+					  	'layout' 		=> 'empty'
+				),
 				//Dynamic
 				array(	'url' 			=> '/^(?P<parentName>[0-9a-zA-Z\-\_]+)\/?((?P<childName>[0-9a-zA-Z\-\_]+)\/?)*$/', 
 						'controller' 	=> 'dynamic', 
 					  	'action' 		=> 'page', 
 					  	'layout' 		=> 'user'
 				),
+				
 				
 				
 );
