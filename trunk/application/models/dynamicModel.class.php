@@ -106,6 +106,11 @@ class DynamicModel extends Model{
 		//Get if it's parent of child
 		if($pageInfo['parent_id'] > 0){
 			
+			$query_l = sprintf("SELECT `link` FROM `pages` WHERE `id`='%s'",
+						mysql_real_escape_string($pageInfo['parent_id'])
+						);
+			$row_l = mysql_fetch_assoc(mysql_query($query_l));
+			
 			//Child
 			$query_banner = sprintf("SELECT `banners`.*, `pages`.`link` FROM `banners` INNER JOIN
 									`pages` ON `pages`.`id`=`banners`.`page_id`

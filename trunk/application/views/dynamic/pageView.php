@@ -59,8 +59,8 @@ switch($getPageInfo['template']){
             <ul>
 				<?php foreach($getPageInfo['banners'] as $banner):?>
                 <li class="box">
-                    <a href="<?php echo BASE_PATH.$banner['parent_link'].DS.(isset($banner['link']) ? $banner['link'].DS : "");?>"><img title="<?php echo $banner['title']; ?>" alt="<?php echo $banner['title']; ?>" src="<?php echo BASE_PATH.UPLOAD_PATH.'banners'.DS.$banner['id']."-".$banner['file']; ?>" /></a>
-                    <h2><a href="<?php echo BASE_PATH.$banner['parent_link'].DS.(isset($banner['link']) ? $banner['link'].DS : "");?>"><?php echo $banner['title']; ?></a></h2>
+                    <a href="<?php echo BASE_PATH.(isset($banner['parent_link']) ? $banner['parent_link'].DS : "").(isset($banner['link']) ? $banner['link'].DS : "");?>"><img title="<?php echo $banner['title']; ?>" alt="<?php echo $banner['title']; ?>" src="<?php echo BASE_PATH.UPLOAD_PATH.'banners'.DS.$banner['id']."-".$banner['file']; ?>" /></a>
+                    <h2><a href="<?php echo BASE_PATH.(isset($banner['parent_link']) ? $banner['parent_link'].DS : "").(isset($banner['link']) ? $banner['link'].DS : "");?>"><?php echo $banner['title']; ?></a></h2>
                 </li>
                 <?php endforeach; ?>
             </ul>

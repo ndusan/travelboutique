@@ -10,6 +10,8 @@ class HomeController extends Controller{
 		parent::set('getPageInfo', $this->db->getPageInfo($params, $this->lng));
 		
 		parent::set('dynamicPages', $this->db->dynamicPages($params, $this->lng));
+		
+		parent::set('active', 'home');
 	}
 	
 	public function news($params){
