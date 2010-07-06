@@ -15,6 +15,7 @@ class Admin_carouselController extends Controller{
 		parent::set('submenu', 'carousel');
 		parent::set('pages', $this->db->getPages());
 		
+		parent::defaultJs(array('admin_carousel'));
 	}
 	
 	public function submit($params){
@@ -48,6 +49,6 @@ class Admin_carouselController extends Controller{
 		
 		parent::set('submenu', 'carousel');
 		
-		
+		parent::defaultJs(array('admin_carousel'));
 	}
 }

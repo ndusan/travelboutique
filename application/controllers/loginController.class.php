@@ -9,6 +9,8 @@ class LoginController extends Controller{
 	public function index(){
 		
 		if(isset($_SESSION['tb']) && !empty($_SESSION['tb'])) parent::redirect('admin'.DS.'home', '');
+		
+		parent::defaultJs(array('login'));
 	}	
 	
 	/**
