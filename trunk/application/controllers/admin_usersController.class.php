@@ -7,6 +7,8 @@ class Admin_usersController extends Controller{
 		parent::userInfoAndSession();
 		
 		parent::set('submenu', 'users');
+		
+		parent::defaultJs(array('admin_users'));
 	}
 	
 	public function index($params){
@@ -28,6 +30,7 @@ class Admin_usersController extends Controller{
 		
 		
 		parent::set('submenu', 'users');
+		parent::defaultJs(array('admin_users'));
 	}
 	
 	public function submit($params){

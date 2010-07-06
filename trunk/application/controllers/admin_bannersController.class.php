@@ -15,6 +15,7 @@ class Admin_bannersController extends Controller{
 		parent::set('submenu', 'banners');
 		parent::set('pages', $this->db->getPages());
 		
+		parent::defaultJs(array('admin_banners'));
 	}
 	
 	public function submit($params){
@@ -48,7 +49,7 @@ class Admin_bannersController extends Controller{
 		
 		parent::set('submenu', 'banners');
 		
-		
+		parent::defaultJs(array('admin_banners'));
 	}
 	
 }

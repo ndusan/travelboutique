@@ -18,5 +18,6 @@ class LoginModel extends Model{
 		if(mysql_num_rows($res) <= 0) return false;
 		
 		return mysql_fetch_assoc($res);
+		
 	}
 }
