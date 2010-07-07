@@ -86,7 +86,16 @@
                     <button type="button"><?php echo $html->translate('Potvrdi');?></button>
                 </form>
             </div>
-            <div class="details">facebook & skype</div>
+            <div class="details">f
+                <ul>
+                    <li>
+                        Travel Boutique on Facebook
+                    </li>
+                    <li>
+                        Travel Boutique on Skype
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <script type="text/javascript" charset="utf-8">
