@@ -86,15 +86,15 @@
                     <button type="button"><?php echo $html->translate('Potvrdi');?></button>
                 </form>
             </div>
-            <div class="details">f
-                <ul>
-                    <li>
-                        Travel Boutique on Facebook
-                    </li>
-                    <li>
-                        Travel Boutique on Skype
-                    </li>
-                </ul>
+            <div class="details">
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td><a href="#"><img src="<?php echo IMAGE_PATH; ?>facebook.png" alt="" title="" /></a></td>
+                        <td><label>Travel Boutique on<br/> <a href="#">Facebook</a></label></td>
+                        <td><img src="<?php echo IMAGE_PATH; ?>skype.png" alt="" title="" /></td>
+                        <td><label>Skype name:<br/> Travel-Boutique</label></td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
