@@ -87,7 +87,7 @@ button:hover {background-color:#EEE; cursor:pointer;}
 .jCarouselLite {width:930px !important;}
 
 .content {padding:20px 25px; overflow:hidden;}
-.links {overflow:hidden; padding:20px 25px;}
+.links {overflow:hidden; padding:10px 25px;}
 .about {float:left; width:455px; padding:0 235px 0 0; overflow:hidden; background:transparent url(../images/about_bg.png)scroll no-repeat 510px center;}
 .newsletter {float:left; width:330px; position:relative;}
 .details {float:right; width:570px; position:relative;}
