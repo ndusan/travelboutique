@@ -44,7 +44,7 @@ button:hover {background-color:#EEE; cursor:pointer;}
 .lang .active, .lang .active:hover {text-decoration:none; font-weight:bold; color:#000;}
 .letter {position:absolute; top:0; right:5px; width:60px; height:40px; background:transparent url(../images/letter_bg.png) scroll no-repeat top center;}
 .phone {position:absolute; top:-5px; right:0; width:77px; height:74px; background:transparent url(../images/phone_bg.png) scroll no-repeat top center;}
-.wings {position:absolute; top:-55px; right:0; width:230px; height:40px; background:transparent url(../images/wings.png) scroll no-repeat top center;}
+.wings {position:absolute; top:-68px; right:0; width:230px; height:90px; background:transparent url(../images/wings.png) scroll no-repeat top center;}
 .top {height:15px; background:transparent url(../images/header_bg.png) scroll no-repeat top center;}
 .main {padding:5px 0 0; background:transparent url(../images/main_bg.png) scroll repeat-y top center;}
 .bottom {height:15px; margin:0 0 50px; background:transparent url(../images/footer_bg.png) scroll no-repeat top center;}
