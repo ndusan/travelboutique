@@ -48,7 +48,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td colspan="2">
                                 <label>Tekst poruke</label>
                                 <textarea class="inputBig" name="" rows="4" cols="20"></textarea>
                             </td>
