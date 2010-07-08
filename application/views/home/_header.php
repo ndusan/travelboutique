@@ -7,7 +7,7 @@
         </div>
         <div class="logo">
             <div class="logoHolder">
-                <a href="#"><img alt="travel boutique" title="homepage" src="<?php echo IMAGE_PATH; ?>logo.png" /></a>
+                <a href="<?php echo BASE_PATH;?>"><img alt="travel boutique" title="homepage" src="<?php echo IMAGE_PATH; ?>logo.png" /></a>
             </div>
             <div class="mainNav">
                 <a href="<?php echo BASE_PATH;?>" <?php echo (@$active == 'home' ? "class='active'" : ""); ?>><?php  $html->translate('početna'); ?></a> |

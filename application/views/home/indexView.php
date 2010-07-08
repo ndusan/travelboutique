@@ -44,11 +44,11 @@
         <div class="boxHolder">
             <div class="tabs">
                 <ul>
-                    <li><a href="javascript:;" class="active" id="link-offer">u ponudi</a></li>
-                    <li><a href="javascript:;" id="link-insurance">putno osiguranje</a></li>
-                    <li><a href="javascript:;" id="link-voucher">poklon vaucer</a></li>
-                    <li><a href="javascript:;" id="link-weather">vremenska prognoza</a></li>
-                    <li><a href="javascript:;" id="link-exchange">kursna lista</a></li>
+                    <li><a href="javascript:;" class="active" id="link-offer"><?php echo $html->translate('u ponudi');?></a></li>
+                    <li><a href="javascript:;" id="link-insurance"><?php echo $html->translate('putno osiguranje');?></a></li>
+                    <li><a href="javascript:;" id="link-voucher"><?php echo $html->translate('poklon vaučeri');?></a></li>
+                    <li><a href="javascript:;" id="link-weather"><?php echo $html->translate('vremenska prognoza');?></a></li>
+                    <li><a href="javascript:;" id="link-exchange"><?php echo $html->translate('kursna lista');?></a></li>
                 </ul>
             </div>
 			<div id="ul">
@@ -61,16 +61,22 @@
 	                <?php endforeach; ?>
 	            </ul>
 	            <ul id="ul-insurance" style="display: none;">
-	            	<li class="box"><?php echo $html->translate('osiguranje');?></li>
+	            	<li class="box">
+	            	<?php echo $extra['insurance']['title'];?>
+	            	<?php echo $extra['insurance']['content'];?>
+	            	</li>
 	            </ul>
 	            <ul id="ul-voucher" style="display: none;">
-	            	<li class="box"><?php echo $html->translate('vaučeri');?></li>
+	            	<li class="box">
+	            	<?php echo $extra['voucher']['title'];?>
+	            	<?php echo $extra['voucher']['content'];?>
+	            	</li>
 	            </ul>
 	            <ul id="ul-weather" style="display: none;">
-	            	<li class="box"><?php echo $html->translate('vr.prognoza');?></li>
+	            	<li class="box"></li>
 	            </ul>
 	            <ul id="ul-exchange" style="display: none;">
-	            	<li class="box"><?php echo $html->translate('kursna lista');?></li>
+	            	<li class="box"></li>
 	            </ul>
             </div>
             <div class="clear"></div>
