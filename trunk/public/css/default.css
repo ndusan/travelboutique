@@ -17,7 +17,7 @@ abbr,acronym { border:0;}
 body {font-size:13px; color:#444; font-family:georgia,sans-serif; background:#FFF url("../images/body_bg.jpg") fixed no-repeat top center;}
 a {color:#990099; outline:none;}
 a:hover {text-decoration:none;}
-p {padding:25px 0;}
+p {padding:5px 0;}
 .clear {clear:both; line-height:0;}
 .fl {float:left;}
 .fr {float:right;}
