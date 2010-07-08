@@ -63,7 +63,7 @@ button:hover {background-color:#EEE; cursor:pointer;}
 .mainNav a {color:#FFF; text-decoration:none; padding: 0 5px; text-transform:uppercase; outline:none;}
 .mainNav a:hover {color:#000;}
 .mainNav .active,.mainNav .active:hover {color:#000;}
-.subNav {overflow:hidden; margin:10px 0 0;}
+.subNav {overflow:hidden; margin:25px 0 0;}
 .subNav li {border-bottom:dotted 1px #CCC;}
 .subNav li a {color:#333; text-decoration:none; outline:none;}
 .subNav li a:hover {color:#990099;}
