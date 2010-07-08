@@ -151,9 +151,9 @@
                     </tbody>
                 </table>
             </div>
-        </div>
-        <div class="sidebar">
-            <?php include_once(VIEW_PATH.'home'.DS.'_sidebar.php');?>
+            <div class="sidebar">
+                <?php include_once(VIEW_PATH.'home'.DS.'_sidebar.php');?>
+            </div>
         </div>
     </div>
     <div class="bottom"></div>
