@@ -3,8 +3,6 @@
     <p>
  	Atraktivne cene…..nudimo Vam veliki izbor različitih klasa automobila vodećih rent-a-car kompanija. Reputacija renomiranih kuća kao što su Hertz, Avis, Budget, Alamo, Centauro...garantuje da sigurno nećete pogrešiti ako iznajmite vozilo unapred. Preuzmite vozilo na nekoj od destinacija širom sveta.
     </p>
-
-
     <table cellpadding="0" cellspacing="0">
         <tfoot>
             <tr>
