@@ -58,5 +58,7 @@
        	</ul>
     </li>
     <li><a href="<?php echo BASE_PATH.'admin'.DS.'menu'.DS;?>">Main menu</a></li>
+    <li><a href="<?php echo BASE_PATH.'admin'.DS.'insurance'.DS;?>">Insurance</a></li>
+    <li><a href="<?php echo BASE_PATH.'admin'.DS.'voucher'.DS;?>">Voucher</a></li>
     <li><a href="<?php echo BASE_PATH.'admin'.DS.'logout'.DS;?>">Logout</a></li>
 </ul>

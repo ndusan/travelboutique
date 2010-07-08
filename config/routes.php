@@ -230,6 +230,28 @@ $routes = array(
 					  	'action' 		=> 'edit', 
 					  	'layout' 		=> 'admin'
 				),
+				//Insurance
+				array(	'url' 			=> '/^admin\/insurance\/?$/', 
+						'controller' 	=> 'admin_insurance', 
+					  	'action' 		=> 'index', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/insurance\/(?P<id>\d+)\/submit\/?$/', 
+						'controller' 	=> 'admin_insurance', 
+					  	'action' 		=> 'submit', 
+					  	'layout' 		=> 'empty'
+				),
+				//Voucher
+				array(	'url' 			=> '/^admin\/voucher\/?$/', 
+						'controller' 	=> 'admin_voucher', 
+					  	'action' 		=> 'index', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/voucher\/(?P<id>\d+)\/submit\/?$/', 
+						'controller' 	=> 'admin_voucher', 
+					  	'action' 		=> 'submit', 
+					  	'layout' 		=> 'empty'
+				),
 				//Static pages
 				array(	'url' 			=> '/^rent-a-car\/?$/', 
 						'controller' 	=> 'rent_a_car', 
