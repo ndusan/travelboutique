@@ -18,5 +18,10 @@ $_lang = array(
 	'osiguranje'		=>		'osiguranje',
 	'vaučeri'			=>		'vaučeri',
 	'vr.prognoza'		=>		'vr.prognoza',
-	'kursna lista'		=>		'kursna lista'
+	'kursna lista'		=>		'kursna lista',
+	'Dodatne informacije'=>		'Dodatne informacije',
+	'Dodatno'			=>		'Bla bla',
+	'Kontakt informacije'=>		'Kontakt informacije',
+	'Kontakt'			=>		'telefon',
+	'Avio karte'		=>		'Avio karte',
 );

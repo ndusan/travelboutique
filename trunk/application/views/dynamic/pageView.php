@@ -30,23 +30,7 @@ switch($getPageInfo['template']){
                     </ul>
                     <?php endif;?>
                 </div>
-                <div class="additional">
-                    <h4>Aditional info</h4>
-                    <p>Je jedinstveno mesto koje Vam pruza mogucnost da sami kreirajte svoje putovanje uz nasu strucnu pomoc.
-                        <br/><br/>
-                        U skladu sa Vasim zeljama Vas "Butik putovanja" Vam pruza i kompletnu pripremu za samu destinaciju.
-                    </p>
-                </div>
-                <div class="contactUs">
-                    <h4>Contact info</h4>
-                    <p>Serbia, 11000 Belgrade,<br/>
-                        42 Gospodar Jevremova st.<br/><br/>
-
-                        Tel: +381 60 440 90 40<br/>
-                        Email: <a href="#">office@travelboutique.rs</a><br/><br/>
-
-                        Web: <a href="#">www.travelboutique.rs</a></p>
-                </div>
+                <?php include_once(VIEW_PATH.'home'.DS.'_sidebar.php');?>
             </div>
         </div>
 		<?php if(isset($getPageInfo['banners']) && !empty($getPageInfo['banners'])):?>
