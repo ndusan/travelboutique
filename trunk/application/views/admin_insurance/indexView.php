@@ -14,16 +14,16 @@
     <div id="content">
 
         <div class="post">
-            <h2 class="title">	voucher</h2>
+            <h2 class="title">insurance</h2>
             <div class="info" <?php if(!isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg($_GET['q']); ?></div>
             <div class="info" <?php if(isset($_GET['q'])):?> style="display: none;" <?php endif;?>><?php echo $html->msg('For more actions click on links'); ?></div>
             <!-- Data -->
 			<div class="entry">
-				<form name="form-vaucher" action="<?php echo BASE_PATH.'admin'.DS.'voucher'.DS.'submit'.DS.'?type=voucher';?>" method="post">
+				<form name="form-vaucher" action="<?php echo BASE_PATH.'admin'.DS.'insurance'.DS.'submit'.DS.'?type=insurance';?>" method="post">
 			    <table cellpadding="0" cellspacing="0">
 			        <thead>
 			            <tr>
-			                <th colspan="4">Set voucher</th>
+			                <th colspan="4">Set insurance</th>
 			            </tr>
 			        </thead>
 			        <tfoot>
@@ -34,7 +34,7 @@
 			            </tr>
 			        </tfoot>
 			        <tbody>
-			           <?php if(isset($lang) && !empty($lang)):?>
+			            <?php if(isset($lang) && !empty($lang)):?>
 			            <?php foreach($lang as $l):?>
 			            <tr>
 			            	<td colspan="3">

@@ -236,7 +236,7 @@ $routes = array(
 					  	'action' 		=> 'index', 
 					  	'layout' 		=> 'admin'
 				),
-				array(	'url' 			=> '/^admin\/insurance\/(?P<id>\d+)\/submit\/?$/', 
+				array(	'url' 			=> '/^admin\/insurance\/submit\/?$/', 
 						'controller' 	=> 'admin_insurance', 
 					  	'action' 		=> 'submit', 
 					  	'layout' 		=> 'empty'
@@ -247,7 +247,7 @@ $routes = array(
 					  	'action' 		=> 'index', 
 					  	'layout' 		=> 'admin'
 				),
-				array(	'url' 			=> '/^admin\/voucher\/(?P<id>\d+)\/submit\/?$/', 
+				array(	'url' 			=> '/^admin\/voucher\/submit\/?$/', 
 						'controller' 	=> 'admin_voucher', 
 					  	'action' 		=> 'submit', 
 					  	'layout' 		=> 'empty'
