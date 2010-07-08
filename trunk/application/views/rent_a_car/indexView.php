@@ -16,8 +16,8 @@
 			    <tfoot>
 			        <tr>
 			            <td colspan="2" align="center">
-			                <button type="submit">prosledi ups</button>
-			                <button type="reset">odustani</button>
+			                <button type="submit"><?php echo $html->translate('posali zahtev');?></button>
+			                <button type="reset"><?php echo $html->translate('odustani');?></button>
 			            </td>
 			        </tr>
 			    </tfoot>
