@@ -5,57 +5,49 @@
         <div style="clear: both;"></div>
         <div class="content">
             <div class="mainPromo">
-                <h1 class="borBot">rent a car</h1>
-                <p>
- 	Atraktivne cene…..nudimo Vam veliki izbor različitih klasa automobila vodećih rent-a-car kompanija. Reputacija renomiranih kuća kao što su Hertz, Avis, Budget, Alamo, Centauro...garantuje da sigurno nećete pogrešiti ako iznajmite vozilo unapred. Preuzmite vozilo na nekoj od destinacija širom sveta.
-                </p>
+                <h1 class="borBot"><?php echo $getPageInfo['items'][0]['title'];?></h1>
+                <?php echo $getPageInfo['items'][0]['content'];?>
+                
+                <form id="form-contact" action="<?php echo BASE_PATH.'contact'.DS.'submit'.DS; ?>" method="post">
                 <table cellpadding="0" cellspacing="0">
-                    <tfoot>
-                        <tr>
-                            <td colspan="2" align="center">
-                                <button>prosledi ups</button>
-                                <button>odustani</button>
-                            </td>
-                        </tr>
-                    </tfoot>
+                    
                     <tbody>
                         <tr>
                             <td>
-                                <label>Ime</label>
-                                <input class="inputSmall" type="text" name="" value="" />
+                                <label><?php echo $html->translate('Ime');?></label>
+                                <input class="inputSmall j_required" type="text" name="contact[firstname]" value="" />
                             </td>
                             <td>
-                                <label>Prezime</label>
-                                <input class="inputSmall" type="text" name="" value="" />
+                                <label><?php echo $html->translate('Prezime')?></label>
+                                <input class="inputSmall j_required" type="text" name="contact[lastname]" value="" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label>Telefon</label>
-                                <input class="inputSmall" type="text" name="" value="" />
+                                <label><?php echo $html->translate('Telefon');?></label>
+                                <input class="inputSmall j_required" type="text" name="contact[tel]" value="" />
                             </td>
-                            <td>
-                                <label>Telefon</label>
-                                <select class="selectSmall" name="">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                </select>
-                            </td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <label>Tekst poruke</label>
-                                <textarea class="inputBig" name="" rows="4" cols="20"></textarea>
+                                <label><?php echo $html->translate('Tekst poruke')?></label>
+                                <textarea class="inputBig" name="contact[text]" rows="4" cols="20"></textarea>
                             </td>
                         </tr>
 
                     </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2" align="center">
+                                <button type="button" id="contact"><?php echo $html->translate('posalji zahtev');?></button>
+                                <button type="reset"><?php echo $html->translate('odustani');?></button>
+                            </td>
+                        </tr>
+                    </tfoot>
                 </table>
+                </form>
+                
             </div>
             <div class="sidebar">
                 <?php include_once(VIEW_PATH.'home'.DS.'_sidebar.php');?>
