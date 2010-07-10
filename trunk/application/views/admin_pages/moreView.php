@@ -44,7 +44,7 @@
 					    	<?php endforeach;?>
 					    	<?php if($page['template']!='tmp1'):?>
 					    	<tr>
-					    		<th style="vertical-align: top;">Images: (215 x 105 px)</th>
+					    		<th style="vertical-align: top;">Images:<br/>(215 x 105 px)</th>
 					    		<td>
 					    			<input type="file" name="file0" ><br/>
 					    			<input type="file" name="file1" ><br/>
