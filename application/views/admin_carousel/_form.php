@@ -12,7 +12,7 @@
             </td>
         </tr>
         <tr>
-            <td>Image: <b>(300 x 285px)</b></td>
+            <td>Image: <b>(300 x 285 px)</b></td>
             <td>
                 <input type="file" name="file" value="" />
                 <?php echo (isset($carousel['file']) ? "[ ".$carousel['file']." ]" : "");?>
