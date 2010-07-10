@@ -62,13 +62,13 @@
                 </ul>
                 <div id="ul-insurance" style="display: none;">
                     <div class="boxBig">
-                        <?php echo $extra['insurance']['title'];?>
+                        <label><?php echo $extra['insurance']['title'];?></label>
                         <?php echo $extra['insurance']['content'];?>
                     </div>
                 </div>
                 <div id="ul-voucher" style="display: none;">
                     <div class="boxBig">
-                        <?php echo $extra['voucher']['title'];?>
+                        <label><?php echo $extra['voucher']['title'];?><label>
                         <?php echo $extra['voucher']['content'];?>
                     </div>
                 </div>
