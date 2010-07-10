@@ -23,7 +23,7 @@
                         <thead>
 		    	<tr>
 		    		<th>Title</th>
-		    		<th>Image</th>
+		    		<th>Image (300 x 285 px)</th>
 		    		<th>To page</th>
 		    		<th>Actions</th>
 		    	</tr>
