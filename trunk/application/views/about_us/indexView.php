@@ -5,10 +5,8 @@
         <div style="clear: both;"></div>
         <div class="content">
             <div class="mainPromo">
-                <h1 class="borBot">O nama</h1>
-                <p>
-                    bla bla truc
-                </p>
+               <h1 class="borBot"><?php echo $getPageInfo['items'][0]['title'];?></h1>
+                <?php echo $getPageInfo['items'][0]['content'];?>
             </div>
             <div class="sidebar">
                 <?php include_once(VIEW_PATH.'home'.DS.'_sidebar.php');?>

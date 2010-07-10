@@ -258,15 +258,30 @@ $routes = array(
 					  	'action' 		=> 'index', 
 					  	'layout' 		=> 'user'
 				),
+				array(	'url' 			=> '/^rent-a-car\/submit\/?$/', 
+						'controller' 	=> 'rent_a_car', 
+					  	'action' 		=> 'submit', 
+					  	'layout' 		=> 'empty'
+				),
 				array(	'url' 			=> '/^avio-karte\/?$/', 
 						'controller' 	=> 'avio_karte', 
 					  	'action' 		=> 'index', 
+					  	'layout' 		=> 'user'
+				),
+				array(	'url' 			=> '/^avio-karte\/submit\/?$/', 
+						'controller' 	=> 'avio_karte', 
+					  	'action' 		=> 'submit', 
 					  	'layout' 		=> 'user'
 				),
 				array(	'url' 			=> '/^contact\/?$/', 
 						'controller' 	=> 'contact', 
 					  	'action' 		=> 'index', 
 					  	'layout' 		=> 'user'
+				),
+				array(	'url' 			=> '/^contact\/submit\/?$/', 
+						'controller' 	=> 'contact', 
+					  	'action' 		=> 'submit', 
+					  	'layout' 		=> 'empty'
 				),
 				array(	'url' 			=> '/^about-us\/?$/', 
 						'controller' 	=> 'about_us', 

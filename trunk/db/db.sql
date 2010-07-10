@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 08, 2010 at 09:27 PM
+-- Generation Time: Jul 10, 2010 at 09:43 AM
 -- Server version: 5.0.83
 -- PHP Version: 5.2.10-2ubuntu6.4
 
@@ -12,6 +12,43 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- Database: `travelboutique`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `avio_karte`
+--
+
+DROP TABLE IF EXISTS `avio_karte`;
+CREATE TABLE IF NOT EXISTS `avio_karte` (
+  `id` int(11) NOT NULL auto_increment,
+  `firstname` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `lastname` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `email` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `tel` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `address` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `city` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `state` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `start` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `end` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `date_from` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `date_to` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `passangers` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `seniors` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `children` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `inf` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `class` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `ticket` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `modif` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `avio_karte`
+--
+
+INSERT INTO `avio_karte` (`id`, `firstname`, `lastname`, `email`, `tel`, `address`, `city`, `state`, `start`, `end`, `date_from`, `date_to`, `passangers`, `seniors`, `children`, `inf`, `class`, `ticket`, `modif`) VALUES
+(1, 'Dusan', 'Novakovic', 'ndusan@gmail.com', '23434', 'Sodra Tvarvagen 16', 'hjarup', 'Sweden', 'Hjarup', 'Malmo', '10-07-2010', '10-07-2010', '1', '0', '0', '0', '0', '1', '2010-07-10 09:23:39');
 
 -- --------------------------------------------------------
 
@@ -66,6 +103,77 @@ INSERT INTO `carousel` (`id`, `title`, `file`, `page_id`, `modif`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contact`
+--
+
+DROP TABLE IF EXISTS `contact`;
+CREATE TABLE IF NOT EXISTS `contact` (
+  `id` int(11) NOT NULL auto_increment,
+  `firstname` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `lastname` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `tel` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `text` text collate utf8_unicode_ci NOT NULL,
+  `modif` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id`, `firstname`, `lastname`, `tel`, `text`, `modif`) VALUES
+(1, 'Dusan', 'Novakovic', '123232', 'rersdfasd', '2010-07-10 09:38:48');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `extra`
+--
+
+DROP TABLE IF EXISTS `extra`;
+CREATE TABLE IF NOT EXISTS `extra` (
+  `id` int(11) NOT NULL auto_increment,
+  `type` varchar(255) collate utf8_unicode_ci NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `extra`
+--
+
+INSERT INTO `extra` (`id`, `type`) VALUES
+(1, 'voucher'),
+(2, 'insurance');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `extra_details`
+--
+
+DROP TABLE IF EXISTS `extra_details`;
+CREATE TABLE IF NOT EXISTS `extra_details` (
+  `id` int(11) NOT NULL auto_increment,
+  `title` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `content` text collate utf8_unicode_ci NOT NULL,
+  `language_id` int(11) NOT NULL,
+  `extra_id` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=9 ;
+
+--
+-- Dumping data for table `extra_details`
+--
+
+INSERT INTO `extra_details` (`id`, `title`, `content`, `language_id`, `extra_id`) VALUES
+(6, 'eng test', '<p>tendsafa</p>', 2, 2),
+(5, 'bla', '<p>bla</p>', 1, 2),
+(7, 'test 1', '<p>vo2</p>', 1, 1),
+(8, 'fdsaf', '<p>dsfas</p>', 2, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `languages`
 --
 
@@ -97,14 +205,17 @@ CREATE TABLE IF NOT EXISTS `newsletters` (
   `email` varchar(255) collate utf8_unicode_ci NOT NULL,
   `modif` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `newsletters`
 --
 
 INSERT INTO `newsletters` (`id`, `email`, `modif`) VALUES
-(1, 'ndusan@gmail.com', '2010-06-25 13:48:26');
+(2, 'ndusan@gmail.com', '2010-07-10 07:46:21'),
+(3, 'ndusan@gmail.com2', '2010-07-10 07:49:32'),
+(4, 'fas', '2010-07-10 07:50:52'),
+(5, 'fasdf', '2010-07-10 07:51:49');
 
 -- --------------------------------------------------------
 
@@ -130,8 +241,10 @@ CREATE TABLE IF NOT EXISTS `pages` (
 
 INSERT INTO `pages` (`id`, `template`, `link`, `active`, `parent_id`, `type`, `checked`) VALUES
 (1, '0', 'home', 1, 0, 'static', 0),
+(5, '', 'contact', 1, 0, 'static', 0),
 (2, '0', 'rent-a-car', 1, 0, 'static', 0),
 (14, 'tmp1', 'subsomer-2', 1, 11, 'dynamic', 0),
+(4, '', 'about-us', 1, 0, 'static', 0),
 (3, '0', 'avio-karte', 1, 0, 'static', 0),
 (13, 'tmp1', 'sub-summer', 1, 11, 'dynamic', 0),
 (12, 'tmp1', 'winter-2011', 1, 0, 'dynamic', 1),
@@ -270,6 +383,39 @@ INSERT INTO `partners` (`id`, `file`, `link`, `modif`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `rent_a_car`
+--
+
+DROP TABLE IF EXISTS `rent_a_car`;
+CREATE TABLE IF NOT EXISTS `rent_a_car` (
+  `id` int(11) NOT NULL auto_increment,
+  `firstname` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `lastname` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `email` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `tel` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `address` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `state_take` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `date_take` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `car_type` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `location` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `city_take` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `date_return` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `modif` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  `city` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `state` varchar(255) collate utf8_unicode_ci NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `rent_a_car`
+--
+
+INSERT INTO `rent_a_car` (`id`, `firstname`, `lastname`, `email`, `tel`, `address`, `state_take`, `date_take`, `car_type`, `location`, `city_take`, `date_return`, `modif`, `city`, `state`) VALUES
+(1, 'Dusan', 'Novakovic', 'ndusan@gmail.com', '12412312', 'Sodra Tvarvagen 16', 'Sweden', '10-07-2010', '3', '1', 'Malmo', '10-07-2010', '2010-07-10 08:29:36', 'Hjarup', 'Sweden');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `static_page_item_details`
 --
 
@@ -282,7 +428,7 @@ CREATE TABLE IF NOT EXISTS `static_page_item_details` (
   `modif` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
   `language_id` int(11) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `static_page_item_details`
@@ -293,7 +439,9 @@ INSERT INTO `static_page_item_details` (`id`, `title`, `content`, `page_id`, `mo
 (2, '', '', 2, '2010-07-07 17:46:35', 0),
 (3, '', '', 3, '2010-07-07 17:46:35', 0),
 (4, 'This is a page for avio karte', '<p>This is a short description about this page</p>', 3, '2010-07-07 17:47:11', 1),
-(5, 'This is a page how to rent a car', '<p>This is just dummy text to check how it will look on page :-)</p>\r\n<p>&nbsp;</p>', 2, '2010-07-07 17:47:52', 1);
+(5, 'This is a page how to rent a car', '<p>This is just dummy text to check how it will look on page :-)</p>', 2, '2010-07-10 07:57:32', 1),
+(6, 'Test', '<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>', 4, '2010-07-10 09:41:29', 1),
+(7, 'Contact', '<p>This is contact</p>', 5, '2010-07-10 09:28:52', 1);
 
 -- --------------------------------------------------------
 

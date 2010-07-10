@@ -5,82 +5,74 @@
         <div style="clear: both;"></div>
         <div class="content">
             <div class="mainPromo">
-                <h1 class="borBot"><?php echo $html->translate('Avio karte');?></h1>
-                <p>
-                    Po svim svetskim standardima, tehničkoj opremljenosti i stručnosti nudimo Vam redovne linije svih svetskih avio kompanija. Letite iz Beograda ili sa bilo koje druge tačke na planeti do željene destinacije.Za klijente koji traže best-inn-class pružamo premium uslugu, za klijente koji traže vrednost za novac, nudimo pouzdan service.
-                </p>
-
+                <h1 class="borBot"><?php echo $getPageInfo['items'][0]['title'];?></h1>
+                <?php echo $getPageInfo['items'][0]['content'];?>
+				<form id="form-avio_karte" action="<?php echo BASE_PATH.'avio-karte'.DS.'submit'.DS; ?>" method="post">
                 <table cellpadding="0" cellspacing="0">
-                    <tfoot>
-                        <tr>
-                            <td colspan="2" align="center">
-                                <button>prosledi ups</button>
-                                <button>odustani</button>
-                            </td>
-                        </tr>
-                    </tfoot>
+                    
                     <tbody>
                         <tr>
                             <td>
-                                <label>Ime</label>
-                                <input class="inputSmall" type="text" name="" value="" />
+                                <label><?php echo $html->translate('Ime');?></label>
+                                <input class="inputSmall j_required" type="text" name="avio_karte[firstname]" value="" />
                             </td>
                             <td>
-                                <label>Prezime</label>
-                                <input class="inputSmall" type="text" name="" value="" />
+                                <label><?php echo $html->translate('Prezime');?></label>
+                                <input class="inputSmall j_required" type="text" name="avio_karte[lastname]" value="" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label>E-mail</label>
-                                <input class="inputSmall" type="text" name="" value="" />
+                                <label><?php echo $html->translate('E-mail');?></label>
+                                <input class="inputSmall j_required" type="text" name="avio_karte[email]" value="" />
                             </td>
                             <td>
-                                <label>Telefon</label>
-                                <input class="inputSmall" type="text" name="" value="" />
+                                <label><?php echo $html->translate('Telefon');?></label>
+                                <input class="inputSmall j_required" type="text" name="avio_karte[tel]" value="" />
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <label>Adresa</label>
-                                <input class="inputBig" type="text" name="" value="" />
+                                <label><?php echo $html->translate('Adresa')?></label>
+                                <input class="inputBig j_required" type="text" name="avio_karte[address]" value="" />
                             </td>
 
                         </tr>
                         <tr>
                             <td>
-                                <label>Grad</label>
-                                <input class="inputSmall" type="text" name="" value="" />
+                                <label><?php echo $html->translate('Grad');?></label>
+                                <input class="inputSmall j_required" type="text" name="avio_karte[city]" value="" />
                             </td>
                             <td>
-                                <label>Drzava</label>
-                                <input class="inputSmall" type="text" name="" value="" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>Polazak iz</label>
-                                <input class="inputSmall" type="text" name="" value="" />
-                            </td>
-                            <td>
-                                <label>Dolazak u</label>
-                                <input class="inputSmall" type="text" name="" value="" />
+                                <label><?php echo $html->translate('Drzava');?></label>
+                                <input class="inputSmall j_required" type="text" name="avio_karte[state]" value="" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label>Datum od</label>
-                                <input class="inputSmall" type="text" name="" value="" />
+                                <label><?php echo $html->translate('Polazak iz');?></label>
+                                <input class="inputSmall j_required" type="text" name="avio_karte[start]" value="" />
                             </td>
                             <td>
-                                <label>Datum do</label>
-                                <input class="inputSmall" type="text" name="" value="" />
+                                <label><?php echo $html->translate('Dolazak u');?></label>
+                                <input class="inputSmall j_required" type="text" name="avio_karte[end]" value="" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label>Broj putnika odraslih</label>
-                                <select class="selectSmall" name="">
+                                <label><?php echo $html->translate('Datum od');?></label>
+                                <input class="inputSmall j_required j_datepicker" type="text" name="avio_karte[date_from]" value="" />
+                            </td>
+                            <td>
+                                <label><?php echo $html->translate('Datum do');?></label>
+                                <input class="inputSmall j_required j_datepicker" type="text" name="avio_karte[date_to]" value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label><?php echo $html->translate('Broj putnika odraslih');?></label>
+                                <select class="selectSmall j_required" name="avio_karte[passangers]">
+                                    <option>0</option>
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -91,34 +83,9 @@
                                 </select>
                             </td>
                             <td>
-                                <label>Broj putnika senior</label>
-                                <select class="selectSmall" name="">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>Broj putnika deca</label>
-                                <select class="selectSmall" name="">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                </select>
-                            </td>
-                            <td>
-                                <label>broj putnika INF</label>
-                                <select class="selectSmall" name="">
+                                <label><?php echo $html->translate('Broj putnika senior');?></label>
+                                <select class="selectSmall j_required" name="avio_karte[seniors]">
+                                    <option>0</option>
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -131,16 +98,45 @@
                         </tr>
                         <tr>
                             <td>
-                                <label>Klasa</label>
-                                <select class="selectSmall" name="">
+                                <label><?php echo $html->translate('Broj putnika deca');?></label>
+                                <select class="selectSmall j_required" name="avio_karte[children]">
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                </select>
+                            </td>
+                            <td>
+                                <label><?php echo $html->translate('broj putnika INF');?></label>
+                                <select class="selectSmall j_required" name="avio_karte[inf]">
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label><?php echo $html->translate('Klasa');?></label>
+                                <select class="selectSmall j_required" name="avio_karte[class]">
+                                    <option>0</option>
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
                                 </select>
                             </td>
                             <td>
-                                <label>Vrsta karte</label>
-                                <select class="selectSmall" name="">
+                                <label><?php echo $html->translate('Vrsta karte');?></label>
+                                <select class="selectSmall j_required" name="avio_karte[ticket]">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -149,7 +145,21 @@
                         </tr>
 
                     </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2" align="center">
+                                <button type="button" id="avio_karte"><?php echo $html->translate('posalji zahtev');?></button>
+                                <button type="reset"><?php echo $html->translate('odustani');?></button>
+                            </td>
+                        </tr>
+                    </tfoot>
                 </table>
+                </form>
+                <script type="text/javascript" charset="utf=8">
+                	$(document).ready(function(){
+						$(".j_datepicker").datepicker();
+                    });
+                </script>
             </div>
             <div class="sidebar">
                 <?php include_once(VIEW_PATH.'home'.DS.'_sidebar.php');?>

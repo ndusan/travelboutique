@@ -4,7 +4,7 @@ class Avio_karteModel extends Model{
 	
 public function getPageInfo($params, $langId){
 		
-		$query = sprintf("SELECT * FROM `pages` WHERE `link`='home'");
+		$query = sprintf("SELECT * FROM `pages` WHERE `link`='avio-karte'");
 		$resChild = mysql_query($query);
 		
 		if(mysql_num_rows($resChild) <= 0) return false;
@@ -34,34 +34,7 @@ public function getPageInfo($params, $langId){
 			$output = array_merge($output, array('items' => $tmpOutput));
 		}
 		
-		//Get carousel
-		$query = sprintf("SELECT * FROM `carousel`");
-		$resPar = mysql_query($query);
-		if(mysql_num_rows($resPar) > 0){
-			
-			$parOutput = array();
-			while($rowPar = mysql_fetch_assoc($resPar)){
-				//Get path
-				$query_path = sprintf("SELECT `id`, `link`, `parent_id` FROM `pages` WHERE `id`='%s'",
-									mysql_real_escape_string($rowPar['page_id'])
-									);
-				$row_path = mysql_fetch_assoc(mysql_query($query_path));
-				if($row_path['parent_id'] > 0){
-					//Find parent
-					$query_path2 = sprintf("SELECT `link` FROM `pages` WHERE `id`='%s'",
-										mysql_real_escape_string($row_path['parent_id'])
-										);	
-					$row_path2 = mysql_fetch_assoc(mysql_query($query_path2));
-					$rowPar = array_merge($rowPar, array('parent_link' => $row_path2['link'], 'link' => $row_path['link']));
-				}else $rowPar = array_merge($rowPar, array('parent_link' => $row_path['link']));
-				$parOutput[] = $rowPar;
-			} 
-			$output = array_merge($output, array('carousel' => $parOutput));
-		}
 		
-		//Get banners
-		$output = array_merge($output, array('banners' => self::getBanners($pageInfo, $langId)));
-						
 		//print_r($output);
 		return $output;
 	}
@@ -148,5 +121,16 @@ public function getBanners($pageInfo, $langId){
 		}
 		
 		return $tmpOutput;
+	}
+	
+public function setRequest($params){
+		
+		$sql = "INSERT INTO `avio_karte` SET ";
+		$num = 0;
+		foreach($params['avio_karte'] as $key => $val)
+			$sql .= "`".$key."`='".mysql_real_escape_string($val)."'".(++$num<count($params['avio_karte'])?", ":" ");
+		mysql_query($sql);
+		
+		return true;
 	}
 }

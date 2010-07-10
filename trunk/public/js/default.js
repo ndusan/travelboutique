@@ -27,26 +27,31 @@ $(document).ready(function(){
 	});
 	
 	//News button
-	$("button[type='button']").click(function(){
+	$("#newsletters").click(function(){
 		
 		//Get and check data
 		var email = $("input[name='email']").val();
-		if(email.length <= 0) $("input[name='email']").addClass('j_warning');
-		else{
+		var emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+		if(email.length <= 0 || email.search(emailRegEx) == -1){
+			$("input[name='email']").addClass('j_warning');
+			return false;
+		}else{
 			$.post(	'ajax-news/',
 					{ 'email' : email},
 					function(data){
 						if(data == true){
 							//Success
-							
+							$("input[name='email']").removeClass('j_warning').val('');
+							return true;
 						}else{
 							//Error
-							
+							$("input[name='email']").addClass('j_warning');
+							return false;
 						}
 					}
 			);
+		
 		}
-		return true;
 	});
 	
 });

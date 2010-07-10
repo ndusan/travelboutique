@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	
-	$("#rent_a_car").click(function(){
+	$("#avio_karte").click(function(){
 		
 		var allOk = true;
 		
@@ -12,6 +12,6 @@ $(document).ready(function(){
 			}else $(this).removeClass('j_warning');
 		});
 		
-		if(allOk) $("#form-rent_a_car").submit();
+		if(allOk) $("#form-avio_karte").submit();
 	});
 });

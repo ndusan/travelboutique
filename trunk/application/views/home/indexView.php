@@ -89,7 +89,7 @@
                 <form action="<?php echo BASE_PATH.'ajax-news'.DS;?>" method="post">
                     <label><?php echo $html->translate('Vaša el.adresa');?></label>
                     <input class="inputSmall" type="text" name="email" value="" />
-                    <button type="button"><?php echo $html->translate('Potvrdi');?></button>
+                    <button type="button" id="newsletters"><?php echo $html->translate('Potvrdi');?></button>
                 </form>
             </div>
             <div class="details">
