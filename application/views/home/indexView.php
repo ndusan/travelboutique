@@ -9,29 +9,29 @@
             <div class="maskBottom"></div>
             <!-- I've added div with class jCarouselLite  -->
             <div class="jCarouselLite">
-            <?php if(isset($getPageInfo['carousel']) && !empty($getPageInfo['carousel'])):?>
+                <?php if(isset($getPageInfo['carousel']) && !empty($getPageInfo['carousel'])):?>
                 <ul>
-					<?php foreach($getPageInfo['carousel'] as $c):?>
+                        <?php foreach($getPageInfo['carousel'] as $c):?>
                     <li class="image">
                         <div class="maskTop"></div>
                         <a class="title" href="<?php echo $c['parent_link'].DS.(isset($c['link']) ? $c['link'].DS : "");?>"><span><?php echo $html->translate('detaljnije');?></span><?php echo $c['title'];?></a>
                         <img title="<?php echo $c['title'];?>" alt="<?php echo $c['title'];?>" src="<?php echo BASE_PATH.UPLOAD_PATH.'carousel'.DS.$c['id']."-".$c['file']; ?>" />
                     </li>
-                    <?php endforeach;?>
+                        <?php endforeach;?>
                 </ul>
-            <?php endif;?>
+                <?php endif;?>
             </div>
         </div>
         <div style="clear: both;"></div>
         <div class="content">
             <div class="about">
-            <?php if(isset($getPageInfo['items']) && !empty($getPageInfo['items'])):?>
-            <?php foreach($getPageInfo['items'] as $gpi):?>
+                <?php if(isset($getPageInfo['items']) && !empty($getPageInfo['items'])):?>
+                    <?php foreach($getPageInfo['items'] as $gpi):?>
                 <h1 class="borBot"><?php echo $gpi['title'];?></h1>
-              
+
                 <p><?php echo $gpi['content'];?></p>
-            <?php endforeach;?>
-            <?php endif; ?>
+                    <?php endforeach;?>
+                <?php endif; ?>
             </div>
             <div class="callUs">
                 <div class="wings"></div>
@@ -51,33 +51,33 @@
                     <li><a href="javascript:;" id="link-exchange"><?php echo $html->translate('kursna lista');?></a></li>
                 </ul>
             </div>
-			<div id="ul">
-	            <ul id="ul-offer">
-	                <?php foreach($getPageInfo['banners'] as $banner):?>
-	                <li class="box">
-	                    <a href="<?php echo BASE_PATH.$banner['parent_link'].DS.(isset($banner['link']) ? $banner['link'].DS : "");?>"><img title="<?php echo $banner['title']; ?>" alt="<?php echo $banner['title']; ?>" src="<?php echo BASE_PATH.UPLOAD_PATH.'banners'.DS.$banner['id']."-".$banner['file']; ?>" /></a>
-	                    <h2><a href="<?php echo BASE_PATH.$banner['parent_link'].DS.(isset($banner['link']) ? $banner['link'].DS : "");?>"><?php echo $banner['title']; ?></a></h2>
-	                </li>
-	                <?php endforeach; ?>
-	            </ul>
-	            <ul id="ul-insurance" style="display: none;">
-	            	<li class="box">
-	            	<?php echo $extra['insurance']['title'];?>
-	            	<?php echo $extra['insurance']['content'];?>
-	            	</li>
-	            </ul>
-	            <ul id="ul-voucher" style="display: none;">
-	            	<li class="box">
-	            	<?php echo $extra['voucher']['title'];?>
-	            	<?php echo $extra['voucher']['content'];?>
-	            	</li>
-	            </ul>
-	            <ul id="ul-weather" style="display: none;">
-	            	<li class="box"></li>
-	            </ul>
-	            <ul id="ul-exchange" style="display: none;">
-	            	<li class="box"></li>
-	            </ul>
+            <div id="ul">
+                <ul id="ul-offer">
+                    <?php foreach($getPageInfo['banners'] as $banner):?>
+                    <li class="box">
+                        <a href="<?php echo BASE_PATH.$banner['parent_link'].DS.(isset($banner['link']) ? $banner['link'].DS : "");?>"><img title="<?php echo $banner['title']; ?>" alt="<?php echo $banner['title']; ?>" src="<?php echo BASE_PATH.UPLOAD_PATH.'banners'.DS.$banner['id']."-".$banner['file']; ?>" /></a>
+                        <h2><a href="<?php echo BASE_PATH.$banner['parent_link'].DS.(isset($banner['link']) ? $banner['link'].DS : "");?>"><?php echo $banner['title']; ?></a></h2>
+                    </li>
+                    <?php endforeach; ?>
+                </ul>
+                <ul id="ul-insurance" style="display: none;">
+                    <li class="box">
+                        <?php echo $extra['insurance']['title'];?>
+                        <?php echo $extra['insurance']['content'];?>
+                    </li>
+                </ul>
+                <ul id="ul-voucher" style="display: none;">
+                    <li class="box">
+                        <?php echo $extra['voucher']['title'];?>
+                        <?php echo $extra['voucher']['content'];?>
+                    </li>
+                </ul>
+                <ul id="ul-weather" style="display: none;">
+                    <li class="box"></li>
+                </ul>
+                <ul id="ul-exchange" style="display: none;">
+                    <li class="box"></li>
+                </ul>
             </div>
             <div class="clear"></div>
         </div>
