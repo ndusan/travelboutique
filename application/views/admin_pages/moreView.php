@@ -48,7 +48,7 @@
 					    		<td>
 					    			<input type="file" name="file0" ><br/>
 					    			<input type="file" name="file1" ><br/>
-					    			<input type="file" name="file2" >
+					    			<input type="file" name="file2" ><br/>
 					    			<?php 
 			    					if(isset($item) && is_dir(UPLOAD_PATH.$item[$lang['id']]['folder'])){
 				    					$handle = opendir(UPLOAD_PATH.$item[$lang['id']]['folder']);
