@@ -12,7 +12,7 @@
             </td>
         </tr>
         <tr>
-            <td>Image (195 x 85px): </td>
+            <td>Image (<b>195 x 85px</b>): </td>
             <td>
                 <input type="file" name="file" value="" />
                 <?php echo (isset($banner['file']) ? "[ ".$banner['file']." ]" : "");?>
