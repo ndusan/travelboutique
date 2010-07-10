@@ -68,7 +68,7 @@
                 </div>
                 <div id="ul-voucher" style="display: none;">
                     <div class="boxBig">
-                        <label><?php echo $extra['voucher']['title'];?><label>
+                        <label><?php echo $extra['voucher']['title'];?></label>
                         <?php echo $extra['voucher']['content'];?>
                     </div>
                 </div>
