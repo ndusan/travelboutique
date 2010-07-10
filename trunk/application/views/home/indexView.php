@@ -60,24 +60,24 @@
                     </li>
                     <?php endforeach; ?>
                 </ul>
-                <ul id="ul-insurance" style="display: none;">
-                    <li class="box">
+                <div id="ul-insurance" style="display: none;">
+                    <div class="boxBig">
                         <?php echo $extra['insurance']['title'];?>
                         <?php echo $extra['insurance']['content'];?>
-                    </li>
-                </ul>
-                <ul id="ul-voucher" style="display: none;">
-                    <li class="box">
+                    </div>
+                </div>
+                <div id="ul-voucher" style="display: none;">
+                    <div class="boxBig">
                         <?php echo $extra['voucher']['title'];?>
                         <?php echo $extra['voucher']['content'];?>
-                    </li>
-                </ul>
-                <ul id="ul-weather" style="display: none;">
-                    <li class="box"></li>
-                </ul>
-                <ul id="ul-exchange" style="display: none;">
-                    <li class="box"></li>
-                </ul>
+                    </div>
+                </div>
+                <div id="ul-weather" style="display: none;">
+                    <div class="boxBig"></div>
+                </div>
+                <div id="ul-exchange" style="display: none;">
+                    <div class="box"></div>
+                </div>
             </div>
             <div class="clear"></div>
         </div>
