@@ -33,6 +33,8 @@ public function getPageInfo($params, $langId){
 			while($rowTmp = mysql_fetch_assoc($resTmp)) $tmpOutput[] = $rowTmp;
 			$output = array_merge($output, array('items' => $tmpOutput));
 		}
+		//Get banners
+		$output = array_merge($output, array('banners' => self::getBanners($pageInfo, $langId)));
 		
 		
 		//print_r($output);
@@ -121,6 +123,27 @@ public function getBanners($pageInfo, $langId){
 		}
 		
 		return $tmpOutput;
+	}
+	
+public function extra($params, $lang){
+		
+		$query = sprintf("SELECT * FROM `languages` WHERE `name`='%s'",
+						mysql_real_escape_string($lang)
+						);
+		$res = mysql_query($query);
+		$row = mysql_fetch_assoc($res);
+		
+		$query = sprintf("SELECT `extra_details`.*, `extra`.`type` FROM `extra_details` 
+							INNER JOIN `extra` ON `extra_details`.`extra_id`=`extra`.`id`
+							WHERE `extra_details`.`language_id`='%s'",
+						mysql_real_escape_string($row['id'])
+						);
+		$tmp = array();
+		
+		$res = mysql_query($query);
+		if(mysql_num_rows($res) <= 0) return false;
+		while($row = mysql_fetch_assoc($res)) $tmp[$row['type']] = $row;
+		return $tmp;	
 	}
 	
 }

@@ -9,7 +9,7 @@ class Avio_karteController extends Controller{
 		parent::set('dynamicPages', $this->db->dynamicPages($params, $this->lng));
 
 		parent::set('active', 'avio-karte');
-		
+		parent::set('extra', $this->db->extra($params, $this->lng));
 		parent::defaultCss(array('datepicker'));
 		parent::defaultJs(array('avio_karte', 'ui.datepicker'));
 	}

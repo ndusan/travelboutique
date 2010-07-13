@@ -50,5 +50,6 @@ $_lang = array(
 	'broj putnika INF'	=>		'broj putnika INF',
 	'Klasa'				=>		'Klasa',
 	'Vrsta karte'		=>		'Vrsta karte',
-	'Tekst poruke'		=>		'Tekst poruke'
+	'Tekst poruke'		=>		'Tekst poruke',
+	'Podmeni'			=>		'Podmeni'
 );

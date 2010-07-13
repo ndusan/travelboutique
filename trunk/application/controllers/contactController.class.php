@@ -9,7 +9,7 @@ class ContactController extends Controller{
 		parent::set('dynamicPages', $this->db->dynamicPages($params, $this->lng));
 
 		parent::set('active', 'contact');
-		
+		parent::set('extra', $this->db->extra($params, $this->lng));
 		parent::defaultJs(array('contact'));
 	}
 	

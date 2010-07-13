@@ -101,4 +101,140 @@ class HTML{
 			echo $this->_language[$string];
 		else echo $string;
 	}
+	
+	function getWeather() {
+
+		$response = "";
+		
+		$requestAddress = "http://www.google.com/ig/api?weather=belgrade&hl=en";
+		$xml_str = file_get_contents($requestAddress,0);
+		// Parses XML
+		$xml = new SimplexmlElement($xml_str);
+		// Loops XML
+		$count = 0;
+		//echo $xml->forecast_conditions[0]->city['data'];
+		//var_dump($xml);
+		$response = '<div id="weather">';
+		foreach($xml->weather as $item) {
+	
+			foreach($item->forecast_conditions as $new) {
+			$response.= '<div class="weatherIcon">';
+			$response.= '<img src="http://www.google.com/' .$new->icon['data'] . '"/><br/>';
+			$response.= $new->day_of_week['data'];
+			$response.= '</div>';
+			
+			}
+	      	//echo $item->forecast_information->city['data'];
+			//echo $item->condition['data'];
+	
+		}
+	  $response.= '</div>';
+	  return $response;
+  	}
+  	
+  	function getCurrency(){
+
+  		//Set agent
+		ini_set('user_agent', 'Mozilla Firefox');
+		//Set date
+		$date = date('d.m.Y');
+		//Url
+		$part1 = 'http://www.nbs.rs/internet/latinica/scripts/kl.html?datum=';
+		$part1 .= $date.'&broj=br.&godina='.date('Y').'&vrsta=3&eksport=plain';
+		$part2 = file_get_contents($part1);
+		$address = $part2;
+
+		$output = array();
+		
+		if (!$part2) return false;
+		else{
+
+			// Evropska unija - EUR
+			$valuta = 'EUR';
+			$value = strpos($address, $valuta);
+			$EUR = '';
+			for ($i = $value + 87; $i <= $value + 93; $i++) $EUR .= $address{$i};
+			$output[$valuta] = $EUR;
+			
+			// Australija - AUD
+			$valuta = 'AUD';
+			$value = strpos($address, $valuta);
+			$AUD = '';
+			for ($i = $value + 87; $i <= $value + 93; $i++) $AUD .= $address{$i};
+			$output[$valuta] = $AUD;
+			
+			// Kanada - CAD
+			$valuta = 'CAD';
+			$value = strpos($address, $valuta);
+			$CAD = '';
+			for ($i = $value + 87; $i <= $value + 93; $i++) $CAD .= $address{$i};
+			$output[$valuta] = $CAD;
+			
+			// Hrvatska - HRK
+			$valuta = 'HRK';
+			$value = strpos($address, $valuta);
+			$HRK = '';
+			for ($i = $value + 87; $i <= $value + 93; $i++) $HRK .= $address{$i};
+			$output[$valuta] = $HRK;
+			
+			// Danska - DKK
+			$valuta = 'DKK';
+			$value = strpos($address, $valuta);
+			$DKK = '';
+			for ($i = $value + 87; $i <= $value + 93; $i++) $DKK .= $address{$i};
+			$output[$valuta] = $DKK;
+			
+			// Japan - JPY
+			$valuta = 'JPY';
+			$value = strpos($address, $valuta);
+			$JPY = '';
+			for ($i = $value + 89; $i <= $value + 95; $i++) $JPY .= $address{$i};
+			$output[$valuta] = $JPY;
+			
+			// Norveška - NOK
+			$valuta = 'NOK';
+			$value = strpos($address, $valuta);
+			$NOK = '';
+			for ($i = $value + 87; $i <= $value + 92; $i++)  $NOK .= $address{$i};
+			$output[$valuta] = $NOK;
+			
+			// Švedska - SEK
+			$valuta = 'SEK';
+			$value = strpos($address, $valuta);
+			$SEK = '';
+			for ($i = $value + 87; $i <= $value + 92; $i++) $SEK .= $address{$i};
+			$output[$valuta] = $SEK;
+			
+			// Švajcarska - CHF
+			$valuta = 'CHF';
+			$value = strpos($address, $valuta);
+			$CHF = '';
+			for ($i = $value + 87; $i <= $value + 93; $i++) $CHF .= $address{$i};
+			$output[$valuta] = $CHF;
+			
+			// Velika Britanija - GBP
+			$valuta = 'GBP';
+			$value = strpos($address, $valuta);
+			$GBP = '';
+			for ($i = $value + 87; $i <= $value + 93; $i++) $GBP .= $address{$i};
+			$output[$valuta] = $GBP;
+			
+			// SAD - USD
+			$valuta = 'USD';
+			$value = strpos($address, $valuta);
+			$USD = '';
+			for ($i = $value + 87; $i <= $value + 93; $i++) $USD .= $address{$i};
+			$output[$valuta] = $USD;
+			
+			// Bosna i Hercegovina - BAM
+			$valuta = 'BAM';
+			$value = strpos($address, $valuta);
+			$BAM = '';
+			for ($i = $value + 87; $i <= $value + 93; $i++) $BAM .= $address{$i};
+			$output[$valuta] = $BAM;
+			
+			return $output; 
+		}
+	}
+	
 }
