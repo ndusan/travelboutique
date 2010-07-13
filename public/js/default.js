@@ -1,29 +1,26 @@
 $(document).ready(function(){
 
-	$(".tabs").each(function(){
+	$(".tabs").find('a').click(function(){
+		var id = $(this).attr('id');
+		var currentId = id.substring(5, id.length);
 		
-		$(this).find('a').click(function(){
-			var id = $(this).attr('id');
-			var currentId = id.substring(5, id.length);
-			
-			//Hide all tabs except current one
-			$(".tabs").find('a').each(function(){
-				if($(this).attr('id') != id){
-					//Hide
-					$(this).removeClass('active');
-				}else{
-					//Show
-					$(this).addClass('active');
-					
-				}
-			});
-			//Show / hide ul
-			$("#ul").find('ul').each(function(){
-				if($(this).attr('id') == "ul-" + currentId) $(this).show();
-				else $(this).hide();
-			});
-			
+		//Hide all tabs except current one
+		$(".tabs").find('a').each(function(){
+			var tmpId = $(this).attr('id');
+			tmpId = tmpId.substring(5, tmpId.length);
+		
+			if($(this).attr('id') == id){
+				//Hide
+				$(this).addClass('active');
+				
+				$("#ul-" + tmpId).show();
+			}else{
+				//Show
+				$(this).removeClass('active');
+				$("#ul-" + tmpId).hide();
+			}
 		});
+			
 	});
 	
 	//News button

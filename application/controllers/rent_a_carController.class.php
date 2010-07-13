@@ -9,7 +9,7 @@ class Rent_a_carController extends Controller{
 		parent::set('dynamicPages', $this->db->dynamicPages($params, $this->lng));
 		
 		parent::set('active', 'rent-a-car');
-		
+		parent::set('extra', $this->db->extra($params, $this->lng));
 		parent::defaultCss(array('datepicker'));
 		parent::defaultJs(array('rent_a_car', 'ui.datepicker'));
 	}

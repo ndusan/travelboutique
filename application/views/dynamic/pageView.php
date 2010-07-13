@@ -22,7 +22,7 @@ switch($getPageInfo['template']){
             <div class="sidebar">
                 <div class="subNav">
                     <?php if(isset($getPageInfo['children']) && !empty($getPageInfo['children'])):?>
-                    <h4>Subnavigation</h4>
+                    <h4><?php echo $html->translate('Podmeni');?></h4>
                     <ul>
                     	<?php foreach($getPageInfo['children'] as $ch):?>
                         <li><h3><a href="<?php echo BASE_PATH.$getPageInfo['link'].DS.$ch['link'].DS; ?>"><?php echo $ch['name']?></a></h3></li>
