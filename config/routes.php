@@ -219,6 +219,16 @@ $routes = array(
 					  	'action' 		=> 'set', 
 					  	'layout' 		=> 'empty'
 				),
+				array(	'url' 			=> '/^admin\/menu\/(?P<id>\d+)\/(?P<position>\d+)\/up\/?$/', 
+						'controller' 	=> 'admin_menu', 
+					  	'action' 		=> 'up', 
+					  	'layout' 		=> 'empty'
+				),
+				array(	'url' 			=> '/^admin\/menu\/(?P<id>\d+)\/(?P<position>\d+)\/down\/?$/', 
+						'controller' 	=> 'admin_menu', 
+					  	'action' 		=> 'down', 
+					  	'layout' 		=> 'empty'
+				),
 				//Languages
 				array(	'url' 			=> '/^admin\/language\/?$/', 
 						'controller' 	=> 'admin_language', 

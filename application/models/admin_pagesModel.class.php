@@ -111,10 +111,11 @@ class Admin_pagesModel extends Model{
 		
 		if(!$link) return false;
 		
-		$query = sprintf("INSERT INTO `pages` SET `parent_id`='%s', `template`='%s', `link`='%s', `type`='dynamic'",
+		$query = sprintf("INSERT INTO `pages` SET `parent_id`='%s', `template`='%s', `link`='%s', `type`='dynamic', `possition`='%s'",
 						mysql_real_escape_string($params['level']),
 						mysql_real_escape_string($params['template']),
-						mysql_real_escape_string($link)
+						mysql_real_escape_string($link),
+						mysql_real_escape_string(time())
 						);
 		$pageId = parent::insert($query);
 		
