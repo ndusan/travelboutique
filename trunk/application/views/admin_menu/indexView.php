@@ -24,6 +24,7 @@
 		    	<tr>
 		    		<th>Title</th>
 		    		<th>Show on main</th>
+		    		<th>Position</th>
 		    	</tr>
                         </thead>
                         <tbody>
@@ -32,6 +33,14 @@
 		    		<td><?php echo $p['link'];?></td>
 		    		<td>
 		    			<input type="checkbox" name="" <?php echo ($p['checked'] ? "checked='checked'" : "");?> value="<?php echo $p['id'];?>" onClick="javascript: location.href='<?php echo BASE_PATH.'admin'.DS.'menu'.DS.$p['id'].DS.'set'.DS; ?>'"/>
+		    		</td>
+		    		<td>
+		    		<a href="<?php echo BASE_PATH.'admin'.DS.'menu'.DS.$p['id'].DS.$p['position'].DS.'up'.DS;?>">
+		    			<img src="<?php echo IMAGE_PATH.'up.png'?>" alt="Up" title="Up" />
+		    		</a>
+		    		<a href="<?php echo BASE_PATH.'admin'.DS.'menu'.DS.$p['id'].DS.$p['position'].DS.'down'.DS;?>">
+		    			<img src="<?php echo IMAGE_PATH.'down.png'?>" alt="Down" title="Down" />
+		    		</a>
 		    		</td>
 		    	</tr>
 		    	<?php endforeach;?>

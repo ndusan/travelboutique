@@ -178,7 +178,7 @@ class DynamicModel extends Model{
 		
 		$query = sprintf("SELECT `pages`.*, `page_info`.`name` FROM `pages` INNER JOIN `page_info`
 							ON `pages`.`id`=`page_info`.`page_id`
-							WHERE `pages`.`checked`='1' AND `page_info`.`language_id`=(SELECT `id` FROM `languages` WHERE `name`='%s')",
+							WHERE `pages`.`checked`='1' AND `page_info`.`language_id`=(SELECT `id` FROM `languages` WHERE `name`='%s') ORDER BY `pages`.`position` DESC",
 						mysql_real_escape_string($lang)
 						);
 		return parent::query($query);

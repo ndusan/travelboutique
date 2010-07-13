@@ -16,4 +16,20 @@ class Admin_menuController extends Controller{
 		
 		header("Location: ".BASE_PATH.'admin'.DS.'menu', 'success');
 	}
+	
+	public function up($params){
+		parent::userInfoAndSession();
+		
+		$this->db->up($params);
+		
+		header("Location: ".BASE_PATH.'admin'.DS.'menu', 'success');
+	}
+	
+	public function down($params){
+		parent::userInfoAndSession();
+		
+		$this->db->down($params);
+		
+		header("Location: ".BASE_PATH.'admin'.DS.'menu', 'success');
+	}
 }
