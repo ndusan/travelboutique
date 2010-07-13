@@ -111,7 +111,7 @@
 				    					<img src="<?php echo IMAGE_PATH;?>edit.gif" width="16" height="16" title="Edit" alt="Edit" />
 				    				</a>
 				    				<a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$page['id'].DS.'more'.DS.$morePage['id'].DS.'delete'.DS;?>">
-				    					<img src="<?php echo IMAGE_PATH;?>delete.gif" width="16" height="16" title="More details" alt="More details" />
+				    					<img src="<?php echo IMAGE_PATH;?>delete.gif" width="16" height="16" title="Delete" alt="Delete" />
 				    				</a>
 				    				<!-- Up -->
 				    				<a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$page['id'].DS.'more'.DS.$morePage['id'].DS.'up'.DS.$morePage['position'].DS;?>">

@@ -186,8 +186,34 @@ class Admin_pagesModel extends Model{
 	}
 	
 	public function update($params){
+		print_r($params);
+		$link = "";
+		//Collect serbian name if there is
+		if(isset($params['name']['sr']) && !empty($params['name']['sr'])){
+
+			$link = $params['name']['sr'];
+		}elseif(isset($params['name']['en']) && !empty($params['name']['en'])){
+			
+			$link = $params['name']['en'];
+		}
 		
-		$query = sprintf("UPDATE `pages` SET `parent_id`='%s', `template`='%s', `type`='dynamic' WHERE `id`='%s'",
+		//If there is a request to change name of page it should be done here
+		$query_old = sprintf("SELECT * FROM `pages` WHERE `id`='%s'",
+							mysql_real_escape_string($params['id'])
+							);
+		$res_old = mysql_query($query_old);
+		$row_old = mysql_fetch_assoc($res_old);
+		
+		if($res_old['name'] != $link){
+			
+			//Request to change name
+			$link = self::createLink($link);
+		
+			if(!$link) return false;
+		}
+		
+		$query = sprintf("UPDATE `pages` SET `link`='%s', `parent_id`='%s', `template`='%s', `type`='dynamic' WHERE `id`='%s'",
+						mysql_real_escape_string($link),
 						mysql_real_escape_string($params['level']),
 						mysql_real_escape_string($params['template']),
 						mysql_real_escape_string($params['id'])
