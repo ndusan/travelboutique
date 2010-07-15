@@ -46,7 +46,8 @@ class DynamicModel extends Model{
 		$query = sprintf("SELECT `page_items`.`folder`, `page_item_details`.`title`, `page_item_details`.`content`
 							FROM `page_items` INNER JOIN `page_item_details` ON
 									`page_items`.`id`=`page_item_details`.`page_item_id`
-							WHERE `page_items`.`page_id`='%s' AND `page_item_details`.`language_id`=(SELECT `id` FROM `languages` WHERE `name`='%s')",
+							WHERE `page_items`.`page_id`='%s' AND `page_item_details`.`language_id`=(SELECT `id` FROM `languages` WHERE `name`='%s')
+							ORDER BY `page_items`.`position` DESC",
 						mysql_real_escape_string($pageInfo['id']),
 						mysql_real_escape_string($langId)
 						);

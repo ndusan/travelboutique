@@ -4,7 +4,7 @@ $(document).ready(function(){
 		
 		var allOk = true;
 		
-		$("input[type='text'], input[type='file']").each(function(){
+		$("input[type='text']").each(function(){
 			
 			if($(this).val().length <= 0){
 				allOk = false;

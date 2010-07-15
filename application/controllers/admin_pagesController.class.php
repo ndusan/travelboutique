@@ -104,6 +104,7 @@ class Admin_pagesController extends Controller{
 					if(!is_dir(UPLOAD_PATH.$folder)) mkdir(UPLOAD_PATH.$folder, 0777);
 					//Put value in dir
 					move_uploaded_file($params[$fileTag]['tmp_name'], UPLOAD_PATH.$folder.DS.$params[$fileTag]['name']);
+					chmod(UPLOAD_PATH.$folder.DS.$params[$fileTag]['name'], 0755);
 				}
 			}
 			parent::redirect('admin'.DS.'pages'.DS.$params['id'].DS.'more', 'success');
