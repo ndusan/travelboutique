@@ -13,13 +13,13 @@ public function getPageInfo($params, $langId){
 		$output = array();
 		
 		//Page name
-		$query = sprintf("SELECT `name` FROM `page_info` WHERE `language_id`=(SELECT `id` FROM `languages` WHERE `name`='%s') AND `page_id`='%s'",
+		$query = sprintf("SELECT `additional` FROM `static_page_item_details` WHERE `language_id`=(SELECT `id` FROM `languages` WHERE `name`='%s') AND `page_id`='%s'",
 						mysql_real_escape_string($langId),
 						mysql_real_escape_string($pageInfo['id'])
 						);
 		$rowTmp = mysql_fetch_assoc(mysql_query($query));
 		
-		$output = array('id' => $pageInfo['id'], 'link' => $pageInfo['link'], 'parent_id' => $pageInfo['parent_id'], 'name' => $rowTmp['name'], 'template' => $pageInfo['template'], 'link' => $pageInfo['link']);
+		$output = array('id' => $pageInfo['id'], 'link' => $pageInfo['link'], 'parent_id' => $pageInfo['parent_id'], 'additional' => $rowTmp['additional'], 'template' => $pageInfo['template'], 'link' => $pageInfo['link']);
 		
 		//Items
 		$query = sprintf("SELECT * FROM `static_page_item_details` WHERE `page_id`='%s' AND `language_id`=(SELECT `id` FROM `languages` WHERE `name`='%s')",

@@ -52,6 +52,14 @@
             </td>
         </tr>
         <?php endif;?>
+        <?php foreach($langs as $lang):?>
+        <tr>
+            <td style="vertical-align: top;">Additional info: <img src="<?php echo IMAGE_PATH.$lang['name'].'.png'; ?>" /> </td>
+            <td>
+                <textarea cols="46" rows="10" name="additional[<?php echo $lang['name']; ?>]" ><?php echo @($page['info'][0]['language_id'] == $lang['id'] ? $page['info'][0]['additional'] : ''); ?></textarea>
+            </td>
+        </tr>
+        <?php endforeach; ?>
     </table>
     <br/>
     <button type="submit">
@@ -59,3 +67,10 @@
     </button>
     <?php endif; ?>
 </div>
+<!-- end footer -->
+<script type="text/javascript">
+	tinyMCE.init({
+		mode : "textareas",
+		theme : "advanced"
+	});
+</script>

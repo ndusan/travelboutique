@@ -233,6 +233,32 @@ $routes = array(
 					  	'action' 		=> 'down', 
 					  	'layout' 		=> 'empty'
 				),
+				//Weather
+				array(	'url' 			=> '/^admin\/weather\/?$/', 
+						'controller' 	=> 'admin_weather', 
+					  	'action' 		=> 'index', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/weather\/add\/?$/', 
+						'controller' 	=> 'admin_weather', 
+					  	'action' 		=> 'add', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/weather\/(?P<id>\d+)\/edit\/?$/', 
+						'controller' 	=> 'admin_weather', 
+					  	'action' 		=> 'edit', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/weather\/(?P<id>\d+)\/delete\/?$/', 
+						'controller' 	=> 'admin_weather', 
+					  	'action' 		=> 'delete', 
+					  	'layout' 		=> 'admin'
+				),
+				array(	'url' 			=> '/^admin\/weather\/((?P<id>\d+)\/)?submit\/?$/', 
+						'controller' 	=> 'admin_weather', 
+					  	'action' 		=> 'submit', 
+					  	'layout' 		=> 'empty'
+				),
 				//Main menu
 				array(	'url' 			=> '/^admin\/menu\/?$/', 
 						'controller' 	=> 'admin_menu', 
