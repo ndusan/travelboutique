@@ -24,12 +24,20 @@ class Admin_partnersModel extends Model{
 		
 		if(isset($params['id']) && !empty($params)){
 			//Update
-			$query = sprintf("UPDATE `partners` SET `file`='%s', `link`='%s' WHERE `id`='%s'",
-						mysql_real_escape_string($params['file']['name']),
+			$query = sprintf("UPDATE `partners` SET `link`='%s' WHERE `id`='%s'",
 						mysql_real_escape_string($params['link']),
 						mysql_real_escape_string($params['id'])
 						);
 			mysql_query($query);
+			
+			if(isset($params['file']['error']) && $params['file']['error'] == 0){
+				$query = sprintf("UPDATE `partners` SET `file`='%s' WHERE `id`='%s'",
+							mysql_real_escape_string($params['file']['name']),
+							mysql_real_escape_string($params['id'])
+							);
+				mysql_query($query);	
+				
+			}
 			return $params['id'];
 			
 		}else{

@@ -111,7 +111,7 @@ class Admin_pagesModel extends Model{
 		
 		if(!$link) return false;
 		
-		$query = sprintf("INSERT INTO `pages` SET `parent_id`='%s', `template`='%s', `link`='%s', `type`='dynamic', `possition`='%s'",
+		$query = sprintf("INSERT INTO `pages` SET `parent_id`='%s', `template`='%s', `link`='%s', `type`='dynamic', `position`='%s'",
 						mysql_real_escape_string($params['level']),
 						mysql_real_escape_string($params['template']),
 						mysql_real_escape_string($link),
@@ -186,7 +186,7 @@ class Admin_pagesModel extends Model{
 	}
 	
 	public function update($params){
-		print_r($params);
+		
 		$link = "";
 		//Collect serbian name if there is
 		if(isset($params['name']['sr']) && !empty($params['name']['sr'])){
@@ -204,7 +204,7 @@ class Admin_pagesModel extends Model{
 		$res_old = mysql_query($query_old);
 		$row_old = mysql_fetch_assoc($res_old);
 		
-		if($res_old['name'] != $link){
+		if($row_old['link'] != $link){
 			
 			//Request to change name
 			$link = self::createLink($link);
@@ -439,4 +439,48 @@ class Admin_pagesModel extends Model{
 		
 		return $output;
 	}
+	
+	public function delete($params){
+		
+		//Remove partners connection
+		$queryPartner = sprintf("DELETE FROM `page_partners` WHERE `page_id`='%s'",
+								mysql_real_escape_string($params['id'])
+								);
+		mysql_query($queryParent);
+
+		//Remove banners
+		$queryBanners = sprintf("DELETE FROM `banners` WHERE `page_id`='%s'",
+								mysql_real_escape_string($params['id'])
+								);
+		mysql_query($queryBanners);
+		
+		//Remove carousel
+		$queryCarousel = sprintf("DELETE FROM `carousel` WHERE `page_id`='%s'",
+								mysql_real_escape_string($params['id'])
+								);
+		mysql_query($queryCarousel);
+	
+		//Remove page
+		$queryItems = sprintf("DELETE FROM `page_item_details` WHERE `page_item_id` IN (SELECT `id` FROM `page_items` WHERE `page_id`='%s')",
+							mysql_real_escape_string($params['id'])
+							);
+		mysql_query($queryItems);
+		$queryItems = sprintf("DELETE FROM `page_items` WHERE `page_id`='%s'",
+							mysql_real_escape_string($params['id'])
+							);
+		mysql_query($queryItems);
+
+		$queryPage = sprintf("DELETE FROM `pages` WHERE `id`='%s'",
+							mysql_real_escape_string($params['id'])
+							);
+		mysql_query($queryPage);
+		//Remove parent id to this page
+		$queryParent = sprintf("UPDATE `pages` SET `parent_id`='0' WHERE `parent_id`='%s'",
+								mysql_real_escape_string($params['id'])
+								);
+		mysql_query($queryParent);
+		
+		return true;
+	}
+	
 }

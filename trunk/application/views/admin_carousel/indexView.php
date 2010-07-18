@@ -42,6 +42,14 @@
 		    				<a href="<?php echo BASE_PATH.'admin'.DS.'carousel'.DS.$c['id'].DS.'delete'.DS;?>">
 		    					<img src="<?php echo IMAGE_PATH;?>delete.gif" width="16" height="16" title="Delete" alt="Delete" />
 		    				</a>
+		    				<!-- Up -->
+		    				<a href="<?php echo BASE_PATH.'admin'.DS.'carousel'.DS.$c['id'].DS.$c['position'].DS.'up'.DS;?>">
+		    					<img src="<?php echo IMAGE_PATH;?>up.png" width="16" height="16" title="Up" alt="Up" />
+		    				</a>
+		    				<!-- Down -->
+		    				<a href="<?php echo BASE_PATH.'admin'.DS.'carousel'.DS.$c['id'].DS.$c['position'].DS.'down'.DS;?>">
+		    					<img src="<?php echo IMAGE_PATH;?>down.png" width="16" height="16" title="Down" alt="Down" />
+		    				</a>
 		    			</span>
 		    		</td>
 		    	</tr>
