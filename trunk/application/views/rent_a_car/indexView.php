@@ -50,7 +50,58 @@
                             <tr>
                                 <td>
                                     <label><?php echo $html->translate('Drzava preuzimanja');?></label>
-                                    <input class="inputSmall j_required" type="text" name="rent_a_car[state_take]" value="" />
+                                    <select class="inputSmall j_required" name="rent_a_car[state_take]" size="">
+                                        <option value="Argentina">Argentina</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="Austrija">Austrija</option>
+                                        <option value="Belgija">Belgija</option>
+                                        <option value="Bosna i Hercegovina">Bosna i Hercegovina</option>
+                                        <option value="Bugarska">Bugarska</option>
+                                        <option value="Češka">Češka</option>
+                                        <option value="Čile">Čile</option>
+                                        <option value="Danska">Danska</option>
+                                        <option value="Dominikanska Republika">Dominikanska Republika</option>
+                                        <option value="Egipat">Egipat</option>
+                                        <option value="Finska">Finska</option>
+                                        <option value="Francuska">Francuska</option>
+                                        <option value="Grčka">Grčka</option>
+                                        <option value="Holandija">Holandija</option>
+                                        <option value="Hrvatska">Hrvatska</option>
+                                        <option value="Irska">Irska</option>
+                                        <option value="Island">Island</option>
+                                        <option value="Italija">Italija</option>
+                                        <option value="Izrael">Izrael</option>
+                                        <option value="Južna Afrika">Južna Afrika</option>
+                                        <option value="Kanada ">Kanada</option>
+                                        <option value="Kanasrka Ostrva">Kanasrka Ostrva</option>
+                                        <option value="Kipar">Kipar</option>
+                                        <option value="Korzika">Korzika</option>
+                                        <option value="Kosta Rika">Kosta Rika</option>
+                                        <option value="Litvanija">Litvanija</option>
+                                        <option value="Luksemburg">Luksemburg</option>
+                                        <option value="Mađarska">Mađarska</option>
+                                        <option value="Malta">Malta</option>
+                                        <option value="Maroko">Maroko</option>
+                                        <option value="Mauricius">Mauricius</option>
+                                        <option value="Meksiko">Meksiko</option>
+                                        <option value="Namibia">Namibia</option>
+                                        <option value="Norveška">Norveška</option>
+                                        <option value="Novi Zeland">Novi Zeland</option>
+                                        <option value="Poljska">Poljska</option>
+                                        <option value="Portugal">Portugal</option>
+                                        <option value="Rumunija">Rumunija</option>
+                                        <option value="Slovačka">Slovačka</option>
+                                        <option value="Slovenija">Slovenija</option>
+                                        <option value="Španija">Španija</option>
+                                        <option value="Švajcarska">Švajcarska</option>
+                                        <option value="Švedska">Švedska</option>
+                                        <option value="Tajland">Tajland</option>
+                                        <option value="Tunis">Tunis</option>
+                                        <option value="Turska">Turska</option>
+                                        <option value="Ujedinjeni Arapski Emirati">Ujedinjeni Arapski Emirati</option>
+                                        <option value="USA">USA</option>
+                                        <option value="Velika Britanija">Velika Britanija</option>
+                                    </select>
                                 </td>
                                 <td>
                                     <label><?php echo $html->translate('Grad preuzimanja');?></label>
