@@ -28,6 +28,15 @@ switch($getPageInfo['template']){
                         <li><h3><a href="<?php echo BASE_PATH.$getPageInfo['link'].DS.$ch['link'].DS; ?>"><?php echo $ch['name']?></a></h3></li>
                         <?php endforeach; ?>
                     </ul>
+                    <?php else:?>
+                    <?php if(isset($getPageInfo['brothers']) && !empty($getPageInfo['brothers'])):?>
+                    <h4><?php echo $html->translate('Podmeni');?></h4>
+                    <ul>
+                    	<?php foreach($getPageInfo['brothers'] as $ch):?>
+                        <li><h3><a href="<?php echo BASE_PATH.$ch['parent']['link'].DS.$ch['link'].DS; ?>"><?php echo $ch['name']?></a></h3></li>
+                        <?php endforeach; ?>
+                    </ul>
+                    <?php endif;?>
                     <?php endif;?>
                 </div>
                 <?php include_once(VIEW_PATH.'home'.DS.'_sidebar.php');?>

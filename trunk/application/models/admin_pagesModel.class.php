@@ -122,10 +122,11 @@ class Admin_pagesModel extends Model{
 		//Add page details
 		foreach($params['name'] as $key => $val){
 			
-			$query = sprintf("INSERT INTO `page_info` SET `page_id`='%s', `name`='%s', `language_id`='%s'",
+			$query = sprintf("INSERT INTO `page_info` SET `page_id`='%s', `name`='%s', `language_id`='%s', `additional`='%s'",
 							mysql_real_escape_string($pageId),
 							mysql_real_escape_string($val),
-							mysql_real_escape_string($params['language'][$key])
+							mysql_real_escape_string($params['language'][$key]),
+							mysql_real_escape_string($params['additional'][$key])
 							);
 			mysql_query($query);
 		}
@@ -159,9 +160,10 @@ class Admin_pagesModel extends Model{
 			if(mysql_num_rows($res) <= 0){
 				
 				//Insert 
-				$query = sprintf("INSERT INTO `static_page_item_details` SET `title`='%s', `content`='%s', `language_id`='%s',  `page_id`='%s'",
+				$query = sprintf("INSERT INTO `static_page_item_details` SET `title`='%s', `content`='%s', `additional`='%s', `language_id`='%s',  `page_id`='%s'",
 								mysql_real_escape_string($name),
 								mysql_real_escape_string($params['content'][$key]),
+								mysql_real_escape_string($params['additional'][$key]),
 								mysql_real_escape_string($key),
 								mysql_real_escape_string($params['id'])
 								);
@@ -169,9 +171,10 @@ class Admin_pagesModel extends Model{
 			}else{
 				
 				//Update
-				$query = sprintf("UPDATE `static_page_item_details` SET `title`='%s', `content`='%s' WHERE `language_id`='%s' AND `page_id`='%s'",
+				$query = sprintf("UPDATE `static_page_item_details` SET `title`='%s', `content`='%s', `additional`='%s'  WHERE `language_id`='%s' AND `page_id`='%s'",
 								mysql_real_escape_string($name),
 								mysql_real_escape_string($params['content'][$key]),
+								mysql_real_escape_string($params['additional'][$key]),
 								mysql_real_escape_string($key),
 								mysql_real_escape_string($params['id'])
 								);
@@ -229,10 +232,11 @@ class Admin_pagesModel extends Model{
 		//Add page details
 		foreach($params['name'] as $key => $val){
 			
-			$query = sprintf("INSERT INTO `page_info` SET `page_id`='%s', `name`='%s', `language_id`='%s'",
+			$query = sprintf("INSERT INTO `page_info` SET `page_id`='%s', `name`='%s', `language_id`='%s', `additional`='%s'",
 							mysql_real_escape_string($params['id']),
 							mysql_real_escape_string($val),
-							mysql_real_escape_string($params['language'][$key])
+							mysql_real_escape_string($params['language'][$key]),
+							mysql_real_escape_string($params['additional'][$key])
 							);
 			mysql_query($query);
 		}

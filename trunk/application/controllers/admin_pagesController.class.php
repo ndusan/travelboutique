@@ -17,7 +17,7 @@ class Admin_pagesController extends Controller{
 		parent::set('partners', $this->db->getPartners());
 		
 		parent::set('submenu', 'pages');
-		parent::defaultJs(array('admin_pages'));
+		parent::defaultJs(array('admin_pages', 'tiny_mce'.DS.'tiny_mce'));
 	}
 	
 	public function submit($params){
@@ -48,7 +48,7 @@ class Admin_pagesController extends Controller{
 		
 		parent::set('submenu', 'pages');
 		
-		parent::defaultJs(array('admin_pages'));
+		parent::defaultJs(array('admin_pages', 'tiny_mce'.DS.'tiny_mce'));
 	}
 	
 	public function edit_static($params){

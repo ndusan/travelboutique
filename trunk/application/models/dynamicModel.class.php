@@ -16,7 +16,6 @@ class DynamicModel extends Model{
 			if(mysql_num_rows($resChild) <= 0) return false;
 			$pageInfo = mysql_fetch_assoc($resChild);
 			
-			
 		}elseif(isset($params['parentName']) && !empty($params['parentName'])){
 		
 			//Find this page if exists
@@ -34,13 +33,13 @@ class DynamicModel extends Model{
 		$output = array();
 		
 		//Page name
-		$query = sprintf("SELECT `name` FROM `page_info` WHERE `language_id`=(SELECT `id` FROM `languages` WHERE `name`='%s') AND `page_id`='%s'",
+		$query = sprintf("SELECT `name`, `additional` FROM `page_info` WHERE `language_id`=(SELECT `id` FROM `languages` WHERE `name`='%s') AND `page_id`='%s'",
 						mysql_real_escape_string($langId),
 						mysql_real_escape_string($pageInfo['id'])
 						);
 		$rowTmp = mysql_fetch_assoc(mysql_query($query));
 		
-		$output = array('id' => $pageInfo['id'], 'link' => $pageInfo['link'], 'parent_id' => $pageInfo['parent_id'], 'name' => $rowTmp['name'], 'template' => $pageInfo['template'], 'link' => $pageInfo['link']);
+		$output = array('id' => $pageInfo['id'], 'link' => $pageInfo['link'], 'parent_id' => $pageInfo['parent_id'], 'name' => $rowTmp['name'], 'additional' => $rowTmp['additional'], 'template' => $pageInfo['template'], 'link' => $pageInfo['link']);
 		
 		//Items
 		$query = sprintf("SELECT `page_items`.`folder`, `page_item_details`.`title`, `page_item_details`.`content`
@@ -76,6 +75,29 @@ class DynamicModel extends Model{
 			while($rowCh = mysql_fetch_assoc($resCh)) $chOutput[] = $rowCh;
 			$output = array_merge($output, array('children' => $chOutput));
 		}
+		//Check for brothers
+		$query = sprintf("SELECT `pages`.*, `page_info`.`name` FROM `pages`
+							INNER JOIN `page_info` ON `page_info`.`page_id`=`pages`.`id`
+							WHERE `pages`.`parent_id` IN (SELECT `parent_id` FROM `pages` WHERE `id`='%s') AND `pages`.`type`='%s'
+							AND `page_info`.`language_id`=(SELECT `id` FROM `languages` WHERE `name`='%s')",
+						mysql_real_escape_string($pageInfo['id']),
+						mysql_real_escape_string('dynamic'),
+						mysql_real_escape_string($langId)
+						);
+				
+		$resCh = mysql_query($query);
+		if(mysql_num_rows($resCh) > 0){
+			$chOutput = array();
+			while($rowCh = mysql_fetch_assoc($resCh)){
+				$sql = sprintf("SELECT * FROM `pages` WHERE `id`='%s'",
+								mysql_real_escape_string($rowCh['parent_id'])
+								);
+				$rowCh['parent'] = mysql_fetch_assoc(mysql_query($sql));
+				$chOutput[] = $rowCh; 
+			} 
+			$output = array_merge($output, array('brothers' => $chOutput));
+		}
+		
 		//Get partners for this page
 		$query = sprintf("SELECT `partners`.`id`, `partners`.`link`, `partners`.`file` FROM `partners` INNER JOIN `page_partners` ON
 							`partners`.`id`=`page_partners`.`partner_id` WHERE `page_partners`.`page_id`='%s'",

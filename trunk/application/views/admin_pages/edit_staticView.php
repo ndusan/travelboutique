@@ -41,6 +41,12 @@
                 <textarea cols="46" rows="10" name="content[<?php echo $lang['id']; ?>]" ><?php echo @$page[$lang['id']]['content']; ?></textarea>
             </td>
         </tr>
+        <tr>
+            <td style="vertical-align: top;">Additional info: <img src="<?php echo IMAGE_PATH.$lang['name'].'.png'; ?>" /> </td>
+            <td>
+                <textarea cols="46" rows="10" name="additional[<?php echo $lang['id']; ?>]" ><?php echo @$page[$lang['id']]['additional']; ?></textarea>
+            </td>
+        </tr>
             <?php endforeach; ?>
     </table>
     <br/>

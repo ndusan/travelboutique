@@ -60,5 +60,16 @@
     <li><a href="<?php echo BASE_PATH.'admin'.DS.'menu'.DS;?>">Main menu</a></li>
     <li><a href="<?php echo BASE_PATH.'admin'.DS.'insurance'.DS;?>">Insurance</a></li>
     <li><a href="<?php echo BASE_PATH.'admin'.DS.'voucher'.DS;?>">Voucher</a></li>
+    <li>
+        <a href="javascript:;" class="submenu-action" id="submenu-weather">Weather</a>
+        <ul <?php if(!isset($submenu) || $submenu!='weather'):?>style="display: none;"<?php endif;?> class="submenu" id="weather">
+            <li>
+                <a href="<?php echo BASE_PATH.'admin'.DS.'weather'.DS.'add'.DS;?>">Add</a>
+            </li>
+            <li>
+                <a href="<?php echo BASE_PATH.'admin'.DS.'weather'.DS;?>">View existing</a>
+            </li>
+       	</ul>
+    </li>
     <li><a href="<?php echo BASE_PATH.'admin'.DS.'logout'.DS;?>">Logout</a></li>
 </ul>
