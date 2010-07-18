@@ -489,6 +489,7 @@ html>body #footer {
     vertical-align: top;
     padding: 10px;
 }
+.j_warning {border:solid 1px #ff9999!important;}/*input borders error*/
 .steps .step {line-height:32px; text-align:center; float:left; width:200px; height:32px; background: transparent url(../images/admin_images/steps.png) no-repeat;}
 .steps .active {background-position:0 -32px; font-size:16px; font-weight:bold; color:#369;}
 .steps .inactive {background-position:0 -64px; font-size:16px; font-weight:bold; color:#b1b1b1;}

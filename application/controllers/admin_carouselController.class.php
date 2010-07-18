@@ -51,4 +51,18 @@ class Admin_carouselController extends Controller{
 		
 		parent::defaultJs(array('admin_carousel'));
 	}
+	
+	public function up($params){
+		parent::userInfoAndSession();
+		
+		$this->db->up($params);
+		parent::redirect('admin'.DS.'carousel', 'success');
+	}
+	
+	public function down($params){
+		parent::userInfoAndSession();
+		
+		$this->db->down($params);
+		parent::redirect('admin'.DS.'carousel', 'success');
+	}
 }

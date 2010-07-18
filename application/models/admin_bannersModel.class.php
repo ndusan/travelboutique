@@ -6,7 +6,7 @@ class Admin_bannersModel extends Model{
 		
 		$query = sprintf("SELECT `banners`.*, `pages`.`link` FROM `banners` 
 							INNER JOIN `pages` ON `pages`.`id`=`banners`.`page_id` 
-							ORDER BY `banners`.`id` DESC");
+							ORDER BY `banners`.`position` DESC");
 		
 		return parent::query($query);
 	}
@@ -78,6 +78,62 @@ class Admin_bannersModel extends Model{
 						);
 		mysql_query($query);
 		return $row;
+	}
+	
+	public function up($params){
+		
+		$query = sprintf("SELECT * FROM `banners` WHERE `id`!='%s' AND
+						 `position`>='%s' ORDER BY `position` ASC LIMIT 0, 1",
+						mysql_real_escape_string($params['id']),
+						mysql_real_escape_string($params['position'])
+						);
+		$res = mysql_query($query);
+		
+		if(mysql_num_rows($res) > 0){
+			
+			$row = mysql_fetch_assoc($res);
+			//Switch places
+			$query = sprintf("UPDATE `banners` SET `position`='%s' WHERE `id`='%s'",
+							mysql_real_escape_string($row['position']),
+							mysql_real_escape_string($params['id'])
+							);
+			mysql_query($query);
+			
+			$query = sprintf("UPDATE `banners` SET `position`='%s' WHERE `id`='%s'",
+							mysql_real_escape_string($params['position']),
+							mysql_real_escape_string($row['id'])
+							);
+			mysql_query($query);
+		}
+		return true;
+	}
+	
+	public function down($params){
+		
+		$query = sprintf("SELECT * FROM `banners` WHERE `id`!='%s' AND
+						 `position`<='%s' ORDER BY `position` DESC LIMIT 0, 1",
+						mysql_real_escape_string($params['id']),
+						mysql_real_escape_string($params['position'])
+						);
+		$res = mysql_query($query);
+		
+		if(mysql_num_rows($res) > 0){
+			
+			$row = mysql_fetch_assoc($res);
+			//Switch places
+			$query = sprintf("UPDATE `banners` SET `position`='%s' WHERE `id`='%s'",
+							mysql_real_escape_string($row['position']),
+							mysql_real_escape_string($params['id'])
+							);
+			mysql_query($query);
+			
+			$query = sprintf("UPDATE `banners` SET `position`='%s' WHERE `id`='%s'",
+							mysql_real_escape_string($params['position']),
+							mysql_real_escape_string($row['id'])
+							);
+			mysql_query($query);
+		}
+		return true;
 	}
 	
 }

@@ -52,4 +52,17 @@ class Admin_bannersController extends Controller{
 		parent::defaultJs(array('admin_banners'));
 	}
 	
+	public function up($params){
+		parent::userInfoAndSession();
+		
+		$this->db->up($params);
+		parent::redirect('admin'.DS.'banners', 'success');
+	}
+	
+	public function down($params){
+		parent::userInfoAndSession();
+		
+		$this->db->down($params);
+		parent::redirect('admin'.DS.'banners', 'success');
+	}
 }

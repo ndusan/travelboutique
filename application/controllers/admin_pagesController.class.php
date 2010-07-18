@@ -22,7 +22,7 @@ class Admin_pagesController extends Controller{
 	
 	public function submit($params){
 		parent::userInfoAndSession();
-
+		
 		if($this->db->submit($params)) parent::redirect('admin'.DS.'pages', 'success');
 		else parent::redirect('admin'.DS.'pages'.DS.'add', 'error');
 	}
@@ -68,7 +68,7 @@ class Admin_pagesController extends Controller{
 		parent::userInfoAndSession();
 		
 		if($this->db->update($params)) parent::redirect('admin'.DS.'pages', 'success');
-		else parent::redirect('admin'.DS.'pages'.DS.'add', 'error');
+		else parent::redirect('admin'.DS.'pages', 'error');
 	}
 	
 	public function more($params){
@@ -136,4 +136,10 @@ class Admin_pagesController extends Controller{
 		parent::redirect('admin'.DS.'pages'.DS.$params['id'].DS.'more', 'success');
 	}
 
+	public function delete($params){
+		parent::userInfoAndSession();
+		
+		if($this->db->delete($params)) parent::redirect('admin'.DS.'pages', 'success');
+		else parent::redirect('admin'.DS.'pages'.DS.'add', 'error');
+	}
 }

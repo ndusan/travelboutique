@@ -90,6 +90,11 @@ $routes = array(
 					  	'action' 		=> 'more', 
 					  	'layout' 		=> 'admin'
 				),
+				array(	'url' 			=> '/^admin\/pages\/(?P<id>\d+)\/delete\/?$/', 
+						'controller' 	=> 'admin_pages', 
+					  	'action' 		=> 'delete', 
+					  	'layout' 		=> 'empty'
+				),
 				array(	'url' 			=> '/^admin\/pages\/(?P<id>\d+)\/more\/submit\/?$/', 
 						'controller' 	=> 'admin_pages', 
 					  	'action' 		=> 'submitMore', 
@@ -182,6 +187,16 @@ $routes = array(
 					  	'action' 		=> 'submit', 
 					  	'layout' 		=> 'empty'
 				),
+				array(	'url' 			=> '/^admin\/carousel\/(?P<id>\d+)\/(?P<position>\d+)\/up\/?$/', 
+						'controller' 	=> 'admin_carousel', 
+					  	'action' 		=> 'up', 
+					  	'layout' 		=> 'empty'
+				),
+				array(	'url' 			=> '/^admin\/carousel\/(?P<id>\d+)\/(?P<position>\d+)\/down\/?$/', 
+						'controller' 	=> 'admin_carousel', 
+					  	'action' 		=> 'down', 
+					  	'layout' 		=> 'empty'
+				),
 				//Banners
 				array(	'url' 			=> '/^admin\/banners\/?$/', 
 						'controller' 	=> 'admin_banners', 
@@ -206,6 +221,16 @@ $routes = array(
 				array(	'url' 			=> '/^admin\/banners\/((?P<id>\d+)\/)?submit\/?$/', 
 						'controller' 	=> 'admin_banners', 
 					  	'action' 		=> 'submit', 
+					  	'layout' 		=> 'empty'
+				),
+				array(	'url' 			=> '/^admin\/banners\/(?P<id>\d+)\/(?P<position>\d+)\/up\/?$/', 
+						'controller' 	=> 'admin_banners', 
+					  	'action' 		=> 'up', 
+					  	'layout' 		=> 'empty'
+				),
+				array(	'url' 			=> '/^admin\/banners\/(?P<id>\d+)\/(?P<position>\d+)\/down\/?$/', 
+						'controller' 	=> 'admin_banners', 
+					  	'action' 		=> 'down', 
 					  	'layout' 		=> 'empty'
 				),
 				//Main menu
