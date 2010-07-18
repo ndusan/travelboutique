@@ -61,25 +61,18 @@
                                 <td>
                                     <label><?php echo $html->translate('Tip vozila');?></label>
                                     <select class="selectSmall j_required" name="rent_a_car[car_type]">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                        <option>7</option>
+                                        <option>manje vozilo</option>
+                                        <option>srednja klasa</option>
+                                        <option>visa klasa</option>
+                                        <option>terensko vozilo</option>
                                     </select>
                                 </td>
                                 <td>
                                     <label><?php echo $html->translate('Rental lokacija');?></label>
                                     <select class="selectSmall j_required" name="rent_a_car[location]">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                        <option>7</option>
+                                        <option>aerodrom</option>
+                                        <option>hotel</option>
+                                        <option>grad</option>
                                     </select>
                                 </td>
                             </tr>
@@ -91,6 +84,12 @@
                                 <td>
                                     <label><?php echo $html->translate('Datum vracanja');?></label>
                                     <input class="inputSmall j_datepicker j_required" type="text" name="rent_a_car[date_return]" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label><?php echo $html->translate('Napomena')?></label>
+                                    <textarea class="inputBig" name="contact[text]" rows="4" cols="20"></textarea>
                                 </td>
                             </tr>
                         </tbody>
@@ -114,7 +113,7 @@
                 <?php include_once(VIEW_PATH.'home'.DS.'_sidebar.php');?>
             </div>
         </div>
-    <?php include_once(VIEW_PATH.'home'.DS.'_footer.php');?>
+        <?php include_once(VIEW_PATH.'home'.DS.'_footer.php');?>
     </div>
     <div class="bottom"></div>
 </div>
