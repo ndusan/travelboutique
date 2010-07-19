@@ -104,32 +104,42 @@ class HTML{
 	
 	function getWeather() {
 
-		$response = "";
-		
-		$requestAddress = "http://www.google.com/ig/api?weather=belgrade&hl=en";
-		$xml_str = file_get_contents($requestAddress,0);
-		// Parses XML
-		$xml = new SimplexmlElement($xml_str);
-		// Loops XML
-		$count = 0;
-		//echo $xml->forecast_conditions[0]->city['data'];
-		//var_dump($xml);
-		$response = '<div id="weather">';
-		foreach($xml->weather as $item) {
+		$requests = Model::getAllWeather();
 	
-			foreach($item->forecast_conditions as $new) {
-			$response.= '<div class="weatherIcon">';
-			$response.= '<img src="http://www.google.com/' .$new->icon['data'] . '"/><br/>';
-			$response.= $new->day_of_week['data'];
-			$response.= '</div>';
+		$response = '<div>';
+		//Loop requests
+		if(isset($requests) && !empty($requests))
+		foreach($requests as $r){
+			$requestAddress = $r['link'];
 			
+			$xml_str = file_get_contents($requestAddress, 0);
+			// Parses XML
+			$xml = new SimplexmlElement($xml_str);
+			//print_r($xml);
+			// Name
+			$response.= "<div>".$xml->loc->dnam."</div>";
+			
+			foreach($xml->dayf->day as $item) {
+				if($item->hi != 'N/A'){
+					$min = round((5/9)*($item->hi-32));
+					$response .= "<div>".$min."</div>";
+					$max = round((5/9)*($item->low-32));
+					$response .= "<div>".$max."</div>";
+					foreach($item->part as $new) {
+						$response.= '<div>';
+							//Image
+							$response.= '<img src="http://s.imwx.com/v.20100415.153311/img/wxicon/130/'.$new->icon.'.png"/><br/>';
+							$response .= "<div>".$new->t."</div>";
+						$response.= '</div>';
+						
+					}
+					$response .= "next day";
+				}
 			}
-	      	//echo $item->forecast_information->city['data'];
-			//echo $item->condition['data'];
-	
 		}
-	  $response.= '</div>';
-	  return $response;
+		$response.= '</div>';
+	  	return $response;	
+		
   	}
   	
   	function getCurrency(){

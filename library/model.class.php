@@ -93,4 +93,10 @@ class Model{
 		$res = mysql_query($string);
 		return mysql_insert_id($this->_dbHandle);
 	}
+	
+	public static function getAllWeather(){
+		
+		$query = sprintf("SELECT * FROM `weather`");
+		return self::query($query);
+	}
 }

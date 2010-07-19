@@ -35,7 +35,7 @@ class HomeModel extends Model{
 		}
 		
 		//Get carousel
-		$query = sprintf("SELECT * FROM `carousel`");
+		$query = sprintf("SELECT * FROM `carousel` ORDER BY `position` DESC");
 		$resPar = mysql_query($query);
 		if(mysql_num_rows($resPar) > 0){
 			
@@ -81,7 +81,7 @@ class HomeModel extends Model{
 			$query_banner = sprintf("SELECT `banners`.*, `pages`.`link` FROM `banners` INNER JOIN
 									`pages` ON `pages`.`id`=`banners`.`page_id`
 									WHERE `pages`.`parent_id`='%s'
-									AND `pages`.`id`!='%s' ORDER BY `banners`.`id` DESC LIMIT 0, 4",
+									AND `pages`.`id`!='%s' ORDER BY `banners`.`position` DESC LIMIT 0, 4",
 									mysql_real_escape_string($pageInfo['parent_id']),
 									mysql_real_escape_string($pageInfo['id'])
 									);
@@ -97,7 +97,7 @@ class HomeModel extends Model{
 				//Add some extra banners
 				$query_extra = sprintf("SELECT `banners`.`id`, `banners`.`title`, `banners`.`file`, `pages`.`link` FROM `banners` 
 										INNER JOIN `pages` ON `pages`.`id`=`banners`.`page_id` WHERE `pages`.`id`!='%s' AND `pages`.`parent_id`='%s'
-										LIMIT 0, %s",
+										ORDER BY `banners`.`position` LIMIT 0, %s",
 										mysql_real_escape_string($pageInfo['id']),
 										mysql_real_escape_string(0),
 										mysql_real_escape_string(4 - $numOfBanners)
@@ -110,7 +110,8 @@ class HomeModel extends Model{
 			
 			//Parent
 			$query_banner = sprintf("SELECT `banners`.`id`, `banners`.`title`, `banners`.`file`, `pages`.`link` FROM `banners` 
-									INNER JOIN `pages` ON `pages`.`id`=`banners`.`page_id` WHERE `pages`.`parent_id`='%s'	LIMIT 0, 4",
+									INNER JOIN `pages` ON `pages`.`id`=`banners`.`page_id` WHERE `pages`.`parent_id`='%s'
+									ORDER BY `banners`.`position`  LIMIT 0, 4",
 									mysql_real_escape_string($pageInfo['id'])
 									);
 						
@@ -126,7 +127,7 @@ class HomeModel extends Model{
 				//Add some extra banners
 				$query_extra = sprintf("SELECT `banners`.`id`, `banners`.`title`, `banners`.`file`, `pages`.`link` AS `parent_link` FROM `banners` 
 										INNER JOIN `pages` ON `pages`.`id`=`banners`.`page_id` WHERE `pages`.`id`!='%s' AND `pages`.`parent_id`='%s'	
-										LIMIT 0, %s",
+										ORDER BY `banners`.`position` LIMIT 0, %s",
 										mysql_real_escape_string($pageInfo['id']),
 										mysql_real_escape_string(0),
 										mysql_real_escape_string(4 - $numOfBanners)
