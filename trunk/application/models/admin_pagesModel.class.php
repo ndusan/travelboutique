@@ -194,10 +194,10 @@ class Admin_pagesModel extends Model{
 		//Collect serbian name if there is
 		if(isset($params['name']['sr']) && !empty($params['name']['sr'])){
 
-			$link = $params['name']['sr'];
+			$link = strtolower($params['name']['sr']);
 		}elseif(isset($params['name']['en']) && !empty($params['name']['en'])){
 			
-			$link = $params['name']['en'];
+			$link = strtolower($params['name']['en']);
 		}
 		
 		//If there is a request to change name of page it should be done here
@@ -207,10 +207,10 @@ class Admin_pagesModel extends Model{
 		$res_old = mysql_query($query_old);
 		$row_old = mysql_fetch_assoc($res_old);
 		
-		if($row_old['link'] != $link){
+		if(strtolower($row_old['link']) != $link){
 			
 			//Request to change name
-			$link = self::createLink($link);
+			$link = strtolower(self::createLink($link));
 		
 			if(!$link) return false;
 		}

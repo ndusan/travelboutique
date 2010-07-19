@@ -29,12 +29,12 @@
                         <?php echo $extra['voucher']['content'];?>
                     </div>
                 </div>
-                <div id="ul-weather" style="display: none;">
+               <div id="ul-weather" style="display: none;">
                     <div class="boxBig">
                     	<?php echo $html->getWeather();?>
                     </div>
                 </div>
-                <div id="ul-exchange" style="display: none;">
+                <?php /** <div id="ul-exchange" style="display: none;">
                     <div class="box">
                     <?php 
                     if($var = $html->getCurrency()):
@@ -48,6 +48,7 @@
                     ?>
                     </div>
                 </div>
+                 */ ?>
             </div>
             <div class="clear"></div>
         </div>
