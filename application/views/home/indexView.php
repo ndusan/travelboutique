@@ -37,8 +37,8 @@
                 <div class="wings"></div>
                 <div class="phone"></div>
                 <h1 class="borBot"><?php echo $html->translate('Pozovite nas');?></h1>
-                <h2><?php echo $html->translate('011 / 435 67 89');?></h2>
-                <h2><?php echo $html->translate('063 / 321 59 87');?></h2>
+                <h2><?php echo $html->translate('011 / 32 88 097');?></h2>
+                <h2><?php echo $html->translate('060 / 44 09 040');?></h2>
             </div>
         </div>
         <?php include_once(VIEW_PATH.'home'.DS.'_footer.php');?>
