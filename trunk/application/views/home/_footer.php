@@ -36,6 +36,34 @@
                 </div>
                 <div id="ul-exchange" style="display: none;">
                     <div class="boxBig">
+                        <table cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                                <tr>
+                                    <td>$res['EUR']['img']</td>
+                                    <td>$res['EUR']['img']</td>
+                                    <td>$res['EUR']['img']</td>
+                                    <td>$res['EUR']['img']</td>
+                                    <td>$res['EUR']['img']</td>
+                                    <td>$res['EUR']['img']</td>
+                                    <td>$res['EUR']['img']</td>
+                                    <td>$res['EUR']['img']</td>
+                                    <td>$res['EUR']['img']/td>
+                                    <td>$res['EUR']['img']</td>
+                                </tr>
+                                <tr>
+                                    <td>1 RSD =</td>
+                                    <td>$res['EUR']['value']</td>
+                                    <td>$res['EUR']['value']</td>
+                                    <td>$res['EUR']['value']</td>
+                                    <td>$res['EUR']['value']</td>
+                                    <td>$res['EUR']['value']</td>
+                                    <td>$res['EUR']['value']</td>
+                                    <td>$res['EUR']['value']</td>
+                                    <td>$res['EUR']['value']</td>
+                                    <td>$res['EUR']['value']</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     <?php 
                     $res = $html->getCurrency();
                     print_r($res);
