@@ -117,7 +117,7 @@ class HTML{
 			$xml = new SimplexmlElement($xml_str);
 			//print_r($xml);
 			// Name
-			$response.= "<h2>".$xml->loc->dnam." in next 10 days</h2>";
+			$response.= "<h2>".$xml->loc->dnam."</h2>";
 			$response.= "<table cellspacing='0' cellpading='0' width='100%'>
 							<tbody>
 								<tr>";
