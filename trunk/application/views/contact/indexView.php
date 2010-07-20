@@ -50,9 +50,9 @@
                 </form>
 
             </div>
-            <div class="sidebar">
+            <!-- div class="sidebar">
                 <?php include_once(VIEW_PATH.'home'.DS.'_sidebar.php');?>
-            </div>
+            </div -->
         </div>
         <?php include_once(VIEW_PATH.'home'.DS.'_footer.php');?>
     </div>
