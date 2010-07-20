@@ -88,7 +88,7 @@
                                     </select>
                                 </td>
                                 <td>
-                                    <label><?php echo $html->translate('Broj putnika senior');?></label>
+                                    <label><?php echo $html->translate('Broj putnika senior (65+)');?></label>
                                     <select class="selectSmall j_required" name="avio_karte[seniors]">
                                         <option>0</option>
                                         <option>1</option>
@@ -103,7 +103,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <label><?php echo $html->translate('Broj putnika deca');?></label>
+                                    <label><?php echo $html->translate('Broj putnika deca (2-12)');?></label>
                                     <select class="selectSmall j_required" name="avio_karte[children]">
                                         <option>0</option>
                                         <option>1</option>
@@ -116,7 +116,7 @@
                                     </select>
                                 </td>
                                 <td>
-                                    <label><?php echo $html->translate('broj putnika INF');?></label>
+                                    <label><?php echo $html->translate('broj putnika INF (0-2)');?></label>
                                     <select class="selectSmall j_required" name="avio_karte[inf]">
                                         <option>0</option>
                                         <option>1</option>
