@@ -106,7 +106,7 @@ class HTML{
 
 		$requests = Model::getAllWeather();
 	
-		$response = '<div>';
+		$response = '';
 		//Loop requests
 		if(isset($requests) && !empty($requests))
 		foreach($requests as $r){
@@ -118,8 +118,12 @@ class HTML{
 			//print_r($xml);
 			// Name
 			$response.= "<h2>".$xml->loc->dnam." in next 10 days</h2>";
+			$response.= "<table cellspacing='0' cellspacing='0'>
+							<tbody>
+								<tr>";
 			foreach($xml->dayf->day as $item) {
 				if($item->hi != 'N/A'){
+					$response.= "<td>";
 					$min = round((5/9)*($item->hi-32));
 					$response .= "<div>max temp: ".$min."</div>";
 					$max = round((5/9)*($item->low-32));
@@ -130,13 +134,14 @@ class HTML{
 							$response.= '<img src="http://s.imwx.com/v.20100415.153311/img/wxicon/45/'.$new->icon.'.png"/><br/>';
 							$response .= "<div>".$new->t."</div>";
 						$response.= '</div>';
-						
 					}
-					$response .= "next day";
+					$response .= "</td>";
 				}
 			}
+			$response.= "</tr>
+							</tbody>
+								</table>";
 		}
-		$response.= '</div>';
 	  	return $response;	
 		
   	}
