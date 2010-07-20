@@ -118,6 +118,7 @@ button:hover {background-color:#EEE; cursor:pointer;}
 table {overflow:hidden;}
 tbody td {padding:2px 5px;}
 tfoot td {padding:5px;}
+table th {padding:5px;}
 
 .j_warning {border:solid 1px #ff9999!important;}/*input borders error*/
 .message {text-align:center; padding:20px 0; margin:20px 0; } /* notofication holder */
