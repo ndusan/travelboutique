@@ -6,7 +6,7 @@
         <div class="content">
             <div class="mainPromo">
                 <h1 class="borBot"><?php echo $getPageInfo['items'][0]['title'];?></h1>
-                <iframe height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=115572436179232016372.00048bd4f13f5f7cc3c00&amp;ll=44.830765,20.461221&amp;spn=0.010652,0.025792&amp;z=15&amp;iwloc=00048bd4f672ac2a41b50&amp;output=embed"></iframe><br /><small>View <a href="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=115572436179232016372.00048bd4f13f5f7cc3c00&amp;ll=44.830765,20.461221&amp;spn=0.010652,0.025792&amp;z=15&amp;iwloc=00048bd4f672ac2a41b50&amp;source=embed" style="color:#0000FF;text-align:left">Travel Boutique</a> in a larger map</small>
+                <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=115572436179232016372.00048bd4f13f5f7cc3c00&amp;ll=44.830765,20.461221&amp;spn=0.010652,0.025792&amp;z=15&amp;iwloc=00048bd4f672ac2a41b50&amp;output=embed"></iframe>
                 <?php echo $getPageInfo['items'][0]['content'];?>
 
                 <form id="form-contact" action="<?php echo BASE_PATH.'contact'.DS.'submit'.DS; ?>" method="post">
