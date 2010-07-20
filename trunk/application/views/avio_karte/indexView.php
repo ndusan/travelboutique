@@ -11,7 +11,7 @@
                     <table cellpadding="0" cellspacing="0">
 
                         <tbody>
-                            <tr><th colspan="2"><h2>Vasi detalji</h2></th></tr>
+                            <tr><th colspan="2"><h3>Vasi detalji</h3></th></tr>
                             <tr>
                                 <td>
                                     <label><?php echo $html->translate('Ime');?></label>
@@ -49,7 +49,7 @@
                                     <input class="inputSmall j_required" type="text" name="avio_karte[state]" value="" />
                                 </td>
                             </tr>
-                            <tr><td colspan="2">&nbsp;</td></tr>
+                            <tr><th colspan="2"><h3>Destinacija</h3></th></tr>
                             <tr>
                                 <td>
                                     <label><?php echo $html->translate('Polazak iz');?></label>
