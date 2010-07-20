@@ -111,20 +111,21 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <label><?php echo $html->translate('Tip vozila');?></label>
+                                    <label><?php echo $html->translate('Broj zvezdica');?></label>
                                     <select class="selectSmall j_required" name="rent_a_car[car_type]">
-                                        <option>manje vozilo</option>
-                                        <option>srednja klasa</option>
-                                        <option>visa klasa</option>
-                                        <option>terensko vozilo</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
                                     </select>
                                 </td>
                                 <td>
-                                    <label><?php echo $html->translate('Rental lokacija');?></label>
+                                    <label><?php echo $html->translate('Broj kreveta');?></label>
                                     <select class="selectSmall j_required" name="rent_a_car[location]">
-                                        <option>aerodrom</option>
-                                        <option>hotel</option>
-                                        <option>grad</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
                                     </select>
                                 </td>
                             </tr>
