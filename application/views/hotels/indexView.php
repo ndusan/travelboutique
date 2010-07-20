@@ -124,8 +124,9 @@
                                 <td>
                                     <label><?php echo $html->translate('Broj dece');?></label>
                                     <select class="selectSmall j_required" name="rent_a_car[car_type]">
-                                        <option>jedno</option>
-                                        <option>dvoje</option>
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
                                     </select>
                                 </td>
                                 <td>
