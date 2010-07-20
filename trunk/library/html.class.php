@@ -118,7 +118,7 @@ class HTML{
 			//print_r($xml);
 			// Name
 			$response.= "<h2>".$xml->loc->dnam." in next 10 days</h2>";
-			$response.= "<table cellspacing='0' cellspacing='0' width='100%'>
+			$response.= "<table cellspacing='0' cellpading='0' width='100%'>
 							<tbody>
 								<tr>";
 			foreach($xml->dayf->day as $item) {
