@@ -96,7 +96,7 @@ class Model{
 	
 	public static function getAllWeather(){
 		
-		$query = sprintf("SELECT * FROM `weather`");
+		$query = sprintf("SELECT * FROM `weather` LIMIT 0, 1");
 		return self::query($query);
 	}
 }

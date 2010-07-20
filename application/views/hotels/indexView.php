@@ -7,52 +7,52 @@
             <div class="mainPromo">
                 <h1 class="borBot"><?php echo $getPageInfo['items'][0]['title'];?></h1>
                 <?php echo $getPageInfo['items'][0]['content'];?>
-                <form id="form-rent_a_car" action="<?php echo BASE_PATH.'rent-a-car'.DS.'submit'.DS;?>" method="post" >
+                <form id="form-hotels" action="<?php echo BASE_PATH.'hotels'.DS.'submit'.DS;?>" method="post" >
                     <table cellpadding="0" cellspacing="0">
                         <tbody>
                             <tr><th colspan="2"><h3>Vaši detalji:</h3></th></tr>
                             <tr>
                                 <td>
                                     <label><?php echo $html->translate('Ime');?></label>
-                                    <input class="inputSmall" type="text" name="rent_a_car[firstname]" value="" />
+                                    <input class="inputSmall" type="text" name="hotels[firstname]" value="" />
                                 </td>
                                 <td>
                                     <label><?php echo $html->translate('Prezime');?></label>
-                                    <input class="inputSmall j_required" type="text" name="rent_a_car[lastname]" value="" />
+                                    <input class="inputSmall j_required" type="text" name="hotels[lastname]" value="" />
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <label><?php echo $html->translate('E-mail');?></label>
-                                    <input class="inputSmall j_required" type="text" name="rent_a_car[email]" value="" />
+                                    <input class="inputSmall j_required" type="text" name="hotels[email]" value="" />
                                 </td>
                                 <td>
                                     <label><?php echo $html->translate('Telefon');?></label>
-                                    <input class="inputSmall j_required" type="text" name="rent_a_car[tel]" value="" />
+                                    <input class="inputSmall j_required" type="text" name="hotels[tel]" value="" />
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="2">
                                     <label><?php echo $html->translate('Adresa');?></label>
-                                    <input class="inputBig j_required" type="text" name="rent_a_car[address]" value="" />
+                                    <input class="inputBig j_required" type="text" name="hotels[address]" value="" />
                                 </td>
 
                             </tr>
                             <tr>
                                 <td>
                                     <label><?php echo $html->translate('Grad');?></label>
-                                    <input class="inputSmall j_required" type="text" name="rent_a_car[city]" value="" />
+                                    <input class="inputSmall j_required" type="text" name="hotels[city]" value="" />
                                 </td>
                                 <td>
                                     <label><?php echo $html->translate('Drzava');?></label>
-                                    <input class="inputSmall j_required" type="text" name="rent_a_car[state]" value="" />
+                                    <input class="inputSmall j_required" type="text" name="hotels[state]" value="" />
                                 </td>
                             </tr>
                             <tr><th colspan="2"><h3>Hotel:</h3></th></tr>
                             <tr>
                                 <td>
                                     <label><?php echo $html->translate('Drzava');?></label>
-                                    <select class="selectSmall j_required" name="rent_a_car[state_take]" size="">
+                                    <select class="selectSmall j_required" name="hotels[state_take]" size="">
                                         <option value="Argentina">Argentina</option>
                                         <option value="Australia">Australia</option>
                                         <option value="Austrija">Austrija</option>
@@ -107,23 +107,23 @@
                                 </td>
                                 <td>
                                     <label><?php echo $html->translate('Grad');?></label>
-                                    <input class="inputSmall" type="text" name="rent_a_car[city_take]" value="" />
+                                    <input class="inputSmall" type="text" name="hotels[city_take]" value="" />
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <label><?php echo $html->translate('Datum dolaska');?></label>
-                                    <input class="inputSmall j_datepicker j_required" type="text" name="rent_a_car[date_take]" value="" />
+                                    <input class="inputSmall j_datepicker j_required" type="text" name="hotels[date_return]" value="" />
                                 </td>
                                 <td>
                                     <label><?php echo $html->translate('Datum odlaska');?></label>
-                                    <input class="inputSmall j_datepicker j_required" type="text" name="rent_a_car[date_return]" value="" />
+                                    <input class="inputSmall j_datepicker j_required" type="text" name="hotels[date_take]" value="" />
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <label><?php echo $html->translate('Broj dece');?></label>
-                                    <select class="selectSmall j_required" name="rent_a_car[car_type]">
+                                    <select class="selectSmall j_required" name="hotels[child_num]">
                                         <option>0</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -131,7 +131,7 @@
                                 </td>
                                 <td>
                                     <label><?php echo $html->translate('Godine dece');?></label>
-                                    <select class="j_required" name="rent_a_car[location]">
+                                    <select class="j_required" name="hotels[child_from]">
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
@@ -150,7 +150,7 @@
                                         <option>17</option>
                                         <option>18</option>
                                     </select>
-                                    <select class="j_required" name="rent_a_car[location]">
+                                    <select class="j_required" name="hotels[child_to]">
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
@@ -174,7 +174,7 @@
                             <tr>
                                 <td>
                                     <label><?php echo $html->translate('Kategorija hotela');?></label>
-                                    <select class="selectSmall j_required" name="rent_a_car[car_type]">
+                                    <select class="selectSmall j_required" name="hotels[hotel_category]">
                                         <option>jedna *</option>
                                         <option>dve **</option>
                                         <option>tri ***</option>
@@ -184,7 +184,7 @@
                                 </td>
                                 <td>
                                     <label><?php echo $html->translate('Tip sobe');?></label>
-                                    <select class="selectSmall j_required" name="rent_a_car[location]">
+                                    <select class="selectSmall j_required" name="hotels[room]">
                                         <option>jednokrevetna</option>
                                         <option>dvokrevetna</option>
                                         <option></option>
@@ -194,14 +194,14 @@
                             <tr>
                                 <td colspan="2">
                                     <label><?php echo $html->translate('Napomena')?></label>
-                                    <textarea class="inputBig" name="contact[text]" rows="4" cols="20"></textarea>
+                                    <textarea class="inputBig" name="hotels[text]" rows="4" cols="20"></textarea>
                                 </td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr>
                                 <td colspan="2" align="center">
-                                    <button type="button" id="rent_a_car"><?php echo $html->translate('posalji zahtev');?></button>
+                                    <button type="button" id="hotels"><?php echo $html->translate('posalji zahtev');?></button>
                                     <button type="reset"><?php echo $html->translate('odustani');?></button>
                                 </td>
                             </tr>

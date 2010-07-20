@@ -70,7 +70,8 @@
                         </table>
                     <?php 
                     $res = $html->getCurrency();
-                    print_r($res);
+                    //print_r($res);
+                    echo $res['EUR']['img']; 
                     ?>
                     </div>
                 </div>
