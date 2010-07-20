@@ -14,6 +14,7 @@
 
                         <tbody>
                             <tr>
+                                <td rowspan="4">asdasdasd</td>
                                 <td>
                                     <label><?php echo $html->translate('Ime');?></label>
                                     <input class="inputSmall j_required" type="text" name="contact[firstname]" value="" />
