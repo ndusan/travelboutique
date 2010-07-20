@@ -51,7 +51,7 @@
                             <tr><th colspan="2"><h3>Hotel:</h3></th></tr>
                             <tr>
                                 <td>
-                                    <label><?php echo $html->translate('Destinacija (država)');?></label>
+                                    <label><?php echo $html->translate('Drzava');?></label>
                                     <select class="inputSmall j_required" name="rent_a_car[state_take]" size="">
                                         <option value="Argentina">Argentina</option>
                                         <option value="Australia">Australia</option>
