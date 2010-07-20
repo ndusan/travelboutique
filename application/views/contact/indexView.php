@@ -10,6 +10,7 @@
                 <form id="form-contact" action="<?php echo BASE_PATH.'contact'.DS.'submit'.DS; ?>" method="post">
                     <table cellpadding="0" cellspacing="0">
                         <tbody>
+                            <tr><th colspan="2"><h3>Kontakt forma:</h3></th></tr>
                             <tr>
                                 <td>
                                     <label><?php echo $html->translate('Ime');?></label>
