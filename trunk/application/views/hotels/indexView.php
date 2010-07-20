@@ -112,6 +112,33 @@
                             </tr>
                             <tr>
                                 <td>
+                                    <label><?php echo $html->translate('Datum dolaska');?></label>
+                                    <input class="inputSmall j_datepicker j_required" type="text" name="rent_a_car[date_take]" value="" />
+                                </td>
+                                <td>
+                                    <label><?php echo $html->translate('Datum odlaska');?></label>
+                                    <input class="inputSmall j_datepicker j_required" type="text" name="rent_a_car[date_return]" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label><?php echo $html->translate('Broj dece');?></label>
+                                    <select class="selectSmall j_required" name="rent_a_car[car_type]">
+                                        <option>jedno</option>
+                                        <option>dvoje</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <label><?php echo $html->translate('bnla bla');?></label>
+                                    <select class="selectSmall j_required" name="rent_a_car[location]">
+                                        <option>jednokrevetna</option>
+                                        <option>dvokrevetna</option>
+                                        <option></option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
                                     <label><?php echo $html->translate('Broj zvezdica');?></label>
                                     <select class="selectSmall j_required" name="rent_a_car[car_type]">
                                         <option>jedna *</option>
@@ -122,22 +149,12 @@
                                     </select>
                                 </td>
                                 <td>
-                                    <label><?php echo $html->translate('Broj kreveta');?></label>
+                                    <label><?php echo $html->translate('Tip sobe');?></label>
                                     <select class="selectSmall j_required" name="rent_a_car[location]">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
+                                        <option>jednokrevetna</option>
+                                        <option>dvokrevetna</option>
+                                        <option></option>
                                     </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label><?php echo $html->translate('Datum dolaska');?></label>
-                                    <input class="inputSmall j_datepicker j_required" type="text" name="rent_a_car[date_take]" value="" />
-                                </td>
-                                <td>
-                                    <label><?php echo $html->translate('Datum odlaska');?></label>
-                                    <input class="inputSmall j_datepicker j_required" type="text" name="rent_a_car[date_return]" value="" />
                                 </td>
                             </tr>
                             <tr>
