@@ -89,8 +89,7 @@
                             </select>
                         </td>
                         <td colspan="2" align="left">
-                            <button type="button" id="rent_a_car"><?php echo $html->translate('posalji zahtev');?></button>
-                            <button type="reset"><?php echo $html->translate('odustani');?></button>
+                            <button type="button" id="rent_a_car"><?php echo $html->translate('prikazi');?></button>
                         </td>
                     </tr>
                 </table>
