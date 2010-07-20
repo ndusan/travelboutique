@@ -31,16 +31,17 @@
                 </div>
                <div id="ul-weather" style="display: none;">
                     <div class="boxBig">
-                    	<?php echo $html->getWeather();?>
+                    	<?php  $html->getWeather();?>
                     </div>
                 </div>
                 <div id="ul-exchange" style="display: none;">
                     <div class="boxBig">
                         <h1 class="borBot">Banca Intesa kursna lista na današnji dan</h1>
+                        <?php $res = $html->getCurrency(); ?>
                         <table cellpadding="0" cellspacing="0" width="100%">
                             <tbody>
                                 <tr>
-                                    <td><?php echo $res['RSD']['img'] ?></td>
+                                    <td><img style="border: 0px solid ; width: 16px; height: 11px;" src="http://www.bancaintesabeograd.com/upload/images/exchange_rates/RSD.gif"/></td>
                                     <td><?php echo $res['EUR']['img'] ?></td>
                                     <td><?php echo $res['AUD']['img'] ?></td>
                                     <td><?php echo $res['CAD']['img'] ?></td>
