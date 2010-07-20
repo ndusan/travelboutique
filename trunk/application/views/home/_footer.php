@@ -34,21 +34,14 @@
                     	<?php echo $html->getWeather();?>
                     </div>
                 </div>
-                <?php /** <div id="ul-exchange" style="display: none;">
+                <div id="ul-exchange" style="display: none;">
                     <div class="box">
                     <?php 
-                    if($var = $html->getCurrency()):
-                    foreach($var as $key => $val):?>
-                    
-                    <?php echo $key;?>
-                    <?php echo $val;?><br/>
-                    
-                    <?php endforeach;
-                    endif;
+                    $res = $html->getCurrency();
+                    print_r($res);
                     ?>
                     </div>
                 </div>
-                 */ ?>
             </div>
             <div class="clear"></div>
         </div>
