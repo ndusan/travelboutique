@@ -12,7 +12,7 @@
 
                         <tbody>
                             <tr>
-                                <td rowspan="4">
+                                <td width="40%" rowspan="4">
                                     <?php echo $getPageInfo['items'][0]['content'];?>
                                 </td>
                                 <td>
