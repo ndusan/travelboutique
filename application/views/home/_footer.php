@@ -32,9 +32,9 @@
         <div id="ul-weather" style="display: none;">
             <div class="boxBig">
                 <table>
+                    <tr><td colspan="2"><label><?php echo $html->translate('Odaberite zeljenu destinaciju');?></label></td></tr>
                     <tr>
                         <td>
-                            <label><?php echo $html->translate('Odaberite zeljenu destinaciju');?></label>
                             <select class="selectSmall j_required" name="rent_a_car[state_take]" size="">
                                 <option value="Argentina">Argentina</option>
                                 <option value="Australia">Australia</option>
@@ -87,6 +87,10 @@
                                 <option value="USA">USA</option>
                                 <option value="Velika Britanija">Velika Britanija</option>
                             </select>
+                        </td>
+                        <td colspan="2" align="left">
+                            <button type="button" id="rent_a_car"><?php echo $html->translate('posalji zahtev');?></button>
+                            <button type="reset"><?php echo $html->translate('odustani');?></button>
                         </td>
                     </tr>
                 </table>
