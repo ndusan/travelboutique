@@ -12,9 +12,6 @@
 
                         <tbody>
                             <tr>
-                                <td rowspan="4">
-                                    <?php echo $getPageInfo['items'][0]['content'];?>
-                                </td>
                                 <td>
                                     <label><?php echo $html->translate('Ime');?></label>
                                     <input class="inputSmall j_required" type="text" name="contact[firstname]" value="" />
@@ -36,16 +33,19 @@
                                     <label><?php echo $html->translate('Tekst poruke')?></label>
                                     <textarea class="inputBig" name="contact[text]" rows="4" cols="20"></textarea>
                                 </td>
+                                <td rowspan="4">
+                                    <?php echo $getPageInfo['items'][0]['content'];?>
+                                </td>
                             </tr>
 
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td></td>
                                 <td colspan="2" align="center">
                                     <button type="button" id="contact"><?php echo $html->translate('posalji zahtev');?></button>
                                     <button type="reset"><?php echo $html->translate('odustani');?></button>
                                 </td>
+                                <td></td>
                             </tr>
                         </tfoot>
                     </table>
