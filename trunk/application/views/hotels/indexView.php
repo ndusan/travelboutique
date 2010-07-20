@@ -37,7 +37,7 @@
                                 </td>
 
                             </tr>
-                            <tr class="borBot"><td></td></tr>
+                            <tr><td colspan="2" class="borBot">&nbsp;</td></tr>
                             <tr>
                                 <td>
                                     <label><?php echo $html->translate('Grad');?></label>
