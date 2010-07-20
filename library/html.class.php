@@ -117,18 +117,17 @@ class HTML{
 			$xml = new SimplexmlElement($xml_str);
 			//print_r($xml);
 			// Name
-			$response.= "<div>".$xml->loc->dnam."</div>";
-			
+			$response.= "<h2>".$xml->loc->dnam."</h2>";
 			foreach($xml->dayf->day as $item) {
 				if($item->hi != 'N/A'){
 					$min = round((5/9)*($item->hi-32));
-					$response .= "<div>".$min."</div>";
+					$response .= "<div>max temp: ".$min."</div>";
 					$max = round((5/9)*($item->low-32));
-					$response .= "<div>".$max."</div>";
+					$response .= "<div>min temp: ".$max."</div>";
 					foreach($item->part as $new) {
 						$response.= '<div>';
 							//Image
-							$response.= '<img src="http://s.imwx.com/v.20100415.153311/img/wxicon/130/'.$new->icon.'.png"/><br/>';
+							$response.= '<img src="http://s.imwx.com/v.20100415.153311/img/wxicon/45/'.$new->icon.'.png"/><br/>';
 							$response .= "<div>".$new->t."</div>";
 						$response.= '</div>';
 						
