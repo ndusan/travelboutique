@@ -16,6 +16,7 @@
                 <a href="<?php echo BASE_PATH.$dp['link'].DS;?>" <?php echo (@$active == $dp['link'] ? "class='active'" : ""); ?> ><?php echo $dp['name'];?></a> |
                 <?php endforeach; ?>
                 <?php endif;?>
+                <a href="<?php echo BASE_PATH.'hotels'.DS;?>" <?php echo (@$active == 'hotels' ? "class='active'" : ""); ?>><?php echo $html->translate('hoteli');?></a> |
                 <a href="<?php echo BASE_PATH.'avio-karte'.DS;?>" <?php echo (@$active == 'avio-karte' ? "class='active'" : ""); ?>><?php echo $html->translate('avio karte');?></a> |
                 <a href="<?php echo BASE_PATH.'rent-a-car'.DS;?>" <?php echo (@$active == 'rent-a-car' ? "class='active'" : ""); ?>><?php echo $html->translate('rent a car');?></a>
             </div>

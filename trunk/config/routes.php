@@ -349,6 +349,16 @@ $routes = array(
 					  	'action' 		=> 'index', 
 					  	'layout' 		=> 'user'
 				),
+				array(	'url' 			=> '/^hotels\/?$/', 
+						'controller' 	=> 'hotels', 
+					  	'action' 		=> 'index', 
+					  	'layout' 		=> 'user'
+				),
+				array(	'url' 			=> '/^hotels\/submit\/?$/', 
+						'controller' 	=> 'hotels', 
+					  	'action' 		=> 'submit', 
+					  	'layout' 		=> 'empty'
+				),
 				//Home page
 				array(	'url' 			=> '/^ajax-news\/?$/', 
 						'controller' 	=> 'home', 
