@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div id="ul-exchange" style="display: none;">
-                    <div class="box">
+                    <div class="boxBig">
                     <?php 
                     $res = $html->getCurrency();
                     print_r($res);
