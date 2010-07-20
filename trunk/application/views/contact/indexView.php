@@ -20,6 +20,9 @@
                                     <label><?php echo $html->translate('Prezime')?></label>
                                     <input class="inputSmall j_required" type="text" name="contact[lastname]" value="" />
                                 </td>
+                                <td rowspan="4">
+                                    <?php echo $getPageInfo['items'][0]['content'];?>
+                                </td>
                             </tr>
                             <tr>
                                 <td>
@@ -35,9 +38,6 @@
                                 <td colspan="2">
                                     <label><?php echo $html->translate('Tekst poruke')?></label>
                                     <textarea class="inputBig" name="contact[text]" rows="4" cols="20"></textarea>
-                                </td>
-                                <td rowspan="4">
-                                    <?php echo $getPageInfo['items'][0]['content'];?>
                                 </td>
                             </tr>
                         </tbody>
