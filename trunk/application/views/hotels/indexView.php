@@ -131,11 +131,11 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <label><?php echo $html->translate('Datum preuzimanja');?></label>
+                                    <label><?php echo $html->translate('Datum dolaska');?></label>
                                     <input class="inputSmall j_datepicker j_required" type="text" name="rent_a_car[date_take]" value="" />
                                 </td>
                                 <td>
-                                    <label><?php echo $html->translate('Datum vracanja');?></label>
+                                    <label><?php echo $html->translate('Datum odlaska');?></label>
                                     <input class="inputSmall j_datepicker j_required" type="text" name="rent_a_car[date_return]" value="" />
                                 </td>
                             </tr>
