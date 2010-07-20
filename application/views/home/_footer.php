@@ -31,7 +31,7 @@
                 </div>
                <div id="ul-weather" style="display: none;">
                     <div class="boxBig">
-                    	<?php  $html->getWeather();?>
+                    	<?php echo $html->getWeather();?>
                     </div>
                 </div>
                 <div id="ul-exchange" style="display: none;">
@@ -41,7 +41,7 @@
                         <table cellpadding="0" cellspacing="0" width="100%">
                             <tbody>
                                 <tr>
-                                    <td><img style="border: 0px solid ; width: 16px; height: 11px;" src="http://www.bancaintesabeograd.com/upload/images/exchange_rates/RSD.gif"/></td>
+                                    <td><img style="border: 0px solid ; width: 16px; height: 11px;" src="http://www.bancaintesabeograd.com/upload/images/exchange_rates/SDD.gif"/></td>
                                     <td><?php echo $res['EUR']['img'] ?></td>
                                     <td><?php echo $res['AUD']['img'] ?></td>
                                     <td><?php echo $res['CAD']['img'] ?></td>
@@ -69,11 +69,6 @@
                                 </tr>
                             </tbody>
                         </table>
-                    <?php 
-                    $res = $html->getCurrency();
-                    //print_r($res);
-                    echo $res['EUR']['img']; 
-                    ?>
                     </div>
                 </div>
             </div>
