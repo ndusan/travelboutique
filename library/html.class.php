@@ -157,8 +157,7 @@ class HTML{
 		//Set date
 		$date = date('d.m.Y');
 		//Url
-		$part1 = 'http://www.nbs.rs/internet/latinica/scripts/kl.html?datum=';
-		$part1 .= $date.'&broj=br.&godina='.date('Y').'&vrsta=3&eksport=plain';
+		$part1 = 'http://www.bancaintesabeograd.com/code/navigate.aspx?Id=21';
 		$part2 = file_get_contents($part1);
 		$address = $part2;
 
@@ -168,88 +167,114 @@ class HTML{
 		else{
 
 			// Evropska unija - EUR
-			$valuta = 'EUR';
+			$valuta = '<strong>EUR</strong>';
 			$value = strpos($address, $valuta);
 			$EUR = '';
-			for ($i = $value + 87; $i <= $value + 93; $i++) $EUR .= $address{$i};
-			$output[$valuta] = $EUR;
-			
+			for ($i = $value + 242; $i <= $value + 249; $i++) $EUR .= $address{$i};
+			$tmp = str_replace("</strong>", "", str_replace("<strong>", "", $valuta));
+			$output[$tmp] = array(
+								'value' => $EUR,
+								'img' 	=> "<img src='http://www.bancaintesabeograd.com/upload/images/exchange_rates/".$tmp.".gif' style='border: 0px solid ; width: 16px; height: 11px;'/>"
+								);
+								
 			// Australija - AUD
-			$valuta = 'AUD';
+			$valuta = '<strong>AUD</strong>';
 			$value = strpos($address, $valuta);
 			$AUD = '';
-			for ($i = $value + 87; $i <= $value + 93; $i++) $AUD .= $address{$i};
-			$output[$valuta] = $AUD;
+			for ($i = $value + 240; $i <= $value + 245; $i++) $AUD .= $address{$i};
+			$tmp = str_replace("</strong>", "", str_replace("<strong>", "", $valuta));
+			$output[$tmp] = array(
+								'value' => $AUD,
+								'img' 	=> "<img src='http://www.bancaintesabeograd.com/upload/images/exchange_rates/".$tmp.".gif' style='border: 0px solid ; width: 16px; height: 11px;'/>"
+								);
 			
 			// Kanada - CAD
-			$valuta = 'CAD';
+			$valuta = '<strong>CAD</strong>';
 			$value = strpos($address, $valuta);
 			$CAD = '';
-			for ($i = $value + 87; $i <= $value + 93; $i++) $CAD .= $address{$i};
-			$output[$valuta] = $CAD;
-			
-			// Hrvatska - HRK
-			$valuta = 'HRK';
-			$value = strpos($address, $valuta);
-			$HRK = '';
-			for ($i = $value + 87; $i <= $value + 93; $i++) $HRK .= $address{$i};
-			$output[$valuta] = $HRK;
-			
+			for ($i = $value + 240; $i <= $value + 245; $i++) $CAD .= $address{$i};
+			$tmp = str_replace("</strong>", "", str_replace("<strong>", "", $valuta));
+			$output[$tmp] = array(
+								'value' => $CAD,
+								'img' 	=> "<img src='http://www.bancaintesabeograd.com/upload/images/exchange_rates/".$tmp.".gif' style='border: 0px solid ; width: 16px; height: 11px;'/>"
+								);
+								
 			// Danska - DKK
-			$valuta = 'DKK';
+			$valuta = '<strong>DKK</strong>';
 			$value = strpos($address, $valuta);
 			$DKK = '';
-			for ($i = $value + 87; $i <= $value + 93; $i++) $DKK .= $address{$i};
-			$output[$valuta] = $DKK;
+			for ($i = $value + 240; $i <= $value + 245; $i++) $DKK .= $address{$i};
+			$tmp = str_replace("</strong>", "", str_replace("<strong>", "", $valuta));
+			$output[$tmp] = array(
+								'value' => $DKK,
+								'img' 	=> "<img src='http://www.bancaintesabeograd.com/upload/images/exchange_rates/".$tmp.".gif' style='border: 0px solid ; width: 16px; height: 11px;'/>"
+								);
 			
 			// Japan - JPY
-			$valuta = 'JPY';
+			$valuta = '<strong>JPY</strong>';
 			$value = strpos($address, $valuta);
 			$JPY = '';
-			for ($i = $value + 89; $i <= $value + 95; $i++) $JPY .= $address{$i};
-			$output[$valuta] = $JPY;
+			for ($i = $value + 242; $i <= $value + 247; $i++) $JPY .= $address{$i};
+			$tmp = str_replace("</strong>", "", str_replace("<strong>", "", $valuta));
+			$output[$tmp] = array(
+								'value' => $JPY,
+								'img' 	=> "<img src='http://www.bancaintesabeograd.com/upload/images/exchange_rates/".$tmp.".gif' style='border: 0px solid ; width: 16px; height: 11px;'/>"
+								);
 			
 			// Norveška - NOK
-			$valuta = 'NOK';
+			$valuta = '<strong>NOK</strong>';
 			$value = strpos($address, $valuta);
 			$NOK = '';
-			for ($i = $value + 87; $i <= $value + 92; $i++)  $NOK .= $address{$i};
-			$output[$valuta] = $NOK;
+			for ($i = $value + 240; $i <= $value + 245; $i++)  $NOK .= $address{$i};
+			$tmp = str_replace("</strong>", "", str_replace("<strong>", "", $valuta));
+			$output[$tmp] = array(
+								'value' => $NOK,
+								'img' 	=> "<img src='http://www.bancaintesabeograd.com/upload/images/exchange_rates/".$tmp.".gif' style='border: 0px solid ; width: 16px; height: 11px;'/>"
+								);
 			
 			// Švedska - SEK
-			$valuta = 'SEK';
+			$valuta = '<strong>SEK</strong>';
 			$value = strpos($address, $valuta);
 			$SEK = '';
-			for ($i = $value + 87; $i <= $value + 92; $i++) $SEK .= $address{$i};
-			$output[$valuta] = $SEK;
+			for ($i = $value + 240; $i <= $value + 245; $i++) $SEK .= $address{$i};
+			$tmp = str_replace("</strong>", "", str_replace("<strong>", "", $valuta));
+			$output[$tmp] = array(
+								'value' => $SEK,
+								'img' 	=> "<img src='http://www.bancaintesabeograd.com/upload/images/exchange_rates/".$tmp.".gif' style='border: 0px solid ; width: 16px; height: 11px;'/>"
+								);
 			
 			// Švajcarska - CHF
-			$valuta = 'CHF';
+			$valuta = '<strong>CHF</strong>';
 			$value = strpos($address, $valuta);
 			$CHF = '';
-			for ($i = $value + 87; $i <= $value + 93; $i++) $CHF .= $address{$i};
-			$output[$valuta] = $CHF;
+			for ($i = $value + 240; $i <= $value + 245; $i++) $CHF .= $address{$i};
+			$tmp = str_replace("</strong>", "", str_replace("<strong>", "", $valuta));
+			$output[$tmp] = array(
+								'value' => $CHF,
+								'img' 	=> "<img src='http://www.bancaintesabeograd.com/upload/images/exchange_rates/".$tmp.".gif' style='border: 0px solid ; width: 16px; height: 11px;'/>"
+								);
 			
 			// Velika Britanija - GBP
-			$valuta = 'GBP';
+			$valuta = '<strong>GBP</strong>';
 			$value = strpos($address, $valuta);
 			$GBP = '';
-			for ($i = $value + 87; $i <= $value + 93; $i++) $GBP .= $address{$i};
-			$output[$valuta] = $GBP;
+			for ($i = $value + 242; $i <= $value + 247; $i++) $GBP .= $address{$i};
+			$tmp = str_replace("</strong>", "", str_replace("<strong>", "", $valuta));
+			$output[$tmp] = array(
+								'value' => $GBP,
+								'img' 	=> "<img src='http://www.bancaintesabeograd.com/upload/images/exchange_rates/".$tmp.".gif' style='border: 0px solid ; width: 16px; height: 11px;'/>"
+								);
 			
 			// SAD - USD
-			$valuta = 'USD';
+			$valuta = '<strong>USD</strong>';
 			$value = strpos($address, $valuta);
 			$USD = '';
-			for ($i = $value + 87; $i <= $value + 93; $i++) $USD .= $address{$i};
-			$output[$valuta] = $USD;
-			
-			// Bosna i Hercegovina - BAM
-			$valuta = 'BAM';
-			$value = strpos($address, $valuta);
-			$BAM = '';
-			for ($i = $value + 87; $i <= $value + 93; $i++) $BAM .= $address{$i};
-			$output[$valuta] = $BAM;
+			for ($i = $value + 240; $i <= $value + 245; $i++) $USD .= $address{$i};
+			$tmp = str_replace("</strong>", "", str_replace("<strong>", "", $valuta));
+			$output[$tmp] = array(
+								'value' => $USD,
+								'img' 	=> "<img src='http://www.bancaintesabeograd.com/upload/images/exchange_rates/".$tmp.".gif' style='border: 0px solid ; width: 16px; height: 11px;'/>"
+								);
 			
 			return $output; 
 		}
