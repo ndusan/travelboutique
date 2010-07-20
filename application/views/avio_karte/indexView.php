@@ -11,7 +11,7 @@
                     <table cellpadding="0" cellspacing="0">
 
                         <tbody>
-                            <tr><th class="borBot" colspan="2"><h2>Vasi detalji</h2></th></tr>
+                            <tr><th colspan="2"><h2>Vasi detalji</h2></th></tr>
                             <tr>
                                 <td>
                                     <label><?php echo $html->translate('Ime');?></label>
