@@ -113,11 +113,11 @@
                                 <td>
                                     <label><?php echo $html->translate('Broj zvezdica');?></label>
                                     <select class="selectSmall j_required" name="rent_a_car[car_type]">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
+                                        <option>*</option>
+                                        <option>**</option>
+                                        <option>***</option>
+                                        <option>****</option>
+                                        <option>*****</option>
                                     </select>
                                 </td>
                                 <td>
