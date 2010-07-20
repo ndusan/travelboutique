@@ -10,6 +10,7 @@
                 <form id="form-rent_a_car" action="<?php echo BASE_PATH.'rent-a-car'.DS.'submit'.DS;?>" method="post" >
                     <table cellpadding="0" cellspacing="0">
                         <tbody>
+                            <tr><th colspan="2"><h3>Vaši detalji:</h3></th></tr>
                             <tr>
                                 <td>
                                     <label><?php echo $html->translate('Ime');?></label>
@@ -47,7 +48,7 @@
                                     <input class="inputSmall j_required" type="text" name="rent_a_car[state]" value="" />
                                 </td>
                             </tr>
-                            <tr><td colspan="2">&nbsp;</td></tr>
+                            <tr><th colspan="2"><h3>Hotel:</h3></th></tr>
                             <tr>
                                 <td>
                                     <label><?php echo $html->translate('Destinacija (država)');?></label>
