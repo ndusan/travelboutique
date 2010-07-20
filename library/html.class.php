@@ -117,7 +117,7 @@ class HTML{
 			$xml = new SimplexmlElement($xml_str);
 			//print_r($xml);
 			// Name
-			$response.= "<h2>".$xml->loc->dnam."</h2>";
+			$response.= "<h2>".$xml->loc->dnam." in next 10 days</h2>";
 			foreach($xml->dayf->day as $item) {
 				if($item->hi != 'N/A'){
 					$min = round((5/9)*($item->hi-32));
