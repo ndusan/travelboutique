@@ -36,32 +36,35 @@
                 </div>
                 <div id="ul-exchange" style="display: none;">
                     <div class="boxBig">
-
+                        <h1 class="borBot">Banca Intesa kursna lista na današnji dan</h1>
                         <table cellpadding="0" cellspacing="0" width="100%">
                             <tbody>
                                 <tr>
-                                    <td>echo $res['EUR']['img']</td>
-                                    <td>echo $res['EUR']['img']</td>
-                                    <td>echo $res['EUR']['img']</td>
-                                    <td>echo $res['EUR']['img']</td>
-                                    <td>echo $res['EUR']['img']</td>
-                                    <td>echo $res['EUR']['img']</td>
-                                    <td>echo $res['EUR']['img']</td>
-                                    <td>echo $res['EUR']['img']</td>
-                                    <td>echo $res['EUR']['img']/td>
-                                    <td>echo $res['EUR']['img']</td>
+                                    <td><?php echo $res['RSD']['img']?></td>
+                                    <td><?php echo $res['EUR']['img']?></td>
+                                    <td><?php echo $res['AUD']['img']?></td>
+                                    <td><?php echo $res['CAD']['img']?></td>
+                                    <td><?php echo $res['DKK']['img']?></td>
+                                    <td><?php echo $res['JPY']['img']?></td>
+                                    <td><?php echo $res['NOK']['img']?></td>
+                                    <td><?php echo $res['SEK']['img']?></td>
+                                    <td><?php echo $res['CHF']['img']?></td>
+                                    <td><?php echo $res['GBP']['img']?></td>
+                                    <td><?php echo $res['USD']['img']?></td>
                                 </tr>
                                 <tr>
                                     <td>1 RSD =</td>
-                                    <td>echo $res['EUR']['value']</td>
-                                    <td>echo $res['EUR']['value']</td>
-                                    <td>echo $res['EUR']['value']</td>
-                                    <td>echo $res['EUR']['value']</td>
-                                    <td>echo $res['EUR']['value']</td>
-                                    <td>echo $res['EUR']['value']</td>
-                                    <td>echo $res['EUR']['value']</td>
-                                    <td>echo $res['EUR']['value']</td>
-                                    <td>echo $res['EUR']['value']</td>
+                                    <td><?php echo $res['EUR']['value']?></td>
+                                    <td><?php echo $res['AUD']['value']?></td>
+                                    <td><?php echo $res['CAD']['value']?></td>
+                                    <td><?php echo $res['DKK']['value']?></td>
+                                    <td><?php echo $res['JPY']['value']?></td>
+                                    <td><?php echo $res['NOK']['value']?></td>
+                                    <td><?php echo $res['SEK']['value']?></td>
+                                    <td><?php echo $res['CHF']['value']?></td>
+                                    <td><?php echo $res['GBP']['value']?></td>
+                                    <td><?php echo $res['USD']['value']?></td>
+
                                 </tr>
                             </tbody>
                         </table>
