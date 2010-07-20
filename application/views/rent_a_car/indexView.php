@@ -47,6 +47,7 @@
                                     <input class="inputSmall j_required" type="text" name="rent_a_car[state]" value="" />
                                 </td>
                             </tr>
+                            <tr><td colspan="2">&nbsp;</td></tr>
                             <tr>
                                 <td>
                                     <label><?php echo $html->translate('Drzava preuzimanja');?></label>
