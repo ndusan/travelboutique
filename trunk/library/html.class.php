@@ -105,12 +105,10 @@ class HTML{
 	function getWeather() {
 
 		$requests = Model::getAllWeather();
-	
+
 		$response = '';
-		//Loop requests
-		if(isset($requests) && !empty($requests))
-		foreach($requests as $r){
-			$requestAddress = $r['link'];
+		if(isset($requests[0]['link']) && !empty($requests[0]['link'])){
+			$requestAddress = $requests[0]['link'];
 			
 			$xml_str = file_get_contents($requestAddress, 0);
 			// Parses XML
@@ -121,23 +119,29 @@ class HTML{
 			$response.= "<table class='borBot' style='margin:10px 0 10px; text-align:center' cellspacing='0' cellpading='0' width='100%'>
 							<tbody>
 								<tr>";
+			//Set date
+			$date = substr($xml->dayf->lsup, 0, 8);
+			$date = explode("/", $date);
+			$day = 0;
 			foreach($xml->dayf->day as $item) {
 				if($item->hi != 'N/A'){
+					$date_out = @date("d-m-Y", mktime(0, 0, 0, $date[0], $date[1]+$day, "20".$date[2]));
+					$day++;
 					$response.= "<td>";
-                                        $response .= "<label>Today</label>";
-					$min = round((5/9)*($item->hi-32));
-					$response .= "<div>max temp: ".$min."&deg</div>";
+	                    $response .= "<label>".$date_out."</label>";
 					$max = round((5/9)*($item->low-32));
 					$response .= "<div>min temp: ".$max."&deg</div>";
-                                        $response .= "<br/>";
+					$min = round((5/9)*($item->hi-32));
+					$response .= "<div>max temp: ".$min."&deg</div>";
+	                                        $response .= "<br/>";
 					foreach($item->part as $new) {
 						$response.= '<div>';
 							//Image
-                                                        $response .= "<label>Day / Evening</label>";
+	                                                        $response .= "<label>Day / Evening</label>";
 							$response.= '<img src="http://s.imwx.com/v.20100415.153311/img/wxicon/45/'.$new->icon.'.png"/><br/>';
 							$response .= "<div>".$new->t."</div>";
 						$response.= '</div>';
-                                                $response .= "<br/>";
+	                                                $response .= "<br/>";
 					}
 					$response .= "</td>";
 				}
