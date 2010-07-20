@@ -128,20 +128,22 @@ class HTML{
 					$date_out = @date("d-m-Y", mktime(0, 0, 0, $date[0], $date[1]+$day, "20".$date[2]));
 					$day++;
 					$response.= "<td>";
-	                    $response .= "<label>".$date_out."</label>";
+	                $response .= "<label>".$date_out."</label>";
 					$max = round((5/9)*($item->low-32));
 					$response .= "<div>min temp: ".$max."&deg</div>";
 					$min = round((5/9)*($item->hi-32));
 					$response .= "<div>max temp: ".$min."&deg</div>";
-	                                        $response .= "<br/>";
+	                $response .= "<br/>";
+	                $first = true;
 					foreach($item->part as $new) {
 						$response.= '<div>';
 							//Image
-	                                                        $response .= "<label>Day / Evening</label>";
+	                        $response .= "<label>".($first ? "Day" : "Evening")."</label>";
 							$response.= '<img src="http://s.imwx.com/v.20100415.153311/img/wxicon/45/'.$new->icon.'.png"/><br/>';
 							$response .= "<div>".$new->t."</div>";
 						$response.= '</div>';
-	                                                $response .= "<br/>";
+	                    $response .= "<br/>";
+	                    $first = false;
 					}
 					$response .= "</td>";
 				}
