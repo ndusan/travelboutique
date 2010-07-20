@@ -102,15 +102,15 @@ class HTML{
 		else echo $string;
 	}
 	
-	function getWeather() {
+	function getWeather($city_id = 0) {
 
-		$requests = Model::getAllWeather();
+		$requests = Model::getAllWeather($city_id);
 
 		$response = '';
-		if(isset($requests[0]['link']) && !empty($requests[0]['link'])){
-			$requestAddress = $requests[0]['link'];
+		if(isset($requests['link']) && !empty($requests['link'])){
+			$requestAddress = $requests['link'];
 			
-			$xml_str = file_get_contents($requestAddress, 0);
+			$xml_str = file_get_contents("http://xoap.weather.com/weather/local/".$requestAddress."?cc=*&dayf=5&link=xoap&prod=xoap&par=1197447447&key=43e103dae96b02ae", 0);
 			// Parses XML
 			$xml = new SimplexmlElement($xml_str);
 			//print_r($xml);
@@ -284,6 +284,12 @@ class HTML{
 			
 			return $output; 
 		}
+		
+	}
+	
+	public function getWeatherCities(){
+		
+		return Model::getWeatherCities();
 	}
 	
 }

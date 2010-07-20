@@ -21,4 +21,9 @@ class HomeController extends Controller{
 		if($this->db->submitNews($params)) echo true;
 		else echo false;
 	}
+	
+	public function getWeather($params){
+		parent::set('params', $params);
+		parent::renderHTML();
+	}
 }

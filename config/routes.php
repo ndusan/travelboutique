@@ -365,6 +365,11 @@ $routes = array(
 					  	'action' 		=> 'news', 
 					  	'layout' 		=> 'empty'
 				),
+				array(	'url' 			=> '/^ajax-get-weather\/?$/', 
+						'controller' 	=> 'home', 
+					  	'action' 		=> 'getWeather', 
+					  	'layout' 		=> 'empty'
+				),
 				//Dynamic
 				array(	'url' 			=> '/^(?P<parentName>[0-9a-zA-Z\-\_]+)\/?((?P<childName>[0-9a-zA-Z\-\_]+)\/?)*$/', 
 						'controller' 	=> 'dynamic', 

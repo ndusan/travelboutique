@@ -31,69 +31,42 @@
         </div>
         <div id="ul-weather" style="display: none;">
             <div class="boxBig">
+            <?php
+			$weather = $html->getWeatherCities();
+			
+            if(isset($weather) && !empty($weather)):?>
                 <table>
-                    <tr><td colspan="2"><label><?php echo $html->translate('Odaberite zeljenu destinaciju');?></label></td></tr>
+                    <tr><td colspan="2"><label><?php echo $html->translate('Odaberite željenu destinaciju');?></label></td></tr>
                     <tr>
                         <td>
-                            <select class="selectSmall j_required" name="rent_a_car[state_take]" size="">
-                                <option value="Argentina">Argentina</option>
-                                <option value="Australia">Australia</option>
-                                <option value="Austrija">Austrija</option>
-                                <option value="Belgija">Belgija</option>
-                                <option value="Bosna i Hercegovina">Bosna i Hercegovina</option>
-                                <option value="Bugarska">Bugarska</option>
-                                <option value="Češka">Češka</option>
-                                <option value="Čile">Čile</option>
-                                <option value="Danska">Danska</option>
-                                <option value="Dominikanska Republika">Dominikanska Republika</option>
-                                <option value="Egipat">Egipat</option>
-                                <option value="Finska">Finska</option>
-                                <option value="Francuska">Francuska</option>
-                                <option value="Grčka">Grčka</option>
-                                <option value="Holandija">Holandija</option>
-                                <option value="Hrvatska">Hrvatska</option>
-                                <option value="Irska">Irska</option>
-                                <option value="Island">Island</option>
-                                <option value="Italija">Italija</option>
-                                <option value="Izrael">Izrael</option>
-                                <option value="Južna Afrika">Južna Afrika</option>
-                                <option value="Kanada ">Kanada</option>
-                                <option value="Kanasrka Ostrva">Kanasrka Ostrva</option>
-                                <option value="Kipar">Kipar</option>
-                                <option value="Korzika">Korzika</option>
-                                <option value="Kosta Rika">Kosta Rika</option>
-                                <option value="Litvanija">Litvanija</option>
-                                <option value="Luksemburg">Luksemburg</option>
-                                <option value="Mađarska">Mađarska</option>
-                                <option value="Malta">Malta</option>
-                                <option value="Maroko">Maroko</option>
-                                <option value="Mauricius">Mauricius</option>
-                                <option value="Meksiko">Meksiko</option>
-                                <option value="Namibia">Namibia</option>
-                                <option value="Norveška">Norveška</option>
-                                <option value="Novi Zeland">Novi Zeland</option>
-                                <option value="Poljska">Poljska</option>
-                                <option value="Portugal">Portugal</option>
-                                <option value="Rumunija">Rumunija</option>
-                                <option value="Slovačka">Slovačka</option>
-                                <option value="Slovenija">Slovenija</option>
-                                <option value="Španija">Španija</option>
-                                <option value="Švajcarska">Švajcarska</option>
-                                <option value="Švedska">Švedska</option>
-                                <option value="Tajland">Tajland</option>
-                                <option value="Tunis">Tunis</option>
-                                <option value="Turska">Turska</option>
-                                <option value="Ujedinjeni Arapski Emirati">Ujedinjeni Arapski Emirati</option>
-                                <option value="USA">USA</option>
-                                <option value="Velika Britanija">Velika Britanija</option>
+                            <select class="selectSmall j_required" name="weather" size="">
+                                <?php foreach($weather as $city):?>
+                                <option value="<?php echo $city['id']; ?>"><?php echo $city['city'];?></option>
+                                <?php endforeach;?>
                             </select>
-                        </td>
-                        <td colspan="2" align="left">
-                            <button type="button" id="rent_a_car"><?php echo $html->translate('prikazi');?></button>
                         </td>
                     </tr>
                 </table>
+                <script type="text/javascript" charset="utf-8">
+                	$(document).ready(function(){
+						$("select[name='weather']").change(function(){
+
+							$.post('ajax-get-weather/',
+									{'id': $(this).val()},
+									function(data){
+										if(data){
+											$("#weather-info").html(data);	
+										}
+									},
+									"html"
+									);
+						});
+                    });
+                </script>
+                <div id="weather-info">
                 <?php echo $html->getWeather();?>
+                </div>
+            <?php endif; ?>
             </div>
         </div>
         <div id="ul-exchange" style="display: none;">
