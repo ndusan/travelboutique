@@ -73,7 +73,7 @@
             <div class="boxBig">
                 <h1 class="borBot">Banca Intesa kursna lista na današnji dan</h1>
                 <?php $res = $html->getCurrency(); ?>
-                <table cellpadding="0" cellspacing="0" width="100%">
+                <table style="text-align:center; margin:20px 0 10px;" cellpadding="0" cellspacing="0" width="100%">
                     <tbody>
                         <tr>
                             <td><img style="border: 0px solid ; width: 16px; height: 11px;" src="http://www.bancaintesabeograd.com/upload/images/exchange_rates/RSD.gif"/></td>
