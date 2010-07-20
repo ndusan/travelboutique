@@ -25,7 +25,10 @@
                                     <label><?php echo $html->translate('Telefon');?></label>
                                     <input class="inputSmall j_required" type="text" name="contact[tel]" value="" />
                                 </td>
-                                <td></td>
+                                <td>
+                                    <label><?php echo $html->translate('E-mail');?></label>
+                                    <input class="inputSmall j_required" type="text" name="rent_a_car[email]" value="" />
+                                </td>
                             </tr>
                             <tr>
                                 <td colspan="2">
