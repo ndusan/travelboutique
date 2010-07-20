@@ -131,7 +131,12 @@
                                 </td>
                                 <td>
                                     <label><?php echo $html->translate('bnla bla');?></label>
-                                    <select class="selectSmall j_required" name="rent_a_car[location]">
+                                    <select class="j_required" name="rent_a_car[location]">
+                                        <option>jednokrevetna</option>
+                                        <option>dvokrevetna</option>
+                                        <option></option>
+                                    </select>
+                                    <select class="j_required" name="rent_a_car[location]">
                                         <option>jednokrevetna</option>
                                         <option>dvokrevetna</option>
                                         <option></option>
@@ -140,7 +145,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <label><?php echo $html->translate('Broj zvezdica');?></label>
+                                    <label><?php echo $html->translate('Kategorija hotela');?></label>
                                     <select class="selectSmall j_required" name="rent_a_car[car_type]">
                                         <option>jedna *</option>
                                         <option>dve **</option>
