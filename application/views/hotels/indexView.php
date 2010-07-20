@@ -130,7 +130,7 @@
                                     </select>
                                 </td>
                                 <td>
-                                    <label><?php echo $html->translate('bnla bla');?></label>
+                                    <label><?php echo $html->translate('Godine dece');?></label>
                                     <select class="j_required" name="rent_a_car[location]">
                                         <option>jednokrevetna</option>
                                         <option>dvokrevetna</option>
