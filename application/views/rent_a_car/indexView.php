@@ -52,7 +52,7 @@
                             <tr>
                                 <td>
                                     <label><?php echo $html->translate('Drzava preuzimanja');?></label>
-                                    <select class="inputSmall j_required" name="rent_a_car[state_take]" size="">
+                                    <select class="selectSmall j_required" name="rent_a_car[state_take]" size="">
                                         <option value="Argentina">Argentina</option>
                                         <option value="Australia">Australia</option>
                                         <option value="Austrija">Austrija</option>
