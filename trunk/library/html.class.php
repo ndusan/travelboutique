@@ -117,23 +117,27 @@ class HTML{
 			$xml = new SimplexmlElement($xml_str);
 			//print_r($xml);
 			// Name
-			$response.= "<h2>".$xml->loc->dnam."</h2>";
-			$response.= "<table cellspacing='0' cellpading='0' width='100%'>
+			$response.= "<h1 class='borBot'>".$xml->loc->dnam."</h1>";
+			$response.= "<table class='borBot' style='margin:10px 0 10px; text-align:center' cellspacing='0' cellpading='0' width='100%'>
 							<tbody>
 								<tr>";
 			foreach($xml->dayf->day as $item) {
 				if($item->hi != 'N/A'){
 					$response.= "<td>";
+                                        $response .= "<label>Today</label>";
 					$min = round((5/9)*($item->hi-32));
-					$response .= "<div>max temp: ".$min."</div>";
+					$response .= "<div>max temp: ".$min."&deg</div>";
 					$max = round((5/9)*($item->low-32));
-					$response .= "<div>min temp: ".$max."</div>";
+					$response .= "<div>min temp: ".$max."&deg</div>";
+                                        $response .= "<br/>";
 					foreach($item->part as $new) {
 						$response.= '<div>';
 							//Image
+                                                        $response .= "<label>Day / Evening</label>";
 							$response.= '<img src="http://s.imwx.com/v.20100415.153311/img/wxicon/45/'.$new->icon.'.png"/><br/>';
 							$response .= "<div>".$new->t."</div>";
 						$response.= '</div>';
+                                                $response .= "<br/>";
 					}
 					$response .= "</td>";
 				}
