@@ -94,9 +94,22 @@ class Model{
 		return mysql_insert_id($this->_dbHandle);
 	}
 	
-	public static function getAllWeather(){
+	public static function getAllWeather($params){
+		if($params == 0)
+			$query = sprintf("SELECT * FROM `weather` LIMIT 0, 1");
+		else 
+			$query = sprintf("SELECT * FROM `weather` WHERE `id`='%s'",
+							mysql_real_escape_string($params)
+			);
+		$res = mysql_query($query);
+		if(mysql_num_rows($res) <=0 ) return false;
 		
-		$query = sprintf("SELECT * FROM `weather` LIMIT 0, 1");
+		return mysql_fetch_assoc($res);
+	}
+	
+	public static function getWeatherCities(){
+		
+		$query = sprintf("SELECT * FROM `weather`");
 		return self::query($query);
 	}
 }
