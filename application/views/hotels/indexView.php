@@ -50,7 +50,7 @@
                             <tr><td colspan="2">&nbsp;</td></tr>
                             <tr>
                                 <td>
-                                    <label><?php echo $html->translate('Drzava preuzimanja');?></label>
+                                    <label><?php echo $html->translate('Destinacija (država)');?></label>
                                     <select class="inputSmall j_required" name="rent_a_car[state_take]" size="">
                                         <option value="Argentina">Argentina</option>
                                         <option value="Australia">Australia</option>
@@ -105,7 +105,7 @@
                                     </select>
                                 </td>
                                 <td>
-                                    <label><?php echo $html->translate('Grad preuzimanja');?></label>
+                                    <label><?php echo $html->translate('Grad');?></label>
                                     <input class="inputSmall" type="text" name="rent_a_car[city_take]" value="" />
                                 </td>
                             </tr>
