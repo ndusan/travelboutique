@@ -56,7 +56,7 @@ button:hover {background-color:#EEE; cursor:pointer;}
 /* VISUALS */
 
 .borBot {border-bottom:solid 1px #CCC;}
-.pdf {border:dashed 1px #ccc; padding:5px 5px 5px 30px; background:transparent url(../images/pdf.png) scroll no-repeat 0 50%;}
+.pdf {border:dashed 1px #ccc; padding:10px 10px 10px 35px; background:transparent url(../images/pdf.png) scroll no-repeat 0 50%;}
 
 /* NAVIGATION */
 .topNav {color:#FFF; position:absolute; top:5px; right:100px;}
