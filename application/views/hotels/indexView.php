@@ -158,11 +158,11 @@
                                 <td>
                                     <label><?php echo $html->translate('Kategorija hotela');?></label>
                                     <select class="selectSmall j_required" name="hotels[hotel_category]">
-                                        <option>jedna *</option>
-                                        <option>dve **</option>
-                                        <option>tri ***</option>
-                                        <option>četiri ****</option>
-                                        <option>pet *****</option>
+                                        <option>*</option>
+                                        <option>**</option>
+                                        <option>***</option>
+                                        <option>****</option>
+                                        <option>*****</option>
                                     </select>
                                 </td>
                                 <td>
