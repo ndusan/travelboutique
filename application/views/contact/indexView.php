@@ -44,7 +44,7 @@
                         <tfoot>
                             <tr>
                                 <td colspan="2" align="center">
-                                    <button type="button" id="contact"><?php echo $html->translate('posalji zahtev');?></button>
+                                    <button type="button" id="contact"><?php echo $html->translate('posalji');?></button>
                                     <button type="reset"><?php echo $html->translate('odustani');?></button>
                                 </td>
                                 <td></td>
