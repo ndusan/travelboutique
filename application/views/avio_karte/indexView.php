@@ -32,23 +32,6 @@
                                     <input class="inputSmall j_required" type="text" name="avio_karte[tel]" value="" />
                                 </td>
                             </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <label><?php echo $html->translate('Adresa')?></label>
-                                    <input class="inputBig j_required" type="text" name="avio_karte[address]" value="" />
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label><?php echo $html->translate('Grad');?></label>
-                                    <input class="inputSmall j_required" type="text" name="avio_karte[city]" value="" />
-                                </td>
-                                <td>
-                                    <label><?php echo $html->translate('Drzava');?></label>
-                                    <input class="inputSmall j_required" type="text" name="avio_karte[state]" value="" />
-                                </td>
-                            </tr>
                             <tr><th colspan="2"><h3>Destinacija:</h3></th></tr>
                             <tr>
                                 <td>
