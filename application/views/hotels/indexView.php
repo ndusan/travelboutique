@@ -31,23 +31,6 @@
                                     <input class="inputSmall j_required" type="text" name="hotels[tel]" value="" />
                                 </td>
                             </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <label><?php echo $html->translate('Adresa');?></label>
-                                    <input class="inputBig j_required" type="text" name="hotels[address]" value="" />
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label><?php echo $html->translate('Grad');?></label>
-                                    <input class="inputSmall j_required" type="text" name="hotels[city]" value="" />
-                                </td>
-                                <td>
-                                    <label><?php echo $html->translate('Drzava');?></label>
-                                    <input class="inputSmall j_required" type="text" name="hotels[state]" value="" />
-                                </td>
-                            </tr>
                             <tr><th colspan="2"><h3>Hotel:</h3></th></tr>
                             <tr>
                                 <td>
