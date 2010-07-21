@@ -115,7 +115,7 @@
                                 <td>
                                     <label><?php echo $html->translate('Godine dece');?></label>
                                     <select class="j_required" name="hotels[child_from]">
-                                        <option>0</option>
+                                        <option>/</option>
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -136,7 +136,7 @@
                                         <option>18</option>
                                     </select>
                                     <select class="j_required" name="hotels[child_to]">
-                                        <option>0</option>
+                                        <option>/</option>
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
