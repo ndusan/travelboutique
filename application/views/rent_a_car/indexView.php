@@ -31,23 +31,6 @@
                                     <input class="inputSmall j_required" type="text" name="rent_a_car[tel]" value="" />
                                 </td>
                             </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <label><?php echo $html->translate('Adresa');?></label>
-                                    <input class="inputBig j_required" type="text" name="rent_a_car[address]" value="" />
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label><?php echo $html->translate('Grad');?></label>
-                                    <input class="inputSmall j_required" type="text" name="rent_a_car[city]" value="" />
-                                </td>
-                                <td>
-                                    <label><?php echo $html->translate('Drzava');?></label>
-                                    <input class="inputSmall j_required" type="text" name="rent_a_car[state]" value="" />
-                                </td>
-                            </tr>
                             <tr><th colspan="2"><h3>Automobil:</h3></th></tr>
                             <tr>
                                 <td>
