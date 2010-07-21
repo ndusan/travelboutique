@@ -6,7 +6,7 @@
         <div class="content">
             <div class="mainPromo">
                 <!-- breadcrumb -->
-                <div class="breadcrumb"><a href="#">home</a> / about us</div>
+                <div class="breadcrumb"><a href="#">home</a> &raquo; about us</div>
                 <h1 class="borBot"><?php echo $getPageInfo['items'][0]['title'];?></h1>
                 <?php echo $getPageInfo['items'][0]['content'];?>
             </div>
