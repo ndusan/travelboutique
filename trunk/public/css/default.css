@@ -70,6 +70,7 @@ button:hover {background-color:#EEE; cursor:pointer;}
 .subNav li {border-bottom:dotted 1px #CCC;}
 .subNav li a {color:#333; text-decoration:none; outline:none;}
 .subNav li a:hover {color:#990099;}
+.subNav .active,.subNav .active:hover {color:#000;}
 
 
 .arrow {outline:none; z-index:3; top:100px; position:absolute; width:50px; height:64px; display:block; background-image: url(../images/arrows.png);}
