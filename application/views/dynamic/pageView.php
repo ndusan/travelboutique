@@ -25,7 +25,7 @@ switch($getPageInfo['template']){
                     <h4><?php echo $html->translate('Podmeni');?></h4>
                     <ul>
                     	<?php foreach($getPageInfo['children'] as $ch):?>
-                        <li><h3><a href="<?php echo BASE_PATH.$getPageInfo['link'].DS.$ch['link'].DS; ?>"><?php echo $ch['name']?></a></h3></li>
+                        <li><h3><a <?php echo ($getPageInfo['id'] == $ch['id'] ? "class='active'" : "");?> href="<?php echo BASE_PATH.$getPageInfo['link'].DS.$ch['link'].DS; ?>"><?php echo $ch['name']?></a></h3></li>
                         <?php endforeach; ?>
                     </ul>
                     <?php else:?>
@@ -33,7 +33,7 @@ switch($getPageInfo['template']){
                     <h4><?php echo $html->translate('Podmeni');?></h4>
                     <ul>
                     	<?php foreach($getPageInfo['brothers'] as $ch):?>
-                        <li><h3><a href="<?php echo BASE_PATH.$ch['parent']['link'].DS.$ch['link'].DS; ?>"><?php echo $ch['name']?></a></h3></li>
+                        <li><h3><a <?php echo ($getPageInfo['id'] == $ch['id'] ? "class='active'" : "");?> href="<?php echo BASE_PATH.$ch['parent']['link'].DS.$ch['link'].DS; ?>"><?php echo $ch['name']?></a></h3></li>
                         <?php endforeach; ?>
                     </ul>
                     <?php endif;?>
