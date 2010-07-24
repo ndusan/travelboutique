@@ -5,6 +5,11 @@
         <div style="clear: both;"></div>
         <div class="content">
             <div class="mainPromo">
+            	<!-- breadcrumb -->
+                <div class="breadcrumb">
+                	<a href="<?php echo BASE_PATH;?>"><?php echo $html->translate('Početna');?></a>
+                	&raquo; <?php echo $html->translate('Avio karte');?>
+                </div>
                 <h1 class="borBot"><?php echo $getPageInfo['items'][0]['title'];?></h1>
                 <?php echo $getPageInfo['items'][0]['content'];?>
                 <form id="form-avio_karte" action="<?php echo BASE_PATH.'avio-karte'.DS.'submit'.DS; ?>" method="post">

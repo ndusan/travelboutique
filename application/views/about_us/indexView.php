@@ -6,7 +6,10 @@
         <div class="content">
             <div class="mainPromo">
                 <!-- breadcrumb -->
-                <div class="breadcrumb"><a href="#">home</a> &raquo; about us</div>
+                <div class="breadcrumb">
+                	<a href="<?php echo BASE_PATH;?>"><?php echo $html->translate('Početna');?></a>
+                	&raquo; <?php echo $html->translate('O nama');?>
+                </div>
                 <h1 class="borBot"><?php echo $getPageInfo['items'][0]['title'];?></h1>
                 <?php echo $getPageInfo['items'][0]['content'];?>
             </div>
