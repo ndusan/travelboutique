@@ -16,6 +16,12 @@ class DynamicModel extends Model{
 			if(mysql_num_rows($resChild) <= 0) return false;
 			$pageInfo = mysql_fetch_assoc($resChild);
 			
+			//Parent name
+			$queryParent = sprintf("SELECT * FROM `pages` WHERE `id`='%s'",
+									mysql_real_escape_string($pageInfo['parent_id'])
+									);
+			$parent = parent::query($queryParent);
+			
 		}elseif(isset($params['parentName']) && !empty($params['parentName'])){
 		
 			//Find this page if exists
@@ -39,7 +45,7 @@ class DynamicModel extends Model{
 						);
 		$rowTmp = mysql_fetch_assoc(mysql_query($query));
 		
-		$output = array('id' => $pageInfo['id'], 'link' => $pageInfo['link'], 'parent_id' => $pageInfo['parent_id'], 'name' => $rowTmp['name'], 'additional' => $rowTmp['additional'], 'template' => $pageInfo['template'], 'link' => $pageInfo['link']);
+		$output = array('id' => $pageInfo['id'], 'link' => $pageInfo['link'], 'parent_id' => $pageInfo['parent_id'], 'parent_name' =>(isset($parent[0]['link'])?$parent[0]['link']:""), 'name' => $rowTmp['name'], 'additional' => $rowTmp['additional'], 'template' => $pageInfo['template'], 'link' => $pageInfo['link']);
 		
 		//Items
 		$query = sprintf("SELECT `page_items`.`folder`, `page_item_details`.`title`, `page_item_details`.`content`
