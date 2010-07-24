@@ -2,11 +2,11 @@
 <div class="mainPromo">
 	<!-- breadcrumb -->
     <div class="breadcrumb">
-	    <a href="<?php echo BASE_PATH;?>"><?php echo ucfirst($html->translate('Početna'));?></a>
+	    <a href="<?php echo BASE_PATH;?>"><?php echo ucfirst(strtolower($html->translate('Početna')));?></a>
 	    <?php if($getPageInfo['parent_id']>0):?>
-	    &raquo; <a href="<?php echo BASE_PATH.$getPageInfo['parent_name'];?>"><?php echo ucfirst($getPageInfo['parent_name']);?></a>
+	    &raquo; <a href="<?php echo BASE_PATH.$getPageInfo['parent_name'];?>"><?php echo ucfirst(strtolower(str_replace("-", " ", $getPageInfo['parent_name'])));?></a>
 	    <?php endif;?>
-	    &raquo; <?php echo ucfirst($getPageInfo['name']);?>
+	    &raquo; <?php echo ucfirst(strtolower($getPageInfo['name']));?>
     </div>
     <h1 class="borBot"><?php echo $getPageInfo['name'];?></h1>
     <?php foreach($getPageInfo['items'] as $d):?>
