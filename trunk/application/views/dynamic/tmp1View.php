@@ -1,5 +1,10 @@
 <?php if(isset($getPageInfo) && !empty($getPageInfo)):?>
 <div class="mainPromo">
+	<!-- breadcrumb -->
+    <div class="breadcrumb">
+	    <a href="<?php echo BASE_PATH;?>"><?php echo $html->translate('Početna');?></a>
+	    &raquo; <?php echo $getPageInfo['name'];?>
+    </div>
     <h1 class="borBot"><?php echo $getPageInfo['name'];?></h1>
     <?php foreach($getPageInfo['items'] as $d):?>
     <div class="onePromoted borBot">

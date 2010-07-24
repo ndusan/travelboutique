@@ -51,7 +51,7 @@
                 	$(document).ready(function(){
 						$("select[name='weather']").change(function(){
 
-							$.post('ajax-get-weather/',
+							$.post("<?php echo BASE_PATH.'ajax-get-weather'.DS?>",
 									{'id': $(this).val()},
 									function(data){
 										if(data){
