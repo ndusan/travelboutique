@@ -46,7 +46,7 @@ switch($getPageInfo['template']){
         <div class="boxHolder">
             <div class="tabs">
                 <ul>
-                    <li><a href="#" class="active">Bla bla bla</a></li>
+                    <li><a href="#" class="active">u ponudi</a></li>
                 </ul>
             </div>
             <ul>
