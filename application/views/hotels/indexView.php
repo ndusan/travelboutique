@@ -193,8 +193,8 @@
                         <tfoot>
                             <tr>
                                 <td colspan="2" align="center">
-                                    <button type="button" id="hotels"><?php echo $html->translate('posalji zahtev');?></button>
-                                    <button type="reset"><?php echo $html->translate('odustani');?></button>
+                                    <button type="button" id="hotels"><?php echo $html->translate('poslati');?></button>
+                                    <button type="reset"><?php echo $html->translate('odustati');?></button>
                                 </td>
                             </tr>
                         </tfoot>
