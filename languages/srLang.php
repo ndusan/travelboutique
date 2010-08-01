@@ -23,7 +23,22 @@ $_lang = array(
 	'Dodatne informacije'=>		'Dodatne informacije',
 	'Dodatno'			=>		'Bla bla',
 	'Kontakt informacije'=>		'Kontakt informacije',
-	'Kontakt'			=>		'telefon',
+	'Kontakt'			=>		'<table>
+									<tbody>
+										<tr>
+											<td>tel:</td>
+											<td>+381 11 32 88 097</td>
+										</tr>
+										<tr>
+											<td>fax:</td>
+											<td>+381 11 26 27 389</td>
+										</tr>
+										<tr>
+											<td>e-mail:</td>
+											<td><a href="mailto:office@travelboutique.rs">office@travelboutique.rs</a></td>
+										</tr>
+									</tbody>
+								</table>',
 	'Avio karte'		=>		'Avio karte',
 	'Ime'				=>		'Ime',
 	'Prezime'			=>		'Prezime',
