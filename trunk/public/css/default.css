@@ -112,7 +112,7 @@ button:hover {background-color:#EEE; cursor:pointer;}
 .tabs .active,.tabs .active:hover {background-color:#f4f5f6;  padding:0 14px 0; border:solid 1px #CCC; color:#990099; border-bottom:none;}
 
 .box {padding:10px; float:left; background-color:#FFF; border:solid 1px #ccc; width:195px; height:140px; margin:9px;}
-.box img {margin:0 0 5px;}
+.box img {margin:0 0 5px; display:block; background:transparent url(../images/laoder.gif) scroll no-repeat center center; }
 .box a { text-decoration:none; outline:none; color:#333;}
 .box a:hover {color:#990099;}
 
