@@ -33,7 +33,7 @@ button {background-color:#FFF; margin:2px 0; font-size:12px; font-family:Arial,S
 button:hover {background-color:#EEE; cursor:pointer;}
 .inputSmall {width:210px;}
 .inputBig {width:442px;}
-.selectSmall {width:222px;}
+.selectSmall {width:222px; outline:none;}
 
 /* BUILD */
 .wrapper {width:970px; margin:0 auto;}
