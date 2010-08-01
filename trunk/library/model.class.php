@@ -96,9 +96,9 @@ class Model{
 	
 	public static function getAllWeather($params){
 		if($params == 0)
-			$query = sprintf("SELECT * FROM `weather` LIMIT 0, 1");
+			$query = sprintf("SELECT * FROM `weather` ORDER BY `city` ASC LIMIT 0, 1");
 		else 
-			$query = sprintf("SELECT * FROM `weather` WHERE `id`='%s'",
+			$query = sprintf("SELECT * FROM `weather` WHERE `id`='%s' ORDER BY `city` ASC",
 							mysql_real_escape_string($params)
 			);
 		$res = mysql_query($query);
@@ -109,7 +109,7 @@ class Model{
 	
 	public static function getWeatherCities(){
 		
-		$query = sprintf("SELECT * FROM `weather`");
+		$query = sprintf("SELECT * FROM `weather` ORDER BY `city` ASC");
 		return self::query($query);
 	}
 }
