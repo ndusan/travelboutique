@@ -33,15 +33,43 @@
                 Cufon.replace('label', { fontFamily: 'Georgia', hover:true });
                 Cufon.replace('h3', { fontFamily: 'Georgia', hover:true });
                 Cufon.replace('h4', { fontFamily: 'Georgia', hover:true });
+                <!--[if lt IE 7]>
+                $(".wrapper").hide();
+				$(".ie6").show();
+				<![endif]-->
             });
         </script>
 
     </head>
     <body>
-        <div class="ie6">Please upgrade browser message <a href="#">link here</a></div>
+        <div class="ie6" style="display: none;">
+        	<table>
+        		<thead>
+        			<tr>
+        				<td>This website does not support your browser version. <br/>Please upgrade to one of these more modern browsers:</td>
+        			</tr>
+        		</thead>
+        		<tbody>
+        			<tr>
+        				<td>
+        					<a href="http://www.mozilla.com/en-US/firefox/upgrade.html" target="_blank">http://mozilla.org</a>
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>
+        					<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank">http://www.microsoft.com</a>
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>
+        					<a href="http://www.google.com/chrome" target="_blank">http://www.google.com</a>
+        				</td>
+        			</tr>
+        		</tbody>
+        	</table>
+       	</div> 
 
         <!-- This is a content that will be included on page inside of this layout -->
         <?php if(file_exists(VIEW_PATH.$this->_controller.DS.$this->_action.'View.php')) include (VIEW_PATH.$this->_controller.DS.$this->_action.'View.php'); ?>
-
     </body>
 </html>
