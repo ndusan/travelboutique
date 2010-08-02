@@ -36,7 +36,7 @@ button:hover {background-color:#EEE; cursor:pointer;}
 .selectSmall {width:222px; outline:none;}
 
 /* BUILD */
-.ie6 {overflow:hidden; width:600px; margin:120px auto 0; padding:20px; background-color:#FFF; border:solid 3px #9e005d; -moz-border-radius:10px;}
+.ie6 {overflow:hidden; width:400px; margin:120px auto 0; padding:20px; background-color:#FFF; border:solid 3px #9e005d; -moz-border-radius:10px;}
 .wrapper {width:970px; margin:0 auto;}
 .header {position:relative;}
 .logo {height:105px;}
