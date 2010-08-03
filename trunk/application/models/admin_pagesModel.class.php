@@ -86,6 +86,7 @@ class Admin_pagesModel extends Model{
 		$link = str_replace("ć", "c", $link);
 		$link = str_replace("ž", "z", $link);
 		$link = str_replace("đ", "dj", $link);
+		$link = str_replace("&", "-and-", $link);
 		
 		$query = sprintf("SELECT * FROM `pages` WHERE `link`='%s'",
 						mysql_real_escape_string($link)
