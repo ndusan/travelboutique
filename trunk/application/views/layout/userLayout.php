@@ -33,13 +33,16 @@
                 Cufon.replace('label', { fontFamily: 'Georgia', hover:true });
                 Cufon.replace('h3', { fontFamily: 'Georgia', hover:true });
                 Cufon.replace('h4', { fontFamily: 'Georgia', hover:true });
-                <!--[if lt IE 7]>
-                $(".wrapper").hide();
-				$(".ie6").show();
-				<![endif]-->
             });
         </script>
-
+		<!--[if lt IE 7]>
+		<script type="text/javascript">
+            $(document).ready(function(){
+		        $(".wrapper").hide();
+				$(".ie6").show();
+		 	});
+        </script>
+		<![endif]-->
     </head>
     <body>
         <div class="ie6" style="display: none;">
