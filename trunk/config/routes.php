@@ -371,7 +371,7 @@ $routes = array(
 					  	'layout' 		=> 'empty'
 				),
 				//Dynamic
-				array(	'url' 			=> '/^(?P<parentName>[0-9a-zA-Z\-\_]+)\/?((?P<childName>[0-9a-zA-Z\-\_]+)\/?)*$/', 
+				array(	'url' 			=> '/^(?P<parentName>[a-zA-Z0-9\_\-%]+)\/?((?P<childName>[a-zA-Z0-9\_\-%]+)\/?)*$/u', 
 						'controller' 	=> 'dynamic', 
 					  	'action' 		=> 'page', 
 					  	'layout' 		=> 'user'

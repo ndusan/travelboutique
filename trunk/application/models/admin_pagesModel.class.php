@@ -81,11 +81,11 @@ class Admin_pagesModel extends Model{
 		$link = strtolower($link);
 		
 		//Remove serbian letters
-		$link = str_replace("š", "s", $link);
-		$link = str_replace("č", "c", $link);
-		$link = str_replace("ć", "c", $link);
-		$link = str_replace("ž", "z", $link);
-		$link = str_replace("đ", "dj", $link);
+//		$link = str_replace("š", "s", $link);
+//		$link = str_replace("č", "c", $link);
+//		$link = str_replace("ć", "c", $link);
+//		$link = str_replace("ž", "z", $link);
+//		$link = str_replace("đ", "dj", $link);
 		$link = str_replace("&", "-and-", $link);
 		
 		$query = sprintf("SELECT * FROM `pages` WHERE `link`='%s'",
