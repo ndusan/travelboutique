@@ -104,7 +104,7 @@
                                     <select class="selectSmall j_required" name="rent_a_car[car_type]">
                                         <option>manje vozilo</option>
                                         <option>srednja klasa</option>
-                                        <option>visa klasa</option>
+                                        <option>viša klasa</option>
                                         <option>terensko vozilo</option>
                                     </select>
                                 </td>
