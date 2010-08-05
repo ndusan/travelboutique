@@ -15,7 +15,7 @@
                 <form id="form-rent_a_car" action="<?php echo BASE_PATH.'rent-a-car'.DS.'submit'.DS;?>" method="post" >
                     <table cellpadding="0" cellspacing="0">
                         <tbody>
-                            <tr><th colspan="2"><h3>Vasi detalji:</h3></th></tr>
+                            <tr><th colspan="2"><h3>Vaši detalji:</h3></th></tr>
                             <tr>
                                 <td>
                                     <label><?php echo $html->translate('Ime');?></label>
