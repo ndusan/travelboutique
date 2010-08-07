@@ -92,7 +92,7 @@ class Admin_pagesModel extends Model{
 						mysql_real_escape_string($link)
 						);
 		$res = mysql_query($query);
-		if(mysql_num_rows($res) > 0) return false;
+		//if(mysql_num_rows($res) > 0) return false;
 		return $link;
 	}
 	
@@ -212,10 +212,10 @@ class Admin_pagesModel extends Model{
 			
 			//Request to change name
 			$link = strtolower(self::createLink($link));
-		
-			if(!$link) return false;
+			
+			//if(!$link) return false;
 		}
-		
+		$link = strtolower($link);
 		$query = sprintf("UPDATE `pages` SET `link`='%s', `parent_id`='%s', `template`='%s', `type`='dynamic' WHERE `id`='%s'",
 						mysql_real_escape_string($link),
 						mysql_real_escape_string($params['level']),
