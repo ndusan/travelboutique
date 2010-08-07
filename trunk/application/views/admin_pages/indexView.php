@@ -48,7 +48,7 @@
 		    				<a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$page['id'].DS.'more'.DS;?>">
 		    					<img src="<?php echo IMAGE_PATH;?>view.gif" width="16" height="16" title="More details" alt="More details" />
 		    				</a>
-		    				<a href="<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$page['id'].DS.'delete'.DS;?>">
+		    				<a href="javascript:;" onclick="javascript: confirmDelete('Delete <?php echo $page['link']; ?>?', '<?php echo BASE_PATH.'admin'.DS.'pages'.DS.$page['id'].DS.'delete'.DS;?>');">
 		    					<img src="<?php echo IMAGE_PATH;?>delete.gif" width="16" height="16" title="Delete" alt="Delete" />
 		    				</a>
 		    				<?php endif;?>
