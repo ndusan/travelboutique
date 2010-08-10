@@ -76,7 +76,6 @@
                 <table style="text-align:center; margin:20px 0 10px;" cellpadding="0" cellspacing="0" width="100%">
                     <tbody>
                         <tr>
-                            <td><img style="border: 0px solid ; width: 16px; height: 11px;" src="http://www.bancaintesabeograd.com/upload/images/exchange_rates/RSD.gif"/></td>
                             <td><?php echo $res['EUR']['img'] ?></td>
                             <td><?php echo $res['AUD']['img'] ?></td>
                             <td><?php echo $res['CAD']['img'] ?></td>
@@ -89,7 +88,6 @@
                             <td><?php echo $res['USD']['img'] ?></td>
                         </tr>
                         <tr>
-                            <td>1 RSD =</td>
                             <td><?php echo $res['EUR']['value'] ?></td>
                             <td><?php echo $res['AUD']['value'] ?></td>
                             <td><?php echo $res['CAD']['value'] ?></td>
