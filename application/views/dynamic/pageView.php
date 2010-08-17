@@ -69,7 +69,9 @@ switch($getPageInfo['template']){
         </div>
         <?php endif;?>
     </div>
-    <div class="bottom"></div>
+    <div class="bottom">
+        <?php include_once(VIEW_PATH.'home'.DS.'_copyright.php');?>
+    </div>
 </div>
 
 
