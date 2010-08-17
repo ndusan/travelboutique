@@ -1,12 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Travelboutique</title>
+        <title>TRAVEL BOUTIQUE - TRAVEL UNIQUE</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <link rel="shortcut icon" href="http://www.travelboutique.rs/public/images/favicon.ico" type="image/x-icon" />
         <meta name="keywords" content="individualna putovanja, aviokarte, rezervacija hotela, hotel, krstarenja, wayout, transorient, egipat, cruise ferry center, egipat, turska, grcka, spanija, leto, hoteli, leto 2010, putovanja, letovanje, smestaj, turisticke agencije, putovanje, letovanje 2010, Jevremova, tajland, kuba, " />
         <meta name="description" content="TRAVEL BOUTIQUE - TRAVEL UNIQUE" />
-        <meta name="author" content="novalinsolutions.com" />
+        <meta name="author" content="novalinsolutions" />
         <meta name="robots" content="index,follow" />
         <!-- Include jQuery -->
         <?php echo $html->js('jquery-1.4.2.min'); ?>
