@@ -23,6 +23,11 @@ $routes = array(
 					  	'action' 		=> 'index', 
 					  	'layout' 		=> 'admin'
 				),
+				array(	'url' 			=> '/^admin\/newsletters\/?$/', 
+						'controller' 	=> 'admin_newsletters', 
+					  	'action' 		=> 'index', 
+					  	'layout' 		=> 'admin'
+				),
 				array(	'url' 			=> '/^admin\/logout\/?$/', 
 						'controller' 	=> 'login', 
 					  	'action' 		=> 'logout', 

@@ -13,11 +13,17 @@
     <div class="onePromoted borBot">
     	<?php 
     	$dh = opendir(UPLOAD_PATH.$d['folder']);
-        while (($file = readdir($dh)) !== false):?>
-        <?php if($file != '.' && $file != '..'):?>
-        <img alt="travel boutique" title="<?php echo $d['title'];?>" src="<?php echo BASE_PATH.UPLOAD_PATH.$d['folder'].DS.$file; ?>" />
-		<?php endif;?>
-        <?php endwhile;?>
+    	$narray = array();
+        while (($file = readdir($dh)) !== false):
+        	if($file != '.' && $file != '..'):
+        	$narray[] = $file;
+			endif;
+        endwhile;
+        sort($narray);
+        for($i=0; $i<sizeof($narray); $i++):
+        ?>
+        <img alt="travel boutique" title="<?php echo $d['title'];?>" src="<?php echo BASE_PATH.UPLOAD_PATH.$d['folder'].DS.$narray[$i]; ?>" />
+		<?php endfor;?>
         <h2><?php echo $d['title'];?></h2>
         <p>
             <?php echo $d['content'];?>

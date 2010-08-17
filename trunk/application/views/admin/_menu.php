@@ -71,5 +71,6 @@
             </li>
        	</ul>
     </li>
+    <li><a href="<?php echo BASE_PATH.'admin'.DS.'newsletters'.DS;?>">Newsletters</a></li>
     <li><a href="<?php echo BASE_PATH.'admin'.DS.'logout'.DS;?>">Logout</a></li>
 </ul>
