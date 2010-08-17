@@ -19,6 +19,11 @@
         </div>
         <?php include_once(VIEW_PATH.'home'.DS.'_footer.php');?>
     </div>
-    <div class="bottom"></div>
+    <div class="bottom">
+        <p class="copyright">
+		<strong>Tel:+381 11 32 88 097, Fax:+381 11 26 27 389, Gospodar Jevremova 42/1,11 000 Beograd</strong><br>
+		Copyright &copy; 2010. <a href="/">Travel Boutique</a>. Sva prava zadržana.
+	</p>
+    </div>
 </div>
 
