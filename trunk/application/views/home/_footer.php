@@ -122,7 +122,7 @@
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <td><a href="#"><img src="<?php echo IMAGE_PATH; ?>facebook.png" alt="" title="" /></a></td>
-                <td><label>Travel Boutique on<br/> <a href="#">Facebook</a></label></td>
+                <td><label>Travel Boutique on<br/> <a href="http://www.facebook.com/pages/Travel-Boutique/134662306569077?ref=ts">Facebook</a></label></td>
                 <td><img src="<?php echo IMAGE_PATH; ?>skype.png" alt="" title="" /></td>
                 <td>
                     <!--
