@@ -31,42 +31,42 @@
         </div>
         <div id="ul-weather" style="display: none;">
             <div class="boxBig">
-            <?php
-			$weather = $html->getWeatherCities();
-			
-            if(isset($weather) && !empty($weather)):?>
+                <?php
+                $weather = $html->getWeatherCities();
+
+                if(isset($weather) && !empty($weather)):?>
                 <table>
                     <tr><td colspan="2"><label><?php echo $html->translate('Odaberite željenu destinaciju');?></label></td></tr>
                     <tr>
                         <td>
                             <select class="selectSmall j_required" name="weather" size="">
-                                <?php foreach($weather as $city):?>
+                                    <?php foreach($weather as $city):?>
                                 <option value="<?php echo $city['id']; ?>"><?php echo $city['city'];?></option>
-                                <?php endforeach;?>
+                                    <?php endforeach;?>
                             </select>
                         </td>
                     </tr>
                 </table>
                 <script type="text/javascript" charset="utf-8">
-                	$(document).ready(function(){
-						$("select[name='weather']").change(function(){
+                    $(document).ready(function(){
+                        $("select[name='weather']").change(function(){
 
-							$.post("<?php echo BASE_PATH.'ajax-get-weather'.DS?>",
-									{'id': $(this).val()},
-									function(data){
-										if(data){
-											$("#weather-info").html(data);	
-										}
-									},
-									"html"
-									);
-						});
+                            $.post("<?php echo BASE_PATH.'ajax-get-weather'.DS?>",
+                            {'id': $(this).val()},
+                            function(data){
+                                if(data){
+                                    $("#weather-info").html(data);
+                                }
+                            },
+                            "html"
+                        );
+                        });
                     });
                 </script>
                 <div id="weather-info">
-                <?php echo $html->getWeather();?>
+                        <?php echo $html->getWeather();?>
                 </div>
-            <?php endif; ?>
+                <?php endif; ?>
             </div>
         </div>
         <div id="ul-exchange" style="display: none;">
@@ -124,7 +124,14 @@
                 <td><a href="#"><img src="<?php echo IMAGE_PATH; ?>facebook.png" alt="" title="" /></a></td>
                 <td><label>Travel Boutique on<br/> <a href="#">Facebook</a></label></td>
                 <td><img src="<?php echo IMAGE_PATH; ?>skype.png" alt="" title="" /></td>
-                <td><label>Skype name:<br/> Travel-Boutique</label></td>
+                <td>
+                    <!--
+Skype 'My status' button
+http://www.skype.com/go/skypebuttons
+                    -->
+                    <script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script>
+                    <a href="skype:travel-boutique?call"><img src="http://mystatus.skype.com/bigclassic/travel-boutique" style="border: none;" width="182" height="44" alt="My status" /></a>
+                </td>
             </tr>
         </table>
     </div>
