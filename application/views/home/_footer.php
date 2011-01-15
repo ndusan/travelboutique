@@ -71,7 +71,7 @@
         </div>
         <div id="ul-exchange" style="display: none;">
             <div class="boxBig">
-                <h1 class="borBot">Banca Intesa kursna lista na današnji dan</h1>
+                <h1 class="borBot">UniCredit Banka - kursna lista na današnji dan</h1>
                 <?php $res = $html->getCurrency(); ?>
                 <table style="text-align:center; margin:20px 0 10px;" cellpadding="0" cellspacing="0" width="100%">
                     <tbody>
