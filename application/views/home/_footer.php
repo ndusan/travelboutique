@@ -8,7 +8,7 @@
             <li><a href="javascript:;" id="link-exchange"><?php echo $html->translate('kursna lista');?></a></li>
         </ul>
     </div>
-    <div id="ul">
+    <div id="ul" style="position: relative; overflow: hidden;">
         <ul id="ul-offer">
             <?php foreach($getPageInfo['banners'] as $banner):?>
             <li class="box">
