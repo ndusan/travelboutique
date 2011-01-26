@@ -12,7 +12,8 @@
                 </div>
                 <h1 class="borBot"><?php echo $getPageInfo['items'][0]['title'];?></h1>
                 <?php echo $getPageInfo['items'][0]['content'];?>
-                <form id="form-hotels" action="<?php echo BASE_PATH.'hotels'.DS.'submit'.DS;?>" method="post" >
+                <iframe src="b2c.travelboutique.rs" width="600px" height="500px"></iframe>
+                <form style="display:none"id="form-hotels" action="<?php echo BASE_PATH.'hotels'.DS.'submit'.DS;?>" method="post" >
                     <table cellpadding="0" cellspacing="0">
                         <tbody>
                             <tr><th colspan="2"><h3>Vaši detalji:</h3></th></tr>
