@@ -84,6 +84,7 @@ function routing($routes){
 	//Current URI
 	$url = $_SERVER['REQUEST_URI'];
 	
+	
 	//Prevent problems
 	$url = str_replace(APP_ROOT, '', $url);
 	$url = substr_replace($url,'', 0, 1);
