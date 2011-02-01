@@ -12,7 +12,16 @@
                 </div>
                 <h1 class="borBot"><?php echo $getPageInfo['items'][0]['title'];?></h1>
                 <?php echo $getPageInfo['items'][0]['content'];?>
-                <iframe src="b2c.travelboutique.rs" width="600px" height="500px"></iframe>
+                
+                <script type="text/javascript">
+                $(document).ready(function(){
+                	$("#hotels").addClass("loader");
+                	$("#hotels").removeClass("loader").html('<iframe src="http://b2c.travelboutique.rs" width="660px" height="400px" frameborder="0" scrolling="no"></iframe>');
+                });
+                </script>
+                
+                <div id="hotels"><!-- load --></div>
+                <?php /*
                 <form style="display:none"id="form-hotels" action="<?php echo BASE_PATH.'hotels'.DS.'submit'.DS;?>" method="post" >
                     <table cellpadding="0" cellspacing="0">
                         <tbody>
@@ -352,6 +361,7 @@
                         $(".j_datepicker").datepicker();
                     });
                 </script>
+                */?>
             </div>
             <div class="sidebar">
                 <?php include_once(VIEW_PATH.'home'.DS.'_sidebar.php');?>
