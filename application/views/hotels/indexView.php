@@ -16,7 +16,7 @@
                 <script type="text/javascript">
                 $(document).ready(function(){
                 	$("#hotels").addClass("loader");
-                	$("#hotels").removeClass("loader").html('<iframe src="http://b2c.travelboutique.rs" width="660px" height="400px" frameborder="0" scrolling="no"></iframe>');
+                	$("#hotels").removeClass("loader").html('<iframe src="http://b2c.travelboutique.rs" style="border:none; background-color:#f5f5f5"idth="100%" height="400px" frameborder="0" scrolling="no"></iframe>');
                 });
                 </script>
                 
